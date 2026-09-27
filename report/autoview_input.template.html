@@ -1,0 +1,132 @@
+<title>오토뷰 등급 입력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --accent:#0E7A68; --accent-soft:#DDEFEA; --warn:#D9520B; --av:#1F5FBF; --av-soft:#E3ECFA;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --av:#7FA8F0; --av-soft:#1A2640;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --av:#7FA8F0; --av-soft:#1A2640;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:20px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:0}
+.lede{color:var(--muted);max-width:70ch;margin:8px 0 0}
+.scale{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;font-family:var(--mono);font-size:11.5px}
+.scale span{padding:2px 8px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);padding-block:10px;z-index:2;border-bottom:1px solid var(--line)}
+.bar input[type=search]{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.status{font-family:var(--mono);font-size:12px}
+.status.off{color:var(--warn)}
+ul.list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.row.done{border-color:var(--av);box-shadow:inset 3px 0 0 var(--av)}
+.row .t{font-weight:500;overflow-wrap:anywhere}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:4px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.meta a{color:var(--av);text-underline-offset:2px}
+.hint{font-family:var(--body);font-size:11.5px;padding:1px 7px;border-radius:4px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.pick{display:grid;grid-template-columns:auto auto;gap:6px 8px;align-items:center;font-size:12.5px}
+.pick label{color:var(--muted);text-align:right}
+.pick select{font:inherit;font-size:13px;padding:5px 6px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);min-width:9.5em}
+.saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--av);min-height:1em}
+@media (max-width:640px){.row{grid-template-columns:1fr}.pick{grid-template-columns:auto 1fr}.pick label{text-align:left}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>오토뷰 등급 입력</h1>
+    <p class="lede">영상에서 오토뷰가 매긴 <b>핸들링</b>과 <b>긴급 회피</b> 등급을 골라 주세요. 고르는 즉시 저장되고, 클아가 읽어서 등급표에 반영해요. 링크의 시각은 영상 설명란 목차의 '핸들링'·'기본 안정성' 구간이에요. 기준: 911 GTS = 핸들링 훌륭함, 긴급 회피 좋음~훌륭함.</p>
+    <div class="scale" aria-label="등급 순서"><span>나쁨</span><span>부족</span><span>보통</span><span>좋음</span><span>훌륭함</span><span>+ 사이 값</span></div>
+  </header>
+
+  <div class="bar">
+    <input type="search" id="q" placeholder="차 이름으로 찾기 (예: 모델 Y, 911, 스포티지)" aria-label="차 이름으로 찾기">
+    <label><input type="checkbox" id="onlyHint"> KM77 기록 있는 차만</label>
+    <label><input type="checkbox" id="onlyTodo"> 미입력만</label>
+    <span class="status" id="status">저장소 연결 중…</span>
+    <span class="count" id="count"></span>
+  </div>
+
+  <ul class="list" id="list"></ul>
+</div>
+
+<script>
+const VIDEOS = /*DATA*/[];
+const LEVELS = ['', '나쁨', '나쁨~부족', '부족', '부족~보통', '보통', '보통~좋음', '좋음', '좋음~훌륭함', '훌륭함'];
+const ratings = {};
+let db = null;
+
+const $ = (s) => document.querySelector(s);
+const fmt = (s) => (s == null ? null : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`);
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+
+function render() {
+  const q = $('#q').value.trim().toLowerCase();
+  const onlyHint = $('#onlyHint').checked, onlyTodo = $('#onlyTodo').checked;
+  const rows = VIDEOS.filter((v) => (!q || v.title.toLowerCase().includes(q)) && (!onlyHint || v.hint) && (!onlyTodo || !ratings[v.id]?.handling));
+  const done = VIDEOS.filter((v) => ratings[v.id]?.handling || ratings[v.id]?.avoidance).length;
+  $('#count').textContent = `${rows.length}개 표시 · 입력 ${done}/${VIDEOS.length}`;
+  $('#list').innerHTML = rows.map((v) => {
+    const r = ratings[v.id] || {};
+    const opt = (cur) => LEVELS.map((l) => `<option value="${l}"${l === (cur || '') ? ' selected' : ''}>${l || '— 선택 —'}</option>`).join('');
+    const link = (t, label) => (t == null ? '' : `<a href="https://www.youtube.com/watch?v=${v.id}&t=${t}s" target="_blank" rel="noopener">${label} ${fmt(t)}</a>`);
+    return `<li class="row${r.handling || r.avoidance ? ' done' : ''}" data-id="${v.id}">
+      <div><div class="t">${esc(v.title)}</div>
+        <div class="meta"><span>${v.date || ''}</span><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">영상</a>${link(v.handling, '핸들링')}${link(v.stability, '기본 안정성')}${v.hint ? `<span class="hint">${esc(v.hint)}</span>` : ''}</div></div>
+      <div class="pick">
+        <label for="h-${v.id}">핸들링</label><select id="h-${v.id}" data-k="handling"${db ? '' : ' disabled'}>${opt(r.handling)}</select>
+        <label for="a-${v.id}">긴급 회피</label><select id="a-${v.id}" data-k="avoidance"${db ? '' : ' disabled'}>${opt(r.avoidance)}</select>
+        <span class="saved" id="s-${v.id}"></span>
+      </div></li>`;
+  }).join('');
+}
+
+$('#list').addEventListener('change', async (e) => {
+  const sel = e.target.closest('select');
+  if (!sel || !db) return;
+  const id = sel.closest('.row').dataset.id;
+  const v = VIDEOS.find((x) => x.id === id);
+  const next = { ...(ratings[id] || {}), [sel.dataset.k]: sel.value, title: v.title, updatedAt: new Date().toISOString() };
+  const note = document.getElementById('s-' + id);
+  note.textContent = '저장 중…';
+  try {
+    await db.collection('ratings').doc(id).set(next);
+    ratings[id] = next;
+    note.textContent = '저장됨';
+    sel.closest('.row').classList.toggle('done', !!(next.handling || next.avoidance));
+  } catch (err) {
+    note.textContent = err?.code === 'permission_denied' || err?.code === 'not_granted' ? '저장 권한이 없어요' : '저장하지 못했어요. 다시 골라 주세요';
+  }
+});
+['#q', '#onlyHint', '#onlyTodo'].forEach((s) => $(s).addEventListener('input', render));
+render();
+
+(async () => {
+  db = await window.claude?.use?.('db').catch(() => null) ?? null;
+  const st = $('#status');
+  if (!db) { st.textContent = '저장소에 연결할 수 없어요 (보기 전용)'; st.classList.add('off'); return; }
+  st.textContent = '저장소 연결됨';
+  db.collection('ratings').onSnapshot((snap) => {
+    snap.docs.forEach((d) => { if (d.exists) ratings[d.id] = d.data(); });
+    render();
+  }, () => { st.textContent = '저장소 연결이 끊겼어요'; st.classList.add('off'); });
+  render();
+})();
+</script>

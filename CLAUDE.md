@@ -7,6 +7,7 @@
 - 등급 경계: 아래 값 포함. 휠베이스 <2600 / 2600–2699 / … / ≥3000, 지상고 <150 / 150–159 / … / ≥190.
 - 보라색: Consumer Reports · Quattroruote · 오토뷰가 그 등급 1위와 비교해 "비슷하다 / 더 좋다"고 한 차 → `data/peer_mentions.json`. 직접 인용 금지, 검색 결과 요약만. 방향이 반대(1위가 더 좋음)거나 세대가 다르거나 출처가 세 사이트가 아니면 넣지 않는다.
 - 호박색: KM77 값은 없지만 Quattroruote 공개 YouTube 안정성 시험(재생목록 "Prove di stabilità")에서 평가가 좋아 비슷하거나 나을 것으로 예상한 차 → `data/qr_expected.json` (차 자신의 제원 등급 칸, `confidence` 필수). 같은 세대를 KM77이 77km/h 이하로 측정했으면 KM77 값을 우선해 넣지 않는다. 기준점: Opel Astra L = Quattroruote 젖은 노면 88km/h·4성 ↔ KM77 76km/h.
+- 파란색(예정): 오토뷰 YouTube 로드테스트의 핸들링·긴급 회피 등급(나쁨 < 부족 < 보통 < 좋음 < 훌륭함, 사이 값 포함 9단계)이 그 등급 1위 차의 오토뷰 등급과 같거나 높은 차. 등급은 화면에만 나와서 사용자가 입력 페이지 https://claude.ai/artifact/2nAeipTFhLagQpdZTRMdtL (db 컬렉션 `ratings`, 문서 id = 영상 id)에 입력하고, `ArtifactData` list로 읽는다. 1위 차를 오토뷰가 시험하지 않았으면 양쪽 기록이 있는 차(기준점: 911 GTS 핸들링 훌륭함·긴급 회피 좋음~훌륭함 ↔ KM77 911 Turbo S 82km/h)로 대응표를 만들어 비교. 표시 차량의 제원 등급은 KM77 제원 또는 제조사 값으로 정한다. 영상 목록: `scripts/autoview_list.mjs` → `data/autoview_videos.json`.
 - 지상고: KM77 제원 값 우선, 없으면 `data/gc_manual.json`(출처 표기). 등급 경계 ±6mm 안의 추정치는 웹 검색으로 검증하고 `gc_source`를 `verified (...)`로.
 - 템플릿의 `<!--PRIVATE-->…<!--/PRIVATE-->` 구간(어떻게 뽑았나 · 읽을 때 주의할 점 · 7개 사이트 활용 범위)은 사용자만 보는 내용이라 공개 페이지(public/)에서는 빌드 때 빠진다. 방법·출처 설명을 새로 쓸 땐 이 구간 안에 넣는다.
 - 칸 상세 정보의 출처 링크와 `추정`·`검증` 지상고 표시는 공개 페이지에도 남긴다 (사용자 결정).
