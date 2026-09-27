@@ -25,7 +25,9 @@
 
 ## 배포
 - Vercel 프로젝트는 `public/`을 정적 파일로 서빙한다 (`vercel.json`).
-- 배포 방식과 URL은 아래 "배포 정보"를 따른다.
+- 방식: Vercel CLI 직접 배포 (GitHub 연동 없음). 계정 itinerary-git, 프로젝트 moose-grade, 주소 https://moose-grade.vercel.app
+- 명령: `npx vercel deploy --prod --yes` (프로젝트 폴더에서). `.vercelignore`로 public/과 vercel.json만 업로드된다.
+- 배포 후 `curl -s https://moose-grade.vercel.app/ | grep 마지막`으로 갱신일 반영 확인.
 
 ## 수집 주의
 - KM77: robots.txt가 막은 `/buscador/*`, `/coches/mediciones-propias/` 목록 경로는 쓰지 않는다. 차량별 페이지만, 요청 간 250–400ms 간격.

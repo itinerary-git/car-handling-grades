@@ -2,3 +2,6 @@ data/raw/
 node_modules/
 .vercel/
 *.log
+
+.vercel
+.env*
