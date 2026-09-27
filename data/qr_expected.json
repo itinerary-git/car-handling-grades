@@ -1,0 +1,42 @@
+[
+ {
+  "cell": "W4G3",
+  "chip": true,
+  "car": "Tesla Model Y (2025 부분변경, RWD)",
+  "relation": "유사 이상 예상",
+  "confidence": "중간",
+  "basis": "Quattroruote 안정성 시험에서 부분변경 뒤에도 차체와 전자 제어가 뛰어나다는 평가를 다시 받았고, ESP가 초기 언더스티어를 잘 잡는다고 했어요. 부분변경 전 Model Y는 KM77에서 83km/h로 최고 기록대예요.",
+  "specs": "WB 2,890 / GC 167mm (KM77 제원) · KM77 무스 테스트 값 없음",
+  "url": "https://www.youtube.com/watch?v=12O2-ufA2so"
+ },
+ {
+  "cell": "W5G1",
+  "chip": true,
+  "car": "Audi RS6 Avant Performance (C8)",
+  "relation": "유사 예상",
+  "confidence": "중간",
+  "basis": "Quattroruote 영상 설명은 2톤이 넘는 왜건인데도 매우 민첩하고, 롤이 적고, 늘 안정적이고 안전하다고 평가했어요. 같은 등급의 KM77 기록은 AMG GT 63 4도어 80km/h, Panamera 4S 78km/h예요.",
+  "specs": "WB 2,929mm · GC 150mm 미만(에어 서스펜션, 추정) · KM77 무스 테스트 값 없음",
+  "url": "https://www.youtube.com/watch?v=jtopoahx-iY"
+ },
+ {
+  "cell": "W3G1",
+  "chip": true,
+  "car": "Lamborghini Revuelto",
+  "relation": "유사 예상",
+  "confidence": "낮음",
+  "basis": "Quattroruote 영상 설명은 차체가 평평하고 반응이 빠르며 시험을 무난히 통과했다고 했어요. 다만 직선 회피 속도는 높지만 최상위는 아니라고 적었어요. KM77에서 비슷한 성격의 차는 911 Turbo S 82km/h, AMG GT R 81km/h예요.",
+  "specs": "WB 2,779mm (KM77 제원) · GC 150mm 미만(추정) · KM77 무스 테스트 값 없음",
+  "url": "https://www.youtube.com/watch?v=kkeAebcX9BM"
+ },
+ {
+  "cell": "W3G4",
+  "chip": false,
+  "car": "Renault Rafale E-Tech Esprit Alpine",
+  "relation": "교차 확인",
+  "confidence": "-",
+  "basis": "KM77 1위(79km/h) 차량을 Quattroruote도 시험했어요. 뒷바퀴 조향과 높은 접지 한계 덕분에 회피 기동에서 제어가 좋다는 평가예요. 직선 이중 차선 변경에서는 ESP 개입이 약해 수정 조향이 많았다고 했어요.",
+  "specs": "KM77 79km/h · 두 시험 모두 양호",
+  "url": "https://www.youtube.com/watch?v=us5Qn7sQsbY"
+ }
+]

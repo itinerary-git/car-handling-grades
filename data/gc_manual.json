@@ -1,0 +1,715 @@
+{
+ "Porsche 911 Carrera 4S Coupé (2018-2020)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT León 1.5 TSI 96 KW (130 CV) Start/Stop Xcellence Launch Pack L (2020-2020)": {
+  "ground_clearance_mm": 136,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Polo Advance 1.0 TSI 70 kW (95 CV) (2017-2018)": {
+  "ground_clearance_mm": 142,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche Cayenne S (2018-2019)": {
+  "ground_clearance_mm": 210,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Alfa Romeo Stelvio First Edition I 2.0 206 kW (280 CV) AT8 Q4 (2017-2017)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz AMG GT R (2017-2018)": {
+  "ground_clearance_mm": 100,
+  "gc_source": "manufacturer (estimate, unverified)",
+  "wheelbase_mm": 2630
+ },
+ "BMW M2 Competition (2018-2021)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 116d 5p Aut. (2017-2019)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot 308 5p GT Line 1.2 PureTech 130 S&amp;S (2017-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A3 Sportback 35 TFSI 110 kW (150 CV) (2020-2022)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Opel Astra 5p Business Elegance 1.2 Turbo 107 kW (145 CV) (2020-2021)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Opel Astra Elegance 1.2 Turbo 96 kW (130 CV) (2021-2023)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "KIA Ceed 5p 1.0 T-GDi Tech 88 kW (120 CV) (2018-2019)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Citroën C4 Cactus PureTech 130 S&amp;S Shine (2018-2019)": {
+  "ground_clearance_mm": 165,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda Civic 5p 1.0 Turbo VTEC Executive (2017-2018)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota Corolla 125H Feel! (2019-2020)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Focus Berlina ST-Line X 1.0 EcoBoost 92 kW (125 CV) (2022-2024)": {
+  "ground_clearance_mm": 142,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Focus Berlina ST-Line 1.0 EcoBoost 92 kW (125 CV) (2018-2020)": {
+  "ground_clearance_mm": 142,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Subaru Impreza 1.6i Lineartronic Executive (2018-2019)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Hyundai i30 Fastback T-GDi 1.4 103 kW (140 CV) DCT Style (2018-2019)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Hyundai i30 5p 2.0 T-GDi 202 kW (275 CV) N Performance (2018-2020)": {
+  "ground_clearance_mm": 136,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Nissan LEAF 40 kWh Tekna (2017-2024)": {
+  "ground_clearance_mm": 155,
+  "gc_source": "verified (web search: EVspecs 155, range 135-155)"
+ },
+ "SEAT León 5p 1.5 EcoTSI 110 kW (150 CV) DSG-7 Start&amp;Stop FR (2018-2020)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Scala 1.5 TSI 110 kW (150 CV) DSG First Edition (2019-2019)": {
+  "ground_clearance_mm": 149,
+  "gc_source": "verified (web search: carsguide)"
+ },
+ "Mercedes-Benz CLA 200 d Shooting Brake 8G-DCT (2019-2023)": {
+  "ground_clearance_mm": 115,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot 508 GT PureTech 225 S&amp;S EAT8 (2018-2019)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota Corolla Hybrid 200 GR Sport (2022)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "KIA Proceed 1.4 T-GDi 103 kW (140 CV) GT Line DCT (2019-2020)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Scout 2.0 TDI 110 kW (150 CV) 4x4 (2017-2019)": {
+  "ground_clearance_mm": 171,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A7 Sportback 50 TDI 210 kW (286 CV) quattro tiptronic (2018-2021)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A6 Avant 50 TDI quattro tiptronic (2018-2021)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz CLS 350 d 4MATIC Coupé (2018-2018)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz EQE 350 Edition (2023-2024)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Lexus LS 500h AWD Luxury (2021)": {
+  "ground_clearance_mm": 165,
+  "gc_source": "verified-ish (US spec 6.5 in; other sources 144-147)"
+ },
+ "Peugeot 208 5p GT-Line 1.2 PureTech 110 S&amp;S (2015-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Citroën C3 PureTech 82 Shine (2016-2019)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Citroën C3 Exclusive BlueHDi 100 S&amp;S (2015-2016)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Clio Zen Energy dCi 66 kW (90 CV) EDC (2016-2018)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Opel Corsa-e Elegance (2019-2020)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Fabia 1.0 TSI 70 kW (95 CV) Style (2018-2019)": {
+  "ground_clearance_mm": 136,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT Ibiza 1.0 TSI 70 kW (95 CV) Start&amp;Stop Style (2017-2021)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford KA+ White Edition 1.19 Ti-VCT 63 kW (85 CV) (2017-2018)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Nissan Micra 1.5 dCi 66 kW (90 CV) S&amp;S Tekna (2016-2018)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Dacia Sandero Stepway TCE 66 kW (90 CV) (2016-2018)": {
+  "ground_clearance_mm": 175,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Dacia Sandero Stepway Comfort 74 kW (100 CV) ECO-G (2020-2022)": {
+  "ground_clearance_mm": 174,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota Yaris 5p 110 Active (2017-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Megane E-TECH iconic EV60 160 kW (220 CV) optimum charge (2021-2024)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota C-HR 180H Kaji Edition (2019-2020)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "verified approx (5.9 in)"
+ },
+ "Volkswagen ID.4 Pro Performance 150 kW (204 CV) 77 kWh (2021-2023)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi Q5 S line TDI quattro 150 kW (204 CV) S tronic (2024)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Nissan Qashqai e-POWER 140 kW (190 CV) Tekna+ (2022-2024)": {
+  "ground_clearance_mm": 180,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BYD Seal U Design (2024)": {
+  "ground_clearance_mm": 180,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Tayron R-Line 2.0 TDI 4Motion 142 kW (193 CV) DSG 7 plazas (2024)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Hyundai Tucson Style Híbrido 1.6 T-GDI HEV 169 kW (230 CV) 4x4 6AT (2020-2024)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Kodiaq RS 2.0 TDI 176 kW (240 CV) DSG 4x4 7 plazas (2018-2021)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi e-tron Sportback S line 50 quattro (2020-2022)": {
+  "ground_clearance_mm": 172,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi Q6 e-tron quattro S line (2024-2025)": {
+  "ground_clearance_mm": 184,
+  "gc_source": "verified (steel springs 184; air 159-229)"
+ },
+ "Porsche 718 Boxster S PDK (2016-2018)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota GT86 Sport (2016-2019)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota GR Supra Performance 3.0 Turbo 250 kW (340 CV) Aut. (2019-2022)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz A 200 d 7G-DCT (2015-2018)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Opel Astra 5p Dynamic 1.4 Turbo 92 kW (125 CV) Start/Stop (2015-2018)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Mégane Berlina GT Energy TCe 151 kW (205 CV) EDC (2015-2019)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Infiniti Q30 1.5d Premium (2015-2018)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Fiat Tipo 5p 1.6 Multijet II 88 kW (120 CV) Lounge (2016-2018)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Focus RS 2.3 EcoBoost 257 kW (350 CV) (2015-2019)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot e-208 GT 100 kW (136 CV) (2019-2021)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault ZOE Zen 100 kW R135 Batería 50 kWh (2019-2022)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Polestar 2 Long range Dual motor Performance Pack (2022-2023)": {
+  "ground_clearance_mm": 151,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz A 250 e (2022-2025)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "CUPRA Born 150 kW (204 CV) 58 kWh (2021-2024)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BYD Dolphin Comfort (2023-2025)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda Civic e:HEV Advance (2022-2025)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW M235i xDrive Gran Coupé Black Shadow Edition (2019-2020)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Fiat Tipo 5p Life 1.0 T3 73 CV (100 CV) (2020-2022)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Golf 50 Aniversario 1.5 eTSI 85 kW (115 CV) DSG (2024-2024)": {
+  "ground_clearance_mm": 136,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "CUPRA León 5p VZ 1.4 e-HYBRID 180 kW (245 CV) DSG (2020-2024)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A4 allroad 45 TFSI quattro-ultra 180 kW (245 CV) S tronic (2019-2020)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Octavia Ambition 1.0 TSI mHEV 81 kW (110 CV) DSG (2020-2023)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A1 Sportback S line 30 TFSI S tronic 7 vel. (2018-2020)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 420d Gran Coupé Aut. (2017-2018)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz CLA 200 Coupé 7G-DCT (2019-2023)": {
+  "ground_clearance_mm": 115,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Alfa Romeo Giulia 2.9 V6 Bi-turbo 375 kW (510 CV) Quadrifoglio Aut. 8 vel. (2016-2018)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Tesla Model 3 Tracción integral Gran autonomía (2018-2020)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 320d Gran Turismo Aut. (2016-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Arteon Elegance 2.0 TDI 4MOTION 176 kW (240 CV) DSG 7 vel. (2017-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 520d Berlina Aut. (2016-2018)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota Camry Electric Hybrid Luxury (2021-2025)": {
+  "ground_clearance_mm": 145,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz C 300 e Berlina (2022-2025)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz E 220 d 4MATIC All-Terrain (2017-2018)": {
+  "ground_clearance_mm": 156,
+  "gc_source": "verified (air susp. 121-156, max used)"
+ },
+ "Opel Insignia Country Tourer 2.0 CDTi BiTurbo Start &amp; Stop 154 kW (210 CV) 4x4 AT8 (2017-2019)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "KIA EV4 GT-Line 81 kWh 204 CV (2025)": {
+  "ground_clearance_mm": 155,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Passat Variant R-Line 2.0 TDI 150 CV DSG (2023)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 330i xDrive Touring (2019-2022)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW i4 eDrive40 Gran Coupé (2021-2024)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volvo V90 Cross Country D5 AWD Aut. (2016-2018)": {
+  "ground_clearance_mm": 210,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "KIA Stinger 3.3 T-GDI 276 kW (370 CV) GT 4x4 (2017-2018)": {
+  "ground_clearance_mm": 134,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Tesla Model 3 Tracción trasera (2023-2025)": {
+  "ground_clearance_mm": 138,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen ID.7 Pro Más 210 kW (286 CV) 77 kWh (2024-2025)": {
+  "ground_clearance_mm": 149,
+  "gc_source": "verified (web search: EVspecs)"
+ },
+ "Suzuki Swift 1.2 SHVS GLX (2017-2019)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot 208 GT Hybrid 136 e-DCS6 (2023-2025)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MINI Cooper 3 puertas Automático (2021-2024)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda e Advance 113 kW (154 CV) (2019-2024)": {
+  "ground_clearance_mm": 145,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Fiesta 5p ST-Line X 1.0 EcoBoost MHEV 114 kW (155 CV) (2022-2022)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota GR Yaris RZ (2020-2024)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Fabia 1.0 MPI 59 kW (80 CV) Ambition (2021-2023)": {
+  "ground_clearance_mm": 143,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Polo Life 1.0 TSI 70 kW (95 CV) DSG 7 vel. (2021-2024)": {
+  "ground_clearance_mm": 142,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT Ibiza 1.0 TSI 81 kW (110 CV) Xcellence Plus (2021-2022)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Opel Corsa 1.2 Turbo 74 kW (100 CV) GS (2023)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MG MG3 Hybrid+ Luxury (2024)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "CUPRA Ateca 2.0 TSI 221 kW (300 CV) 4Drive DSG 7 vel. (2018-2020)": {
+  "ground_clearance_mm": 165,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Omoda 5 Premium 1.6 TGDI 185 CV (2024-2024)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot E-2008 GT 115 kW (156 CV) (2023)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz GLB 200 d 4MATIC 7 plazas (2019-2023)": {
+  "ground_clearance_mm": 180,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Tiguan R-Line 1.5 TSI 110 kW (150 CV) DSG 7 vel. (2020-2024)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Kuga ST-Line 1.5 EcoBoost Auto-Start-Stop 110 kW (150 CV) 4x2 (2016-2018)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi Q2 S line 35 TFSI 110 kW (150 CV) S tronic (2020-2021)": {
+  "ground_clearance_mm": 144,
+  "gc_source": "verified (web search: cars-data 142-144)"
+ },
+ "Audi Q2 design edition 1.4 TFSI CoD 110 kW (150 CV) S tronic 7 vel. (2016-2018)": {
+  "ground_clearance_mm": 144,
+  "gc_source": "verified (web search: cars-data 142-144)"
+ },
+ "Opel Frontera Hybrid 145 GS (2025)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen T-Roc R-Line 1.5 eTSI 110 kW (150 CV) DSG (2025)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Fiat 500X 1.0 Firefly Turbo 88 kW (120 CV) Cross (2018-2019)": {
+  "ground_clearance_mm": 180,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota C-HR Hybrid Advance (2016-2018)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "verified approx (5.9 in)"
+ },
+ "Opel Grandland X Excellence 1.2 Turbo Start&amp;Stop 96 kW (130 CV) (2017-2018)": {
+  "ground_clearance_mm": 188,
+  "gc_source": "verified (web search: cars-data)"
+ },
+ "Renault Kadjar Intens TCe GPF 103 kW (140 CV) (2018-2020)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "verified (web search: carsguide)"
+ },
+ "KIA XCeed 1.0 T-GDi Emotion 88 kW (120 CV) (2019-2021)": {
+  "ground_clearance_mm": 172,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MG ZS Luxury 1.5 VTI-tech (2021-2025)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Geely E5 MAX+ (2026)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Lexus RZ 450e Luxury (2022-2025)": {
+  "ground_clearance_mm": 175,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Peugeot 2008 Allure 1.6 BlueHDi 100 S&amp;S (2016-2019)": {
+  "ground_clearance_mm": 165,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT Arona 1.6 TDI 85 kW (115 CV) Start/Stop FR (2018-2018)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "verified (web search)"
+ },
+ "Mercedes-Benz E 220 d Cabrio (2018-2020)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Lexus LC 500h Sport+ (2016-2019)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Alpine A110 S (2022-2025)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BYD Seal Excellence AWD (2023-2026)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz CLA 250+ con tecnología EQ (2025)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz Mercedes-AMG GT 63 S 4MATIC+ 4 puertas Coupé": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A5 Coupé 3.0 TDI 160 kW (218 CV) quattro S tronic (2016-2018)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BYD Han AWD Executive (2023-2026)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche Taycan GTS (2021-2024)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche Panamera 4S (2017-2019)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi RS e-tron GT (2021-2024)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mazda 6e Takumi Plus E-Skyactiv EV Long Range (2025)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Hyundai i10 1.2 MPI 64 kW (84 CV) AT Style (2020-2023)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Hyundai i10 1.2 MPI 64 kW (87 CV) AT Link (2018-2018)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault 5 E-Tech iconic cinq 110 kW (150 CV) 52 kWh (2024)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Nissan Micra Tekna Long Range 52 kWh (2025)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Abarth 500e Turismo (2023)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MINI Cooper SE 3 puertas Acabado L (2019-2021)": {
+  "ground_clearance_mm": 155,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MINI Cooper SE Classic (2023)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT Arona 1.0 TSI 81 kW (110 CV) DSG X-Perience Plus (2021-2022)": {
+  "ground_clearance_mm": 190,
+  "gc_source": "verified (web search: cars-data/autotijd)"
+ },
+ "Citroën C3 Aircross PureTech 110 S&amp;S Shine (2017-2019)": {
+  "ground_clearance_mm": 175,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz E 220 d Coupé (2020-2023)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW 840d xDrive Coupé (2018-2020)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Skoda Superb Selection 1.5 TSI mHEV 150 CV DSG (2024)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz AMG GT C Roadster (2017-2018)": {
+  "ground_clearance_mm": 105,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz EQS 580 4MATIC (2021-2022)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "SEAT Mii electric Plus (2019-2022)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Twingo Zen Energy SCe 52 KW (70 CV) (2014-2018)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Twingo Electric SL Vibes 60 kW R80 Batería 20 kWh (2020-2022)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Fiat 124 Spider Lusso 103 kW (140 CV) (2016-2019)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Renault Scenic Edition One Energy dCi 96 kW (130 CV) (2016-2018)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda Jazz 1.5 i-VTEC Dynamic (2018-2018)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda Prelude e:HEV Advance (2025)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi TT Roadster 45 TFSI 180 kW (245 CV) quattro S tronic 7 vel. (2019-2021)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BMW i3s 94Ah (2017-2019)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Tesla Model S Plaid (2021-2025)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mazda CX-5 2.5 e-SKYACTIV G 141 CV AT Homura (2025)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "BYD Seal 6 DM-i Comfort (2025)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Citroën SpaceTourer Talla XS BlueHDi 150 S&amp;S Feel (2016-2018)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Fiat 500e Berlina Icon 87 kW (118 CV) (2020-2022)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Mustang Convertible GT 5.0 V8 Aut. (2024)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Grand Tourneo Connect Active 1.5 EcoBoost 114 CV (2022-2024)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche 911 Turbo S Coupé (2025)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Toyota Aygo X Cross Play (2022-2025)": {
+  "ground_clearance_mm": 155,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen ID. Buzz Pro Batalla Corta 150 kW (204 CV) 77 kWh 5 asientos (2022-2024)": {
+  "ground_clearance_mm": 160,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Volkswagen Multivan corto Style 1.4 eHybrid 160 kW (218 CV) DSG 6 vel. (2021-2024)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz X 250 d 4MATIC Pure Automático (2017-2020)": {
+  "ground_clearance_mm": 220,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Leapmotor T03 BEV 37 kWh (2024)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ }
+}

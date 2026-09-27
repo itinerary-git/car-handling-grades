@@ -1,0 +1,249 @@
+<title>무스 테스트 등급표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --heat:#0E7A68; --heat-ink:#FFFFFF; --cone:#D9520B; --empty:#E8ECEA; --peer:#6A45D6; --peer-soft:#EEE9FC; --qr:#9A5B00; --qr-soft:#FBEFD9;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.01em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,54px)}
+h2{font-size:28px}
+p{margin:0}
+.lede{max-width:66ch;color:var(--muted);margin-top:10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cone)}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:22px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-size:30px;font-weight:600;color:var(--ink);line-height:1}
+
+/* grid */
+.board{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.scroll{overflow-x:auto;padding-bottom:6px}
+table.grid{border-collapse:separate;border-spacing:4px;min-width:760px;width:100%;table-layout:fixed}
+.grid th{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--muted);text-align:center;padding:4px 2px;font-variant-numeric:tabular-nums}
+.grid th.row{text-align:right;padding-right:8px;width:92px}
+.grid th .unit{display:block;font-size:10px;opacity:.75}
+.axis{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cell{position:relative;height:104px;padding:8px 9px;border-radius:6px;border:1px solid transparent;cursor:pointer;vertical-align:top;
+  background:color-mix(in oklab,var(--heat) var(--p),var(--surface));color:var(--c);transition:transform .12s ease,border-color .12s ease}
+.cell:hover{transform:translateY(-1px)}
+.cell:focus-visible{outline:2px solid var(--cone);outline-offset:2px}
+.cell[aria-pressed="true"]{border-color:var(--cone);box-shadow:0 0 0 1px var(--cone)}
+.cell .kmh{font-family:var(--display);font-size:30px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.cell .kmh small{font-family:var(--mono);font-size:10px;font-weight:400;margin-left:2px;opacity:.8}
+.cell .who{display:block;font-size:12px;line-height:1.3;margin-top:5px;overflow-wrap:anywhere}
+.cell .n{position:absolute;right:8px;top:8px;font-family:var(--mono);font-size:10px;opacity:.7}
+.cell.tie .kmh::after{content:"공동";font-family:var(--body);font-size:10px;font-weight:600;margin-left:6px;padding:1px 5px;border-radius:3px;border:1px solid currentColor;vertical-align:middle}
+.cell.none{background:var(--empty);color:var(--muted);cursor:default}
+.cell.none .who{font-size:11px}
+.legend{display:flex;align-items:center;gap:10px;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap}
+.ramp{height:10px;width:160px;border-radius:3px;background:linear-gradient(90deg,color-mix(in oklab,var(--heat) 8%,var(--surface)),var(--heat))}
+
+/* detail */
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.detail h3{font-size:22px}
+.detail .sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:4px}
+.detail ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.detail li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:start;padding-top:10px;border-top:1px solid var(--line)}
+.detail li:first-child{border-top:0;padding-top:0}
+.detail .sp{font-family:var(--display);font-size:24px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.detail .nm{font-size:13px;line-height:1.4}
+.detail .sp-meta{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
+.detail a{color:inherit;text-decoration-color:var(--cone);text-underline-offset:2px}
+.flag{font-family:var(--mono);font-size:10px;padding:0 4px;border-radius:3px;border:1px solid var(--line);margin-left:4px;white-space:nowrap}
+.flag.e{color:var(--cone);border-color:var(--cone)}
+
+/* prose */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.block{display:grid;gap:12px;align-content:start}
+.block ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.block li{max-width:66ch}
+table.src{border-collapse:collapse;width:100%;font-size:13.5px}
+.src th,.src td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.src th{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.src td:first-child{white-space:nowrap;font-weight:600}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.pill.main{background:var(--heat);color:var(--heat-ink);border-color:var(--heat)}
+.pill.part{border-color:var(--heat);color:var(--heat)}
+.pill.no{color:var(--muted)}
+/* other-source mentions */
+.peer{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--peer-soft);color:var(--peer);border:1px solid var(--peer)}
+.detail .peers{margin-top:16px;padding-top:12px;border-top:2px solid var(--peer);display:grid;gap:10px}
+.detail .peers h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--peer)}
+.detail .peer-item{border-left:3px solid var(--peer);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .peer-item b{color:var(--peer)}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--peer-soft);border:1px solid var(--peer);vertical-align:-2px}
+/* quattroruote expected */
+.qrchip{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--qr-soft);color:var(--qr);border:1px dashed var(--qr)}
+.cell.none.hasqr{cursor:pointer;outline:1px dashed var(--qr);outline-offset:-3px}
+.detail .qrs{margin-top:16px;padding-top:12px;border-top:2px dashed var(--qr);display:grid;gap:10px}
+.detail .qrs h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--qr)}
+.detail .qr-item{border-left:3px dashed var(--qr);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .qr-item b{color:var(--qr)}
+.swatch.qr{background:var(--qr-soft);border:1px dashed var(--qr)}
+.changelog{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13.5px}
+.changelog li{max-width:90ch}
+.cl-date{font-family:var(--mono);font-size:12px;color:var(--muted);margin-right:8px}
+footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+
+@media (max-width:960px){
+  .board{grid-template-columns:1fr}
+  .detail{position:static}
+  .cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.cell{transition:none}.cell:hover{transform:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">ISO 3888-2 · KM77 maniobra de esquiva</p>
+    <h1>무스 테스트 등급표</h1>
+    <p class="lede">휠베이스 6단계 × 지상고 6단계, 총 36개 등급마다 KM77 무스 테스트(회피 기동)를 가장 빠른 진입 속도로 통과한 차를 1위로 뽑았어요. 78km/h 이상을 기록한 차만 비교했어요. 칸 색이 진할수록 속도가 높아요. 칸을 누르면 해당 등급의 상위 차량과 제원이 보여요.</p>
+    <div class="facts">
+      <span><b>{{TOTAL}}</b>78km/h 이상 차량</span>
+      <span><b>{{FILLED}}/36</b>1위가 있는 등급</span>
+      <span><b>83 km/h</b>KM77 최고 기록대</span>
+      <span><b>{{UPDATED}}</b>마지막 갱신</span>
+    </div>
+  </header>
+
+  <section class="board" aria-label="등급표">
+    <div>
+      <div class="scroll">
+        <table class="grid" id="grid">
+          <thead><tr><th class="row"><span class="axis">휠베이스 ↓ / 지상고 →</span></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span></div>
+    </div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </section>
+
+  <section class="cols">
+    <div class="block">
+      <h2>어떻게 뽑았나</h2>
+      <ul>
+        <li><b>순위 기준</b>은 KM77이 측정한 무스 테스트 통과 속도(km/h)예요. 콘을 하나도 쓰러뜨리지 않고 통과한 가장 높은 진입 속도로, 높을수록 좋아요.</li>
+        <li><b>등급 경계</b>는 아래 칸을 포함해요. 휠베이스 2,600mm 미만 / 2,600–2,699 / … / 3,000mm 이상, 지상고 150mm 미만 / 150–159 / … / 190mm 이상이에요.</li>
+        <li><b>휠베이스</b>는 KM77 제원표 값이에요. <b>지상고</b>는 KM77에 값이 있으면 그 값을 쓰고, 없으면 제조사 공표값을 넣었어요. 표에서 <span class="flag e">추정</span>은 검증 전 추정치, <span class="flag">검증</span>은 웹 검색으로 확인한 값이에요.</li>
+        <li><b>77km/h 이하</b>를 기록한 차는 비교 대상에서 뺐어요. 그래서 1위가 77km/h 이하였던 등급은 비어 있어요.</li>
+        <li><b>보라색 표시</b>는 Consumer Reports, Quattroruote, 오토뷰가 그 등급 1위 차와 견줘 핸들링이 비슷하거나 더 낫다고 평가한 차예요. 이 사이트들은 직접 인용할 수 없어서 공개 검색 결과로 확인한 내용을 요약했어요. 표시된 차는 자기 제원 등급이 달라도 비교 대상인 1위 차의 칸에 붙였어요.</li>
+        <li><b>호박색 점선 표시</b>는 KM77 무스 테스트 값은 없지만, Quattroruote가 YouTube에 공개한 안정성 시험(Vairano, 젖은 노면 이중 차선 변경 · 마른 노면 선회 중 차선 변경)에서 평가가 좋아 그 등급 차량과 비슷하거나 나을 것으로 예상한 차예요. 차 자신의 제원 등급 칸에 붙였고, 칸을 누르면 근거와 확신 정도가 보여요.</li>
+        <li>같은 속도면 공동 1위로 표시했어요. 제조사가 다르고 시험 조건이 다른 수치(스키드패드 g, 8자 주행 시간)로 억지로 순위를 가르지 않았어요.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h2>읽을 때 주의할 점</h2>
+      <ul>
+        <li>무스 테스트 속도는 <b>시승한 버전과 타이어</b>에 크게 좌우돼요. 같은 모델이라도 트림이 다르면 결과가 달라질 수 있어요.</li>
+        <li>KM77은 영상과 기사로 결과를 발표했어도 데이터 칸이 비어 있는 경우가 있어요. 그래서 MX-5 RF(기사상 80km/h), GR86, Civic Type R, 골프 GTI, IONIQ 6 같은 차는 이 표에 빠졌어요.</li>
+        <li>지상고 추정치 178대 중 순위에 영향을 주는 경계값 차량 12대만 따로 검증했어요. 에어 서스펜션 차량(E-Class All-Terrain, Q6 e-tron 등)은 높이가 바뀌어서 등급이 달라질 수 있어요.</li>
+        <li>KM77 표기 지상고가 제조사 공표값과 다를 때가 있어요(예: GLA 134mm). 이때도 KM77 값을 그대로 썼어요.</li>
+        <li>빈 칸은 KM77 기록 차량이 없거나, 있더라도 모두 77km/h 이하인 등급이에요.</li>
+        <li>Quattroruote의 한계 속도는 영상 화면에만 나와서, 영상 설명에 적힌 평가와 별점, 속도 3건만 썼어요. 두 곳에서 모두 시험한 Opel Astra(Quattroruote 젖은 노면 88km/h·4성, KM77 76km/h)를 보면 두 시험 수치는 바로 바꿔 쓸 수 없어요. 그래서 호박색 표시는 예상일 뿐 측정값이 아니에요.</li>
+        <li>보라색 표시는 세 사이트를 검색해 찾은 만큼만 반영했어요. 표시가 없다고 해서 비슷한 차가 없다는 뜻은 아니에요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>7개 사이트 활용 범위</h2>
+    <p class="lede" style="margin-top:0">요청하신 7개 사이트 중 무스 테스트를 같은 방식으로 대량 측정해 공개하는 곳은 KM77뿐이어서, 등급 순위는 KM77 한 곳으로 매겼어요. 나머지는 접근 제한이 있어 공개 검색 결과로 일부 차량만 교차 확인했어요.</p>
+    <div class="scroll">
+      <table class="src">
+        <thead><tr><th>사이트</th><th>활용</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>KM77 (스페인)</td><td><span class="pill main">순위 기준</span></td><td>차량별 실측 페이지 1,177개를 확인해 무스 테스트 값이 있는 291대를 추렸어요. robots.txt가 막은 목록·검색 경로는 쓰지 않았어요.</td></tr>
+          <tr><td>Teknikens Värld (스웨덴)</td><td><span class="pill part">보도 인용</span></td><td>이용약관이 데이터 수집을 금지해서 직접 수집하지 않았어요. 보도된 수치로 Model 3 72km/h, Model Y 75km/h를 확인했어요. KM77(83km/h)과 코스·판정이 달라 수치를 섞지 않았어요.</td></tr>
+          <tr><td>Car and Driver (미국)</td><td><span class="pill part">일부 확인</span></td><td>Kia Stinger GT AWD 스키드패드 0.91g를 확인했어요. 스키드패드는 정상 선회 한계라 회피 기동과 직접 비교하지 않았어요.</td></tr>
+          <tr><td>MotorTrend (미국)</td><td><span class="pill part">일부 확인</span></td><td>Model S Plaid 8자 코스 23.5초(평균 0.90g), Model Y 스키드패드 0.86g를 확인했어요. 이 사이트는 자동 수집을 막고 있어요.</td></tr>
+          <tr><td>Consumer Reports (미국)</td><td><span class="pill part">비교 평가 1건</span></td><td>회피 기동 점수는 유료 회원 전용이에요. 공개 검색 결과로 Model Y가 Model 3와 핸들링이 비슷하다는 평가를 찾아 W4G1 칸에 표시했어요. Q5와 X3처럼 1위끼리 비교한 내용은 표시하지 않았어요.</td></tr>
+          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 3대</span></td><td>공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
+          <tr><td>오토뷰 (한국)</td><td><span class="pill no">해당 없음</span></td><td>조건에 맞는 평가를 찾지 못했어요. 검색에 나온 G70이 스팅어보다 낫다는 평가, 폴스타 2가 Model 3보다 낫다는 평가는 오토뷰가 아닌 다른 매체나 커뮤니티 글이라 뺐어요.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>갱신 기록</h2>
+    <ul class="changelog">{{CHANGELOG}}</ul>
+  </section>
+
+  <footer>마지막 갱신 {{UPDATED}} · 원자료: km77.com 차량별 "Mediciones propias" 페이지 · <a href="all_cars.csv" style="color:inherit">전체 차량 목록 CSV</a></footer>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const lo = 78, hi = 83;
+const qrItems = c => c.qr.filter(q => q.chip);
+const tbody = document.querySelector('#grid tbody');
+const headRow = document.querySelector('#grid thead tr');
+DATA.GC.forEach(g => { const th = document.createElement('th'); th.innerHTML = g + '<span class="unit">mm</span>'; headRow.appendChild(th); });
+let selected = null;
+DATA.WB.forEach((w, i) => {
+  const tr = document.createElement('tr');
+  const th = document.createElement('th'); th.className = 'row'; th.innerHTML = w + '<span class="unit">mm</span>'; tr.appendChild(th);
+  DATA.GC.forEach((g, j) => {
+    const c = DATA.cells[i][j];
+    const td = document.createElement('td');
+    td.className = 'cell';
+    td.dataset.i = i; td.dataset.j = j;
+    if (!c.n) {
+      td.classList.add('none');
+      td.innerHTML = '<span class="kmh">–</span><span class="who">78km/h 이상 기록 없음</span>' + qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('');
+      if (qrItems(c).length) {
+        td.classList.add('hasqr'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+        td.addEventListener('click', () => show(i, j));
+        td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
+      }
+    } else {
+      const t = Math.max(0, Math.min(1, (c.top - lo) / (hi - lo)));
+      const p = Math.round(8 + t * 92);
+      td.style.setProperty('--p', p + '%');
+      td.style.setProperty('--c', p > 55 ? 'var(--heat-ink)' : 'var(--ink)');
+      if (c.winners.length > 1) td.classList.add('tie');
+      td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+      td.setAttribute('aria-label', `휠베이스 ${w}mm, 지상고 ${g}mm: ${c.winners.join(', ')} ${c.top}km/h`);
+      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}`;
+      td.addEventListener('click', () => show(i, j));
+      td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
+    }
+    tr.appendChild(td);
+  });
+  tbody.appendChild(tr);
+});
+function show(i, j) {
+  const c = DATA.cells[i][j];
+  if (selected) selected.setAttribute('aria-pressed', 'false');
+  selected = tbody.querySelector(`td[data-i="${i}"][data-j="${j}"]`);
+  selected.setAttribute('aria-pressed', 'true');
+  const flag = e => e === 'e' ? '<span class="flag e">추정</span>' : e === 'v' ? '<span class="flag">검증</span>' : '';
+  document.getElementById('detail').innerHTML =
+    `<h3>W${i + 1} · G${j + 1}</h3><p class="sub">휠베이스 ${DATA.WB[i]}mm · 지상고 ${DATA.GC[j]}mm · ${c.n}대</p>${c.n ? '' : '<p class="sub">KM77 78km/h 이상 기록 차량 없음</p>'}
+     <ol>${c.list.map(r => `<li><span class="sp">${r.kmh}</span><span class="nm"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
+     <span class="sp-meta">WB ${r.wb.toLocaleString()} · GC ${r.gc}mm${flag(r.est)}</span></span></li>`).join('')}</ol>
+     ${c.mentions.length ? `<div class="peers"><h4>다른 사이트 평가</h4>${c.mentions.map(m => `<div class="peer-item"><b>${m.car}</b> · ${m.vs}와 핸들링 ${m.relation}<br>${m.summary}<span class="sp-meta">${m.own}</span><span class="sp-meta">${m.caveat}</span><span class="sp-meta">출처: <a href="${m.url}" target="_blank" rel="noopener">${m.source}</a> (검색 결과 요약)</span></div>`).join('')}</div>` : ''}
+     ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}`;
+}
+show(3, 0);
+</script>

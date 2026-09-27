@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="휠베이스 × 지상고 36개 등급별 KM77 무스 테스트 1위 차량 표">
+<title>무스 테스트 등급표</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --heat:#0E7A68; --heat-ink:#FFFFFF; --cone:#D9520B; --empty:#E8ECEA; --peer:#6A45D6; --peer-soft:#EEE9FC; --qr:#9A5B00; --qr-soft:#FBEFD9;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:.01em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(34px,6vw,54px)}
+h2{font-size:28px}
+p{margin:0}
+.lede{max-width:66ch;color:var(--muted);margin-top:10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--cone)}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:22px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.facts b{display:block;font-family:var(--display);font-size:30px;font-weight:600;color:var(--ink);line-height:1}
+
+/* grid */
+.board{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.scroll{overflow-x:auto;padding-bottom:6px}
+table.grid{border-collapse:separate;border-spacing:4px;min-width:760px;width:100%;table-layout:fixed}
+.grid th{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--muted);text-align:center;padding:4px 2px;font-variant-numeric:tabular-nums}
+.grid th.row{text-align:right;padding-right:8px;width:92px}
+.grid th .unit{display:block;font-size:10px;opacity:.75}
+.axis{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cell{position:relative;height:104px;padding:8px 9px;border-radius:6px;border:1px solid transparent;cursor:pointer;vertical-align:top;
+  background:color-mix(in oklab,var(--heat) var(--p),var(--surface));color:var(--c);transition:transform .12s ease,border-color .12s ease}
+.cell:hover{transform:translateY(-1px)}
+.cell:focus-visible{outline:2px solid var(--cone);outline-offset:2px}
+.cell[aria-pressed="true"]{border-color:var(--cone);box-shadow:0 0 0 1px var(--cone)}
+.cell .kmh{font-family:var(--display);font-size:30px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.cell .kmh small{font-family:var(--mono);font-size:10px;font-weight:400;margin-left:2px;opacity:.8}
+.cell .who{display:block;font-size:12px;line-height:1.3;margin-top:5px;overflow-wrap:anywhere}
+.cell .n{position:absolute;right:8px;top:8px;font-family:var(--mono);font-size:10px;opacity:.7}
+.cell.tie .kmh::after{content:"공동";font-family:var(--body);font-size:10px;font-weight:600;margin-left:6px;padding:1px 5px;border-radius:3px;border:1px solid currentColor;vertical-align:middle}
+.cell.none{background:var(--empty);color:var(--muted);cursor:default}
+.cell.none .who{font-size:11px}
+.legend{display:flex;align-items:center;gap:10px;margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap}
+.ramp{height:10px;width:160px;border-radius:3px;background:linear-gradient(90deg,color-mix(in oklab,var(--heat) 8%,var(--surface)),var(--heat))}
+
+/* detail */
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.detail h3{font-size:22px}
+.detail .sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:4px}
+.detail ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.detail li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:start;padding-top:10px;border-top:1px solid var(--line)}
+.detail li:first-child{border-top:0;padding-top:0}
+.detail .sp{font-family:var(--display);font-size:24px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.detail .nm{font-size:13px;line-height:1.4}
+.detail .sp-meta{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
+.detail a{color:inherit;text-decoration-color:var(--cone);text-underline-offset:2px}
+.flag{font-family:var(--mono);font-size:10px;padding:0 4px;border-radius:3px;border:1px solid var(--line);margin-left:4px;white-space:nowrap}
+.flag.e{color:var(--cone);border-color:var(--cone)}
+
+/* prose */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.block{display:grid;gap:12px;align-content:start}
+.block ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.block li{max-width:66ch}
+table.src{border-collapse:collapse;width:100%;font-size:13.5px}
+.src th,.src td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.src th{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.src td:first-child{white-space:nowrap;font-weight:600}
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.pill.main{background:var(--heat);color:var(--heat-ink);border-color:var(--heat)}
+.pill.part{border-color:var(--heat);color:var(--heat)}
+.pill.no{color:var(--muted)}
+/* other-source mentions */
+.peer{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--peer-soft);color:var(--peer);border:1px solid var(--peer)}
+.detail .peers{margin-top:16px;padding-top:12px;border-top:2px solid var(--peer);display:grid;gap:10px}
+.detail .peers h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--peer)}
+.detail .peer-item{border-left:3px solid var(--peer);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .peer-item b{color:var(--peer)}
+.swatch{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--peer-soft);border:1px solid var(--peer);vertical-align:-2px}
+/* quattroruote expected */
+.qrchip{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--qr-soft);color:var(--qr);border:1px dashed var(--qr)}
+.cell.none.hasqr{cursor:pointer;outline:1px dashed var(--qr);outline-offset:-3px}
+.detail .qrs{margin-top:16px;padding-top:12px;border-top:2px dashed var(--qr);display:grid;gap:10px}
+.detail .qrs h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--qr)}
+.detail .qr-item{border-left:3px dashed var(--qr);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .qr-item b{color:var(--qr)}
+.swatch.qr{background:var(--qr-soft);border:1px dashed var(--qr)}
+.changelog{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13.5px}
+.changelog li{max-width:90ch}
+.cl-date{font-family:var(--mono);font-size:12px;color:var(--muted);margin-right:8px}
+footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+
+@media (max-width:960px){
+  .board{grid-template-columns:1fr}
+  .detail{position:static}
+  .cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.cell{transition:none}.cell:hover{transform:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">ISO 3888-2 · KM77 maniobra de esquiva</p>
+    <h1>무스 테스트 등급표</h1>
+    <p class="lede">휠베이스 6단계 × 지상고 6단계, 총 36개 등급마다 KM77 무스 테스트(회피 기동)를 가장 빠른 진입 속도로 통과한 차를 1위로 뽑았어요. 78km/h 이상을 기록한 차만 비교했어요. 칸 색이 진할수록 속도가 높아요. 칸을 누르면 해당 등급의 상위 차량과 제원이 보여요.</p>
+    <div class="facts">
+      <span><b>72</b>78km/h 이상 차량</span>
+      <span><b>23/36</b>1위가 있는 등급</span>
+      <span><b>83 km/h</b>KM77 최고 기록대</span>
+      <span><b>2026-09-27</b>마지막 갱신</span>
+    </div>
+  </header>
+
+  <section class="board" aria-label="등급표">
+    <div>
+      <div class="scroll">
+        <table class="grid" id="grid">
+          <thead><tr><th class="row"><span class="axis">휠베이스 ↓ / 지상고 →</span></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span></div>
+    </div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </section>
+
+  <section class="cols">
+    <div class="block">
+      <h2>어떻게 뽑았나</h2>
+      <ul>
+        <li><b>순위 기준</b>은 KM77이 측정한 무스 테스트 통과 속도(km/h)예요. 콘을 하나도 쓰러뜨리지 않고 통과한 가장 높은 진입 속도로, 높을수록 좋아요.</li>
+        <li><b>등급 경계</b>는 아래 칸을 포함해요. 휠베이스 2,600mm 미만 / 2,600–2,699 / … / 3,000mm 이상, 지상고 150mm 미만 / 150–159 / … / 190mm 이상이에요.</li>
+        <li><b>휠베이스</b>는 KM77 제원표 값이에요. <b>지상고</b>는 KM77에 값이 있으면 그 값을 쓰고, 없으면 제조사 공표값을 넣었어요. 표에서 <span class="flag e">추정</span>은 검증 전 추정치, <span class="flag">검증</span>은 웹 검색으로 확인한 값이에요.</li>
+        <li><b>77km/h 이하</b>를 기록한 차는 비교 대상에서 뺐어요. 그래서 1위가 77km/h 이하였던 등급은 비어 있어요.</li>
+        <li><b>보라색 표시</b>는 Consumer Reports, Quattroruote, 오토뷰가 그 등급 1위 차와 견줘 핸들링이 비슷하거나 더 낫다고 평가한 차예요. 이 사이트들은 직접 인용할 수 없어서 공개 검색 결과로 확인한 내용을 요약했어요. 표시된 차는 자기 제원 등급이 달라도 비교 대상인 1위 차의 칸에 붙였어요.</li>
+        <li><b>호박색 점선 표시</b>는 KM77 무스 테스트 값은 없지만, Quattroruote가 YouTube에 공개한 안정성 시험(Vairano, 젖은 노면 이중 차선 변경 · 마른 노면 선회 중 차선 변경)에서 평가가 좋아 그 등급 차량과 비슷하거나 나을 것으로 예상한 차예요. 차 자신의 제원 등급 칸에 붙였고, 칸을 누르면 근거와 확신 정도가 보여요.</li>
+        <li>같은 속도면 공동 1위로 표시했어요. 제조사가 다르고 시험 조건이 다른 수치(스키드패드 g, 8자 주행 시간)로 억지로 순위를 가르지 않았어요.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h2>읽을 때 주의할 점</h2>
+      <ul>
+        <li>무스 테스트 속도는 <b>시승한 버전과 타이어</b>에 크게 좌우돼요. 같은 모델이라도 트림이 다르면 결과가 달라질 수 있어요.</li>
+        <li>KM77은 영상과 기사로 결과를 발표했어도 데이터 칸이 비어 있는 경우가 있어요. 그래서 MX-5 RF(기사상 80km/h), GR86, Civic Type R, 골프 GTI, IONIQ 6 같은 차는 이 표에 빠졌어요.</li>
+        <li>지상고 추정치 178대 중 순위에 영향을 주는 경계값 차량 12대만 따로 검증했어요. 에어 서스펜션 차량(E-Class All-Terrain, Q6 e-tron 등)은 높이가 바뀌어서 등급이 달라질 수 있어요.</li>
+        <li>KM77 표기 지상고가 제조사 공표값과 다를 때가 있어요(예: GLA 134mm). 이때도 KM77 값을 그대로 썼어요.</li>
+        <li>빈 칸은 KM77 기록 차량이 없거나, 있더라도 모두 77km/h 이하인 등급이에요.</li>
+        <li>Quattroruote의 한계 속도는 영상 화면에만 나와서, 영상 설명에 적힌 평가와 별점, 속도 3건만 썼어요. 두 곳에서 모두 시험한 Opel Astra(Quattroruote 젖은 노면 88km/h·4성, KM77 76km/h)를 보면 두 시험 수치는 바로 바꿔 쓸 수 없어요. 그래서 호박색 표시는 예상일 뿐 측정값이 아니에요.</li>
+        <li>보라색 표시는 세 사이트를 검색해 찾은 만큼만 반영했어요. 표시가 없다고 해서 비슷한 차가 없다는 뜻은 아니에요.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>7개 사이트 활용 범위</h2>
+    <p class="lede" style="margin-top:0">요청하신 7개 사이트 중 무스 테스트를 같은 방식으로 대량 측정해 공개하는 곳은 KM77뿐이어서, 등급 순위는 KM77 한 곳으로 매겼어요. 나머지는 접근 제한이 있어 공개 검색 결과로 일부 차량만 교차 확인했어요.</p>
+    <div class="scroll">
+      <table class="src">
+        <thead><tr><th>사이트</th><th>활용</th><th>내용</th></tr></thead>
+        <tbody>
+          <tr><td>KM77 (스페인)</td><td><span class="pill main">순위 기준</span></td><td>차량별 실측 페이지 1,177개를 확인해 무스 테스트 값이 있는 291대를 추렸어요. robots.txt가 막은 목록·검색 경로는 쓰지 않았어요.</td></tr>
+          <tr><td>Teknikens Värld (스웨덴)</td><td><span class="pill part">보도 인용</span></td><td>이용약관이 데이터 수집을 금지해서 직접 수집하지 않았어요. 보도된 수치로 Model 3 72km/h, Model Y 75km/h를 확인했어요. KM77(83km/h)과 코스·판정이 달라 수치를 섞지 않았어요.</td></tr>
+          <tr><td>Car and Driver (미국)</td><td><span class="pill part">일부 확인</span></td><td>Kia Stinger GT AWD 스키드패드 0.91g를 확인했어요. 스키드패드는 정상 선회 한계라 회피 기동과 직접 비교하지 않았어요.</td></tr>
+          <tr><td>MotorTrend (미국)</td><td><span class="pill part">일부 확인</span></td><td>Model S Plaid 8자 코스 23.5초(평균 0.90g), Model Y 스키드패드 0.86g를 확인했어요. 이 사이트는 자동 수집을 막고 있어요.</td></tr>
+          <tr><td>Consumer Reports (미국)</td><td><span class="pill part">비교 평가 1건</span></td><td>회피 기동 점수는 유료 회원 전용이에요. 공개 검색 결과로 Model Y가 Model 3와 핸들링이 비슷하다는 평가를 찾아 W4G1 칸에 표시했어요. Q5와 X3처럼 1위끼리 비교한 내용은 표시하지 않았어요.</td></tr>
+          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 3대</span></td><td>공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
+          <tr><td>오토뷰 (한국)</td><td><span class="pill no">해당 없음</span></td><td>조건에 맞는 평가를 찾지 못했어요. 검색에 나온 G70이 스팅어보다 낫다는 평가, 폴스타 2가 Model 3보다 낫다는 평가는 오토뷰가 아닌 다른 매체나 커뮤니티 글이라 뺐어요.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>갱신 기록</h2>
+    <ul class="changelog"><li><span class="cl-date">2026-09-27</span> 첫 공개 · 78km/h 이상 72대, Quattroruote 예상 3대, 비교 평가 1건</li></ul>
+  </section>
+
+  <footer>마지막 갱신 2026-09-27 · 원자료: km77.com 차량별 "Mediciones propias" 페이지 · <a href="all_cars.csv" style="color:inherit">전체 차량 목록 CSV</a></footer>
+</div>
+
+<script>
+const DATA = {"WB":["~2599","2600~2699","2700~2799","2800~2899","2900~2999","3000~"],"GC":["~149","150~159","160~169","170~179","180~189","190~"],"cells":[[{"n":16,"mentions":[],"qr":[],"winners":["Porsche 911 Turbo S (992.2)"],"top":82,"list":[{"name":"Porsche 911 Turbo S Coupé (2025)","kmh":82,"wb":2450,"gc":110,"est":"e","url":"https://www.km77.com/coches/porsche/911/2025/mediciones-propias"},{"name":"Fiat 124 Spider Lusso 103 kW (140 CV) (2016-2019)","kmh":81,"wb":2310,"gc":140,"est":"e","url":"https://www.km77.com/coches/fiat/124-spider/2016/mediciones-propias"},{"name":"Porsche 911 Carrera 4S Coupé (2018-2020)","kmh":80,"wb":2450,"gc":110,"est":"e","url":"https://www.km77.com/coches/porsche/911/2019/mediciones-propias"},{"name":"Skoda Fabia 1.0 TSI 70 kW (95 CV) Style (2018-2019)","kmh":80,"wb":2470,"gc":136,"est":"e","url":"https://www.km77.com/coches/skoda/fabia/2019/mediciones-propias"},{"name":"Porsche 718 Boxster S PDK (2016-2018)","kmh":80,"wb":2475,"gc":110,"est":"e","url":"https://www.km77.com/coches/porsche/718/2016/mediciones-propias"},{"name":"Toyota GT86 Sport (2016-2019)","kmh":80,"wb":2570,"gc":130,"est":"e","url":"https://www.km77.com/coches/toyota/gt-86/2017/mediciones-propias"}]},{"n":1,"mentions":[],"qr":[],"winners":["Ford Puma 1.0 EcoBoost MHEV"],"top":78,"list":[{"name":"Ford Puma ST-Line X 1.0 EcoBoost MHEV 114 kW (155 CV) (2019-2020)","kmh":78,"wb":2588,"gc":152,"est":"","url":"https://www.km77.com/coches/ford/puma/2020/mediciones-propias"}]},{"n":2,"mentions":[],"qr":[],"winners":["Citroën ë-C3"],"top":81,"list":[{"name":"Citroën ë-C3 Max Eléctrico 113cv (44 kWh) (2023)","kmh":81,"wb":2540,"gc":163,"est":"","url":"https://www.km77.com/coches/citroen/c3/2024/mediciones-propias"},{"name":"Citroën C4 Cactus PureTech 130 S&S Shine (2018-2019)","kmh":79,"wb":2595,"gc":165,"est":"e","url":"https://www.km77.com/coches/citroen/c4-cactus/2018/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[],"winners":["Volkswagen T-Cross 1.0 TSI"],"top":79,"list":[{"name":"Volkswagen T-Cross Advance 1.0 TSI 85 kW (115 CV) DSG 7 vel. (2018-2019)","kmh":79,"wb":2551,"gc":184,"est":"","url":"https://www.km77.com/coches/volkswagen/t-cross/2019/mediciones-propias"}]},{"n":1,"mentions":[],"qr":[],"winners":["SEAT Arona 1.0 TSI"],"top":81,"list":[{"name":"SEAT Arona 1.0 TSI 81 kW (110 CV) DSG X-Perience Plus (2021-2022)","kmh":81,"wb":2566,"gc":190,"est":"v","url":"https://www.km77.com/coches/seat/arona/2021/mediciones-propias"}]}],[{"n":10,"mentions":[],"qr":[],"winners":["Peugeot 308 GT Line (T9)"],"top":82,"list":[{"name":"Peugeot 308 5p GT Line 1.2 PureTech 130 S&S (2017-2018)","kmh":82,"wb":2620,"gc":140,"est":"e","url":"https://www.km77.com/coches/peugeot/308/2017/mediciones-propias"},{"name":"Mercedes-Benz AMG GT R (2017-2018)","kmh":81,"wb":2630,"gc":100,"est":"e","url":"https://www.km77.com/coches/mercedes/amg-gt/2015/mediciones-propias"},{"name":"Honda Prelude e:HEV Advance (2025)","kmh":80,"wb":2604,"gc":130,"est":"e","url":"https://www.km77.com/coches/honda/prelude/2026/mediciones-propias"},{"name":"Honda Civic 5p 1.0 Turbo VTEC Executive (2017-2018)","kmh":79,"wb":2697,"gc":130,"est":"e","url":"https://www.km77.com/coches/honda/civic/2017/mediciones-propias"},{"name":"Skoda Scala 1.5 TSI 110 kW (150 CV) DSG First Edition (2019-2019)","kmh":79,"wb":2649,"gc":149,"est":"v","url":"https://www.km77.com/coches/skoda/scala/2019/mediciones-propias"},{"name":"CUPRA León 5p VZ 1.4 e-HYBRID 180 kW (245 CV) DSG (2020-2024)","kmh":79,"wb":2682,"gc":135,"est":"e","url":"https://www.km77.com/coches/cupra/leon/2020/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[],"winners":["Skoda Karoq 1.5 TSI Sportline"],"top":78,"list":[{"name":"Skoda Karoq Sportline 1.5 TSI 110 kW (150 CV) DSG (2022)","kmh":78,"wb":2638,"gc":169,"est":"","url":"https://www.km77.com/coches/skoda/karoq/2022/mediciones-propias"}]},{"n":3,"mentions":[],"qr":[],"winners":["Kia Sportage 1.6 T-GDI 4x4 (NQ5)","Skoda Karoq 2.0 TDI 4x4"],"top":80,"list":[{"name":"KIA Sportage GT-line 1.6 T-GDI MHEV 132 kW (180 CV) 7DCT 4x4 (2022-2024)","kmh":80,"wb":2680,"gc":170,"est":"","url":"https://www.km77.com/coches/kia/sportage/2022/mediciones-propias"},{"name":"Skoda Karoq Style 2.0 TDI 110 kW (150 CV) DSG 4x4 (2017-2018)","kmh":80,"wb":2630,"gc":176,"est":"","url":"https://www.km77.com/coches/skoda/karoq/2017/mediciones-propias"},{"name":"Ebro s700 1.6 TGDI 147 CV Luxury (2024)","kmh":79,"wb":2670,"gc":177,"est":"","url":"https://www.km77.com/coches/ebro/s700/2025/mediciones-propias"}]},{"n":3,"mentions":[],"qr":[],"winners":["Opel Grandland X 1.2 Turbo"],"top":81,"list":[{"name":"Opel Grandland X Excellence 1.2 Turbo Start&Stop 96 kW (130 CV) (2017-2018)","kmh":81,"wb":2675,"gc":188,"est":"v","url":"https://www.km77.com/coches/opel/grandland-x/2018/mediciones-propias"},{"name":"Skoda Kamiq Monte Carlo 1.5 TSI 110 kW (150 CV) DSG (2023)","kmh":79,"wb":2651,"gc":188,"est":"","url":"https://www.km77.com/coches/skoda/kamiq/2024/mediciones-propias"},{"name":"Honda HR-V 1.5 i-VTEC 96 kW (130 CV) Elegance Navi (2018-2021)","kmh":78,"wb":2610,"gc":185,"est":"","url":"https://www.km77.com/coches/honda/hr-v/2019/mediciones-propias"}]},{"n":4,"mentions":[],"qr":[],"winners":["Renault Kadjar TCe 140"],"top":81,"list":[{"name":"Renault Kadjar Intens TCe GPF 103 kW (140 CV) (2018-2020)","kmh":81,"wb":2646,"gc":200,"est":"v","url":"https://www.km77.com/coches/renault/kadjar/2019/mediciones-propias"},{"name":"Jaecoo 7 Exclusive 4x4 (2024)","kmh":79,"wb":2672,"gc":200,"est":"","url":"https://www.km77.com/coches/jaecoo/7/2024/mediciones-propias"},{"name":"Jeep Compass Limited 2.0 MultiJet 103 kW (140 CV) 4x4 Active Drive Auto (2017-2019)","kmh":79,"wb":2636,"gc":215,"est":"","url":"https://www.km77.com/coches/jeep/compass/2017/mediciones-propias"},{"name":"Volkswagen Tiguan Advance 2.0 TDI 110 kW (150 CV) 4Motion DSG 7 vel. (2016-2018)","kmh":78,"wb":2677,"gc":201,"est":"","url":"https://www.km77.com/coches/volkswagen/tiguan/2016/mediciones-propias"}]}],[{"n":3,"mentions":[],"qr":[{"cell":"W3G1","chip":true,"car":"Lamborghini Revuelto","relation":"유사 예상","confidence":"낮음","basis":"Quattroruote 영상 설명은 차체가 평평하고 반응이 빠르며 시험을 무난히 통과했다고 했어요. 다만 직선 회피 속도는 높지만 최상위는 아니라고 적었어요. KM77에서 비슷한 성격의 차는 911 Turbo S 82km/h, AMG GT R 81km/h예요.","specs":"WB 2,779mm (KM77 제원) · GC 150mm 미만(추정) · KM77 무스 테스트 값 없음","url":"https://www.youtube.com/watch?v=kkeAebcX9BM"}],"winners":["Ford Focus 1.0 EcoBoost (Mk4)"],"top":83,"list":[{"name":"Ford Focus Berlina ST-Line 1.0 EcoBoost 92 kW (125 CV) (2018-2020)","kmh":83,"wb":2700,"gc":142,"est":"e","url":"https://www.km77.com/coches/ford/focus/2018/mediciones-propias"},{"name":"Audi A5 Coupé 3.0 TDI 160 kW (218 CV) quattro S tronic (2016-2018)","kmh":82,"wb":2764,"gc":130,"est":"e","url":"https://www.km77.com/coches/audi/a5/2016/mediciones-propias"},{"name":"BYD Dolphin Comfort (2023-2025)","kmh":78,"wb":2700,"gc":130,"est":"e","url":"https://www.km77.com/coches/byd/dolphin/2024/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[{"cell":"W3G4","chip":false,"car":"Renault Rafale E-Tech Esprit Alpine","relation":"교차 확인","confidence":"-","basis":"KM77 1위(79km/h) 차량을 Quattroruote도 시험했어요. 뒷바퀴 조향과 높은 접지 한계 덕분에 회피 기동에서 제어가 좋다는 평가예요. 직선 이중 차선 변경에서는 ESP 개입이 약해 수정 조향이 많았다고 했어요.","specs":"KM77 79km/h · 두 시험 모두 양호","url":"https://www.youtube.com/watch?v=us5Qn7sQsbY"}],"winners":["Renault Rafale E-Tech 200"],"top":79,"list":[{"name":"Renault Rafale esprit Alpine full hybrid E-Tech 200 CV (2024)","kmh":79,"wb":2738,"gc":177,"est":"","url":"https://www.km77.com/coches/renault/rafale/2024/mediciones-propias"}]},{"n":1,"mentions":[],"qr":[],"winners":["Skoda Kodiaq 1.5 TSI mHEV (2세대)"],"top":78,"list":[{"name":"Skoda Kodiaq Selection 1.5 TSI mHEV 150 CV DSG 7 asientos (2024)","kmh":78,"wb":2791,"gc":189,"est":"","url":"https://www.km77.com/coches/skoda/kodiaq/2024/mediciones-propias"}]},{"n":3,"mentions":[],"qr":[],"winners":["Nissan X-Trail dCi 130 (T32)"],"top":80,"list":[{"name":"Nissan X-Trail dCi 96 kW (130 CV) Xtronic Tekna (2017-2019)","kmh":80,"wb":2705,"gc":210,"est":"","url":"https://www.km77.com/coches/nissan/x-trail/2017/mediciones-propias"},{"name":"Citroën C5 Aircross Shine BlueHDi 180 S&S EAT8 (2018-2021)","kmh":79,"wb":2730,"gc":230,"est":"","url":"https://www.km77.com/coches/citroen/c5-aircross/2019/mediciones-propias"},{"name":"Volkswagen Tiguan Allspace 4MOTION 2.0 TSI 132 kW (180 CV) DSG7 Sport (2017-2018)","kmh":79,"wb":2787,"gc":201,"est":"","url":"https://www.km77.com/coches/volkswagen/tiguan/2018/mediciones-propias"}]}],[{"n":4,"mentions":[{"cell":"W4G1","vs":"Tesla Model 3","car":"Tesla Model Y (2026 페이스리프트)","relation":"유사","source":"Consumer Reports","summary":"Model Y도 Model 3 세단만큼 운전이 즐겁고, 차체 기울임이 적고 조향이 빨라 핸들링이 비슷하게 단단하고 민첩하다고 평가했어요.","own":"자체 등급 W4G4 · WB 2,890 / GC 172mm · KM77 83km/h","caveat":"비교 대상은 2024년 이후 부분변경 Model 3이고, KM77 1위 기록은 2018–2020년형 Model 3예요.","url":"https://www.consumerreports.org/cars/hybrids-evs/2026-tesla-model-y-review-a4126153571/"}],"qr":[],"winners":["Tesla Model 3 Long Range AWD"],"top":83,"list":[{"name":"Tesla Model 3 Tracción integral Gran autonomía (2018-2020)","kmh":83,"wb":2875,"gc":140,"est":"e","url":"https://www.km77.com/coches/tesla/model-3/2018/mediciones-propias"},{"name":"Tesla Model 3 Tracción trasera (2023-2025)","kmh":81,"wb":2875,"gc":138,"est":"e","url":"https://www.km77.com/coches/tesla/model-3/2024/mediciones-propias"},{"name":"Peugeot 508 GT PureTech 225 S&S EAT8 (2018-2019)","kmh":80,"wb":2800,"gc":140,"est":"e","url":"https://www.km77.com/coches/peugeot/508/2019/mediciones-propias"},{"name":"BMW 330i xDrive Touring (2019-2022)","kmh":78,"wb":2851,"gc":140,"est":"e","url":"https://www.km77.com/coches/bmw/serie-3/2020/mediciones-propias"}]},{"n":1,"mentions":[],"qr":[],"winners":["Aiways U5"],"top":78,"list":[{"name":"Aiways U5 Prime (2022-2025)","kmh":78,"wb":2800,"gc":150,"est":"","url":"https://www.km77.com/coches/aiways/u5/2021/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[{"cell":"W4G3","chip":true,"car":"Tesla Model Y (2025 부분변경, RWD)","relation":"유사 이상 예상","confidence":"중간","basis":"Quattroruote 안정성 시험에서 부분변경 뒤에도 차체와 전자 제어가 뛰어나다는 평가를 다시 받았고, ESP가 초기 언더스티어를 잘 잡는다고 했어요. 부분변경 전 Model Y는 KM77에서 83km/h로 최고 기록대예요.","specs":"WB 2,890 / GC 167mm (KM77 제원) · KM77 무스 테스트 값 없음","url":"https://www.youtube.com/watch?v=12O2-ufA2so"}],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[],"winners":["Tesla Model Y Long Range AWD"],"top":83,"list":[{"name":"Tesla Model Y Gran autonomía Tracción integral (2019-2025)","kmh":83,"wb":2890,"gc":172,"est":"","url":"https://www.km77.com/coches/tesla/model-y/2021/mediciones-propias"}]},{"n":1,"mentions":[],"qr":[],"winners":["Audi Q6 e-tron quattro"],"top":78,"list":[{"name":"Audi Q6 e-tron quattro S line (2024-2025)","kmh":78,"wb":2899,"gc":184,"est":"v","url":"https://www.km77.com/coches/audi/q6/2024/mediciones-propias"}]},{"n":4,"mentions":[],"qr":[],"winners":["BMW X3 xDrive20d (G01)","Audi Q5 2.0 TDI quattro (FY)"],"top":81,"list":[{"name":"BMW X3 xDrive20d xLine (2021-2024)","kmh":81,"wb":2864,"gc":204,"est":"","url":"https://www.km77.com/coches/bmw/x3/2022/mediciones-propias"},{"name":"Audi Q5 2.0 TDI 140 kW (190 CV) quattro-ultra S tronic 7 vel. (2016-2018)","kmh":81,"wb":2819,"gc":208,"est":"","url":"https://www.km77.com/coches/audi/q5/2017/mediciones-propias"},{"name":"Peugeot 5008 GT Line 2.0 BlueHDi 150 S&S (2017-2018)","kmh":78,"wb":2840,"gc":236,"est":"","url":"https://www.km77.com/coches/peugeot/5008/2017/mediciones-propias"},{"name":"Porsche Cayenne Turbo E-Hybrid Coupé (2023-2025)","kmh":78,"wb":2895,"gc":198,"est":"","url":"https://www.km77.com/coches/porsche/cayenne/2024/mediciones-propias"}]}],[{"n":7,"mentions":[],"qr":[{"cell":"W5G1","chip":true,"car":"Audi RS6 Avant Performance (C8)","relation":"유사 예상","confidence":"중간","basis":"Quattroruote 영상 설명은 2톤이 넘는 왜건인데도 매우 민첩하고, 롤이 적고, 늘 안정적이고 안전하다고 평가했어요. 같은 등급의 KM77 기록은 AMG GT 63 4도어 80km/h, Panamera 4S 78km/h예요.","specs":"WB 2,929mm · GC 150mm 미만(에어 서스펜션, 추정) · KM77 무스 테스트 값 없음","url":"https://www.youtube.com/watch?v=jtopoahx-iY"}],"winners":["Kia Stinger GT 3.3T AWD","Tesla Model S Plaid"],"top":82,"list":[{"name":"KIA Stinger 3.3 T-GDI 276 kW (370 CV) GT 4x4 (2017-2018)","kmh":82,"wb":2905,"gc":134,"est":"e","url":"https://www.km77.com/coches/kia/stinger/2018/mediciones-propias"},{"name":"Tesla Model S Plaid (2021-2025)","kmh":82,"wb":2960,"gc":125,"est":"e","url":"https://www.km77.com/coches/tesla/model-s/2021/mediciones-propias"},{"name":"Mercedes-Benz Mercedes-AMG GT 63 S 4MATIC+ 4 puertas Coupé","kmh":80,"wb":2951,"gc":120,"est":"e","url":"https://www.km77.com/coches/mercedes/amg-gt/2019/mediciones-propias"},{"name":"BMW 520d Berlina Aut. (2016-2018)","kmh":79,"wb":2975,"gc":140,"est":"e","url":"https://www.km77.com/coches/bmw/serie-5/2017/mediciones-propias"},{"name":"BMW 320d Gran Turismo Aut. (2016-2018)","kmh":78,"wb":2920,"gc":140,"est":"e","url":"https://www.km77.com/coches/bmw/serie-3-gran-turismo/2016/mediciones-propias"},{"name":"Porsche Taycan GTS (2021-2024)","kmh":78,"wb":2900,"gc":125,"est":"e","url":"https://www.km77.com/coches/porsche/taycan/2020/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[],"winners":["Kia EV6 RWD 77 kWh"],"top":78,"list":[{"name":"KIA EV6 GT-line 168 kW (229 CV) 77 kWh RWD (2021-2025)","kmh":78,"wb":2900,"gc":160,"est":"","url":"https://www.km77.com/coches/kia/ev6/2021/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":1,"mentions":[],"qr":[],"winners":["Audi Q8 50 TDI"],"top":79,"list":[{"name":"Audi Q8 50 TDI quattro tiptronic 210 kW (286 CV) (2018-2023)","kmh":79,"wb":2995,"gc":220,"est":"","url":"https://www.km77.com/coches/audi/q8/2019/mediciones-propias"}]}],[{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":2,"mentions":[],"qr":[],"winners":["Hyundai IONIQ 5 RWD 73 kWh"],"top":80,"list":[{"name":"Hyundai IONIQ 5 160 kW (218 CV) 73 kWh RWD Star (2021-2022)","kmh":80,"wb":3000,"gc":160,"est":"","url":"https://www.km77.com/coches/hyundai/ioniq-5/2021/mediciones-propias"},{"name":"Mazda CX-80 Takumi Plus 2.5 E-Skyactiv PHEV 327 CV AWD (2024)","kmh":78,"wb":3120,"gc":165,"est":"","url":"https://www.km77.com/coches/mazda/cx-80/2025/mediciones-propias"}]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]},{"n":0,"mentions":[],"qr":[],"winners":[],"top":null,"list":[]}]]};
+const lo = 78, hi = 83;
+const qrItems = c => c.qr.filter(q => q.chip);
+const tbody = document.querySelector('#grid tbody');
+const headRow = document.querySelector('#grid thead tr');
+DATA.GC.forEach(g => { const th = document.createElement('th'); th.innerHTML = g + '<span class="unit">mm</span>'; headRow.appendChild(th); });
+let selected = null;
+DATA.WB.forEach((w, i) => {
+  const tr = document.createElement('tr');
+  const th = document.createElement('th'); th.className = 'row'; th.innerHTML = w + '<span class="unit">mm</span>'; tr.appendChild(th);
+  DATA.GC.forEach((g, j) => {
+    const c = DATA.cells[i][j];
+    const td = document.createElement('td');
+    td.className = 'cell';
+    td.dataset.i = i; td.dataset.j = j;
+    if (!c.n) {
+      td.classList.add('none');
+      td.innerHTML = '<span class="kmh">–</span><span class="who">78km/h 이상 기록 없음</span>' + qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('');
+      if (qrItems(c).length) {
+        td.classList.add('hasqr'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+        td.addEventListener('click', () => show(i, j));
+        td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
+      }
+    } else {
+      const t = Math.max(0, Math.min(1, (c.top - lo) / (hi - lo)));
+      const p = Math.round(8 + t * 92);
+      td.style.setProperty('--p', p + '%');
+      td.style.setProperty('--c', p > 55 ? 'var(--heat-ink)' : 'var(--ink)');
+      if (c.winners.length > 1) td.classList.add('tie');
+      td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+      td.setAttribute('aria-label', `휠베이스 ${w}mm, 지상고 ${g}mm: ${c.winners.join(', ')} ${c.top}km/h`);
+      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}`;
+      td.addEventListener('click', () => show(i, j));
+      td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
+    }
+    tr.appendChild(td);
+  });
+  tbody.appendChild(tr);
+});
+function show(i, j) {
+  const c = DATA.cells[i][j];
+  if (selected) selected.setAttribute('aria-pressed', 'false');
+  selected = tbody.querySelector(`td[data-i="${i}"][data-j="${j}"]`);
+  selected.setAttribute('aria-pressed', 'true');
+  const flag = e => e === 'e' ? '<span class="flag e">추정</span>' : e === 'v' ? '<span class="flag">검증</span>' : '';
+  document.getElementById('detail').innerHTML =
+    `<h3>W${i + 1} · G${j + 1}</h3><p class="sub">휠베이스 ${DATA.WB[i]}mm · 지상고 ${DATA.GC[j]}mm · ${c.n}대</p>${c.n ? '' : '<p class="sub">KM77 78km/h 이상 기록 차량 없음</p>'}
+     <ol>${c.list.map(r => `<li><span class="sp">${r.kmh}</span><span class="nm"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
+     <span class="sp-meta">WB ${r.wb.toLocaleString()} · GC ${r.gc}mm${flag(r.est)}</span></span></li>`).join('')}</ol>
+     ${c.mentions.length ? `<div class="peers"><h4>다른 사이트 평가</h4>${c.mentions.map(m => `<div class="peer-item"><b>${m.car}</b> · ${m.vs}와 핸들링 ${m.relation}<br>${m.summary}<span class="sp-meta">${m.own}</span><span class="sp-meta">${m.caveat}</span><span class="sp-meta">출처: <a href="${m.url}" target="_blank" rel="noopener">${m.source}</a> (검색 결과 요약)</span></div>`).join('')}</div>` : ''}
+     ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}`;
+}
+show(3, 0);
+</script>
+
+</body>
+</html>
