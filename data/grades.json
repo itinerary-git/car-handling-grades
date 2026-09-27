@@ -1453,6 +1453,16 @@
      "gc": 5
     },
     {
+     "name": "Peugeot 3008 1.6 BlueHDi 120 S&S (2016-2018)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2675,
+     "ground_clearance_mm": 219,
+     "gc_source": "km77",
+     "km77": "https://www.youtube.com/watch?v=fR1yxzizNBE",
+     "wb": 1,
+     "gc": 5
+    },
+    {
      "name": "Jaecoo 7 Exclusive 4x4 (2024)",
      "moose_kmh": 79,
      "wheelbase_mm": 2672,
