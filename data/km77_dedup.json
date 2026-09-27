@@ -2908,5 +2908,955 @@
   "ground_clearance_mm": 205,
   "length_mm": 5305,
   "weight_kg": 2110
+ },
+ {
+  "k": "/coches/audi/a6/2018/estandar/estandar/a6-50-tdi-quattro/mediciones-propias",
+  "version": "Audi A6 50 TDI quattro tiptronic (2018-2021)",
+  "moose_kmh": 79,
+  "datos": "/coches/audi/a6/2018/estandar/estandar/a6-50-tdi-quattro/datos",
+  "wheelbase_mm": 2924,
+  "ground_clearance_mm": null,
+  "length_mm": 4939,
+  "weight_kg": 1900
+ },
+ {
+  "k": "/coches/seat/leon/2020/sportstourer/estandar/leon-sportstourer-15-tsi-110-kw-150-cv-startstop-xcellence/mediciones-propias",
+  "version": "SEAT León Sportstourer 1.5 TSI 110 KW (150 CV) Start/Stop Xcellence (2020-2020)",
+  "moose_kmh": 70,
+  "datos": "/coches/seat/leon/2020/sportstourer/estandar/leon-sportstourer-15-tsi-110-kw-150-cv-startstop-xcellence/datos",
+  "wheelbase_mm": 2686,
+  "ground_clearance_mm": null,
+  "length_mm": 4642,
+  "weight_kg": 1366
+ },
+ {
+  "k": "/coches/bmw/serie-1/2020/5-puertas/estandar/118i/mediciones-propias",
+  "version": "BMW 118i (2019-2020)",
+  "moose_kmh": 73,
+  "datos": "/coches/bmw/serie-1/2020/5-puertas/estandar/118i/datos",
+  "wheelbase_mm": 2670,
+  "ground_clearance_mm": null,
+  "length_mm": 4319,
+  "weight_kg": 1365
+ },
+ {
+  "k": "/coches/volkswagen/polo/2018/5-puertas/gti/polo-gti-20-tsi-147-kw-200-cv-dsg-6-vel/mediciones-propias",
+  "version": "Volkswagen Polo GTI 2.0 TSI 147 kW (200 CV) DSG 6 vel. (2019-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/volkswagen/polo/2018/5-puertas/gti/polo-gti-20-tsi-147-kw-200-cv-dsg-6-vel/datos",
+  "wheelbase_mm": 2549,
+  "ground_clearance_mm": null,
+  "length_mm": 4067,
+  "weight_kg": 1355
+ },
+ {
+  "k": "/coches/mercedes/clase-c/2018/coupe/amg/amg-c-63-s-coupe/mediciones-propias",
+  "version": "Mercedes-Benz Mercedes-AMG C 63 S Coupé",
+  "moose_kmh": 80,
+  "datos": "/coches/mercedes/clase-c/2018/coupe/amg/amg-c-63-s-coupe/datos",
+  "wheelbase_mm": 2840,
+  "ground_clearance_mm": null,
+  "length_mm": 4751,
+  "weight_kg": 1820
+ },
+ {
+  "k": "/coches/porsche/911/2016/coupe/turbo-s/911-turbo-s-coupe/mediciones-propias",
+  "version": "Porsche 911 Turbo S Coupé (2015-2018)",
+  "moose_kmh": 82,
+  "datos": "/coches/porsche/911/2016/coupe/turbo-s/911-turbo-s-coupe/datos",
+  "wheelbase_mm": 2450,
+  "ground_clearance_mm": null,
+  "length_mm": 4507,
+  "weight_kg": 1675
+ },
+ {
+  "k": "/coches/toyota/rav4/2019/estandar/luxury/rav4-hybrid-4x2-luxury/mediciones-propias",
+  "version": "Toyota RAV4 Hybrid 220H 4x2 Luxury (2018-2020)",
+  "moose_kmh": 71,
+  "datos": "/coches/toyota/rav4/2019/estandar/luxury/rav4-hybrid-4x2-luxury/datos",
+  "wheelbase_mm": 2690,
+  "ground_clearance_mm": 190,
+  "length_mm": 4600,
+  "weight_kg": 1665
+ },
+ {
+  "k": "/coches/audi/a3/2020/sportback/rs-3/rs-3-sportback/mediciones-propias",
+  "version": "Audi RS 3 Sportback 294 kW (400 CV) quattro S tronic (2021-2024)",
+  "moose_kmh": 75,
+  "datos": "/coches/audi/a3/2020/sportback/rs-3/rs-3-sportback/datos",
+  "wheelbase_mm": 2631,
+  "ground_clearance_mm": null,
+  "length_mm": 4389,
+  "weight_kg": 1645
+ },
+ {
+  "k": "/coches/audi/a3/2020/sportback/tfsie/a3-sportback-40-tfsie/mediciones-propias",
+  "version": "Audi A3 Sportback 40 TFSIe 150 kW (204 CV) Advanced S tronic 6 vel. (2020-2024)",
+  "moose_kmh": 73,
+  "datos": "/coches/audi/a3/2020/sportback/tfsie/a3-sportback-40-tfsie/datos",
+  "wheelbase_mm": 2630,
+  "ground_clearance_mm": null,
+  "length_mm": 4343,
+  "weight_kg": 1635
+ },
+ {
+  "k": "/coches/mercedes/clase-a/2018/5-puertas/amg/amg-a-45-s/mediciones-propias",
+  "version": "Mercedes-Benz Mercedes-AMG A 45 S 4MATIC+",
+  "moose_kmh": 75,
+  "datos": "/coches/mercedes/clase-a/2018/5-puertas/amg/amg-a-45-s/datos",
+  "wheelbase_mm": 2729,
+  "ground_clearance_mm": null,
+  "length_mm": 4445,
+  "weight_kg": 1635
+ },
+ {
+  "k": "/coches/mercedes/clase-a/2018/5-puertas/estandar/a-180-d-7g-dct/mediciones-propias",
+  "version": "Mercedes-Benz A 180 d 7G-DCT (2018-2019)",
+  "moose_kmh": 75,
+  "datos": "/coches/mercedes/clase-a/2018/5-puertas/estandar/a-180-d-7g-dct/datos",
+  "wheelbase_mm": 2729,
+  "ground_clearance_mm": null,
+  "length_mm": 4419,
+  "weight_kg": 1445
+ },
+ {
+  "k": "/coches/peugeot/208/2020/5-puertas/gt-line/208-gt-line-puretech-130-ss-eat8/mediciones-propias",
+  "version": "Peugeot 208 GT Line PureTech 130 S&amp;S EAT8 (2019-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/peugeot/208/2020/5-puertas/e-208/e-208-gt/datos",
+  "wheelbase_mm": 2540,
+  "ground_clearance_mm": null,
+  "length_mm": 4055,
+  "weight_kg": 1530
+ },
+ {
+  "k": "/coches/opel/astra/2022/sports-tourer/electric/astra-sports-tourer-electric-gs-115-kw-156-cv-54-kwh/mediciones-propias",
+  "version": "Opel Astra Sports Tourer Electric GS 115 kW (156 CV) 54 kWh (2023-2026)",
+  "moose_kmh": 71,
+  "datos": "/coches/opel/astra/2022/sports-tourer/electric/astra-sports-tourer-electric-gs-115-kw-156-cv-54-kwh/datos",
+  "wheelbase_mm": 2732,
+  "ground_clearance_mm": null,
+  "length_mm": 4642,
+  "weight_kg": 1760
+ },
+ {
+  "k": "/coches/audi/a3/2024/sportback/estandar/a3-sportback-s-line-35-tfsi-s-tronic/mediciones-propias",
+  "version": "Audi A3 Sportback S line TFSI MHEV 110 kW (150 CV) S tronic (2024-2026)",
+  "moose_kmh": 72,
+  "datos": "/coches/audi/a3/2024/sportback/estandar/a3-sportback-s-line-35-tfsi-s-tronic/datos",
+  "wheelbase_mm": 2630,
+  "ground_clearance_mm": null,
+  "length_mm": 4352,
+  "weight_kg": 1400
+ },
+ {
+  "k": "/coches/peugeot/308/2022/5-puertas/phev/308-5p-gt-pack-hybrid-225-eeat8/mediciones-propias",
+  "version": "Peugeot 308 5p GT Pack Hybrid 225 e-EAT8 (2021-2022)",
+  "moose_kmh": 72,
+  "datos": "/coches/peugeot/308/2022/5-puertas/phev/308-5p-gt-pack-hybrid-225-eeat8/datos",
+  "wheelbase_mm": 2675,
+  "ground_clearance_mm": null,
+  "length_mm": 4367,
+  "weight_kg": 1708
+ },
+ {
+  "k": "/coches/toyota/corolla/2019/touring-sports/advance/corolla-hybrid-touring-sports-180h-advance/mediciones-propias",
+  "version": "Toyota Corolla hybrid Touring Sports 180H Advance (2019-2019)",
+  "moose_kmh": 76,
+  "datos": "/coches/toyota/corolla/2019/touring-sports/advance/corolla-hybrid-touring-sports-180h-advance/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": null,
+  "length_mm": 4650,
+  "weight_kg": 1445
+ },
+ {
+  "k": "/coches/honda/civic/2017/5-puertas/type-r/civic-type-r-20-vtec-turbo/mediciones-propias",
+  "version": "Honda Civic Type R 2.0 VTEC Turbo (2017-2018)",
+  "moose_kmh": 78,
+  "datos": "/coches/honda/civic/2017/5-puertas/type-r/civic-type-r-20-vtec-turbo/datos",
+  "wheelbase_mm": 2699,
+  "ground_clearance_mm": null,
+  "length_mm": 4557,
+  "weight_kg": 1380
+ },
+ {
+  "k": "/coches/honda/civic/2017/sedan/executive/civic-sedan-15-turbo-vtec-executive/mediciones-propias",
+  "version": "Honda Civic Sedan 1.5 Turbo VTEC Executive (2017-2018)",
+  "moose_kmh": 76,
+  "datos": "/coches/honda/civic/2017/sedan/executive/civic-sedan-15-turbo-vtec-executive/datos",
+  "wheelbase_mm": 2698,
+  "ground_clearance_mm": null,
+  "length_mm": 4630,
+  "weight_kg": 1354
+ },
+ {
+  "k": "/coches/ford/focus/2018/berlina/st/focus-berlina-st3-23-ecoboost-206-kw-280-cv/mediciones-propias",
+  "version": "Ford Focus Berlina ST3 2.3 EcoBoost 206 kW (280 CV) (2019-2021)",
+  "moose_kmh": 77,
+  "datos": "/coches/ford/focus/2018/berlina/st/focus-berlina-st3-23-ecoboost-206-kw-280-cv/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": null,
+  "length_mm": 4388,
+  "weight_kg": 1508
+ },
+ {
+  "k": "/coches/volkswagen/golf/2020/5-puertas/style/golf-style-15-tsi-110-kw-150-cv-dsg-7-vel/mediciones-propias",
+  "version": "Volkswagen Golf Style 1.5 eTSI 110 kW (150 CV) DSG 7 vel. (2020-2020)",
+  "moose_kmh": 69,
+  "datos": "/coches/volkswagen/golf/2020/5-puertas/style/golf-style-15-tsi-110-kw-150-cv-dsg-7-vel/datos",
+  "wheelbase_mm": 2619,
+  "ground_clearance_mm": null,
+  "length_mm": 4284,
+  "weight_kg": 1380
+ },
+ {
+  "k": "/coches/volkswagen/golf/2017/alltrack/estandar/golf-alltrack-20-tdi-135-kw-184-cv-bmt-dsg-6-vel/mediciones-propias",
+  "version": "Volkswagen Golf Alltrack 2.0 TDI 135 kW (184 CV) BMT DSG 7 vel. (2017-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/volkswagen/golf/2017/alltrack/estandar/golf-alltrack-20-tdi-135-kw-184-cv-bmt-dsg-6-vel/datos",
+  "wheelbase_mm": 2629,
+  "ground_clearance_mm": null,
+  "length_mm": 4567,
+  "weight_kg": 1576
+ },
+ {
+  "k": "/coches/volkswagen/golf/2017/5-puertas/gti/golf-2017-5p-gti/mediciones-propias",
+  "version": "Volkswagen Golf 5p GTI 2.0 TSI 169 kW (230 CV) (2016-2019)",
+  "moose_kmh": 73,
+  "datos": "/coches/volkswagen/golf/2017/5-puertas/gti/golf-2017-5p-gti/datos",
+  "wheelbase_mm": 2626,
+  "ground_clearance_mm": null,
+  "length_mm": 4268,
+  "weight_kg": null
+ },
+ {
+  "k": "/coches/nissan/leaf/2018/estandar/tekna/leaf-62-kwh-e-tekna/mediciones-propias",
+  "version": "Nissan LEAF 62 kWh e+ Tekna (2019-2024)",
+  "moose_kmh": 76,
+  "datos": "/coches/nissan/leaf/2018/estandar/tekna/leaf-62-kwh-e-tekna/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": null,
+  "length_mm": 4490,
+  "weight_kg": 1760
+ },
+ {
+  "k": "/coches/peugeot/508/2019/sw/gt/508-sw-gt-bluehdi-180-ss-eat82/mediciones-propias",
+  "version": "Peugeot 508 SW GT BlueHDi 180 S&amp;S EAT8 (2019-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/peugeot/508/2019/sw/gt/508-sw-gt-bluehdi-180-ss-eat82/datos",
+  "wheelbase_mm": 2800,
+  "ground_clearance_mm": null,
+  "length_mm": 4790,
+  "weight_kg": 1585
+ },
+ {
+  "k": "/coches/seat/leon/2017/st/xcellence/leon-st-14-tsi-act-150-cv-startstop-dsg-7-vel/mediciones-propias",
+  "version": "SEAT León ST 1.4 TSI ACT 110 kW (150 CV) DSG-7 Start&amp;Stop Xcellence (2016-2018)",
+  "moose_kmh": 75,
+  "datos": "/coches/seat/leon/2017/st/xcellence/leon-st-14-tsi-act-150-cv-startstop-dsg-7-vel/datos",
+  "wheelbase_mm": 2636,
+  "ground_clearance_mm": null,
+  "length_mm": 4549,
+  "weight_kg": 1297
+ },
+ {
+  "k": "/coches/bmw/serie-3/2019/berlina/estandar/320d-xdrive-berlina-aut/mediciones-propias",
+  "version": "BMW 320d xDrive Berlina Aut. (2018-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/bmw/serie-3/2019/berlina/estandar/320d-xdrive-berlina-aut/datos",
+  "wheelbase_mm": 2851,
+  "ground_clearance_mm": null,
+  "length_mm": 4709,
+  "weight_kg": 1615
+ },
+ {
+  "k": "/coches/kia/cee-d/2019/tourer/tech/ceed-tourer-10-t-gdi-tech-88-kw-120-cv/mediciones-propias",
+  "version": "KIA Ceed Tourer 1.0 T-GDi Tech 88 kW (120 CV) (2019-2020)",
+  "moose_kmh": 73,
+  "datos": "/coches/kia/cee-d/2019/tourer/tech/ceed-tourer-10-t-gdi-tech-88-kw-120-cv/datos",
+  "wheelbase_mm": 2650,
+  "ground_clearance_mm": null,
+  "length_mm": 4600,
+  "weight_kg": 1334
+ },
+ {
+  "k": "/coches/bmw/serie-5/2017/touring/estandar/530d-touring/mediciones-propias",
+  "version": "BMW 530d Touring (2017-2018)",
+  "moose_kmh": 72,
+  "datos": "/coches/bmw/serie-5/2017/touring/estandar/530d-touring/datos",
+  "wheelbase_mm": 2975,
+  "ground_clearance_mm": null,
+  "length_mm": 4942,
+  "weight_kg": 1825
+ },
+ {
+  "k": "/coches/bmw/i5/2024/touring/estandar/i5-m60-xdrive-touring/mediciones-propias",
+  "version": "BMW i5 M60 xDrive Touring (2024-2025)",
+  "moose_kmh": 74,
+  "datos": "/coches/bmw/i5/2024/touring/estandar/i5-m60-xdrive-touring/datos",
+  "wheelbase_mm": 2995,
+  "ground_clearance_mm": null,
+  "length_mm": 5060,
+  "weight_kg": 2425
+ },
+ {
+  "k": "/coches/renault/clio/2019/5-puertas/zen/clio-zen-blue-dci-63-kw-85-cv/mediciones-propias",
+  "version": "Renault Clio Zen Blue dCi 63 kW (85 CV) (2019-2021)",
+  "moose_kmh": 75,
+  "datos": "/coches/renault/clio/2019/5-puertas/zen/clio-zen-blue-dci-63-kw-85-cv/datos",
+  "wheelbase_mm": 2583,
+  "ground_clearance_mm": null,
+  "length_mm": 4050,
+  "weight_kg": 1264
+ },
+ {
+  "k": "/coches/mini/mini/2015/5-puertas/cooper-s/5-puertas-cooper-s/mediciones-propias",
+  "version": "MINI Cooper S 5 puertas (2014-2017)",
+  "moose_kmh": 80,
+  "datos": "/coches/mini/mini/2015/5-puertas/cooper-s/5-puertas-cooper-s/datos",
+  "wheelbase_mm": 2567,
+  "ground_clearance_mm": null,
+  "length_mm": 4005,
+  "weight_kg": 1295
+ },
+ {
+  "k": "/coches/opel/corsa/2020/5-puertas/elegance/corsa-12-turbo-74-kw-100-cv-elegance/mediciones-propias",
+  "version": "Opel Corsa 1.2T 74 kW (100 CV) Elegance (2019-2020)",
+  "moose_kmh": 75,
+  "datos": "/coches/opel/corsa/2020/5-puertas/elegance/corsa-12-turbo-74-kw-100-cv-elegance/datos",
+  "wheelbase_mm": 2538,
+  "ground_clearance_mm": null,
+  "length_mm": 4060,
+  "weight_kg": 1165
+ },
+ {
+  "k": "/coches/nissan/micra/2017/5-puertas/tekna/micra-ig-t-90-cv-ss-tekna/mediciones-propias",
+  "version": "Nissan Micra IG-T 66 kW (90 CV) S&amp;S Tekna (2016-2018)",
+  "moose_kmh": 71,
+  "datos": "/coches/nissan/micra/2017/5-puertas/tekna/micra-ig-t-90-cv-ss-tekna/datos",
+  "wheelbase_mm": 2525,
+  "ground_clearance_mm": null,
+  "length_mm": 3999,
+  "weight_kg": 1076
+ },
+ {
+  "k": "/coches/toyota/yaris/2017/5-puertas/gr-sport/yaris-5p-100h-gr-sport/mediciones-propias",
+  "version": "Toyota Yaris 5p 100H GR-SPORT (2018-2019)",
+  "moose_kmh": 76,
+  "datos": "/coches/toyota/yaris/2017/5-puertas/gr-sport/yaris-5p-100h-gr-sport/datos",
+  "wheelbase_mm": 2510,
+  "ground_clearance_mm": null,
+  "length_mm": 3945,
+  "weight_kg": 1165
+ },
+ {
+  "k": "/coches/ford/fiesta/2017/5-puertas/st/fiesta-5p-st/mediciones-propias",
+  "version": "Ford Fiesta 5p ST 1.5 EcoBoost 147 kW (200 CV) (2018-2021)",
+  "moose_kmh": 80,
+  "datos": "/coches/ford/fiesta/2017/5-puertas/st/fiesta-5p-st/datos",
+  "wheelbase_mm": 2493,
+  "ground_clearance_mm": null,
+  "length_mm": 4068,
+  "weight_kg": 1283
+ },
+ {
+  "k": "/coches/ford/fiesta/2017/active/plus/fiesta-active-15-tdci-88-kw-120-cv-ss/mediciones-propias",
+  "version": "Ford Fiesta Active+ 1.5 TDCi 88 kW (120 CV) S/S (2018-2019)",
+  "moose_kmh": 81,
+  "datos": "/coches/ford/fiesta/2017/active/plus/fiesta-active-15-tdci-88-kw-120-cv-ss/datos",
+  "wheelbase_mm": 2493,
+  "ground_clearance_mm": null,
+  "length_mm": 4068,
+  "weight_kg": 1279
+ },
+ {
+  "k": "/coches/ford/fiesta/2017/5-puertas/titanium/fiesta-5p-titanium-10-ecoboost-92-kw-125-cv-ss/mediciones-propias",
+  "version": "Ford Fiesta 5p Titanium 1.0 EcoBoost 92 kW (125 CV) S/S (2017-2018)",
+  "moose_kmh": 78,
+  "datos": "/coches/ford/fiesta/2017/5-puertas/titanium/fiesta-5p-titanium-10-ecoboost-92-kw-125-cv-ss/datos",
+  "wheelbase_mm": 2493,
+  "ground_clearance_mm": null,
+  "length_mm": 4040,
+  "weight_kg": 1164
+ },
+ {
+  "k": "/coches/toyota/c-hr/2024/estandar/phev/c-hr-220ph-advance/mediciones-propias",
+  "version": "Toyota C-HR 220PH Advance (2023-2025)",
+  "moose_kmh": 71,
+  "datos": "/coches/toyota/c-hr/2024/estandar/phev/c-hr-220ph-advance/datos",
+  "wheelbase_mm": 2640,
+  "ground_clearance_mm": 137,
+  "length_mm": 4362,
+  "weight_kg": 1720
+ },
+ {
+  "k": "/coches/seat/ateca/2016/estandar/xcellence/ateca-20-tdi-190-cv-4drive-startstop-xcellence-dsg-7-vel/mediciones-propias",
+  "version": "SEAT Ateca 2.0 TDI 140 kW (190 CV) DSG-7 4Drive Start&amp;Stop Xcellence (2016-2018)",
+  "moose_kmh": 71,
+  "datos": "/coches/seat/ateca/2016/estandar/xcellence/ateca-20-tdi-190-cv-4drive-startstop-xcellence-dsg-7-vel/datos",
+  "wheelbase_mm": 2630,
+  "ground_clearance_mm": 189,
+  "length_mm": 4363,
+  "weight_kg": 1589
+ },
+ {
+  "k": "/coches/mazda/cx-30/2020/estandar/zenith/cx-30-zenith-20-skyactiv-g-90-kw-122-cv/mediciones-propias",
+  "version": "Mazda CX-30 Zenith 2.0 SKYACTIV-G 90 kW (122 CV) (2019-2021)",
+  "moose_kmh": 74,
+  "datos": "/coches/mazda/cx-30/2020/estandar/zenith/cx-30-zenith-20-skyactiv-g-90-kw-122-cv/datos",
+  "wheelbase_mm": 2655,
+  "ground_clearance_mm": 175,
+  "length_mm": 4395,
+  "weight_kg": 1395
+ },
+ {
+  "k": "/coches/renault/arkana/2021/estandar/estandar/arkana-rs-line-tce-140-edc-micro-hibrido/mediciones-propias",
+  "version": "Renault Arkana R.S. Line TCe 103 kW (140 CV) EDC mild hybrid (2021-2023)",
+  "moose_kmh": 77,
+  "datos": "/coches/renault/arkana/2021/estandar/estandar/arkana-rs-line-tce-140-edc-micro-hibrido/datos",
+  "wheelbase_mm": 2720,
+  "ground_clearance_mm": 200,
+  "length_mm": 4568,
+  "weight_kg": 1411
+ },
+ {
+  "k": "/coches/kia/niro/2022/estandar/hibrido/niro-16-hev-emotion/mediciones-propias",
+  "version": "KIA Niro 1.6 GDi HEV 141 CV Emotion (2022-2024)",
+  "moose_kmh": 81,
+  "datos": "/coches/kia/niro/2022/estandar/hibrido/niro-16-hev-emotion/datos",
+  "wheelbase_mm": 2720,
+  "ground_clearance_mm": 160,
+  "length_mm": 4420,
+  "weight_kg": 1474
+ },
+ {
+  "k": "/coches/byd/atto-2/2025/estandar/phev/atto-2-dm-i-boost/mediciones-propias",
+  "version": "BYD Atto 2 DM-i Boost (2025)",
+  "moose_kmh": 73,
+  "datos": "/coches/byd/atto-2/2025/estandar/phev/atto-2-dm-i-boost/datos",
+  "wheelbase_mm": 2620,
+  "ground_clearance_mm": 160,
+  "length_mm": 4330,
+  "weight_kg": 1620
+ },
+ {
+  "k": "/coches/mercedes/clase-glc/2023/estandar/estandar/glc-220-d-4matic/mediciones-propias",
+  "version": "Mercedes-Benz GLC 220 d 4MATIC (2022)",
+  "moose_kmh": 75,
+  "datos": "/coches/mercedes/clase-glc/2023/estandar/estandar/glc-220-d-4matic/datos",
+  "wheelbase_mm": 2888,
+  "ground_clearance_mm": 145,
+  "length_mm": 4716,
+  "weight_kg": 1985
+ },
+ {
+  "k": "/coches/cupra/formentor/2021/estandar/estandar/formentor/mediciones-propias",
+  "version": "CUPRA Formentor VZ 2.0 TSI 228 kW (310 CV) DSG 7 vel. 4Drive (2020-2024)",
+  "moose_kmh": 77,
+  "datos": "/coches/cupra/formentor/2021/estandar/estandar/formentor/datos",
+  "wheelbase_mm": 2680,
+  "ground_clearance_mm": null,
+  "length_mm": 4450,
+  "weight_kg": 1644
+ },
+ {
+  "k": "/coches/mercedes/clase-glc/2019/estandar/estandar/glc-220-d-4matic/mediciones-propias",
+  "version": "Mercedes-Benz GLC 220 d 4MATIC (2019-2022)",
+  "moose_kmh": 74,
+  "datos": "/coches/mercedes/clase-glc/2019/estandar/estandar/glc-220-d-4matic/datos",
+  "wheelbase_mm": 2873,
+  "ground_clearance_mm": null,
+  "length_mm": 4658,
+  "weight_kg": 1835
+ },
+ {
+  "k": "/coches/honda/cr-v/2019/estandar/lifestyle/cr-v-15-vtec-turbo-127-kw-173-cv-4x4-lifestyle/mediciones-propias",
+  "version": "Honda CR-V 1.5 VTEC Turbo 127 kW (173 CV) 4x4 Lifestyle (2018-2021)",
+  "moose_kmh": 75,
+  "datos": "/coches/honda/cr-v/2019/estandar/lifestyle/cr-v-15-vtec-turbo-127-kw-173-cv-4x4-lifestyle/datos",
+  "wheelbase_mm": 2663,
+  "ground_clearance_mm": 201,
+  "length_mm": 4600,
+  "weight_kg": 1573
+ },
+ {
+  "k": "/coches/ssangyong/korando/2019/estandar/limited/korando-g15t-4x2-limited/mediciones-propias",
+  "version": "SsangYong Korando G15T 4x2 Limited 120 kW (163 CV) (2019-2020)",
+  "moose_kmh": 73,
+  "datos": "/coches/ssangyong/korando/2019/estandar/limited/korando-g15t-4x2-limited/datos",
+  "wheelbase_mm": 2675,
+  "ground_clearance_mm": 182,
+  "length_mm": 4450,
+  "weight_kg": 1480
+ },
+ {
+  "k": "/coches/ford/kuga/2020/estandar/phev/kuga-st-line-x-25-duratec-phev/mediciones-propias",
+  "version": "Ford Kuga ST-Line X 2.5 PHEV 165 kW (225 CV) (2019-2022)",
+  "moose_kmh": 68,
+  "datos": "/coches/ford/kuga/2020/estandar/phev/kuga-st-line-x-25-duratec-phev/datos",
+  "wheelbase_mm": 2710,
+  "ground_clearance_mm": 160,
+  "length_mm": 4614,
+  "weight_kg": 1844
+ },
+ {
+  "k": "/coches/audi/q5/2021/sportback/estandar/q5-sportback-s-line-45-tfsi-quattro-ultra-s-tronic/mediciones-propias",
+  "version": "Audi Q5 Sportback S line 45 TFSI quattro-ultra S tronic (2020-2024)",
+  "moose_kmh": 79,
+  "datos": "/coches/audi/q5/2021/sportback/estandar/q5-sportback-s-line-45-tfsi-quattro-ultra-s-tronic/datos",
+  "wheelbase_mm": 2819,
+  "ground_clearance_mm": null,
+  "length_mm": 4689,
+  "weight_kg": 1850
+ },
+ {
+  "k": "/coches/hyundai/tucson/2021/estandar/phev/tucson-phev-16-tgdi-195-kw-265-cv-6at-4x4-style/mediciones-propias",
+  "version": "Hyundai Tucson PHEV 1.6 TGDI 195 kW (265 CV) 6AT 4X4 Style (2021-2024)",
+  "moose_kmh": 74,
+  "datos": "/coches/hyundai/tucson/2021/estandar/phev/tucson-phev-16-tgdi-195-kw-265-cv-6at-4x4-style/datos",
+  "wheelbase_mm": 2680,
+  "ground_clearance_mm": 170,
+  "length_mm": 4500,
+  "weight_kg": 1893
+ },
+ {
+  "k": "/coches/kia/niro/2016/estandar/emotion/niro-16-hev-emotion/mediciones-propias",
+  "version": "KIA Niro 1.6 HEV Emotion (2016-2018)",
+  "moose_kmh": 69,
+  "datos": "/coches/kia/niro/2016/estandar/emotion/niro-16-hev-emotion/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": 160,
+  "length_mm": 4355,
+  "weight_kg": 1500
+ },
+ {
+  "k": "/coches/mercedes/glc-coupe/2017/estandar/estandar/glc-250-d-4matic-coupe/mediciones-propias",
+  "version": "Mercedes-Benz GLC 250 d 4MATIC Coupé (2016-2018)",
+  "moose_kmh": 75,
+  "datos": "/coches/mercedes/glc-coupe/2017/estandar/estandar/glc-250-d-4matic-coupe/datos",
+  "wheelbase_mm": 2873,
+  "ground_clearance_mm": 155,
+  "length_mm": 4732,
+  "weight_kg": 1845
+ },
+ {
+  "k": "/coches/skoda/kodiaq/2017/estandar/style/kodiaq-4x4-14-tsi-150-cv-act-style-7-plazas/mediciones-propias",
+  "version": "Skoda Kodiaq Style 1.4 TSI 110 kW (150 CV) ACT 4x4 7 plazas (2016-2018)",
+  "moose_kmh": 77,
+  "datos": "/coches/skoda/kodiaq/2017/estandar/style/kodiaq-4x4-14-tsi-150-cv-act-style-7-plazas/datos",
+  "wheelbase_mm": 2791,
+  "ground_clearance_mm": 188,
+  "length_mm": 4697,
+  "weight_kg": 1653
+ },
+ {
+  "k": "/coches/peugeot/3008/2017/estandar/gt-line/3008-gt-line-16-bluehdi-120-ss/mediciones-propias",
+  "version": "Peugeot 3008 GT Line 1.6 BlueHDi 120 S&amp;S (2016-2017)",
+  "moose_kmh": 80,
+  "datos": "/coches/peugeot/3008/2017/estandar/gt-line/3008-gt-line-16-bluehdi-120-ss/datos",
+  "wheelbase_mm": 2675,
+  "ground_clearance_mm": 219,
+  "length_mm": 4447,
+  "weight_kg": 1375
+ },
+ {
+  "k": "/coches/kia/sportage/2018/estandar/mild-hybrid/sportage-20-mild-hybrid-136-kw-185-cv-4x4/mediciones-propias",
+  "version": "KIA Sportage 2.0 Mild Hybrid 136 kW (185 CV) 4x4 (2018-2019)",
+  "moose_kmh": 77,
+  "datos": "/coches/kia/sportage/2018/estandar/mild-hybrid/sportage-20-mild-hybrid-136-kw-185-cv-4x4/datos",
+  "wheelbase_mm": 2670,
+  "ground_clearance_mm": 172,
+  "length_mm": 4485,
+  "weight_kg": 1723
+ },
+ {
+  "k": "/coches/peugeot/2008/2020/estandar/gt-line/2008-gt-line-puretech-130-ss/mediciones-propias",
+  "version": "Peugeot 2008 GT Line PureTech 130 S&amp;S (2019-2020)",
+  "moose_kmh": 70,
+  "datos": "/coches/peugeot/2008/2020/estandar/gt-line/2008-gt-line-puretech-130-ss/datos",
+  "wheelbase_mm": 2605,
+  "ground_clearance_mm": 170,
+  "length_mm": 4300,
+  "weight_kg": 1267
+ },
+ {
+  "k": "/coches/volvo/xc40/2018/estandar/inscription/xc40-inscription-t5-awd/mediciones-propias",
+  "version": "Volvo XC40 Inscription T5 AWD (2017-2019)",
+  "moose_kmh": 73,
+  "datos": "/coches/volvo/xc40/2018/estandar/inscription/xc40-inscription-t5-awd/datos",
+  "wheelbase_mm": 2702,
+  "ground_clearance_mm": 211,
+  "length_mm": 4425,
+  "weight_kg": 1684
+ },
+ {
+  "k": "/coches/bmw/x1/2015/estandar/estandar/x1-sdrive18i-aut2/mediciones-propias",
+  "version": "BMW X1 sDrive18i Aut. (2017-2018)",
+  "moose_kmh": 73,
+  "datos": "/coches/bmw/x1/2015/estandar/estandar/x1-sdrive18i-aut2/datos",
+  "wheelbase_mm": 2670,
+  "ground_clearance_mm": 183,
+  "length_mm": 4439,
+  "weight_kg": 1505
+ },
+ {
+  "k": "/coches/hyundai/ioniq/2016/estandar/style/ioniq-hibrido-style/mediciones-propias",
+  "version": "Hyundai IONIQ Híbrido 1.6 GDI 104 kW (141 CV) 6DCT Style (2016-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/hyundai/ioniq/2016/estandar/style/ioniq-hibrido-style/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": null,
+  "length_mm": 4470,
+  "weight_kg": 1445
+ },
+ {
+  "k": "/coches/fiat/tipo/2016/station-wagon/lounge/tipo-sw-14-glp-120-cv-lounge/mediciones-propias",
+  "version": "Fiat Tipo SW 1.4 GLP 88 kW (120 CV) Lounge (2016-2018)",
+  "moose_kmh": 70,
+  "datos": "/coches/fiat/tipo/2016/station-wagon/lounge/tipo-sw-14-glp-120-cv-lounge/datos",
+  "wheelbase_mm": 2638,
+  "ground_clearance_mm": null,
+  "length_mm": 4571,
+  "weight_kg": 1470
+ },
+ {
+  "k": "/coches/fiat/tipo/2016/sedan/lounge/tipo-16-multijet-120-cv-lounge/mediciones-propias",
+  "version": "Fiat Tipo Sedán 1.6 Multijet II 88 kW (120 CV) Lounge (2015-2018)",
+  "moose_kmh": 76,
+  "datos": "/coches/fiat/tipo/2016/sedan/lounge/tipo-16-multijet-120-cv-lounge/datos",
+  "wheelbase_mm": 2636,
+  "ground_clearance_mm": null,
+  "length_mm": 4532,
+  "weight_kg": 1420
+ },
+ {
+  "k": "/coches/skoda/octavia/2020/combi/rs/octavia-combi-rs/mediciones-propias",
+  "version": "Skoda Octavia Combi RS 2.0 TSI 180 kW (245 CV) DSG (2020-2023)",
+  "moose_kmh": 70,
+  "datos": "/coches/skoda/octavia/2020/combi/rs/octavia-combi-rs/datos",
+  "wheelbase_mm": 2681,
+  "ground_clearance_mm": null,
+  "length_mm": 4702,
+  "weight_kg": 1538
+ },
+ {
+  "k": "/coches/audi/a4/2016/avant/rs-4/rs-4-avant-29-tfsi-331-kw-450-cv-quattro-tiptronic-8-vel/mediciones-propias",
+  "version": "Audi RS 4 Avant 2.9 TFSI 331 kW (450 CV) quattro tiptronic 8 vel. (2017-2018)",
+  "moose_kmh": 79,
+  "datos": "/coches/audi/a4/2016/avant/rs-4/rs-4-avant-29-tfsi-331-kw-450-cv-quattro-tiptronic-8-vel/datos",
+  "wheelbase_mm": 2826,
+  "ground_clearance_mm": null,
+  "length_mm": 4781,
+  "weight_kg": 1790
+ },
+ {
+  "k": "/coches/alfa-romeo/giulia/2016/estandar/super/giulia-22-diesel-180-cv-super/mediciones-propias",
+  "version": "Alfa Romeo Giulia 2.2 Diesel 132 kW (180 CV) Super (2016-2018)",
+  "moose_kmh": 78,
+  "datos": "/coches/alfa-romeo/giulia/2016/estandar/super/giulia-22-diesel-180-cv-super/datos",
+  "wheelbase_mm": 2820,
+  "ground_clearance_mm": null,
+  "length_mm": 4643,
+  "weight_kg": 1449
+ },
+ {
+  "k": "/coches/peugeot/508/2015/rxh/estandar/508-rxh-20-bluehdi-180-cv-aut/mediciones-propias",
+  "version": "Peugeot 508 RXH 2.0 BlueHDi 180 Aut. (2014-2018)",
+  "moose_kmh": 77,
+  "datos": "/coches/peugeot/508/2015/rxh/estandar/508-rxh-20-bluehdi-180-cv-aut/datos",
+  "wheelbase_mm": 2817,
+  "ground_clearance_mm": null,
+  "length_mm": 4828,
+  "weight_kg": 1725
+ },
+ {
+  "k": "/coches/volkswagen/passat/2019/variant/r-line/passat-variant-r-line-20-tsi-140-kw-190-cv-dsg-7-vel/mediciones-propias",
+  "version": "Volkswagen Passat Variant R-Line 2.0 TSI 140 kW (190 CV) DSG 7 vel. (2019-2021)",
+  "moose_kmh": 73,
+  "datos": "/coches/volkswagen/passat/2019/variant/r-line/passat-variant-r-line-20-tsi-140-kw-190-cv-dsg-7-vel/datos",
+  "wheelbase_mm": 2786,
+  "ground_clearance_mm": null,
+  "length_mm": 4773,
+  "weight_kg": 1570
+ },
+ {
+  "k": "/coches/bmw/serie-3/2022/touring/estandar/m340d-xdrive-touring/mediciones-propias",
+  "version": "BMW M340d xDrive Touring (2022-2024)",
+  "moose_kmh": 71,
+  "datos": "/coches/bmw/serie-3/2022/touring/estandar/m340d-xdrive-touring/datos",
+  "wheelbase_mm": 2851,
+  "ground_clearance_mm": null,
+  "length_mm": 4713,
+  "weight_kg": 1945
+ },
+ {
+  "k": "/coches/opel/insignia/2017/sports-tourer/exclusive/insignia-sports-tourer-exclusive-20-cdti-start-stop-turbo-d-125-kw-170-cv-at8/mediciones-propias",
+  "version": "Opel Insignia Sports Tourer Exclusive 2.0 CDTi Start &amp; Stop Turbo D 125 kW (170 CV) AT8 (2017-2018)",
+  "moose_kmh": 76,
+  "datos": "/coches/opel/insignia/2017/sports-tourer/exclusive/insignia-sports-tourer-exclusive-20-cdti-start-stop-turbo-d-125-kw-170-cv-at8/datos",
+  "wheelbase_mm": 2829,
+  "ground_clearance_mm": null,
+  "length_mm": 4986,
+  "weight_kg": 1666
+ },
+ {
+  "k": "/coches/bmw/serie-5/2017/berlina/m5/m5/mediciones-propias",
+  "version": "BMW M5 (2017-2020)",
+  "moose_kmh": 74,
+  "datos": "/coches/bmw/serie-5/2017/berlina/m5/m5/datos",
+  "wheelbase_mm": 2982,
+  "ground_clearance_mm": null,
+  "length_mm": 4965,
+  "weight_kg": 1930
+ },
+ {
+  "k": "/coches/mercedes/clase-e/2016/estate/estandar/e-220-d-estate/mediciones-propias",
+  "version": "Mercedes-Benz E 220 d Estate 9G-TRONIC (2016-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/mercedes/clase-e/2016/estate/estandar/e-220-d-estate/datos",
+  "wheelbase_mm": 2939,
+  "ground_clearance_mm": null,
+  "length_mm": 4933,
+  "weight_kg": 1780
+ },
+ {
+  "k": "/coches/mercedes/clase-e/2016/berlina/estandar/e-220-d/mediciones-propias",
+  "version": "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)",
+  "moose_kmh": 78,
+  "datos": "/coches/mercedes/clase-e/2016/berlina/estandar/e-220-d/datos",
+  "wheelbase_mm": 2939,
+  "ground_clearance_mm": null,
+  "length_mm": 4923,
+  "weight_kg": 1680
+ },
+ {
+  "k": "/coches/mercedes/clase-e/2017/coupe/estandar/e-220-d-coupe/mediciones-propias",
+  "version": "Mercedes-Benz E 220 d Coupé (2017-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/mercedes/clase-e/2017/coupe/estandar/e-220-d-coupe/datos",
+  "wheelbase_mm": 2873,
+  "ground_clearance_mm": null,
+  "length_mm": 4826,
+  "weight_kg": 1735
+ },
+ {
+  "k": "/coches/suzuki/swift/2017/5-puertas/sport/swift-sport-14-boosterjet/mediciones-propias",
+  "version": "Suzuki Swift Sport 1.4 BoosterJet (2018-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/suzuki/swift/2017/5-puertas/sport/swift-sport-14-boosterjet/datos",
+  "wheelbase_mm": 2450,
+  "ground_clearance_mm": null,
+  "length_mm": 3890,
+  "weight_kg": 1045
+ },
+ {
+  "k": "/coches/audi/q2/2016/estandar/sq2/sq2-tfsi-quattro/mediciones-propias",
+  "version": "Audi SQ2 TFSI quattro S tronic (2018-2020)",
+  "moose_kmh": 75,
+  "datos": "/coches/audi/q2/2016/estandar/sq2/sq2-tfsi-quattro/datos",
+  "wheelbase_mm": 2594,
+  "ground_clearance_mm": null,
+  "length_mm": 4210,
+  "weight_kg": 1585
+ },
+ {
+  "k": "/coches/peugeot/2008/2016/estandar/gt-line/2008-gt-line-12-puretech-130-ss/mediciones-propias",
+  "version": "Peugeot 2008 GT Line 1.2 PureTech 130 S&amp;S (2016-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/peugeot/2008/2016/estandar/gt-line/2008-gt-line-12-puretech-130-ss/datos",
+  "wheelbase_mm": 2537,
+  "ground_clearance_mm": null,
+  "length_mm": 4159,
+  "weight_kg": 1310
+ },
+ {
+  "k": "/coches/renault/captur/2020/estandar/zen-plus/captur-zen-tce-96-kw-130-cv-edc2/mediciones-propias",
+  "version": "Renault Captur Zen + TCe 96 kW (130 CV) EDC (2019-2021)",
+  "moose_kmh": 75,
+  "datos": "/coches/renault/captur/2020/estandar/zen-plus/captur-zen-tce-96-kw-130-cv-edc2/datos",
+  "wheelbase_mm": 2639,
+  "ground_clearance_mm": null,
+  "length_mm": 4227,
+  "weight_kg": 1334
+ },
+ {
+  "k": "/coches/mazda/cx-5/2017/estandar/zenith/cx-5-zenith-22-skyactiv-d-110-kw-150-cv-2wd/mediciones-propias",
+  "version": "Mazda CX-5 Zenith 2.2 SKYACTIV-D 110 kW (150 CV) 2WD (2017-2021)",
+  "moose_kmh": 77,
+  "datos": "/coches/mazda/cx-5/2017/estandar/zenith/cx-5-zenith-22-skyactiv-d-110-kw-150-cv-2wd/datos",
+  "wheelbase_mm": 2700,
+  "ground_clearance_mm": 192,
+  "length_mm": 4550,
+  "weight_kg": 1665
+ },
+ {
+  "k": "/coches/mitsubishi/eclipse-cross/2018/estandar/motion/eclipse-cross-150t-motion-2wd/mediciones-propias",
+  "version": "Mitsubishi Eclipse Cross 150T Motion 2WD (2017-2018)",
+  "moose_kmh": 80,
+  "datos": "/coches/mitsubishi/eclipse-cross/2018/estandar/motion/eclipse-cross-150t-motion-2wd/datos",
+  "wheelbase_mm": 2670,
+  "ground_clearance_mm": 183,
+  "length_mm": 4405,
+  "weight_kg": 1455
+ },
+ {
+  "k": "/coches/mazda/mx-30/2020/estandar/zenith/mx-30-zenith/mediciones-propias",
+  "version": "Mazda MX-30 Zenith (2020-2022)",
+  "moose_kmh": 74,
+  "datos": "/coches/mazda/mx-30/2020/estandar/zenith/mx-30-zenith/datos",
+  "wheelbase_mm": 2655,
+  "ground_clearance_mm": 130,
+  "length_mm": 4395,
+  "weight_kg": 1720
+ },
+ {
+  "k": "/coches/ford/puma/2020/estandar/st/puma-st/mediciones-propias",
+  "version": "Ford Puma ST 1.5 EcoBoost 147 kW (200 CV) (2020-2022)",
+  "moose_kmh": 81,
+  "datos": "/coches/ford/puma/2020/estandar/st/puma-st/datos",
+  "wheelbase_mm": 2588,
+  "ground_clearance_mm": 152,
+  "length_mm": 4226,
+  "weight_kg": 1358
+ },
+ {
+  "k": "/coches/volkswagen/t-roc/2018/estandar/sport/t-roc-sport-20-tsi-140-kw-190-cv-4motion-dsg-7-vel/mediciones-propias",
+  "version": "Volkswagen T-Roc Sport 2.0 TSI 140 kW (190 CV) 4MOTION DSG 7 vel. (2018-2019)",
+  "moose_kmh": 74,
+  "datos": "/coches/volkswagen/t-roc/2018/estandar/sport/t-roc-sport-20-tsi-140-kw-190-cv-4motion-dsg-7-vel/datos",
+  "wheelbase_mm": 2593,
+  "ground_clearance_mm": 158,
+  "length_mm": 4234,
+  "weight_kg": 1495
+ },
+ {
+  "k": "/coches/alfa-romeo/tonale/2022/estandar/estandar/tonale-special-edition-hybrid-96-kw-130-cv/mediciones-propias",
+  "version": "Alfa Romeo Tonale Hybrid 130 TCT Edizione Speciale (2022-2023)",
+  "moose_kmh": 74,
+  "datos": "/coches/alfa-romeo/tonale/2022/estandar/estandar/tonale-special-edition-hybrid-96-kw-130-cv/datos",
+  "wheelbase_mm": 2636,
+  "ground_clearance_mm": 156,
+  "length_mm": 4528,
+  "weight_kg": 1600
+ },
+ {
+  "k": "/coches/hyundai/kona/2018/estandar/klass/kona-10-t-gdi-88-kw-120-cv-4x2-klass/mediciones-propias",
+  "version": "Hyundai Kona 1.0 T-GDI 88 kW (120 CV) 4x2 Klass (2017-2018)",
+  "moose_kmh": 78,
+  "datos": "/coches/hyundai/kona/2018/estandar/klass/kona-10-t-gdi-88-kw-120-cv-4x2-klass/datos",
+  "wheelbase_mm": 2600,
+  "ground_clearance_mm": 170,
+  "length_mm": 4165,
+  "weight_kg": 1308
+ },
+ {
+  "k": "/coches/seat/arona/2018/estandar/xcellence/arona-10-ecotsi-85-kw-115-cv-dsg-7-vel-startstop-xcellence/mediciones-propias",
+  "version": "SEAT Arona 1.0 EcoTSI 85 kW (115 CV) DSG 7 vel. Start/Stop Xcellence (2017-2018)",
+  "moose_kmh": 74,
+  "datos": "/coches/seat/arona/2018/estandar/xcellence/arona-10-ecotsi-85-kw-115-cv-dsg-7-vel-startstop-xcellence/datos",
+  "wheelbase_mm": 2566,
+  "ground_clearance_mm": null,
+  "length_mm": 4138,
+  "weight_kg": 1210
+ },
+ {
+  "k": "/coches/kia/xceed/2020/estandar/emotion/xceed-14-t-gdi-emotion-103-kw-140-cv-dct2/mediciones-propias",
+  "version": "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)",
+  "moose_kmh": 79,
+  "datos": "/coches/kia/xceed/2020/estandar/emotion/xceed-10-t-gdi-emotion-88-kw-120-cv2/datos",
+  "wheelbase_mm": 2650,
+  "ground_clearance_mm": null,
+  "length_mm": 4395,
+  "weight_kg": 1332
+ },
+ {
+  "k": "/coches/ford/mustang/2018/fastback/gt/mustang-fastback-gt-50-ti-vct-v8-331-kw-450-cv/mediciones-propias",
+  "version": "Ford Mustang Fastback GT 5.0 Ti-VCT V8 331 kW (450 CV) (2018-2024)",
+  "moose_kmh": 77,
+  "datos": "/coches/ford/mustang/2018/fastback/gt/mustang-fastback-gt-50-ti-vct-v8-331-kw-450-cv/datos",
+  "wheelbase_mm": 2720,
+  "ground_clearance_mm": null,
+  "length_mm": 4789,
+  "weight_kg": 1843
+ },
+ {
+  "k": "/coches/bmw/serie-4/2021/coupe/m4/m4-competition-coupe/mediciones-propias",
+  "version": "BMW M4 Competition Coupé (2020-2024)",
+  "moose_kmh": 76,
+  "datos": "/coches/bmw/serie-4/2021/coupe/m4/m4-competition-coupe/datos",
+  "wheelbase_mm": 2857,
+  "ground_clearance_mm": null,
+  "length_mm": 4794,
+  "weight_kg": 1800
+ },
+ {
+  "k": "/coches/bmw/serie-2/2022/coupe/estandar/220i-coupe/mediciones-propias",
+  "version": "BMW 220i Coupé (2021-2024)",
+  "moose_kmh": 69,
+  "datos": "/coches/bmw/serie-2/2022/coupe/estandar/220i-coupe/datos",
+  "wheelbase_mm": 2741,
+  "ground_clearance_mm": null,
+  "length_mm": 4537,
+  "weight_kg": 1565
+ },
+ {
+  "k": "/coches/alpine/a110/2018/estandar/premiere-edition/a110-premiere-edition/mediciones-propias",
+  "version": "Alpine A110 Première Edition (2017-2019)",
+  "moose_kmh": 75,
+  "datos": "/coches/alpine/a110/2018/estandar/premiere-edition/a110-premiere-edition/datos",
+  "wheelbase_mm": 2419,
+  "ground_clearance_mm": null,
+  "length_mm": 4180,
+  "weight_kg": 1178
+ },
+ {
+  "k": "/coches/porsche/taycan/2020/estandar/turbo-s/taycan-turbo-s/mediciones-propias",
+  "version": "Porsche Taycan Turbo S (2019-2024)",
+  "moose_kmh": 78,
+  "datos": "/coches/porsche/taycan/2020/estandar/turbo-s/taycan-turbo-s/datos",
+  "wheelbase_mm": 2900,
+  "ground_clearance_mm": null,
+  "length_mm": 4963,
+  "weight_kg": 2370
+ },
+ {
+  "k": "/coches/mercedes/clase-c/2016/coupe/estandar/c-250-d-coupe/mediciones-propias",
+  "version": "Mercedes-Benz C 250 d Coupé (2017-2018)",
+  "moose_kmh": 77,
+  "datos": "/coches/mercedes/clase-c/2016/coupe/estandar/c-250-d-coupe/datos",
+  "wheelbase_mm": 2840,
+  "ground_clearance_mm": null,
+  "length_mm": 4686,
+  "weight_kg": 1645
+ },
+ {
+  "k": "/coches/mazda/mx-5/2019/rf/zenith/mx-5-rf-20-skyactiv-g-20-135-kw-184-cv-i-stop-i-eloop-zenith/mediciones-propias",
+  "version": "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop &amp; i-Eloop Zenith (2018-2022)",
+  "moose_kmh": 80,
+  "datos": "/coches/mazda/mx-5/2019/rf/zenith/mx-5-rf-20-skyactiv-g-20-135-kw-184-cv-i-stop-i-eloop-zenith/datos",
+  "wheelbase_mm": 2310,
+  "ground_clearance_mm": null,
+  "length_mm": 3915,
+  "weight_kg": 1147
+ },
+ {
+  "k": "/coches/opel/combo/2019/life-corto/innovation/combo-life-innovation-l-15-td-130-cv-startstop/mediciones-propias",
+  "version": "Opel Combo Life Innovation L 1.5 TD 96 kW (130 CV) Start/Stop (2018-2020)",
+  "moose_kmh": 77,
+  "datos": "/coches/opel/combo/2019/life-corto/innovation/combo-life-innovation-l-15-td-130-cv-startstop/datos",
+  "wheelbase_mm": 2785,
+  "ground_clearance_mm": null,
+  "length_mm": 4403,
+  "weight_kg": null
+ },
+ {
+  "k": "/coches/toyota/proace/2016/medio/family-high/proace-family-medio-20d-130-kw-180-cv-aut-8-plazas/mediciones-propias",
+  "version": "Toyota PROACE Verso Family Medio 2.0D 130 kW (180 CV) Aut. 8 plazas High (2017-2018)",
+  "moose_kmh": 69,
+  "datos": "/coches/toyota/proace/2016/medio/family-high/proace-family-medio-20d-130-kw-180-cv-aut-8-plazas/datos",
+  "wheelbase_mm": 3275,
+  "ground_clearance_mm": null,
+  "length_mm": 4959,
+  "weight_kg": 1730
  }
 ]

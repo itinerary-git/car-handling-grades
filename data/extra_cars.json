@@ -1,11 +1,1 @@
-[
- {
-  "version": "Peugeot 3008 1.6 BlueHDi 120 S&S (2016-2018)",
-  "moose_kmh": 80,
-  "wheelbase_mm": 2675,
-  "ground_clearance_mm": 219,
-  "gc_source": "km77",
-  "source": "https://www.youtube.com/watch?v=fR1yxzizNBE",
-  "note": "KM77 data table is blank for this generation; 80 km/h is from km77's own video post (Facebook/YouTube, 2017-04-12)."
- }
-]
+[]

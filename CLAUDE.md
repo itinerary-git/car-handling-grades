@@ -15,6 +15,8 @@
 ## "등급표 갱신해줘" 절차
 1. `node scripts/update.mjs` — `data/state.json`의 `lastUpdated` 이후에 생긴 것만 수집:
    KM77 매거진 새 글(링크된 차량 페이지), 최근 연식 새 세대 페이지(이미 확인한 404는 `state.km77.probed`로 건너뜀), Quattroruote 재생목록의 새 영상(`state.qr.seenVideoIds`에 없는 것).
+   세대 페이지는 시험한 버전 하나만 보여 주므로, 비교표(detalle)의 버전 ID를 따라 다른 시험 버전도 읽는다(`crawl_versions.mjs` → `merge_versions.mjs`, 읽은 비교표는 `data/km77_detalle_done.json`에 기록돼 다음엔 건너뜀).
+   KM77 데이터 표에 없고 기사·영상에만 있는 기록은 `data/extra_cars.json`에 수동 추가(출처 필수). `scripts/find_article_moose.mjs`로 시승기 본문에서 찾을 수 있다.
    `--recheck`를 붙이면 최근 3년 페이지 중 무스 값이 비어 있던 것도 다시 읽는다.
 2. `data/pending_review.md`를 읽고 처리:
    - 78km/h 이상 새 차 중 지상고가 없는 차 → `data/gc_manual.json`에 값 추가(경계값이면 검색으로 검증).

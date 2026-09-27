@@ -27,7 +27,7 @@ function genUrl(path) {
 async function get(path) {
   for (let i = 0; i < 3; i++) {
     try {
-      const r = await fetch(BASE + path, { headers: { 'User-Agent': UA } });
+      const r = await fetch(BASE + path, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) });
       if (r.status === 404) return null;
       if (r.ok) return await r.text();
     } catch {}

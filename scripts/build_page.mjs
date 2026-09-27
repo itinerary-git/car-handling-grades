@@ -10,8 +10,12 @@ const mentions = JSON.parse(fs.readFileSync(new URL('data/peer_mentions.json', r
 const qrExpected = JSON.parse(fs.readFileSync(new URL('data/qr_expected.json', root), 'utf8'));
 
 const SHORT = [
-  [/^Porsche 911 Turbo S/, 'Porsche 911 Turbo S (992.2)'],
+  [/^Porsche 911 Turbo S Coupé \(2025/, 'Porsche 911 Turbo S (992.2)'],
+  [/^Porsche 911 Turbo S Coupé \(2015/, 'Porsche 911 Turbo S (991.2)'],
+  [/^Ford Puma ST/, 'Ford Puma ST 1.5 EcoBoost'],
   [/^Ford Puma/, 'Ford Puma 1.0 EcoBoost MHEV'],
+  [/^Ford Fiesta Active/, 'Ford Fiesta Active 1.5 TDCi'],
+  [/^KIA Niro 1.6 GDi HEV/, 'Kia Niro 1.6 HEV (2세대)'],
   [/^Citroën ë-C3/, 'Citroën ë-C3'],
   [/^Toyota Yaris Cross/, 'Toyota Yaris Cross Hybrid'],
   [/^Volkswagen T-Cross/, 'Volkswagen T-Cross 1.0 TSI'],

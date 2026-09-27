@@ -711,5 +711,65 @@
  "Leapmotor T03 BEV 37 kWh (2024)": {
   "ground_clearance_mm": 130,
   "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche 911 Turbo S Coupé (2015-2018)": {
+  "ground_clearance_mm": 110,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Fiesta Active+ 1.5 TDCi 88 kW (120 CV) S/S (2018-2019)": {
+  "ground_clearance_mm": 150,
+  "gc_source": "verified approx (automobiledimension 150; another estimate 130)"
+ },
+ "Mercedes-Benz Mercedes-AMG C 63 S Coupé": {
+  "ground_clearance_mm": 115,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "MINI Cooper S 5 puertas (2014-2017)": {
+  "ground_clearance_mm": 140,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Fiesta 5p ST 1.5 EcoBoost 147 kW (200 CV) (2018-2021)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop &amp; i-Eloop Zenith (2018-2022)": {
+  "ground_clearance_mm": 136,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi A6 50 TDI quattro tiptronic (2018-2021)": {
+  "ground_clearance_mm": 130,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi Q5 Sportback S line 45 TFSI quattro-ultra S tronic (2020-2024)": {
+  "ground_clearance_mm": 200,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Audi RS 4 Avant 2.9 TFSI 331 kW (450 CV) quattro tiptronic 8 vel. (2017-2018)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)": {
+  "ground_clearance_mm": 172,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Honda Civic Type R 2.0 VTEC Turbo (2017-2018)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Ford Fiesta 5p Titanium 1.0 EcoBoost 92 kW (125 CV) S/S (2017-2018)": {
+  "ground_clearance_mm": 133,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Alfa Romeo Giulia 2.2 Diesel 132 kW (180 CV) Super (2016-2018)": {
+  "ground_clearance_mm": 135,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)": {
+  "ground_clearance_mm": 120,
+  "gc_source": "manufacturer (estimate, unverified)"
+ },
+ "Porsche Taycan Turbo S (2019-2024)": {
+  "ground_clearance_mm": 125,
+  "gc_source": "manufacturer (estimate, unverified)"
  }
 }

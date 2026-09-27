@@ -29,6 +29,16 @@
      "gc": 0
     },
     {
+     "name": "Porsche 911 Turbo S Coupé (2015-2018)",
+     "moose_kmh": 82,
+     "wheelbase_mm": 2450,
+     "ground_clearance_mm": 110,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/porsche/911/2016/coupe/turbo-s/911-turbo-s-coupe/mediciones-propias",
+     "wb": 0,
+     "gc": 0
+    },
+    {
      "name": "Fiat 124 Spider Lusso 103 kW (140 CV) (2016-2019)",
      "moose_kmh": 81,
      "wheelbase_mm": 2310,
@@ -119,6 +129,36 @@
      "gc": 0
     },
     {
+     "name": "MINI Cooper S 5 puertas (2014-2017)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2567,
+     "ground_clearance_mm": 140,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/mini/mini/2015/5-puertas/cooper-s/5-puertas-cooper-s/mediciones-propias",
+     "wb": 0,
+     "gc": 0
+    },
+    {
+     "name": "Ford Fiesta 5p ST 1.5 EcoBoost 147 kW (200 CV) (2018-2021)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2493,
+     "ground_clearance_mm": 125,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/ford/fiesta/2017/5-puertas/st/fiesta-5p-st/mediciones-propias",
+     "wb": 0,
+     "gc": 0
+    },
+    {
+     "name": "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop & i-Eloop Zenith (2018-2022)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2310,
+     "ground_clearance_mm": 136,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/mazda/mx-5/2019/rf/zenith/mx-5-rf-20-skyactiv-g-20-135-kw-184-cv-i-stop-i-eloop-zenith/mediciones-propias",
+     "wb": 0,
+     "gc": 0
+    },
+    {
      "name": "Audi A1 Sportback S line 30 TFSI S tronic 7 vel. (2018-2020)",
      "moose_kmh": 79,
      "wheelbase_mm": 2563,
@@ -175,6 +215,16 @@
      "ground_clearance_mm": 142,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/volkswagen/polo/2021/mediciones-propias",
+     "wb": 0,
+     "gc": 0
+    },
+    {
+     "name": "Ford Fiesta 5p Titanium 1.0 EcoBoost 92 kW (125 CV) S/S (2017-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2493,
+     "ground_clearance_mm": 133,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/ford/fiesta/2017/5-puertas/titanium/fiesta-5p-titanium-10-ecoboost-92-kw-125-cv-ss/mediciones-propias",
      "wb": 0,
      "gc": 0
     },
@@ -401,6 +451,26 @@
    ],
    [
     {
+     "name": "Ford Fiesta Active+ 1.5 TDCi 88 kW (120 CV) S/S (2018-2019)",
+     "moose_kmh": 81,
+     "wheelbase_mm": 2493,
+     "ground_clearance_mm": 150,
+     "gc_source": "verified approx (automobiledimension 150; another estimate 130)",
+     "km77": "https://www.km77.com/coches/ford/fiesta/2017/active/plus/fiesta-active-15-tdci-88-kw-120-cv-ss/mediciones-propias",
+     "wb": 0,
+     "gc": 1
+    },
+    {
+     "name": "Ford Puma ST 1.5 EcoBoost 147 kW (200 CV) (2020-2022)",
+     "moose_kmh": 81,
+     "wheelbase_mm": 2588,
+     "ground_clearance_mm": 152,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/ford/puma/2020/estandar/st/puma-st/mediciones-propias",
+     "wb": 0,
+     "gc": 1
+    },
+    {
      "name": "Ford Puma ST-Line X 1.0 EcoBoost MHEV 114 kW (155 CV) (2019-2020)",
      "moose_kmh": 78,
      "wheelbase_mm": 2588,
@@ -497,6 +567,16 @@
      "ground_clearance_mm": 150,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/mini/mini/2024/mediciones-propias",
+     "wb": 0,
+     "gc": 1
+    },
+    {
+     "name": "Volkswagen T-Roc Sport 2.0 TSI 140 kW (190 CV) 4MOTION DSG 7 vel. (2018-2019)",
+     "moose_kmh": 74,
+     "wheelbase_mm": 2593,
+     "ground_clearance_mm": 158,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/volkswagen/t-roc/2018/estandar/sport/t-roc-sport-20-tsi-140-kw-190-cv-4motion-dsg-7-vel/mediciones-propias",
      "wb": 0,
      "gc": 1
     },
@@ -833,6 +913,16 @@
      "gc": 0
     },
     {
+     "name": "Honda Civic Type R 2.0 VTEC Turbo (2017-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2699,
+     "ground_clearance_mm": 125,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/honda/civic/2017/5-puertas/type-r/civic-type-r-20-vtec-turbo/mediciones-propias",
+     "wb": 1,
+     "gc": 0
+    },
+    {
      "name": "BMW 116d 5p Aut. (2017-2019)",
      "moose_kmh": 77,
      "wheelbase_mm": 2690,
@@ -1023,6 +1113,16 @@
      "gc": 0
     },
     {
+     "name": "Mazda MX-30 Zenith (2020-2022)",
+     "moose_kmh": 74,
+     "wheelbase_mm": 2655,
+     "ground_clearance_mm": 130,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mazda/mx-30/2020/estandar/zenith/mx-30-zenith/mediciones-propias",
+     "wb": 1,
+     "gc": 0
+    },
+    {
      "name": "Audi Q2 design edition 1.4 TFSI CoD 110 kW (150 CV) S tronic 7 vel. (2016-2018)",
      "moose_kmh": 73,
      "wheelbase_mm": 2601,
@@ -1059,6 +1159,16 @@
      "ground_clearance_mm": 135,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/opel/astra/2016/mediciones-propias",
+     "wb": 1,
+     "gc": 0
+    },
+    {
+     "name": "Toyota C-HR 220PH Advance (2023-2025)",
+     "moose_kmh": 71,
+     "wheelbase_mm": 2640,
+     "ground_clearance_mm": 137,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/toyota/c-hr/2024/estandar/phev/c-hr-220ph-advance/mediciones-propias",
      "wb": 1,
      "gc": 0
     },
@@ -1101,6 +1211,16 @@
      "ground_clearance_mm": 158,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/hyundai/kona/2018/mediciones-propias",
+     "wb": 1,
+     "gc": 1
+    },
+    {
+     "name": "Alfa Romeo Tonale Hybrid 130 TCT Edizione Speciale (2022-2023)",
+     "moose_kmh": 74,
+     "wheelbase_mm": 2636,
+     "ground_clearance_mm": 156,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/alfa-romeo/tonale/2022/estandar/estandar/tonale-special-edition-hybrid-96-kw-130-cv/mediciones-propias",
      "wb": 1,
      "gc": 1
     },
@@ -1175,6 +1295,16 @@
      "km77": "https://www.km77.com/coches/volkswagen/t-roc/2026/mediciones-propias",
      "wb": 1,
      "gc": 2
+    },
+    {
+     "name": "BYD Atto 2 DM-i Boost (2025)",
+     "moose_kmh": 73,
+     "wheelbase_mm": 2620,
+     "ground_clearance_mm": 160,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/byd/atto-2/2025/estandar/phev/atto-2-dm-i-boost/mediciones-propias",
+     "wb": 1,
+     "gc": 2
     }
    ],
    [
@@ -1205,6 +1335,26 @@
      "ground_clearance_mm": 177,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/ebro/s700/2025/mediciones-propias",
+     "wb": 1,
+     "gc": 3
+    },
+    {
+     "name": "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2650,
+     "ground_clearance_mm": 172,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/kia/xceed/2020/estandar/emotion/xceed-14-t-gdi-emotion-103-kw-140-cv-dct2/mediciones-propias",
+     "wb": 1,
+     "gc": 3
+    },
+    {
+     "name": "Hyundai Kona 1.0 T-GDI 88 kW (120 CV) 4x2 Klass (2017-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2600,
+     "ground_clearance_mm": 170,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/hyundai/kona/2018/estandar/klass/kona-10-t-gdi-88-kw-120-cv-4x2-klass/mediciones-propias",
      "wb": 1,
      "gc": 3
     },
@@ -1245,6 +1395,16 @@
      "ground_clearance_mm": 170,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/renault/captur/2017/mediciones-propias",
+     "wb": 1,
+     "gc": 3
+    },
+    {
+     "name": "KIA Sportage 2.0 Mild Hybrid 136 kW (185 CV) 4x4 (2018-2019)",
+     "moose_kmh": 77,
+     "wheelbase_mm": 2670,
+     "ground_clearance_mm": 172,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/kia/sportage/2018/estandar/mild-hybrid/sportage-20-mild-hybrid-136-kw-185-cv-4x4/mediciones-propias",
      "wb": 1,
      "gc": 3
     },
@@ -1299,6 +1459,26 @@
      "gc": 3
     },
     {
+     "name": "Mazda CX-30 Zenith 2.0 SKYACTIV-G 90 kW (122 CV) (2019-2021)",
+     "moose_kmh": 74,
+     "wheelbase_mm": 2655,
+     "ground_clearance_mm": 175,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mazda/cx-30/2020/estandar/zenith/cx-30-zenith-20-skyactiv-g-90-kw-122-cv/mediciones-propias",
+     "wb": 1,
+     "gc": 3
+    },
+    {
+     "name": "Hyundai Tucson PHEV 1.6 TGDI 195 kW (265 CV) 6AT 4X4 Style (2021-2024)",
+     "moose_kmh": 74,
+     "wheelbase_mm": 2680,
+     "ground_clearance_mm": 170,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/hyundai/tucson/2021/estandar/phev/tucson-phev-16-tgdi-195-kw-265-cv-6at-4x4-style/mediciones-propias",
+     "wb": 1,
+     "gc": 3
+    },
+    {
      "name": "Dacia Sandero Stepway Comfort 74 kW (100 CV) ECO-G (2020-2022)",
      "moose_kmh": 73,
      "wheelbase_mm": 2604,
@@ -1337,6 +1517,16 @@
      "km77": "https://www.km77.com/coches/hyundai/tucson/2021/mediciones-propias",
      "wb": 1,
      "gc": 3
+    },
+    {
+     "name": "Peugeot 2008 GT Line PureTech 130 S&S (2019-2020)",
+     "moose_kmh": 70,
+     "wheelbase_mm": 2605,
+     "ground_clearance_mm": 170,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/peugeot/2008/2020/estandar/gt-line/2008-gt-line-puretech-130-ss/mediciones-propias",
+     "wb": 1,
+     "gc": 3
     }
    ],
    [
@@ -1347,6 +1537,16 @@
      "ground_clearance_mm": 188,
      "gc_source": "verified (web search: cars-data)",
      "km77": "https://www.km77.com/coches/opel/grandland-x/2018/mediciones-propias",
+     "wb": 1,
+     "gc": 4
+    },
+    {
+     "name": "Mitsubishi Eclipse Cross 150T Motion 2WD (2017-2018)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2670,
+     "ground_clearance_mm": 183,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mitsubishi/eclipse-cross/2018/estandar/motion/eclipse-cross-150t-motion-2wd/mediciones-propias",
      "wb": 1,
      "gc": 4
     },
@@ -1431,12 +1631,42 @@
      "gc": 4
     },
     {
+     "name": "SsangYong Korando G15T 4x2 Limited 120 kW (163 CV) (2019-2020)",
+     "moose_kmh": 73,
+     "wheelbase_mm": 2675,
+     "ground_clearance_mm": 182,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/ssangyong/korando/2019/estandar/limited/korando-g15t-4x2-limited/mediciones-propias",
+     "wb": 1,
+     "gc": 4
+    },
+    {
+     "name": "BMW X1 sDrive18i Aut. (2017-2018)",
+     "moose_kmh": 73,
+     "wheelbase_mm": 2670,
+     "ground_clearance_mm": 183,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/bmw/x1/2015/estandar/estandar/x1-sdrive18i-aut2/mediciones-propias",
+     "wb": 1,
+     "gc": 4
+    },
+    {
      "name": "Renault 4 E-Tech iconic 110 kW (150 CV) 52 kWh (2025)",
      "moose_kmh": 71,
      "wheelbase_mm": 2624,
      "ground_clearance_mm": 181,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/renault/4/2025/mediciones-propias",
+     "wb": 1,
+     "gc": 4
+    },
+    {
+     "name": "SEAT Ateca 2.0 TDI 140 kW (190 CV) DSG-7 4Drive Start&Stop Xcellence (2016-2018)",
+     "moose_kmh": 71,
+     "wheelbase_mm": 2630,
+     "ground_clearance_mm": 189,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/seat/ateca/2016/estandar/xcellence/ateca-20-tdi-190-cv-4drive-startstop-xcellence-dsg-7-vel/mediciones-propias",
      "wb": 1,
      "gc": 4
     }
@@ -1453,12 +1683,12 @@
      "gc": 5
     },
     {
-     "name": "Peugeot 3008 1.6 BlueHDi 120 S&S (2016-2018)",
+     "name": "Peugeot 3008 GT Line 1.6 BlueHDi 120 S&S (2016-2017)",
      "moose_kmh": 80,
      "wheelbase_mm": 2675,
      "ground_clearance_mm": 219,
      "gc_source": "km77",
-     "km77": "https://www.youtube.com/watch?v=fR1yxzizNBE",
+     "km77": "https://www.km77.com/coches/peugeot/3008/2017/estandar/gt-line/3008-gt-line-16-bluehdi-120-ss/mediciones-propias",
      "wb": 1,
      "gc": 5
     },
@@ -1543,6 +1773,16 @@
      "gc": 5
     },
     {
+     "name": "Honda CR-V 1.5 VTEC Turbo 127 kW (173 CV) 4x4 Lifestyle (2018-2021)",
+     "moose_kmh": 75,
+     "wheelbase_mm": 2663,
+     "ground_clearance_mm": 201,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/honda/cr-v/2019/estandar/lifestyle/cr-v-15-vtec-turbo-127-kw-173-cv-4x4-lifestyle/mediciones-propias",
+     "wb": 1,
+     "gc": 5
+    },
+    {
      "name": "Ford Kuga ST-Line 1.5 EcoBoost Auto-Start-Stop 110 kW (150 CV) 4x2 (2016-2018)",
      "moose_kmh": 74,
      "wheelbase_mm": 2690,
@@ -1599,6 +1839,16 @@
      "ground_clearance_mm": 217,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/dacia/duster/2022/mediciones-propias",
+     "wb": 1,
+     "gc": 5
+    },
+    {
+     "name": "Toyota RAV4 Hybrid 220H 4x2 Luxury (2018-2020)",
+     "moose_kmh": 71,
+     "wheelbase_mm": 2690,
+     "ground_clearance_mm": 190,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/toyota/rav4/2019/estandar/luxury/rav4-hybrid-4x2-luxury/mediciones-propias",
      "wb": 1,
      "gc": 5
     }
@@ -1811,6 +2061,16 @@
    ],
    [
     {
+     "name": "KIA Niro 1.6 GDi HEV 141 CV Emotion (2022-2024)",
+     "moose_kmh": 81,
+     "wheelbase_mm": 2720,
+     "ground_clearance_mm": 160,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/kia/niro/2022/estandar/hibrido/niro-16-hev-emotion/mediciones-propias",
+     "wb": 2,
+     "gc": 2
+    },
+    {
      "name": "Ebro s800 PHEV Luxury (2025)",
      "moose_kmh": 74,
      "wheelbase_mm": 2710,
@@ -1827,6 +2087,26 @@
      "ground_clearance_mm": 160,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/infiniti/q30/2016/mediciones-propias",
+     "wb": 2,
+     "gc": 2
+    },
+    {
+     "name": "KIA Niro 1.6 HEV Emotion (2016-2018)",
+     "moose_kmh": 69,
+     "wheelbase_mm": 2700,
+     "ground_clearance_mm": 160,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/kia/niro/2016/estandar/emotion/niro-16-hev-emotion/mediciones-propias",
+     "wb": 2,
+     "gc": 2
+    },
+    {
+     "name": "Ford Kuga ST-Line X 2.5 PHEV 165 kW (225 CV) (2019-2022)",
+     "moose_kmh": 68,
+     "wheelbase_mm": 2710,
+     "ground_clearance_mm": 160,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/ford/kuga/2020/estandar/phev/kuga-st-line-x-25-duratec-phev/mediciones-propias",
      "wb": 2,
      "gc": 2
     }
@@ -1891,6 +2171,16 @@
      "ground_clearance_mm": 189,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/skoda/kodiaq/2024/mediciones-propias",
+     "wb": 2,
+     "gc": 4
+    },
+    {
+     "name": "Skoda Kodiaq Style 1.4 TSI 110 kW (150 CV) ACT 4x4 7 plazas (2016-2018)",
+     "moose_kmh": 77,
+     "wheelbase_mm": 2791,
+     "ground_clearance_mm": 188,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/skoda/kodiaq/2017/estandar/style/kodiaq-4x4-14-tsi-150-cv-act-style-7-plazas/mediciones-propias",
      "wb": 2,
      "gc": 4
     },
@@ -1997,6 +2287,26 @@
      "gc": 5
     },
     {
+     "name": "Renault Arkana R.S. Line TCe 103 kW (140 CV) EDC mild hybrid (2021-2023)",
+     "moose_kmh": 77,
+     "wheelbase_mm": 2720,
+     "ground_clearance_mm": 200,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/renault/arkana/2021/estandar/estandar/arkana-rs-line-tce-140-edc-micro-hibrido/mediciones-propias",
+     "wb": 2,
+     "gc": 5
+    },
+    {
+     "name": "Mazda CX-5 Zenith 2.2 SKYACTIV-D 110 kW (150 CV) 2WD (2017-2021)",
+     "moose_kmh": 77,
+     "wheelbase_mm": 2700,
+     "ground_clearance_mm": 192,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mazda/cx-5/2017/estandar/zenith/cx-5-zenith-22-skyactiv-d-110-kw-150-cv-2wd/mediciones-propias",
+     "wb": 2,
+     "gc": 5
+    },
+    {
      "name": "Peugeot E-3008 GT Eléctrico 210 (157 kW) (2023)",
      "moose_kmh": 75,
      "wheelbase_mm": 2739,
@@ -2053,6 +2363,16 @@
      "ground_clearance_mm": 210,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/renault/koleos/2017/mediciones-propias",
+     "wb": 2,
+     "gc": 5
+    },
+    {
+     "name": "Volvo XC40 Inscription T5 AWD (2017-2019)",
+     "moose_kmh": 73,
+     "wheelbase_mm": 2702,
+     "ground_clearance_mm": 211,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/volvo/xc40/2018/estandar/inscription/xc40-inscription-t5-awd/mediciones-propias",
      "wb": 2,
      "gc": 5
     },
@@ -2121,12 +2441,42 @@
      "gc": 0
     },
     {
+     "name": "Mercedes-Benz Mercedes-AMG C 63 S Coupé",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2840,
+     "ground_clearance_mm": 115,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/mercedes/clase-c/2018/coupe/amg/amg-c-63-s-coupe/mediciones-propias",
+     "wb": 3,
+     "gc": 0
+    },
+    {
+     "name": "Audi RS 4 Avant 2.9 TFSI 331 kW (450 CV) quattro tiptronic 8 vel. (2017-2018)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2826,
+     "ground_clearance_mm": 120,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/audi/a4/2016/avant/rs-4/rs-4-avant-29-tfsi-331-kw-450-cv-quattro-tiptronic-8-vel/mediciones-propias",
+     "wb": 3,
+     "gc": 0
+    },
+    {
      "name": "BMW 330i xDrive Touring (2019-2022)",
      "moose_kmh": 78,
      "wheelbase_mm": 2851,
      "ground_clearance_mm": 140,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/bmw/serie-3/2020/mediciones-propias",
+     "wb": 3,
+     "gc": 0
+    },
+    {
+     "name": "Alfa Romeo Giulia 2.2 Diesel 132 kW (180 CV) Super (2016-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2820,
+     "ground_clearance_mm": 135,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/alfa-romeo/giulia/2016/estandar/super/giulia-22-diesel-180-cv-super/mediciones-propias",
      "wb": 3,
      "gc": 0
     },
@@ -2177,6 +2527,16 @@
      "ground_clearance_mm": 120,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/mercedes/clase-e/2021/mediciones-propias",
+     "wb": 3,
+     "gc": 0
+    },
+    {
+     "name": "Mercedes-Benz GLC 220 d 4MATIC (2022)",
+     "moose_kmh": 75,
+     "wheelbase_mm": 2888,
+     "ground_clearance_mm": 145,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mercedes/clase-glc/2023/estandar/estandar/glc-220-d-4matic/mediciones-propias",
      "wb": 3,
      "gc": 0
     },
@@ -2269,6 +2629,16 @@
      "ground_clearance_mm": 155,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/kia/ev4/2025/mediciones-propias",
+     "wb": 3,
+     "gc": 1
+    },
+    {
+     "name": "Mercedes-Benz GLC 250 d 4MATIC Coupé (2016-2018)",
+     "moose_kmh": 75,
+     "wheelbase_mm": 2873,
+     "ground_clearance_mm": 155,
+     "gc_source": "km77",
+     "km77": "https://www.km77.com/coches/mercedes/glc-coupe/2017/estandar/estandar/glc-250-d-4matic-coupe/mediciones-propias",
      "wb": 3,
      "gc": 1
     },
@@ -2426,6 +2796,16 @@
      "ground_clearance_mm": 208,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/audi/q5/2017/mediciones-propias",
+     "wb": 3,
+     "gc": 5
+    },
+    {
+     "name": "Audi Q5 Sportback S line 45 TFSI quattro-ultra S tronic (2020-2024)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2819,
+     "ground_clearance_mm": 200,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/audi/q5/2021/sportback/estandar/q5-sportback-s-line-45-tfsi-quattro-ultra-s-tronic/mediciones-propias",
      "wb": 3,
      "gc": 5
     },
@@ -2624,6 +3004,16 @@
      "gc": 0
     },
     {
+     "name": "Audi A6 50 TDI quattro tiptronic (2018-2021)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2924,
+     "ground_clearance_mm": 130,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/audi/a6/2018/estandar/estandar/a6-50-tdi-quattro/mediciones-propias",
+     "wb": 4,
+     "gc": 0
+    },
+    {
      "name": "BMW 320d Gran Turismo Aut. (2016-2018)",
      "moose_kmh": 78,
      "wheelbase_mm": 2920,
@@ -2650,6 +3040,26 @@
      "ground_clearance_mm": 120,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/porsche/panamera/2017/mediciones-propias",
+     "wb": 4,
+     "gc": 0
+    },
+    {
+     "name": "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2939,
+     "ground_clearance_mm": 120,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/mercedes/clase-e/2016/berlina/estandar/e-220-d/mediciones-propias",
+     "wb": 4,
+     "gc": 0
+    },
+    {
+     "name": "Porsche Taycan Turbo S (2019-2024)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2900,
+     "ground_clearance_mm": 125,
+     "gc_source": "manufacturer (estimate, unverified)",
+     "km77": "https://www.km77.com/coches/porsche/taycan/2020/estandar/turbo-s/taycan-turbo-s/mediciones-propias",
      "wb": 4,
      "gc": 0
     },

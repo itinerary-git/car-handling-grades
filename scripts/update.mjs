@@ -87,8 +87,11 @@ const before = new Set(Object.keys(rd('data/km77_measurements.json', {})));
 const newSeeds = [...seeds].filter((s) => !before.has(s));
 if (newSeeds.length) {
   execFileSync('node', ['scripts/crawl_km77.mjs', ...newSeeds], { cwd: root, stdio: 'inherit', env: { ...process.env, MSYS_NO_PATHCONV: '1' } });
-  execFileSync('node', ['scripts/enrich_specs.mjs'], { cwd: root, stdio: 'inherit' });
 }
+// other tested versions inside each generation (only comparison pages not read before)
+execFileSync('node', ['scripts/crawl_versions.mjs', '2015'], { cwd: root, stdio: 'inherit' });
+execFileSync('node', ['scripts/merge_versions.mjs'], { cwd: root, stdio: 'inherit' });
+execFileSync('node', ['scripts/enrich_specs.mjs'], { cwd: root, stdio: 'inherit' });
 const after = rd('data/km77_measurements.json', {});
 const cars = rd('data/km77_cars.json', {});
 const manual = rd('data/gc_manual.json', {});
