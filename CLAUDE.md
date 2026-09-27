@@ -8,6 +8,7 @@
 - 보라색: Consumer Reports · Quattroruote · 오토뷰가 그 등급 1위와 비교해 "비슷하다 / 더 좋다"고 한 차 → `data/peer_mentions.json`. 직접 인용 금지, 검색 결과 요약만. 방향이 반대(1위가 더 좋음)거나 세대가 다르거나 출처가 세 사이트가 아니면 넣지 않는다.
 - 호박색: KM77 값은 없지만 Quattroruote 공개 YouTube 안정성 시험(재생목록 "Prove di stabilità")에서 평가가 좋아 비슷하거나 나을 것으로 예상한 차 → `data/qr_expected.json` (차 자신의 제원 등급 칸, `confidence` 필수). 같은 세대를 KM77이 77km/h 이하로 측정했으면 KM77 값을 우선해 넣지 않는다. 기준점: Opel Astra L = Quattroruote 젖은 노면 88km/h·4성 ↔ KM77 76km/h.
 - 지상고: KM77 제원 값 우선, 없으면 `data/gc_manual.json`(출처 표기). 등급 경계 ±6mm 안의 추정치는 웹 검색으로 검증하고 `gc_source`를 `verified (...)`로.
+- 템플릿의 `<!--PRIVATE-->…<!--/PRIVATE-->` 구간(어떻게 뽑았나 · 읽을 때 주의할 점 · 7개 사이트 활용 범위)은 사용자만 보는 내용이라 공개 페이지(public/)에서는 빌드 때 빠진다. 방법·출처 설명을 새로 쓸 땐 이 구간 안에 넣는다.
 - 답변은 한국어. 사용자는 Claude를 "클아"라고 부른다.
 
 ## "등급표 갱신해줘" 절차

@@ -112,7 +112,7 @@ ${headTags.trim()}
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
-${body.slice(headTags.length)}
+${body.slice(headTags.length).replace(/\s*<!--PRIVATE-->[\s\S]*?<!--\/PRIVATE-->/g, '')}
 </body>
 </html>
 `;
