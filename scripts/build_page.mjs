@@ -1,5 +1,8 @@
-// Build report/index.html (artifact page) and data/all_cars.csv from data/grades.json.
+// Build report/index.html (artifact page), public/index.html, public/autoview.html (owner-only Autoview input)
+// and data/all_cars.csv from data/grades.json.
 import fs from 'node:fs';
+import { compareAutoview } from './autoview_compare.mjs';
+import { expandVideos, LEVELS } from './autoview_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const MIN_KMH = 78; // user rule: drop cars at or below 77 km/h
@@ -8,6 +11,7 @@ const { WB, GC } = src;
 const grid = src.grid.map((row) => row.map((c) => c.filter((r) => r.moose_kmh >= MIN_KMH)));
 const mentions = JSON.parse(fs.readFileSync(new URL('data/peer_mentions.json', root), 'utf8'));
 const qrExpected = JSON.parse(fs.readFileSync(new URL('data/qr_expected.json', root), 'utf8'));
+const av = compareAutoview(src.grid, MIN_KMH);
 
 const SHORT = [
   [/^Porsche 911 Turbo S Coupé \(2025/, 'Porsche 911 Turbo S (992.2)'],
@@ -61,6 +65,7 @@ const cells = grid.map((row, i) =>
       n: c.length,
       mentions: mentions.filter((m) => m.cell === `W${i + 1}G${j + 1}`),
       qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}`),
+      av: av.cells[i][j],
       winners: c.filter((r) => r.moose_kmh === top).map((r) => short(r.name)),
       top: top ?? null,
       list: c.slice(0, 6).map((r) => ({
@@ -93,6 +98,7 @@ const changelog = rdj('data/changelog.json', []).slice(0, 12).map((e) => {
   if (e.removed.length) parts.push(`제외 ${e.removed.length}대`);
   if (e.qrAdded.length) parts.push(`Quattroruote 예상 추가: ${e.qrAdded.map(escH).join(', ')}`);
   if (e.peersAdded.length) parts.push(`비교 평가 추가: ${e.peersAdded.map(escH).join(', ')}`);
+  if (e.avAdded?.length) parts.push(`오토뷰 비교 추가: ${e.avAdded.map(escH).join(', ')}`);
   return `<li><span class="cl-date">${e.date}</span> ${parts.join(' · ') || '첫 공개'}</li>`;
 }).join('');
 const tpl = fs.readFileSync(new URL('report/template.html', root), 'utf8');
@@ -122,4 +128,19 @@ ${body.slice(headTags.length).replace(/\s*<!--PRIVATE-->[\s\S]*?<!--\/PRIVATE-->
 `;
 fs.writeFileSync(new URL('public/index.html', root), doc);
 fs.copyFileSync(new URL('data/all_cars.csv', root), new URL('public/all_cars.csv', root));
-console.log('cars', total, 'filled cells', filled);
+
+// owner-only Autoview input page: one row per car (titles with "&" give two rows)
+const avMap = rdj('data/autoview_cars.json', {});
+const entries = expandVideos(rdj('data/autoview_videos.json', [])).map((e) => ({
+  ...e,
+  split: e.key.includes('.') ? `한 영상 ${e.key.split('.')[1]}번째 차` : '',
+  hint: avMap[e.car]?.hint || '',
+}));
+const avTpl = fs.readFileSync(new URL('report/autoview_template.html', root), 'utf8');
+fs.writeFileSync(new URL('public/autoview.html', root), avTpl
+  .replace('/*DATA*/[]', () => JSON.stringify(entries).replace(/</g, String.fromCharCode(92) + 'u003c')) // no '</script>' inside the inline JSON
+  .replace('/*LEVELS*/[]', () => JSON.stringify(LEVELS)));
+
+const blue = av.cells.flat(2).filter((x) => x.status === 'blue');
+console.log('cars', total, 'filled cells', filled, '| autoview rated', av.rated, 'blue', blue.length, blue.length ? '(' + blue.map((x) => x.car).join(', ') + ')' : '');
+if (av.unmapped.length) console.log('autoview: no specs in data/autoview_cars.json for', av.unmapped.join(', '));

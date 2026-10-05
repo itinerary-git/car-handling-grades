@@ -1,3 +1,9 @@
 /*
 !/public
 !/vercel.json
+!/api
+!/package.json
+!/package-lock.json
+!/scripts
+/scripts/*
+!/scripts/autoview_lib.mjs

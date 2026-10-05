@@ -24,3 +24,10 @@ node scripts/enrich_specs.mjs
 
 - Crawling skips paths disallowed in km77's robots.txt (`/buscador`, `/coches/mediciones-propias/`).
 - `MSYS_NO_PATHCONV=1` stops Git Bash from rewriting `/coches/...` arguments into Windows paths.
+
+## Autoview ratings (owner only)
+
+```bash
+node scripts/serve.mjs          # local preview; enter ratings at http://localhost:5177/autoview
+node scripts/autoview_sync.mjs  # sync ratings between the site's Blob store and data/autoview_ratings.json
+```

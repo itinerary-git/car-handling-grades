@@ -1,0 +1,141 @@
+{
+ "2026 푸조 3008 하이브리드": {
+  "hint": "KM77 E-3008 75km/h (기준 미달)",
+  "km77": "Peugeot E-3008 GT Eléctrico 210 (157 kW) (2023)"
+ },
+ "2026 아우디 A6 40 TFSI": {
+  "hint": "KM77 A6 (C8, 이전 세대) 79km/h",
+  "wb": 2927,
+  "gc": 130,
+  "src": "제조사 제원(검색 결과)"
+ },
+ "2026 미니 쿠퍼 S": {
+  "hint": "KM77 MINI Cooper S (F55, 이전 세대) 80km/h",
+  "wb": 2526,
+  "gc": 140,
+  "src": "WB 제조사 · GC 추정(이전 세대 143mm)"
+ },
+ "2026 포르쉐 911 터보 S (페이스리프트)": {
+  "hint": "KM77 911 Turbo S (992.2) 82km/h",
+  "km77": "Porsche 911 Turbo S Coupé (2025)",
+  "anchor": true
+ },
+ "2026 아우디 A6 45 TFSI quattro": {
+  "hint": "KM77 A6 (C8, 이전 세대) 79km/h",
+  "wb": 2927,
+  "gc": 130,
+  "src": "제조사 제원(검색 결과)"
+ },
+ "2026 BYD 돌핀": {
+  "hint": "KM77 Dolphin 78km/h",
+  "km77": "BYD Dolphin Comfort (2023-2025)",
+  "anchor": true
+ },
+ "2026 BMW 320i (MSP)": {
+  "hint": "KM77 330i Touring (G21) 78km/h",
+  "km77": "BMW 330i xDrive Touring (2019-2022)"
+ },
+ "2025 아우디 Q5": {
+  "hint": "KM77 Q5 (이전 세대) 81km/h"
+ },
+ "2025 아우디 Q6 e-tron": {
+  "hint": "KM77 Q6 e-tron 78km/h"
+ },
+ "2025 포르쉐 911 (992.2 GTS)": {
+  "hint": "KM77 911 Carrera 4S (992) 80km/h",
+  "km77": "Porsche 911 Carrera 4S Coupé (2018-2020)"
+ },
+ "2025 BMW X3 20": {
+  "hint": "KM77 X3 (G01, 이전 세대) 81km/h"
+ },
+ "2025 기아 EV4": {
+  "hint": "KM77 EV4 77km/h (기준 미달)"
+ },
+ "2025 포르쉐 타이칸 GTS (페이스리프트)": {
+  "hint": "KM77 Taycan Turbo S·GTS 78km/h"
+ },
+ "2025 폴스타 2 BST": {
+  "hint": "KM77 Polestar 2 74km/h (기준 미달)"
+ },
+ "2025 테슬라 모델 Y (주니퍼)": {
+  "hint": "KM77 Model Y (이전 세대) 83km/h"
+ },
+ "2025 BMW 320i (LCI2) 투어링": {
+  "hint": "KM77 330i Touring (G21) 78km/h"
+ },
+ "2025 폴스타 2 스탠다드 레인지 싱글 모터": {
+  "hint": "KM77 Polestar 2 74km/h (기준 미달)"
+ },
+ "2025 BMW X3 M50 xDrive (G45)": {
+  "hint": "KM77 X3 (G01, 이전 세대) 81km/h"
+ },
+ "2025 포르쉐 카이엔 S E-하이브리드 쿠페": {
+  "hint": "KM77 Cayenne Turbo E-Hybrid 쿠페 78km/h"
+ },
+ "2025 기아 스포티지 (페이스리프트)": {
+  "hint": "KM77 Sportage (NQ5) 80km/h"
+ },
+ "2025 BMW M340i (LCI2)": {
+  "hint": "KM77 330i Touring (G21) 78km/h"
+ },
+ "2024 테슬라 모델 3 페이스리프트(하이랜드)": {
+  "hint": "KM77 Model 3 83·81km/h"
+ },
+ "포르쉐 카이엔 터보 GT": {
+  "hint": "KM77 Cayenne Turbo E-Hybrid 쿠페 78km/h"
+ },
+ "2024 폴스타 2 (후륜구동 - RWD)": {
+  "hint": "KM77 Polestar 2 74km/h (기준 미달)"
+ },
+ "2024 포르쉐 카이엔 (페이스리프트)": {
+  "hint": "KM77 Cayenne Turbo E-Hybrid 쿠페 78km/h"
+ },
+ "2023 포르쉐 911 카레라 GTS 카브리올레": {
+  "hint": "KM77 911 Carrera 4S (992) 80km/h"
+ },
+ "포르쉐 911 GT3 (992.1)": {
+  "hint": "KM77 911 Carrera 4S (992) 80km/h"
+ },
+ "2023 폴스타2 롱레인지": {
+  "hint": "KM77 Polestar 2 74km/h (기준 미달)"
+ },
+ "포르쉐 911 카레라4 GTS. 992": {
+  "hint": "KM77 911 Carrera 4S (992) 80km/h"
+ },
+ "포르쉐 타이칸 터보S": {
+  "hint": "KM77 Taycan Turbo S·GTS 78km/h"
+ },
+ "포르쉐 911 터보S": {
+  "hint": "KM77 911 Turbo S (992.2) 82km/h"
+ },
+ "2026 마세라티 MC Pura 첼로": {
+  "wb": 2700,
+  "gc": 102,
+  "src": "WB 제조사 · GC는 MC20 Cielo 값(추정)"
+ },
+ "2027 폴스타3 퍼포먼스": {
+  "wb": 2985,
+  "gc": 211,
+  "src": "제조사 제원(검색 결과)"
+ },
+ "2027 볼보 EX90 퍼포먼스": {
+  "wb": 2985,
+  "gc": 216,
+  "src": "제조사 제원(검색 결과)"
+ },
+ "2027 BYD 씨라이언 7 플러스": {
+  "wb": 2930,
+  "gc": 140,
+  "src": "Sealion 7 제조사 제원(검색 결과)"
+ },
+ "2026 기아 EV5 롱레인지 (2WD)": {
+  "wb": 2750,
+  "gc": 161,
+  "src": "제조사 제원(검색 결과)"
+ },
+ "2027 메르세데스-벤츠 S580 페이스리프트": {
+  "wb": 3216,
+  "gc": 130,
+  "src": "V223 제원(검색 결과)"
+ }
+}

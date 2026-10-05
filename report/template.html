@@ -5,7 +5,7 @@
 <style>
 :root{
   --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
-  --heat:#0E7A68; --heat-ink:#FFFFFF; --cone:#D9520B; --empty:#E8ECEA; --peer:#6A45D6; --peer-soft:#EEE9FC; --qr:#9A5B00; --qr-soft:#FBEFD9;
+  --heat:#0E7A68; --heat-ink:#FFFFFF; --cone:#D9520B; --empty:#E8ECEA; --peer:#6A45D6; --peer-soft:#EEE9FC; --qr:#9A5B00; --qr-soft:#FBEFD9; --av:#1F5FBF; --av-soft:#E3ECFA;
   --display:"Barlow Condensed","Arial Narrow",sans-serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
@@ -14,13 +14,13 @@
   :root:not([data-theme="light"]){
     color-scheme:dark;
     --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
-    --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+    --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F; --av:#7FA8F0; --av-soft:#1A2640;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
   --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
-  --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F;
+  --heat:#35BFA3; --heat-ink:#07120F; --cone:#FF7B3A; --empty:#1B2421; --peer:#B39BFF; --peer-soft:#261F3D; --qr:#F0B44C; --qr-soft:#33270F; --av:#7FA8F0; --av-soft:#1A2640;
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:28px 56px}
@@ -99,6 +99,18 @@ table.src{border-collapse:collapse;width:100%;font-size:13.5px}
 .detail .qr-item{border-left:3px dashed var(--qr);padding-left:10px;font-size:13px;line-height:1.45}
 .detail .qr-item b{color:var(--qr)}
 .swatch.qr{background:var(--qr-soft);border:1px dashed var(--qr)}
+/* Autoview comparison (blue) */
+.avchip{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--av-soft);color:var(--av);border:1px solid var(--av)}
+.cell.none.hasav{cursor:pointer;outline:1px solid var(--av);outline-offset:-3px}
+.detail .avs{margin-top:16px;padding-top:12px;border-top:2px solid var(--av);display:grid;gap:10px}
+.detail .avs h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--av)}
+.detail .av-item{border-left:3px solid var(--line);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .av-item.blue{border-left-color:var(--av)}
+.detail .av-item.blue b{color:var(--av)}
+.swatch.av{background:var(--av-soft);border:1px solid var(--av)}
+.owner{display:flex;justify-content:flex-end}
+.owner a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:6px;background:var(--av);color:#fff;font-weight:600;font-size:13.5px;text-decoration:none}
+.owner a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .changelog{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13.5px}
 .changelog li{max-width:90ch}
 .cl-date{font-family:var(--mono);font-size:12px;color:var(--muted);margin-right:8px}
@@ -133,7 +145,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
           <tbody></tbody>
         </table>
       </div>
-      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span></div>
+      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span><span><span class="swatch av" aria-hidden="true"></span> 오토뷰 핸들링·기본 안정성 등급이 1위 수준 이상인 차</span></div>
     </div>
     <aside class="detail" id="detail" aria-live="polite"></aside>
   </section>
@@ -191,6 +203,8 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
     <ul class="changelog">{{CHANGELOG}}</ul>
   </section>
 
+  <div class="owner" id="owner" hidden><a href="/autoview">오토뷰 등급 입력 →</a></div>
+
   <footer>마지막 갱신 {{UPDATED}} · 원자료: km77.com 차량별 "Mediciones propias" 페이지 · <a href="all_cars.csv" style="color:inherit">전체 차량 목록 CSV</a></footer>
 </div>
 
@@ -198,6 +212,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
 const DATA = /*DATA*/null;
 const lo = 78, hi = 83;
 const qrItems = c => c.qr.filter(q => q.chip);
+const avChips = c => (c.av || []).filter(a => a.status === 'blue').map(a => `<span class="avchip">AV: ${a.car.replace(/^[0-9]{4} /, '').split(' (')[0]}</span>`).join('');
 const tbody = document.querySelector('#grid tbody');
 const headRow = document.querySelector('#grid thead tr');
 DATA.GC.forEach(g => { const th = document.createElement('th'); th.innerHTML = g + '<span class="unit">mm</span>'; headRow.appendChild(th); });
@@ -213,8 +228,8 @@ DATA.WB.forEach((w, i) => {
     if (!c.n) {
       td.classList.add('none');
       td.innerHTML = '<span class="kmh">–</span><span class="who">78km/h 이상 기록 없음</span>' + qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('');
-      if (qrItems(c).length) {
-        td.classList.add('hasqr'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+      if (qrItems(c).length || (c.av || []).length) {
+        td.classList.add(qrItems(c).length ? 'hasqr' : 'hasav'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
         td.addEventListener('click', () => show(i, j));
         td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
       }
@@ -226,7 +241,7 @@ DATA.WB.forEach((w, i) => {
       if (c.winners.length > 1) td.classList.add('tie');
       td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
       td.setAttribute('aria-label', `휠베이스 ${w}mm, 지상고 ${g}mm: ${c.winners.join(', ')} ${c.top}km/h`);
-      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}`;
+      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}${avChips(c)}`;
       td.addEventListener('click', () => show(i, j));
       td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
     }
@@ -245,7 +260,22 @@ function show(i, j) {
      <ol>${c.list.map(r => `<li><span class="sp">${r.kmh}</span><span class="nm"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
      <span class="sp-meta">WB ${r.wb.toLocaleString()} · GC ${r.gc}mm${flag(r.est)}</span></span></li>`).join('')}</ol>
      ${c.mentions.length ? `<div class="peers"><h4>다른 사이트 평가</h4>${c.mentions.map(m => `<div class="peer-item"><b>${m.car}</b> · ${m.vs}와 핸들링 ${m.relation}<br>${m.summary}<span class="sp-meta">${m.own}</span><span class="sp-meta">${m.caveat}</span><span class="sp-meta">출처: <a href="${m.url}" target="_blank" rel="noopener">${m.source}</a> (검색 결과 요약)</span></div>`).join('')}</div>` : ''}
-     ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}`;
+     ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}
+     ${(c.av || []).length ? `<div class="avs"><h4>오토뷰 로드테스트 등급</h4>${c.av.map(a => `<div class="av-item${a.status === 'blue' ? ' blue' : ''}"><b>${a.car}</b> · 핸들링 ${a.handling} · 기본 안정성 ${a.avoidance}<br>${avVerdict(a)}<span class="sp-meta">${a.specs}</span><span class="sp-meta">출처: <a href="${a.url}" target="_blank" rel="noopener">오토뷰 YouTube 영상</a> · 화면의 등급</span></div>`).join('')}</div>` : ''}`;
+}
+function avVerdict(a) {
+  const b = a.basis, base = b ? `기준차 ${b.car.replace(/^[0-9]{4} /, '')}(KM77 ${b.kmh}km/h)의 오토뷰 등급은 핸들링 ${b.handling} · 기본 안정성 ${b.avoidance}` : '';
+  if (a.status === 'blue') return `1위(${a.top}km/h) 수준 이상 예상. ${base}이고, 이 차는 둘 다 같거나 높아요.`;
+  if (a.status === 'below') return `${base}인데, 이 차는 그보다 낮은 항목이 있어 1위(${a.top}km/h) 수준인지 확인할 수 없어요.`;
+  if (a.status === 'nobase') return `KM77 ${a.top}km/h 이상과 비교할 오토뷰 기준차가 아직 없어요.`;
+  if (a.status === 'km77') return `KM77이 같은 세대를 ${a.kmh}km/h로 측정해서 KM77 값을 우선해요.`;
+  return '이 등급에는 78km/h 이상 1위가 없어 비교하지 않았어요.';
 }
 show(3, 0);
+// owner-only link to the Autoview input page: local preview, or a browser that saved the admin key there
+(() => {
+  let key = '';
+  try { key = localStorage.getItem('moose-admin-key') || ''; } catch {}
+  if (['localhost', '127.0.0.1'].includes(location.hostname) || key) document.getElementById('owner').hidden = false;
+})();
 </script>
