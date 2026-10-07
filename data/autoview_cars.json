@@ -52,10 +52,14 @@
   "hint": "KM77 EV4 77km/h (기준 미달)"
  },
  "2025 포르쉐 타이칸 GTS (페이스리프트)": {
-  "hint": "KM77 Taycan Turbo S·GTS 78km/h"
+  "wb": 2900,
+  "gc": 127,
+  "src": "WB 제조사 · GC 검증(검색: autopadre 5in, evkx)"
  },
  "2025 폴스타 2 BST": {
-  "hint": "KM77 Polestar 2 74km/h (기준 미달)"
+  "wb": 2736,
+  "gc": 147,
+  "src": "WB·GC 검증 approx(검색: BST 270 5.8in, 차고 -25mm)"
  },
  "2025 테슬라 모델 Y (주니퍼)": {
   "hint": "KM77 Model Y (이전 세대) 83km/h"
@@ -107,5 +111,25 @@
   "wb": 3216,
   "gc": 130,
   "src": "V223 제원(검색 결과)"
+ },
+ "2024 혼다 어코드 하이브리드": {
+  "wb": 2830,
+  "gc": 135,
+  "src": "제조사 제원(검색: autopadre 5.3in, iseecars 111.4in)"
+ },
+ "2025 렉서스 ES300h": {
+  "wb": 2870,
+  "gc": 158,
+  "src": "검증(검색: autotijd 158, carsguide 2023-24 158)"
+ },
+ "2024 포르쉐 파나메라 4": {
+  "wb": 2950,
+  "gc": 132,
+  "src": "검증(검색: truedelta 5.2in, autotijd)"
+ },
+ "2024 BMW 530e (PHEV)": {
+  "wb": 2995,
+  "gc": 146,
+  "src": "검증(검색: cars-data 세단 146, 투어링 147)"
  }
 }
