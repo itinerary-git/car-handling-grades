@@ -34,9 +34,12 @@ export function compareAutoview(grid, minKmh) {
     if (k) anchors.push({ car, kmh: k.moose_kmh, km77: k.name, h: level(r.handling), a: level(r.avoidance), r });
   }
 
+  // only cars Autoview rated 좋음 or better on handling or stability are shown
+  const GOOD = level('좋음');
   const cells = grid.map((row) => row.map(() => []));
   const unmapped = [];
   for (const [car, r] of byCar) {
+    if (level(r.handling) < GOOD && level(r.avoidance) < GOOD) continue;
     const m = map[car];
     const k = m?.km77 && km77.get(m.km77);
     const wb = k ? k.wheelbase_mm : m?.wb, gc = k ? k.ground_clearance_mm : m?.gc;

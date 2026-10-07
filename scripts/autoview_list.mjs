@@ -11,6 +11,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const get = async (u) => (await fetch(u, { headers: H, signal: AbortSignal.timeout(20000) })).text();
 const unq = (s) => JSON.parse('"' + s + '"');
 const STR = '((?:[^"\\\\]|\\\\.)*)'; // JSON string body
+const MIN_DATE = '2024-05-18'; // records start at the 2024 Honda Accord Hybrid video; older ones are dropped
 const isRoadTest = (t) => /로드테스트|\[리뷰\]|roadtest|로드 테스트/i.test(t);
 
 const old = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : [];
@@ -49,6 +50,6 @@ for (const v of byId.values()) {
   v.stability = chapter(desc, /기본 ?안정성|긴급 ?회피/);
   await sleep(350);
 }
-const all = [...byId.values()].filter((v) => v.title && isRoadTest(v.title)).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+const all = [...byId.values()].filter((v) => v.title && isRoadTest(v.title) && (v.date || '') >= MIN_DATE).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 fs.writeFileSync(OUT, JSON.stringify(all, null, 1));
 console.log('videos', all.length, 'with handling chapter', all.filter((v) => v.handling != null).length);
