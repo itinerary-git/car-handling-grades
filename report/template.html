@@ -257,11 +257,23 @@ function show(i, j) {
   const flag = e => e === 'e' ? '<span class="flag e">추정</span>' : e === 'v' ? '<span class="flag">검증</span>' : '';
   document.getElementById('detail').innerHTML =
     `<h3>W${i + 1} · G${j + 1}</h3><p class="sub">휠베이스 ${DATA.WB[i]}mm · 지상고 ${DATA.GC[j]}mm · ${c.n}대</p>${c.n ? '' : '<p class="sub">KM77 78km/h 이상 기록 차량 없음</p>'}
-     <ol>${c.list.map(r => `<li><span class="sp">${r.kmh}</span><span class="nm"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
+     <ol>${topLevels(c.list).map(r => `<li><span class="sp">${r.kmh}</span><span class="nm"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
      <span class="sp-meta">WB ${r.wb.toLocaleString()} · GC ${r.gc}mm${flag(r.est)}</span></span></li>`).join('')}</ol>
      ${c.mentions.length ? `<div class="peers"><h4>다른 사이트 평가</h4>${c.mentions.map(m => `<div class="peer-item"><b>${m.car}</b> · ${m.vs}와 핸들링 ${m.relation}<br>${m.summary}<span class="sp-meta">${m.own}</span><span class="sp-meta">${m.caveat}</span><span class="sp-meta">출처: <a href="${m.url}" target="_blank" rel="noopener">${m.source}</a> (검색 결과 요약)</span></div>`).join('')}</div>` : ''}
      ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}
-     ${(c.av || []).length ? `<div class="avs"><h4>오토뷰 로드테스트 등급</h4>${c.av.map(a => `<div class="av-item${a.status === 'blue' ? ' blue' : ''}"><b>${a.car}</b> · 핸들링 ${a.handling} · 기본 안정성 ${a.avoidance}<br>${avVerdict(a)}<span class="sp-meta">${a.specs}</span><span class="sp-meta">출처: <a href="${a.url}" target="_blank" rel="noopener">오토뷰 YouTube 영상</a> · 화면의 등급</span></div>`).join('')}</div>` : ''}`;
+     ${bestAv(c.av || []).length ? `<div class="avs"><h4>오토뷰 로드테스트 등급</h4>${bestAv(c.av).map(a => `<div class="av-item${a.status === 'blue' ? ' blue' : ''}"><b>${a.car}</b> · 핸들링 ${a.handling} · 기본 안정성 ${a.avoidance}<br>${avVerdict(a)}<span class="sp-meta">${a.specs}</span><span class="sp-meta">출처: <a href="${a.url}" target="_blank" rel="noopener">오토뷰 YouTube 영상</a> · 화면의 등급</span></div>`).join('')}</div>` : ''}`;
+}
+// KM77 list: only the top speed and the next lower speed level
+function topLevels(list) {
+  const speeds = [...new Set(list.map(r => r.kmh))].sort((x, y) => y - x).slice(0, 2);
+  return list.filter(r => speeds.includes(r.kmh));
+}
+// Autoview list: only the best-handling and the best-stability cars (ties all shown)
+const AV_LV = ['', '나쁨', '나쁨~부족', '부족', '부족~보통', '보통', '보통~좋음', '좋음', '좋음~훌륭함', '훌륭함'];
+const avLv = x => Math.max(0, AV_LV.indexOf(x));
+function bestAv(av) {
+  const mh = Math.max(0, ...av.map(a => avLv(a.handling))), ma = Math.max(0, ...av.map(a => avLv(a.avoidance)));
+  return av.filter(a => avLv(a.handling) === mh || avLv(a.avoidance) === ma);
 }
 function avVerdict(a) {
   const b = a.basis, base = b ? `기준차 ${b.car.replace(/^[0-9]{4} /, '')}(KM77 ${b.kmh}km/h)의 오토뷰 등급은 핸들링 ${b.handling} · 기본 안정성 ${b.avoidance}` : '';
