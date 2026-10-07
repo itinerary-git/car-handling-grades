@@ -53,8 +53,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Citroën C4 Cactus PureTech 130 S&amp;S Shine (2018-2019)": {
-  "ground_clearance_mm": 165,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 150,
+  "gc_source": "verified (web search: carsguide, cars-data 150-151)"
  },
  "Honda Civic 5p 1.0 Turbo VTEC Executive (2017-2018)": {
   "ground_clearance_mm": 130,
@@ -741,8 +741,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Audi Q5 Sportback S line 45 TFSI quattro-ultra S tronic (2020-2024)": {
-  "ground_clearance_mm": 200,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 208,
+  "gc_source": "verified (web search: iseecars 8.2 in)"
  },
  "Audi RS 4 Avant 2.9 TFSI 331 kW (450 CV) quattro tiptronic 8 vel. (2017-2018)": {
   "ground_clearance_mm": 120,

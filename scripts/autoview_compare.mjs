@@ -9,7 +9,7 @@ import { expandVideos, level } from './autoview_lib.mjs';
 const root = new URL('../', import.meta.url);
 const rdj = (p, d) => (fs.existsSync(new URL(p, root)) ? JSON.parse(fs.readFileSync(new URL(p, root), 'utf8')) : d);
 const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
-const gcBin = (g) => (g < 150 ? 0 : g >= 190 ? 5 : Math.floor((g - 150) / 10) + 1);
+const gcBin = (g) => (g < 150 ? 0 : g < 165 ? 1 : g < 185 ? 2 : g < 200 ? 3 : 4);
 
 // grid: grades.json grid (all cars); minKmh: display threshold
 export function compareAutoview(grid, minKmh) {

@@ -117,7 +117,7 @@ const doc = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="휠베이스 × 지상고 36개 등급별 KM77 무스 테스트 1위 차량 표">
+<meta name="description" content="휠베이스 × 지상고 30개 등급별 KM77 무스 테스트 1위 차량 표">
 ${headTags.trim()}
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
