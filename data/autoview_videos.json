@@ -1,15 +1,31 @@
 [
  {
-  "id": "48ZxzFAcZNM",
-  "title": "소비자가 외면하고 싶은 진실... 2027 BYD 씨라이언 7 플러스 리뷰 / 오토뷰 로드테스트",
+  "id": "-D9zBKMBkeU",
+  "title": "이렇게 안해도 잘 팔리는데... 2027 그랜저 하이브리드 (페이스리프트) 리뷰 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-09-26",
+  "date": "2026-10-10",
+  "handling": null,
+  "stability": null
+ },
+ {
+  "id": "se-KkkmTBSk",
+  "title": "실구매가 3~4천만 원 대... 2026 BMW 220 리뷰 / 오토뷰 로드테스트",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-10-04",
+  "handling": 1002,
+  "stability": 1796
+ },
+ {
+  "id": "_oFtY24EzsQ",
+  "title": "[리뷰] 2026 아우디 Q3 TFSI 콰트로 / 오토뷰 로드테스트",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-09-30",
   "handling": null,
   "stability": null
  },
  {
   "id": "O-VZMm55sak",
-  "title": "[리뷰] 2027 메르세데스-벤츠 S580 페이스리프트 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2027 BYD 씨라이언 7 플러스 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-09-24",
   "handling": 576,
@@ -17,7 +33,7 @@
  },
  {
   "id": "IVFQI2BLB_E",
-  "title": "[리뷰] 2026 푸조 3008 하이브리드 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2027 메르세데스-벤츠 S580 페이스리프트 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-09-19",
   "handling": 1454,
@@ -33,9 +49,17 @@
  },
  {
   "id": "kiyvITW85-U",
-  "title": "[리뷰] 2026 BMW X1 xDrive 20i / 오토뷰 로드테스트",
+  "title": "[리뷰]  2027 마이바흐 S580 페이스리프트 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-09-12",
+  "handling": null,
+  "stability": null
+ },
+ {
+  "id": "x5ozIv8RM3A",
+  "title": "[리뷰] 2026 BMW X1 xDrive 20i / 오토뷰 로드테스트",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-09-09",
   "handling": null,
   "stability": null
  },
@@ -48,27 +72,11 @@
   "stability": 1158
  },
  {
-  "id": "8edROei5IE0",
-  "title": "[리뷰] 2027 폴스타3 퍼포먼스 / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-09-05",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "rgoINAYvjBM",
   "title": "[리뷰] 2027 볼보 EX90 퍼포먼스 / 오토뷰 로드테스트",
   "source": "search",
   "date": "2026-09-02",
   "handling": null,
-  "stability": null
- },
- {
-  "id": "7akoq9ZaPBI",
-  "title": "[리뷰] 2026 기아 EV5 롱레인지 (2WD) / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-08-29",
-  "handling": 300,
   "stability": null
  },
  {
@@ -80,12 +88,20 @@
   "stability": 1523
  },
  {
-  "id": "WzxBSUajJtA",
+  "id": "4cZ0v1JffRY",
+  "title": "요즘 가장 잘 팔리는... BMW 520, 벤츠 E200, 아우디 A6 비교 / 오토뷰 로드테스트",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-08-22",
+  "handling": 458,
+  "stability": 574
+ },
+ {
+  "id": "FtKRkJUNfhQ",
   "title": "[리뷰] 2026 벤틀리 컨티넨탈 GTC 스피드 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-08-21",
-  "handling": null,
-  "stability": null
+  "date": "2026-08-19",
+  "handling": 567,
+  "stability": 1711
  },
  {
   "id": "IvlWP0md2rA",
@@ -96,32 +112,16 @@
   "stability": 1339
  },
  {
-  "id": "ut_r24LYNMo",
-  "title": "[리뷰] 2027 BYD 씨라이언 6 DM-i (PHEV) / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-08-16",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "pEk285KDt3k",
+  "id": "pvkzwqFsYU8",
   "title": "이 돈이면... 2026 토요타 알파드 vs 렉서스 LM500h 비교 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-08-13",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "sVJqwf9uH98",
-  "title": "이 가격에 '★★★★★' 독일차... 2026 아우디 A6 40 TFSI 리뷰 / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-08-11",
-  "handling": null,
-  "stability": null
+  "date": "2026-08-12",
+  "handling": 469,
+  "stability": 772
  },
  {
   "id": "YIKP4Jb6x7w",
-  "title": "이것이 최신 BMW 전기차... 2026 BMW iX3 50 xDrive 리뷰 / 오토뷰 로드테스트",
+  "title": "이 가격에 '★★★★★' 독일차... 2026 아우디 A6 40 TFSI 리뷰 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-08-08",
   "handling": 666,
@@ -144,20 +144,12 @@
   "stability": null
  },
  {
-  "id": "jex5q2juyvk",
+  "id": "jAp5tUvmdw0",
   "title": "[리뷰] 2026 RAM 1500 리미티드 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-07-23",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "1kBfmSIPkdg",
-  "title": "[리뷰] 2026 미니 쿠퍼 S / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-07-11",
-  "handling": 676,
-  "stability": null
+  "date": "2026-07-18",
+  "handling": 1348,
+  "stability": 1142
  },
  {
   "id": "oE8sau6e2g8",
@@ -184,40 +176,24 @@
   "stability": 1137
  },
  {
-  "id": "-oJe3X5aFrw",
-  "title": "[리뷰] 2026 토요타 RAV4 하이브리드(HEV) / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-06-27",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "P19G5jLu68w",
-  "title": "[리뷰] 2026 토요타 RAV4 PHEV  / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 토요타 RAV4 하이브리드(HEV) / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmwOgLt__rw3jh32mO6EygIb",
   "date": "2026-06-27",
   "handling": 1055,
   "stability": 1675
  },
  {
-  "id": "qb-D1jn9Wgc",
+  "id": "Q6CwN7EAC7c",
   "title": "[리뷰] 2026 포르쉐 911 터보 S (페이스리프트) / 오토뷰 로드테스트 ",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-06-21",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "V-Fjt66cv1Y",
-  "title": "[리뷰] 2026 BMW M440i (페이스리프트) / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-06-19",
-  "handling": null,
-  "stability": null
+  "date": "2026-06-20",
+  "handling": 803,
+  "stability": 1165
  },
  {
   "id": "gL6b8yv-d64",
-  "title": "[리뷰] 2026 아우디 A6 45 TFSI quattro / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 BMW M440i (페이스리프트) / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-06-17",
   "handling": 935,
@@ -232,16 +208,8 @@
   "stability": 1249
  },
  {
-  "id": "b98Q0_0H54k",
-  "title": "[리뷰] 2026 GMC 캐니언 / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-06-09",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "JIqDAvx8WWI",
-  "title": "[리뷰] 2026 마세라티 GT2 스트라달레 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 GMC 캐니언 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-06-06",
   "handling": 1080,
@@ -249,7 +217,7 @@
  },
  {
   "id": "QkjNkChiTYw",
-  "title": "[리뷰] 2026 메르세데스-AMG A 45S (페이스리프트) / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 마세라티 GT2 스트라달레 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-06-04",
   "handling": 744,
@@ -257,7 +225,7 @@
  },
  {
   "id": "txvGur7RenE",
-  "title": "[리뷰] 2026 페라리 아말피 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 메르세데스-AMG A 45S (페이스리프트) / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-05-30",
   "handling": 897,
@@ -265,7 +233,7 @@
  },
  {
   "id": "Hk910Mxj0F0",
-  "title": "[리뷰] 2026 토요타 시에나 하이브리드 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 페라리 아말피 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-05-25",
   "handling": 1025,
@@ -288,6 +256,14 @@
   "stability": null
  },
  {
+  "id": "Q8KPD7OrfUc",
+  "title": "[리뷰] 2026 메르세데스-AMG GLS 63 4Matic+ / 오토뷰 로드테스트",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-05-13",
+  "handling": 1229,
+  "stability": 1505
+ },
+ {
   "id": "NvxiLU8NYP8",
   "title": "[리뷰] 2026 현대 스타리아 하이브리드 (페이스리프트) / 오토뷰 로드테스트",
   "source": "search",
@@ -296,16 +272,8 @@
   "stability": 1283
  },
  {
-  "id": "F8MZueFd0to",
-  "title": "[리뷰] 2026 현대 스타리아 하이브리드 (페이스리프트) / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-05-05",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "WgFec42j-ac",
-  "title": "[리뷰] 2026 기아 셀토스 하이브리드 / 오토뷰 로드테스트 (Kia seltos hybrid roadtest)",
+  "title": "[리뷰] 2026 메르세데스-AMG G 63 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-05-02",
   "handling": null,
@@ -321,7 +289,7 @@
  },
  {
   "id": "J2fWgvjMCVQ",
-  "title": "[리뷰] 2026 KGM 무쏘 2 0T 4WD / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 BMW M2 LCI / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-04-25",
   "handling": 789,
@@ -329,7 +297,7 @@
  },
  {
   "id": "zHCmKVhrHiA",
-  "title": "[리뷰] 2026 기아 셀토스 1.6 터보(T-GDI) / 오토뷰 로드테스트 (KIA Seltos roadtest)",
+  "title": "[리뷰] 2026 KGM 무쏘 2 0T 4WD / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-04-23",
   "handling": 804,
@@ -345,49 +313,33 @@
  },
  {
   "id": "EJxxuxma1Xs",
-  "title": "[리뷰] 2026 BMW X7 xDrive / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 링컨 노틸러스 하이브리드 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-04-15",
   "handling": 808,
   "stability": 1391
  },
  {
-  "id": "4IajO-mnJ2E",
-  "title": "[리뷰] 2026 마세라티 MC Pura 첼로 / 오토뷰 로드테스트",
+  "id": "3tjELdC2-X0",
+  "title": "[리뷰] 2026 BMW X7 xDrive / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-04-10",
-  "handling": null,
+  "date": "2026-04-11",
+  "handling": 799,
   "stability": null
  },
  {
   "id": "RrO7xtqI1_4",
-  "title": "[리뷰] 2026 포르쉐 마칸4 & 마세라티 그레칼레 폴고레 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 마세라티 MC Pura 첼로 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmz0IoXpllq79v0Kn_Q_8-wP",
   "date": "2026-04-08",
   "handling": 907,
   "stability": 1606
  },
  {
-  "id": "7Pgd5mdKbA8",
-  "title": "[리뷰] 2026 GMC 아카디아 드날리 얼티밋 / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-04-06",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "4p6Enb1Qd-Q",
-  "title": "[리뷰] 2026 GMC 캐니언 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 GMC 아카디아 드날리 얼티밋 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmyd3ZqvjZ3yEdf-1W5BkQVZ",
   "date": "2026-04-04",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "xDDcryQqIYE",
-  "title": "[리뷰] 2026 BYD 돌핀 / 오토뷰 로드테스트 - BYD Dolphin Roadtest",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-03-30",
   "handling": null,
   "stability": null
  },
@@ -400,59 +352,43 @@
   "stability": 1225
  },
  {
-  "id": "ctT9wlawg0o",
-  "title": "[리뷰] 2026 KGM 무쏘 EV / 중앙일보 COTY x 오토뷰 (올해의 유틸리티)",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-03-23",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "_h4NpR17hI0",
-  "title": "[리뷰] 2025 KGM 토레스 하이브리드 / 오토뷰 로드테스트 - KGM Torres Hybrid Roadtest",
+  "title": "[리뷰] 2026 KGM 무쏘 EV / 중앙일보 COTY x 오토뷰 (올해의 유틸리티)",
   "source": "PLwM2uSSObhmyTwUWzDH_C85TuWfUmB7Z-",
   "date": "2026-03-21",
   "handling": null,
   "stability": null
  },
  {
-  "id": "3FAkabtxpF4",
-  "title": "[리뷰] 2026 현대 아이오닉 6 N 리뷰 / 중앙일보 COTY x 오토뷰 (Hyundai Ioniq 6 N Roadetst)",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-03-19",
-  "handling": 743,
-  "stability": 1384
- },
- {
   "id": "XU27hwjUN9o",
-  "title": "이것이 국산 최고 SUV... 2026 르노 필랑트 하이브리드 리뷰 / 오토뷰 로드테스트 - Renault Filante Roadtest",
+  "title": "[리뷰] 2026 현대 아이오닉 6 N 리뷰 / 중앙일보 COTY x 오토뷰 (Hyundai Ioniq 6 N Roadetst)",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-03-17",
   "handling": 1706,
   "stability": 1571
  },
  {
-  "id": "Gq5a_psjTJU",
+  "id": "Bn0jVot72HU",
+  "title": "이것이 국산 최고 SUV... 2026 르노 필랑트 하이브리드 리뷰 / 오토뷰 로드테스트 - Renault Filante Roadtest",
+  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
+  "date": "2026-03-14",
+  "handling": 1133,
+  "stability": 1828
+ },
+ {
+  "id": "HKa5d47P02g",
   "title": "[리뷰] 2026 기아 PV5 패신저 / 중앙일보 COTY x 오토뷰 (올해의 MPV)",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-03-12",
-  "handling": null,
-  "stability": null
+  "date": "2026-03-10",
+  "handling": 1291,
+  "stability": 1164
  },
  {
-  "id": "f1bEY4bjnZU",
+  "id": "m4YjkH15do4",
   "title": "[리뷰] 2026 메르세데스-벤츠 GLS450 4매틱 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-03-07",
-  "handling": null,
-  "stability": null
- },
- {
-  "id": "Z968xkP_tps",
-  "title": "확 달라진... 2026 제네시스 G80 (페이스리프트) 리뷰 / 오토뷰 로드테스트",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-02-21",
-  "handling": null,
+  "date": "2026-02-28",
+  "handling": 524,
   "stability": null
  },
  {
@@ -464,14 +400,6 @@
   "stability": 1624
  },
  {
-  "id": "_E6qeCgX8jo",
-  "title": "[리뷰] 2026 볼보 XC90 (페이스리프트) / 오토뷰 로드테스트 (Volvo XC90 Facelift Roadtest)",
-  "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-02-15",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "piIa01tsoE4",
   "title": "[리뷰] 2026 볼보 XC90 (페이스리프트) / 오토뷰 로드테스트 (Volvo XC90 Facelift Roadtest)",
   "source": "search",
@@ -481,23 +409,23 @@
  },
  {
   "id": "ZL6L-sxtYkM",
-  "title": "[리뷰] 2026 메르세데스-벤츠 GLE 450 4매틱 쿠페 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 랜드로버 레인지로버 P550e / 오토뷰 로드테스트 (Landrover Rangerover P550e Roadtest)",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-02-07",
   "handling": 739,
   "stability": 1425
  },
  {
-  "id": "GGyX54S9pmg",
-  "title": "[리뷰] 2026 BMW X5 50e xDrive / 오토뷰 로드테스트 (BMW X5 50e Roadtest)",
+  "id": "tvVviqGb1Tw",
+  "title": "[리뷰] 2026 메르세데스-벤츠 GLE 450 4매틱 쿠페 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-01-31",
-  "handling": 463,
-  "stability": null
+  "date": "2026-02-04",
+  "handling": 502,
+  "stability": 1124
  },
  {
   "id": "97LWXvZDF_k",
-  "title": "[리뷰] 2026 볼보 S90 / 오토뷰 로드테스트 (Volvo S90 Longwheel Version Roadtest)",
+  "title": "[리뷰] 2026 BMW X5 50e xDrive / 오토뷰 로드테스트 (BMW X5 50e Roadtest)",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-01-28",
   "handling": 869,
@@ -505,7 +433,7 @@
  },
  {
   "id": "80GI5Wuvw7g",
-  "title": "[리뷰] 2026 폴스타 4 듀얼모터 vs 퍼포먼스팩 비교 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 볼보 S90 / 오토뷰 로드테스트 (Volvo S90 Longwheel Version Roadtest)",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-01-24",
   "handling": 1256,
@@ -513,7 +441,7 @@
  },
  {
   "id": "zVq7X06rxrQ",
-  "title": "[리뷰] 2026 쉐보레 콜로라도 Z71 X에디션 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 폴스타 4 듀얼모터 vs 퍼포먼스팩 비교 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-01-21",
   "handling": 976,
@@ -521,23 +449,23 @@
  },
  {
   "id": "eV1y1CzxZ_E",
-  "title": "[리뷰] 2026 BMW 320i (MSP) / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 쉐보레 콜로라도 Z71 X에디션 / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
   "date": "2026-01-17",
   "handling": null,
   "stability": 1150
  },
  {
-  "id": "ycLgb8j894Q",
-  "title": "[리뷰] 2026 렉서스 NX350h / 오토뷰 로드테스트",
+  "id": "Eg8VyspiAOo",
+  "title": "[리뷰] 2026 BMW 320i (MSP) / 오토뷰 로드테스트",
   "source": "UUfcgDLazgMa1L92Kl3r9ZAA",
-  "date": "2026-01-12",
-  "handling": null,
-  "stability": null
+  "date": "2026-01-14",
+  "handling": 836,
+  "stability": 1370
  },
  {
   "id": "up0Xr8kEPvw",
-  "title": "[리뷰] 2026 포르쉐 911 터보 S (페이스리프트) / 오토뷰 로드테스트 ",
+  "title": "[리뷰] 2026 포르쉐 파나메라 터보 S (콘티넨탈 타이어 - 포르쉐팀 인터뷰) / 오토뷰 로드테스트 - Panamera Turbo S Roadtest",
   "source": "PLwM2uSSObhmyPCc9qoKOqAQhxPwzmgR_5",
   "date": "2025-12-30",
   "handling": 911,
@@ -545,7 +473,7 @@
  },
  {
   "id": "BBFjxNdxVOY",
-  "title": "[리뷰] 2025 마세라티 그란투리스모 & 그란카브리오 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 포르쉐 마칸4 & 마세라티 그레칼레 폴고레 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmz0IoXpllq79v0Kn_Q_8-wP",
   "date": "2025-11-29",
   "handling": 1348,
@@ -561,7 +489,7 @@
  },
  {
   "id": "Z3oDXk_gzA4",
-  "title": "[리뷰] 2026 폴스타 4 듀얼모터 vs 퍼포먼스팩 비교 / 오토뷰 로드테스트",
+  "title": "[리뷰] 한정판 2025 폴스타 2 BST / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmw4uQrmvQ_3hR8eoZlemL81",
   "date": "2025-11-17",
   "handling": 801,
@@ -569,11 +497,19 @@
  },
  {
   "id": "ZdBnv4Sy94Q",
-  "title": "[리뷰] 2026 토요타 시에나 하이브리드 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2026 토요타 프리우스 AWD / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmwOgLt__rw3jh32mO6EygIb",
   "date": "2025-11-12",
   "handling": 700,
   "stability": 1329
+ },
+ {
+  "id": "gN7ENjSaKRI",
+  "title": "[리뷰] 2026 람보르기니 우루스 SE / 오토뷰 로드테스트",
+  "source": "PLwM2uSSObhmzuo4nO9_NzUwULQBiEqViV",
+  "date": "2025-10-30",
+  "handling": 1089,
+  "stability": 1748
  },
  {
   "id": "GxR7H9uXiVs",
@@ -608,12 +544,12 @@
   "stability": 1154
  },
  {
-  "id": "2KlZeC3LxSQ",
-  "title": "[리뷰] 2025 혼다 헌터커브  CT125 / 오토뷰 라이프",
-  "source": "PLwM2uSSObhmw9W7GUl_61JDIL61U_wD6P",
-  "date": "2025-08-12",
-  "handling": null,
-  "stability": null
+  "id": "PI7V2Aw8V-A",
+  "title": "[리뷰] 2026 테슬라 모델Y RWD (주니퍼) / 오토뷰 로드테스트",
+  "source": "PLwM2uSSObhmw8T7-1PKoacYbi4ohTjKfP",
+  "date": "2025-09-06",
+  "handling": 462,
+  "stability": 759
  },
  {
   "id": "iLG_BV7GICY",
@@ -624,20 +560,20 @@
   "stability": 1263
  },
  {
-  "id": "PykUtsyJd-c",
-  "title": "[2025 올웨더 타이어 비교] 미쉐린 CC & 콘티넨탈 올시즌콘택트2 & 브레데스타인 콰트락 프로 & 굿이어 벡터4 / 오토뷰 로드테스트",
-  "source": "PLwM2uSSObhmxqdpZrsl1KnU-E1-uX8nZc",
-  "date": "2025-07-26",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "VqGk1kT_-NU",
   "title": "[리뷰] 2025 BMW X3 20 / 오토뷰 로드테스트",
   "source": "search",
   "date": "2025-07-12",
   "handling": 947,
   "stability": 1352
+ },
+ {
+  "id": "ZwqxTcHYKUw",
+  "title": "[2025 올웨더 타이어 비교] 미쉐린 CC & 콘티넨탈 올시즌콘택트2 & 브레데스타인 콰트락 프로 & 굿이어 벡터4 / 오토뷰 로드테스트",
+  "source": "PLwM2uSSObhmxqdpZrsl1KnU-E1-uX8nZc",
+  "date": "2025-07-02",
+  "handling": null,
+  "stability": null
  },
  {
   "id": "RkxtePkXGME",
@@ -649,7 +585,7 @@
  },
  {
   "id": "bv4A71dDbxA",
-  "title": "[리뷰] 2023 마세라티 그레칼레 트로페오 / 오토뷰 4K",
+  "title": "[리뷰] 2025 마세라티 그란투리스모 & 그란카브리오 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmz0IoXpllq79v0Kn_Q_8-wP",
   "date": "2025-06-04",
   "handling": 771,
@@ -657,7 +593,7 @@
  },
  {
   "id": "U67yDWsOyF4",
-  "title": "[리뷰] 2024 KGM 액티언 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 KGM 토레스 하이브리드 / 오토뷰 로드테스트 - KGM Torres Hybrid Roadtest",
   "source": "PLwM2uSSObhmyTwUWzDH_C85TuWfUmB7Z-",
   "date": "2025-05-28",
   "handling": 851,
@@ -673,7 +609,7 @@
  },
  {
   "id": "Lgvgjzo76t4",
-  "title": "[리뷰] 2026 토요타 프리우스 AWD / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 토요타 캠리 하이브리드 XLE / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmwOgLt__rw3jh32mO6EygIb",
   "date": "2025-05-22",
   "handling": null,
@@ -697,15 +633,23 @@
  },
  {
   "id": "nbMAjRcmOzs",
-  "title": "[리뷰] 한정판 2025 폴스타 2 BST / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 폴스타 2 스탠다드 레인지 싱글 모터 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmw4uQrmvQ_3hR8eoZlemL81",
   "date": "2025-05-03",
   "handling": 526,
   "stability": 1352
  },
  {
+  "id": "SFFSb9cT4JU",
+  "title": "[리뷰] 2025 혼다 헌터커브  CT125 / 오토뷰 라이프",
+  "source": "PLwM2uSSObhmw9W7GUl_61JDIL61U_wD6P",
+  "date": "2025-05-01",
+  "handling": null,
+  "stability": null
+ },
+ {
   "id": "jwmcjIIOEs8",
-  "title": "[리뷰] 2026 기아 PV5 패신저 / 중앙일보 COTY x 오토뷰 (올해의 MPV)",
+  "title": "[리뷰] 2025 메르세데스-벤츠 CLE 200 쿠페 / 오토뷰 로드테스트 x 중앙일보 올해의 차 - 디자인 부문",
   "source": "PLwM2uSSObhmxw-8t2sjtWNfCjR49qifvH",
   "date": "2025-04-29",
   "handling": 829,
@@ -752,24 +696,8 @@
   "stability": 1531
  },
  {
-  "id": "fVmVN32wgRQ",
-  "title": "[리뷰] 2025 메르세데스-벤츠 CLE 200 쿠페 / 오토뷰 로드테스트 x 중앙일보 올해의 차 - 디자인 부문",
-  "source": "PLwM2uSSObhmxw-8t2sjtWNfCjR49qifvH",
-  "date": "2025-04-02",
-  "handling": 827,
-  "stability": 1295
- },
- {
-  "id": "G1v90pBJl2M",
-  "title": "[리뷰] 2025 폴스타 2 스탠다드 레인지 싱글 모터 / 오토뷰 로드테스트",
-  "source": "PLwM2uSSObhmw4uQrmvQ_3hR8eoZlemL81",
-  "date": "2025-03-22",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "Reuz_BP1aM0",
-  "title": "[리뷰] 2025 제네시스 GV60 페이스리프트 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 제네시스 eG80 (일렉트리파이드 G80) / 오토뷰 x 중앙일보 COTY - 퓨처 모빌리티",
   "source": "PLwM2uSSObhmxZGIAf-wAiXxGnbGaTeUxL",
   "date": "2025-03-15",
   "handling": null,
@@ -785,7 +713,7 @@
  },
  {
   "id": "fQYbPfaKu3U",
-  "title": "[리뷰] 2025 포르쉐 타이칸 GTS (페이스리프트) / 오토뷰 x 중앙일보 올해의 차 - 퍼포먼스 부문",
+  "title": "[리뷰] 2025 포르쉐 파나메라 터보 E-Hybrid  / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmw0nL7RBu9X8AlSusaLfITz",
   "date": "2025-03-08",
   "handling": 1104,
@@ -873,7 +801,7 @@
  },
  {
   "id": "lX-pXIVhh-g",
-  "title": "[리뷰] 2025 포르쉐 카이엔 S E-하이브리드 쿠페 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 포르쉐 타이칸 (페이스리프트) / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmw0nL7RBu9X8AlSusaLfITz",
   "date": "2025-01-04",
   "handling": 1095,
@@ -888,24 +816,24 @@
   "stability": 1437
  },
  {
+  "id": "xMcvFuP2zFQ",
+  "title": "[리뷰] 2024 페라리 푸로산게 / 오토뷰 로드테스트 - Ferrari Purosangue Roadtest",
+  "source": "PLwM2uSSObhmwuEUsI-qUJ5E2ETTBPqKAv",
+  "date": "2024-12-24",
+  "handling": 1062,
+  "stability": 1588
+ },
+ {
   "id": "Q_3NMRwWuY0",
-  "title": "[리뷰] 2025 토요타 캠리 하이브리드 XLE / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 토요타 캠리 하이브리드 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmwOgLt__rw3jh32mO6EygIb",
   "date": "2024-12-21",
   "handling": 1001,
   "stability": 1504
  },
  {
-  "id": "Y82_W3F6x7Y",
-  "title": "[리뷰] 2025 토요타 캠리 하이브리드 / 오토뷰 로드테스트",
-  "source": "PLwM2uSSObhmwOgLt__rw3jh32mO6EygIb",
-  "date": "2024-12-15",
-  "handling": null,
-  "stability": null
- },
- {
   "id": "OEdVmd7IWFQ",
-  "title": "[리뷰] 2026 링컨 노틸러스 하이브리드 / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 링컨 에비에이터 (페이스리프트) / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmzpcDeblFwc_WIaU8Iulixj",
   "date": "2024-12-08",
   "handling": 1191,
@@ -913,7 +841,7 @@
  },
  {
   "id": "aUS0pLaDP-4",
-  "title": "[리뷰] 2024 로터스 엘레트라 R / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 로터스 에미라 / 오토뷰 로드테스트 - Lotus Emira 2.0T Roadtest / 시승차제공:로터스코리아",
   "source": "PLwM2uSSObhmx7-H0S2B-c6_zGIqlqATBB",
   "date": "2024-12-05",
   "handling": 1095,
@@ -921,7 +849,7 @@
  },
  {
   "id": "l5YPfouBkug",
-  "title": "[리뷰] 2025 폴스타4 듀얼모터 (퍼포먼스) / 오토뷰 로드테스트",
+  "title": "[리뷰] 2025 폴스타 4 (RWD) / 오토뷰 로드테스트 - Polestar 4 Roadtest / 시승차제공:폴스타코리아",
   "source": "PLwM2uSSObhmw4uQrmvQ_3hR8eoZlemL81",
   "date": "2024-11-16",
   "handling": 1161,
@@ -960,6 +888,14 @@
   "stability": 1615
  },
  {
+  "id": "yfBSGjJo6Q4",
+  "title": "[리뷰] 2024 로터스 엘레트라 R / 오토뷰 로드테스트",
+  "source": "PLwM2uSSObhmx7-H0S2B-c6_zGIqlqATBB",
+  "date": "2024-08-18",
+  "handling": 1410,
+  "stability": 1787
+ },
+ {
   "id": "gYys44mbuHY",
   "title": "[리뷰] 2024 제네시스 GV70 AWD 페이스리프트 / 오토뷰 로드테스트 (2025 GENESIS GV70 Facelift Roadtest)",
   "source": "search",
@@ -969,11 +905,19 @@
  },
  {
   "id": "hY3VrRMAWIc",
-  "title": "[리뷰] 2025 테슬라 모델 Y (주니퍼) / 오토뷰 로드테스트",
+  "title": "[리뷰] 2024 테슬라 모델 Y 롱레인지 / 오토뷰 로드테스트",
   "source": "PLwM2uSSObhmw8T7-1PKoacYbi4ohTjKfP",
   "date": "2024-07-20",
   "handling": 1122,
   "stability": 1402
+ },
+ {
+  "id": "j8i3apAl1Jg",
+  "title": "[리뷰] 2024 미니 컨트리맨 S ALL4 / 오토뷰 로드테스트",
+  "source": "PLwM2uSSObhmzz3nUzBzog9wSVhH3WJVfw",
+  "date": "2024-07-10",
+  "handling": 1003,
+  "stability": 1275
  },
  {
   "id": "7zUwU8snQTc",
