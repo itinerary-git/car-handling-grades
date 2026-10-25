@@ -35,9 +35,9 @@
   "updatedAt": "2026-09-30T14:56:05.351Z"
  },
  "z5be7gdJmgQ": {
-  "handling": "",
+  "handling": "보통~좋음",
   "avoidance": "보통~좋음",
-  "updatedAt": "2026-09-30T14:40:17.101Z"
+  "updatedAt": "2026-10-14T15:24:38.573Z"
  },
  "7zUwU8snQTc": {
   "handling": "좋음",
@@ -78,5 +78,110 @@
   "handling": "훌륭함",
   "avoidance": "훌륭함",
   "updatedAt": "2026-10-07T12:29:39.683Z"
+ },
+ "-D9zBKMBkeU": {
+  "handling": "보통~좋음",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-25T12:29:22.112Z"
+ },
+ "AOqKPjRcb-Y": {
+  "handling": "좋음~훌륭함",
+  "avoidance": "좋음~훌륭함",
+  "updatedAt": "2026-10-13T15:28:46.457Z"
+ },
+ "Eg8VyspiAOo": {
+  "handling": "좋음",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-11T13:53:59.904Z"
+ },
+ "G4FI0slsSfY": {
+  "handling": "부족",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-14T15:19:18.980Z"
+ },
+ "IVFQI2BLB_E": {
+  "handling": "좋음",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-25T12:43:00.695Z"
+ },
+ "O-VZMm55sak": {
+  "handling": "나쁨",
+  "avoidance": "나쁨~부족",
+  "updatedAt": "2026-10-25T12:40:29.946Z"
+ },
+ "Q6CwN7EAC7c": {
+  "handling": "훌륭함",
+  "avoidance": "훌륭함",
+  "updatedAt": "2026-10-11T13:52:48.829Z"
+ },
+ "TwP7POjUhqE": {
+  "handling": "보통~좋음",
+  "avoidance": "보통",
+  "updatedAt": "2026-10-14T15:11:48.355Z"
+ },
+ "U5ny4sS_b00": {
+  "handling": "보통",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-12T12:21:39.320Z"
+ },
+ "VqGk1kT_-NU": {
+  "handling": "좋음~훌륭함",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-12T12:09:03.972Z"
+ },
+ "YIKP4Jb6x7w": {
+  "handling": "좋음",
+  "avoidance": "보통",
+  "updatedAt": "2026-10-14T15:20:56.224Z"
+ },
+ "_oFtY24EzsQ": {
+  "handling": "보통~좋음",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-25T12:38:25.610Z"
+ },
+ "f-Ve4TSLXVQ": {
+  "handling": "좋음~훌륭함",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-14T15:17:33.218Z"
+ },
+ "iDfEKeaTYS4": {
+  "handling": "좋음~훌륭함",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-11T13:55:24.922Z"
+ },
+ "j8i3apAl1Jg": {
+  "handling": "좋음",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-14T15:39:41.353Z"
+ },
+ "kiyvITW85-U": {
+  "handling": "보통~좋음",
+  "avoidance": "보통~좋음",
+  "updatedAt": "2026-10-25T12:44:12.306Z"
+ },
+ "mTFMAY2vJ2Y": {
+  "handling": "좋음",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-12T14:11:38.739Z"
+ },
+ "nbMAjRcmOzs": {
+  "handling": "보통~좋음",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-12T12:13:00.433Z"
+ },
+ "se-KkkmTBSk": {
+  "handling": "보통~좋음",
+  "avoidance": "보통",
+  "updatedAt": "2026-10-25T12:34:29.082Z"
+ },
+ "x5ozIv8RM3A": {
+  "handling": "보통",
+  "avoidance": "보통",
+  "updatedAt": "2026-10-25T12:48:16.079Z"
+ },
+ "zs9UDWEZ_EY": {
+  "handling": "좋음~훌륭함",
+  "avoidance": "좋음",
+  "updatedAt": "2026-10-13T14:04:03.565Z"
  }
 }

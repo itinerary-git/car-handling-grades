@@ -11,8 +11,8 @@ const BRANDS = ['포르쉐', '마세라티', '페라리', '람보르기니', '�
   '레인지로버', '재규어', '토요타', '렉서스', '혼다', '닛산', '인피니티', '마쯔다', '스바루', '알파로메오', '피아트', '지커', '쌍용', 'RAM'];
 const isBrand = (w) => BRANDS.some((b) => w === b || w.startsWith(b + ' '));
 
-// Not a single-car road test (tire comparisons etc.)
-export const isCarTest = (title) => !/타이어|비교\]/.test(title);
+// Not a single-car road test (tire comparisons, multi-car "A, B, C 비교 /" comparisons)
+export const isCarTest = (title) => !/타이어|비교\]|,[^/]*비교\s*\//.test(title);
 
 // "[리뷰] 2026 포르쉐 마칸4 & 마세라티 그레칼레 폴고레 / 오토뷰 로드테스트"
 //   -> ['2026 포르쉐 마칸4', '2026 마세라티 그레칼레 폴고레']

@@ -36716,5 +36716,56 @@
    "/coches/changan/deepal-s05/2024/estandar/estandar/deepal-s05-4wd-max/datos",
    "/coches/volvo/xc40/2022/estandar/electrico/xc40-recharge-electrico-puro-twin-ultimate/datos"
   ]
+ },
+ "/coches/mercedes/glc-electrico/2026/estandar/estandar/glc-400-4matic-con-tecnologia-eq/mediciones-propias": {
+  "version": "Mercedes-Benz GLC 400 4MATIC con tecnología EQ (2025)",
+  "moose_kmh": null,
+  "datos": [
+   "/coches/mercedes/glc-electrico/2026/estandar/datos",
+   "/coches/volvo/ex90/2023/estandar/datos",
+   "/coches/hyundai/ioniq-5/2021/estandar/datos",
+   "/coches/bmw/ix3/2026/estandar/datos",
+   "/coches/porsche/macan/2024/estandar/datos",
+   "/coches/ford/mustang/2020/suv/datos",
+   "/coches/audi/q6/2024/estandar/datos",
+   "/coches/mercedes/eqe/2023/suv/datos",
+   "/coches/kia/ev9/2023/estandar/datos",
+   "/coches/hyundai/ioniq-9/2025/estandar/datos",
+   "/coches/mercedes/glc-electrico/2026/estandar/estandar/glc-400-4matic-con-tecnologia-eq/datos",
+   "/coches/omoda/9/2025/estandar/phev/9-shs/datos",
+   "/coches/volvo/ex90/2023/estandar/estandar/ex90-twin-motor-performance/datos",
+   "/coches/bmw/ix3/2026/estandar/estandar/ix3-50-xdrive/datos",
+   "/coches/porsche/macan/2024/estandar/estandar/macan-4/datos",
+   "/coches/audi/q6/2024/estandar/e-tron/q6-e-tron-s-line-quattro/datos",
+   "/coches/audi/q8/2024/estandar/phev/q8-black-line-60-tfsie-quattro/datos",
+   "/coches/audi/q8/2023/sportback/e-tron/q8-sportback-55-e-tron-s-line/datos",
+   "/coches/land-rover/range-rover-sport/2023/estandar/phev/range-rover-sport-p510e-autobiography/datos",
+   "/coches/land-rover/range-rover/2022/swb/phev/range-rover-swb-p440e-phev-hse/datos",
+   "/coches/ebro/s900/2026/estandar/phev/s900-phev-4x4/datos",
+   "/coches/volvo/xc90/2025/estandar/phev/xc90-t8-awd-ultra/datos"
+  ]
+ },
+ "/coches/volkswagen/id-polo/2026/estandar/estandar/id-polo-style-155-kw-211-cv-52-kwh/mediciones-propias": {
+  "version": "Volkswagen ID. Polo Style 155 kW (211 CV) 52 kWh (2026)",
+  "moose_kmh": null,
+  "datos": [
+   "/coches/volkswagen/id-polo/2026/estandar/datos",
+   "/coches/renault/5/2025/estandar/datos",
+   "/coches/mini/mini-aceman/2025/estandar/datos",
+   "/coches/opel/corsa/2024/estandar/datos",
+   "/coches/peugeot/208/2024/estandar/datos",
+   "/coches/nissan/micra/2026/5-puertas/datos",
+   "/coches/cupra/raval/2026/estandar/datos",
+   "/coches/lancia/ypsilon/2024/estandar/datos",
+   "/coches/dongfeng/box/2025/estandar/datos",
+   "/coches/geely/e2/2026/estandar/datos",
+   "/coches/fiat/grande-panda/2025/estandar/datos",
+   "/coches/byd/dolphin-surf/2025/estandar/datos",
+   "/coches/citroen/c3/2024/estandar/datos",
+   "/coches/volkswagen/id-polo/2026/estandar/estandar/id-polo-style-155-kw-211-cv-52-kwh/datos",
+   "/coches/alpine/a290/2025/estandar/estandar/a290-gts/datos",
+   "/coches/mini/mini/2024/3-puertas/estandar/mini-cooper-se-classic/datos",
+   "/coches/mg/mg3/2024/estandar/hev/mg3-hybrid-luxury/datos"
+  ]
  }
 }
