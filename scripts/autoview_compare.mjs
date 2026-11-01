@@ -2,7 +2,7 @@
 // Inputs: data/autoview_videos.json, data/autoview_ratings.json (entered on /autoview),
 //         data/autoview_cars.json (per car name: hint, km77 = same-generation KM77 car, anchor, or wb/gc/src specs).
 // A car is blue when some anchor A (a car Autoview rated that KM77 also measured, same model and generation)
-// has KM77 speed >= the grade's #1 speed and the car's Autoview handling and stability are both >= A's.
+// in the SAME grade cell (wheelbase x ground clearance) has KM77 speed >= the grade's #1 speed and the car's Autoview handling and stability are both >= A's.
 import fs from 'node:fs';
 import { expandVideos, level } from './autoview_lib.mjs';
 
@@ -31,7 +31,7 @@ export function compareAutoview(grid, minKmh) {
   for (const [car, r] of byCar) {
     const m = map[car];
     const k = m?.anchor && km77.get(m.km77);
-    if (k) anchors.push({ car, kmh: k.moose_kmh, km77: k.name, h: level(r.handling), a: level(r.avoidance), r });
+    if (k && k.wheelbase_mm && k.ground_clearance_mm) anchors.push({ car, i: wbBin(k.wheelbase_mm), j: gcBin(k.ground_clearance_mm), kmh: k.moose_kmh, km77: k.name, h: level(r.handling), a: level(r.avoidance), r });
   }
 
   // only cars Autoview rated 좋음 or better on handling or stability are shown
@@ -51,7 +51,7 @@ export function compareAutoview(grid, minKmh) {
     if (k) status = 'km77';
     else if (top == null) status = 'nofirst';
     else {
-      const usable = anchors.filter((x) => x.kmh >= top).sort((x, y) => x.kmh - y.kmh);
+      const usable = anchors.filter((x) => x.i === i && x.j === j && x.kmh >= top).sort((x, y) => x.kmh - y.kmh);
       basis = usable.find((x) => h >= x.h && a >= x.a) || null;
       status = basis ? 'blue' : usable.length ? 'below' : 'nobase';
       if (!basis) basis = usable[0] || null;
