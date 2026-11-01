@@ -1,7 +1,7 @@
 # car-handling-grades
 
 Static page ranking cars by KM77 moose test (maniobra de esquiva) speed within 30 grades:
-wheelbase (<2600, 2600–2699, …, ≥3000 mm) × ground clearance (<150, 150–164, 165–184, 185–199, ≥200 mm).
+wheelbase (<2600, 2600–2699, …, ≥3000 mm) × ground clearance (<150, 150–174, 175–199, ≥200 mm).
 Cars at 77 km/h or below are excluded. Deployed to Vercel from `public/`.
 
 ## Update (incremental)
