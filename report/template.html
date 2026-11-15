@@ -286,9 +286,10 @@ function show(i, j) {
      ${(c.tv || []).length ? `<div class="tvs"><h4>Teknikens Värld 무스 테스트</h4>${c.tv.map(q => `<div class="tv-item"><b>${q.car}</b><br>콘을 쓰러뜨리지 않은 최고 속도 <span class="qm-sp">${q.kmh}km/h</span> (승인 기준 72km/h)<span class="sp-meta">WB ${q.wb.toLocaleString()} · GC ${q.gc_label || q.gc + 'mm'}${flag(q.est)}${q.km77 ? ' · ' + q.km77 : ''}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Teknikens Värld 공개 영상</a> · ${q.by === 'user' ? '직접 확인한 값' : '영상 설명의 기록'}</span></div>`).join('')}<p class="sp-meta">73km/h 이상인 차 중 이 칸에서 가장 빠른 차만 보여요. KM77 무스 테스트와 코스·판정이 달라 속도를 바로 비교할 수 없어요.</p></div>` : ''}
      ${bestAv(c.av || []).length ? `<div class="avs"><h4>오토뷰 로드테스트 등급</h4>${bestAv(c.av).map(a => `<div class="av-item${a.status === 'blue' ? ' blue' : ''}"><b>${a.car}</b> · 핸들링 ${a.handling} · 기본 안정성 ${a.avoidance}<br>${avVerdict(a)}<span class="sp-meta">${a.specs}</span><span class="sp-meta">출처: <a href="${a.url}" target="_blank" rel="noopener">오토뷰 YouTube 영상</a> · 화면의 등급</span></div>`).join('')}</div>` : ''}`;
 }
-// KM77 list: only the top speed and the next lower speed level
+// KM77 list: the top speed, plus the next lower speed level when it is only 1 km/h slower
 function topLevels(list) {
-  const speeds = [...new Set(list.map(r => r.kmh))].sort((x, y) => y - x).slice(0, 2);
+  // user rule 2026-11-15: the next speed level is shown only when it is 1 km/h below the top (2 km/h or more apart: hidden)
+  const speeds = [...new Set(list.map(r => r.kmh))].sort((x, y) => y - x).slice(0, 2).filter((s, i, a) => i === 0 || a[0] - s <= 1);
   return list.filter(r => speeds.includes(r.kmh));
 }
 // Autoview list: handling 좋음 or better; highest handling, then highest stability (exact ties all shown)
