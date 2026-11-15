@@ -79,7 +79,8 @@ const cells = grid.map((row, i) =>
       av: av.cells[i][j],
       qm: qrMeasured
         .filter((q) => q.dry_kmh >= QR_MIN.dry && q.wet_kmh >= QR_MIN.wet && wbBin(q.wb) === i && gcBin(q.gc) === j)
-        .filter((q, _, all) => !all.some((o) => o.dry_kmh > q.dry_kmh && o.wet_kmh > q.wet_kmh)) // user rule: drop a car when another car in the same cell beats both speeds
+        // user rule 2026-11-15: only the cell's top dry-lane-change car and top wet-double-lane-change car (ties all)
+        .filter((q, _, all) => q.dry_kmh === Math.max(...all.map((o) => o.dry_kmh)) || q.wet_kmh === Math.max(...all.map((o) => o.wet_kmh)))
         .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)
         .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
       // user rule: only the fastest Teknikens Värld car(s) of the cell
