@@ -820,8 +820,8 @@
      "name": "Mercedes-Benz AMG GT R (2017-2018)",
      "moose_kmh": 81,
      "wheelbase_mm": 2630,
-     "ground_clearance_mm": 95,
-     "gc_source": "estimate (2017 AMG GT R: auto motor und sport · auto-data 95mm)",
+     "ground_clearance_mm": 106,
+     "gc_source": "estimate (빈 차: carsales GT R 106 / Mercedes 공식 값은 총중량 기준이라 쓰지 않음, auto motor und sport · auto-data 95mm는 같은 총중량 값)",
      "km77": "https://www.km77.com/coches/mercedes/amg-gt/2015/mediciones-propias",
      "wb": 1,
      "gc": 0
@@ -2970,8 +2970,8 @@
      "name": "Mercedes-Benz Mercedes-AMG GT 63 S 4MATIC+ 4 puertas Coupé",
      "moose_kmh": 80,
      "wheelbase_mm": 2951,
-     "ground_clearance_mm": 122,
-     "gc_source": "estimate (2019 AMG GT 63 S 4도어: iSeeCars · neofiliac 122mm)",
+     "ground_clearance_mm": 144,
+     "gc_source": "estimate (빈 차: CarsGuide 2021 GT63 S 4Matic+ 144mm / auto-data · cars-data 122mm는 기준 불명, MBUSA 최대 적재 값 미공개)",
      "km77": "https://www.km77.com/coches/mercedes/amg-gt/2019/mediciones-propias",
      "wb": 4,
      "gc": 0
@@ -3020,8 +3020,8 @@
      "name": "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)",
      "moose_kmh": 78,
      "wheelbase_mm": 2939,
-     "ground_clearance_mm": 125,
-     "gc_source": "estimate (W213 2016–21 E 220 d 세단: autospot 125mm / 2020 CarsGuide 116mm)",
+     "ground_clearance_mm": 116,
+     "gc_source": "estimate (빈 차: CarsGuide 2017 E220 디젤 116mm, CarExpert 2017 E d 세단 111mm / autospot 125mm는 기준 불명)",
      "km77": "https://www.km77.com/coches/mercedes/clase-e/2016/berlina/estandar/e-220-d/mediciones-propias",
      "wb": 4,
      "gc": 0

@@ -20,8 +20,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Mercedes-Benz AMG GT R (2017-2018)": {
-  "ground_clearance_mm": 95,
-  "gc_source": "estimate (2017 AMG GT R: auto motor und sport · auto-data 95mm)",
+  "ground_clearance_mm": 106,
+  "gc_source": "estimate (빈 차: carsales GT R 106 / Mercedes 공식 값은 총중량 기준이라 쓰지 않음, auto motor und sport · auto-data 95mm는 같은 총중량 값)",
   "wheelbase_mm": 2630
  },
  "BMW M2 Competition (2018-2021)": {
@@ -541,8 +541,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Mercedes-Benz Mercedes-AMG GT 63 S 4MATIC+ 4 puertas Coupé": {
-  "ground_clearance_mm": 122,
-  "gc_source": "estimate (2019 AMG GT 63 S 4도어: iSeeCars · neofiliac 122mm)"
+  "ground_clearance_mm": 144,
+  "gc_source": "estimate (빈 차: CarsGuide 2021 GT63 S 4Matic+ 144mm / auto-data · cars-data 122mm는 기준 불명, MBUSA 최대 적재 값 미공개)"
  },
  "Audi A5 Coupé 3.0 TDI 160 kW (218 CV) quattro S tronic (2016-2018)": {
   "ground_clearance_mm": 118,
@@ -765,8 +765,8 @@
   "gc_source": "estimate (Giulia 952: CarExpert 2021 · 2022 · 2023 100mm, 부분변경 전후 같은 차체)"
  },
  "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "estimate (W213 2016–21 E 220 d 세단: autospot 125mm / 2020 CarsGuide 116mm)"
+  "ground_clearance_mm": 116,
+  "gc_source": "estimate (빈 차: CarsGuide 2017 E220 디젤 116mm, CarExpert 2017 E d 세단 111mm / autospot 125mm는 기준 불명)"
  },
  "Porsche Taycan Turbo S (2019-2024)": {
   "ground_clearance_mm": 126,
