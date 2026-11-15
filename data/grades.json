@@ -901,7 +901,7 @@
      "moose_kmh": 78,
      "wheelbase_mm": 2630,
      "ground_clearance_mm": 96,
-     "gc_source": "estimate (2017 AMG GT Roadster: auto-data · vehiclesizes 96mm, MBUSA 2018 최대 적재 3.8in)",
+     "gc_source": "estimate (빈 차: CarExpert GT C Roadster 96mm, auto-data · vehiclesizes 96mm / MBUSA 최대 적재 3.8in)",
      "km77": "https://www.km77.com/coches/mercedes/amg-gt/2017/mediciones-propias",
      "wb": 1,
      "gc": 0
@@ -2430,8 +2430,8 @@
      "name": "Mercedes-Benz Mercedes-AMG C 63 S Coupé",
      "moose_kmh": 80,
      "wheelbase_mm": 2840,
-     "ground_clearance_mm": 101,
-     "gc_source": "estimate (C205 C 63 S: auto-data 101mm, MBUSA 2018 최대 적재 4.1in(104mm))",
+     "ground_clearance_mm": 117,
+     "gc_source": "estimate (빈 차: C 63 S Coupé 2017 CarExpert · CarsGuide 117mm / MBUSA 최대 적재 4.1in)",
      "km77": "https://www.km77.com/coches/mercedes/clase-c/2018/coupe/amg/amg-c-63-s-coupe/mediciones-propias",
      "wb": 3,
      "gc": 0
