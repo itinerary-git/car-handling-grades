@@ -48,7 +48,7 @@
 
 ## Teknikens Värld 입력 (사용자 전용, 내 PC에서만)
 - 출처: 공개 YouTube 재생목록 `PLubnNYiL3c4A-eHxarmLZHfszMp7lXaxC`("Moose test videos", `state.tv.playlist`). 기록은 **콘을 쓰러뜨리지 않은 최고 속도** 하나(km/h). 2023년 이후 "Moose test of the week" 영상은 설명의 `Achieved max speed`를 그대로 쓰고(`by: claude`), 그 전 비교 영상은 속도가 말로만 나와 화면 프레임으로 읽을 수 없어서 사용자가 넣는다. Chrome으로 영상을 볼 때 광고가 나오면 건너뛰기 버튼이 뜰 때 누른다(사용자 지시).
-- `node scripts/serve.mjs` → http://localhost:5177/teknikens (`report/tv_input_template.html`, 배포 안 됨). 저장 `/api/tv` → `data/tv_ratings.json` `{ "<videoId>[.<n>]": { kmh, car?, by, updatedAt } }`. 비교 영상은 "차 추가"로 `<videoId>.2` 같은 키를 만든다.
+- `node scripts/serve.mjs` → http://localhost:5177/teknikens (`report/tv_input_template.html`, 배포 안 됨). 메인 페이지 하단 "Teknikens Värld 속도 입력" 버튼(Quattroruote 버튼과 함께)은 localhost에서는 상대 링크로, 배포 사이트에서는 관리자 키가 저장된 내 브라우저에서만 `http://localhost:5177/...` 링크로 보인다(사용자 지시 2026-11-15). 저장 `/api/tv` → `data/tv_ratings.json` `{ "<videoId>[.<n>]": { kmh, car?, by, updatedAt } }`. 비교 영상은 "차 추가"로 `<videoId>.2` 같은 키를 만든다.
 - 제원 `data/tv_cars.json`(Claude가 채움, 형식은 `qr_cars.json`과 같고 키는 위 키) → `scripts/tv_lib.mjs` → `build_page.mjs`가 차 자신의 제원 칸에 넣고 **칸마다 가장 빠른 차만**(동률은 모두) 분홍색 칩 `TV 이름 속도`와 칸 상세로 보여 준다(사용자 지시 2026-11-15: 한 등급에서 속도가 낮은 차는 무시). 순위·색에는 쓰지 않는다.
 - 새 영상: `scripts/tv_list.mjs`(update.mjs가 호출)가 재생목록에서 `state.tv.seenVideoIds`에 없는 영상을 `data/tv_meta.jsonl`에 넣고 pending_review.md에 적는다. 갱신 때 Claude가 설명의 속도를 넣고 제원을 채운다.
 

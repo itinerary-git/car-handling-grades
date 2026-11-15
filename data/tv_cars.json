@@ -96,12 +96,12 @@
   "km77": "KM77: 같은 세대 45 TFSI 75km/h"
  },
  "sMeh_OZTkCw": {
-  "car": "Opel Mokka-e Ultimate (2023)",
+  "car": "Opel Mokka-e Ultimate 50kWh (2021–2023)",
   "short": "Opel Mokka-e",
   "wb": 2557,
   "gc": 195,
-  "gc_label": "195–200mm",
-  "gc_source": "estimate (cars-data 195mm, EVKX 200mm)",
+  "gc_label": "189–195mm",
+  "gc_source": "estimate (시험 차 Mokka-e 50kWh 2021–23 기준: cars-data 2020년형 195mm, vehiclesizes 2021–24년 189mm / 다른 값: evspecs 164mm, EVKX 200mm(연식 불명), cars-data 2023년형 145mm(같은 DB가 e-2008도 145mm로 적어 오류로 봄), 같은 플랫폼 e-2008 KM77 170mm)",
   "km77": ""
  },
  "3dI3492dugw": {
