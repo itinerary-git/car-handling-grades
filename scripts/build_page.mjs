@@ -19,6 +19,7 @@ const qrData = loadQr();
 const qrMeasured = qrData.measured;
 // Teknikens Värld moose-test speeds (highest pass without hitting a cone), placed by the car's own specs
 const tvData = loadTv();
+const TV_MIN_KMH = 73; // user rule 2026-11-15: show Teknikens Värld cars at 73 km/h or more only
 const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
 const gcBin = (g) => (g < 150 ? 0 : g < 175 ? 1 : g < 200 ? 2 : 3);
 
@@ -82,7 +83,7 @@ const cells = grid.map((row, i) =>
         .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
       // user rule: only the fastest Teknikens Värld car(s) of the cell
       tv: (() => {
-        const inCell = tvData.measured.filter((q) => wbBin(q.wb) === i && gcBin(q.gc) === j);
+        const inCell = tvData.measured.filter((q) => q.kmh >= TV_MIN_KMH && wbBin(q.wb) === i && gcBin(q.gc) === j);
         const best = Math.max(0, ...inCell.map((q) => q.kmh));
         return inCell.filter((q) => q.kmh === best).map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id }));
       })(),
