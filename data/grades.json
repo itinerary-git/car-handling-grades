@@ -161,7 +161,7 @@
      "moose_kmh": 79,
      "wheelbase_mm": 2538,
      "ground_clearance_mm": 140,
-     "gc_source": "estimate (2023 부분변경 Corsa 1.2 Turbo 100: cars-data 140mm)",
+     "gc_source": "estimate (빈 차 표기 값 없음: cars-data 2023 · Witness(남아공) 140mm, auto-data 140–160mm / 같은 플랫폼 Peugeot 208 II L'argus 109 · CarExpert 123mm)",
      "km77": "https://www.km77.com/coches/opel/corsa/2024/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -449,6 +449,16 @@
      "gc": 1
     },
     {
+     "name": "SEAT Arona 1.0 TSI 81 kW (110 CV) DSG X-Perience Plus (2021-2022)",
+     "moose_kmh": 81,
+     "wheelbase_mm": 2566,
+     "ground_clearance_mm": 174,
+     "gc_source": "estimate (부분변경 2021~ Arona: Carwow 스페인 무적재(sin carga) 174mm 전 트림, cars-data 2021 · automoli 174mm / 190mm는 부분변경 전 \"휠에 따라 최대\" 값(Autocar))",
+     "km77": "https://www.km77.com/coches/seat/arona/2021/mediciones-propias",
+     "wb": 0,
+     "gc": 1
+    },
+    {
      "name": "Ford Fiesta Active+ 1.5 TDCi 88 kW (120 CV) S/S (2018-2019)",
      "moose_kmh": 81,
      "wheelbase_mm": 2493,
@@ -700,16 +710,6 @@
     }
    ],
    [
-    {
-     "name": "SEAT Arona 1.0 TSI 81 kW (110 CV) DSG X-Perience Plus (2021-2022)",
-     "moose_kmh": 81,
-     "wheelbase_mm": 2566,
-     "ground_clearance_mm": 190,
-     "gc_source": "verified (web search: cars-data/autotijd)",
-     "km77": "https://www.km77.com/coches/seat/arona/2021/mediciones-propias",
-     "wb": 0,
-     "gc": 2
-    },
     {
      "name": "Volkswagen T-Cross Advance 1.0 TSI 85 kW (115 CV) DSG 7 vel. (2018-2019)",
      "moose_kmh": 79,

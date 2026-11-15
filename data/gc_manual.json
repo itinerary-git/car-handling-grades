@@ -434,7 +434,7 @@
  },
  "Opel Corsa 1.2 Turbo 74 kW (100 CV) GS (2023)": {
   "ground_clearance_mm": 140,
-  "gc_source": "estimate (2023 부분변경 Corsa 1.2 Turbo 100: cars-data 140mm)"
+  "gc_source": "estimate (빈 차 표기 값 없음: cars-data 2023 · Witness(남아공) 140mm, auto-data 140–160mm / 같은 플랫폼 Peugeot 208 II L'argus 109 · CarExpert 123mm)"
  },
  "MG MG3 Hybrid+ Luxury (2024)": {
   "ground_clearance_mm": 150,
@@ -597,8 +597,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "SEAT Arona 1.0 TSI 81 kW (110 CV) DSG X-Perience Plus (2021-2022)": {
-  "ground_clearance_mm": 190,
-  "gc_source": "verified (web search: cars-data/autotijd)"
+  "ground_clearance_mm": 174,
+  "gc_source": "estimate (부분변경 2021~ Arona: Carwow 스페인 무적재(sin carga) 174mm 전 트림, cars-data 2021 · automoli 174mm / 190mm는 부분변경 전 \"휠에 따라 최대\" 값(Autocar))"
  },
  "Citroën C3 Aircross PureTech 110 S&amp;S Shine (2017-2019)": {
   "ground_clearance_mm": 175,
