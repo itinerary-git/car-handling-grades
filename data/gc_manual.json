@@ -618,7 +618,7 @@
  },
  "Mercedes-Benz AMG GT C Roadster (2017-2018)": {
   "ground_clearance_mm": 96,
-  "gc_source": "estimate (빈 차: CarExpert GT C Roadster 96mm, auto-data · vehiclesizes 96mm / MBUSA 최대 적재 3.8in)"
+  "gc_source": "estimate (Mercedes 공식 값은 총중량 기준 96mm(MBUSA 최대 적재 3.8in)뿐이고 빈 차 값은 공개 안 함, 빈 차는 96mm보다 높음 / CarExpert 빈 차 96mm 표기는 적재 값과 같음)"
  },
  "Mercedes-Benz EQS 580 4MATIC (2021-2022)": {
   "ground_clearance_mm": 120,
@@ -722,7 +722,7 @@
  },
  "Mercedes-Benz Mercedes-AMG C 63 S Coupé": {
   "ground_clearance_mm": 117,
-  "gc_source": "estimate (빈 차: C 63 S Coupé 2017 CarExpert · CarsGuide 117mm / MBUSA 최대 적재 4.1in)"
+  "gc_source": "estimate (Mercedes 공식 값은 최대 적재 4.1in(104mm)뿐이고 빈 차 값은 공개 안 함 / 빈 차: CarExpert 2017 · CarsGuide 117mm)"
  },
  "MINI Cooper S 5 puertas (2014-2017)": {
   "ground_clearance_mm": 146,
