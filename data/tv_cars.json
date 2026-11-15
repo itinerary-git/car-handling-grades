@@ -12,7 +12,7 @@
   "short": "Tesla Model 3 SR+",
   "wb": 2875,
   "gc": 140,
-  "gc_source": "estimate (KM77 Model 3 지상고 추정 140mm)",
+  "gc_source": "estimate (2021 SR+: CarExpert · cars-data · ArenaEV 140mm)",
   "km77": "KM77: Long Range AWD (2018-2020) 83km/h"
  },
  "2PTOBc883zg": {
@@ -28,15 +28,16 @@
   "short": "Maxus Euniq 5",
   "wb": 2800,
   "gc": 130,
-  "gc_source": "estimate (autocango BEV 130mm, auto-data PHEV 145mm)",
-  "km77": ""
+  "gc_source": "estimate (유럽 판매 BEV 2022–23: autocango 만재 130mm, vehiclesizes 130–145mm)",
+  "km77": "",
+  "gc_label": "130–145mm"
  },
  "glfCfD3dEHA": {
   "car": "BMW M3 Competition RWD (G80, 2023)",
   "short": "BMW M3 Competition",
   "wb": 2857,
   "gc": 120,
-  "gc_source": "estimate (제조사 제원 약 120mm)",
+  "gc_source": "verified (BMW 2021-03 보도자료 M3 Competition 120mm)",
   "km77": ""
  },
  "gz76gNfNx1A": {
@@ -51,9 +52,10 @@
   "car": "Peugeot 208 Active PureTech 75 (2세대, 2023)",
   "short": "Peugeot 208",
   "wb": 2540,
-  "gc": 140,
-  "gc_source": "estimate (KM77 같은 세대 추정 140mm)",
-  "km77": "KM77: 같은 세대 e-208 GT 76km/h · 208 GT Hybrid 73km/h"
+  "gc": 109,
+  "gc_source": "estimate (2020–23 PureTech 75 Active: L'argus 109mm, CarExpert 2020 Active 123mm / cars-data 191mm은 오류로 봄)",
+  "km77": "KM77: 같은 세대 e-208 GT 76km/h · 208 GT Hybrid 73km/h",
+  "gc_label": "109–123mm"
  },
  "O_CLAD4UEoM": {
   "car": "MG5 Electric Luxury (Michelin 타이어, 2023)",
@@ -75,8 +77,8 @@
   "car": "Porsche 718 Boxster 25 Years (2023)",
   "short": "Porsche 718 Boxster",
   "wb": 2475,
-  "gc": 110,
-  "gc_source": "estimate (KM77 718 Boxster S 추정 110mm)",
+  "gc": 112,
+  "gc_source": "estimate (2021 Boxster 25 Years: CarExpert 112mm, PASM 10mm 낮춤)",
   "km77": "KM77: 718 Boxster S PDK (2016-2018) 80km/h"
  },
  "ksLEYoiMhwo": {
@@ -91,9 +93,10 @@
   "car": "Audi A4 allroad 40 TDI quattro (B9, 2023)",
   "short": "Audi A4 allroad",
   "wb": 2818,
-  "gc": 173,
-  "gc_source": "estimate (CarExpert 173mm, Audi: Avant보다 34–35mm 높음)",
-  "km77": "KM77: 같은 세대 45 TFSI 75km/h"
+  "gc": 172,
+  "gc_source": "estimate (2021 부분변경 후: CarExpert 2021 172mm, 미국 사양 165mm, Audi: Avant보다 34–35mm 높음)",
+  "km77": "KM77: 같은 세대 45 TFSI 75km/h",
+  "gc_label": "165–172mm"
  },
  "sMeh_OZTkCw": {
   "car": "Opel Mokka-e Ultimate 50kWh (2021–2023)",
@@ -108,17 +111,18 @@
   "car": "Volkswagen Golf 1.0 eTSI DSG (8세대, 2023)",
   "short": "Volkswagen Golf",
   "wb": 2619,
-  "gc": 136,
-  "gc_source": "estimate (KM77 같은 세대 추정 136mm)",
+  "gc": 133,
+  "gc_source": "estimate (Golf 8: CarExpert NZ Life 133mm / 이전 세대 Golf 7 1.0 TSI 142mm)",
   "km77": "KM77: 같은 세대 1.5 eTSI 115 77km/h · Style 1.5 eTSI 69km/h"
  },
  "w2EZwDxWfLU": {
   "car": "Cupra Leon Sportstourer 1.4 TSI e-Hybrid (2023)",
   "short": "Cupra Leon ST e-Hybrid",
-  "wb": 2686,
+  "wb": 2681,
   "gc": 130,
-  "gc_source": "estimate (제조사 제원 약 130mm)",
-  "km77": "KM77: 같은 세대 SEAT León ST 1.5 TSI 70km/h"
+  "gc_source": "estimate (공식 값 없음, Cupra: 2021-06 생산분부터 e-HYBRID 차체 25mm 낮춤, 휠베이스 Autotijd 2681mm)",
+  "km77": "KM77: 같은 세대 SEAT León ST 1.5 TSI 70km/h",
+  "gc_label": "150mm 미만"
  },
  "X_6HNeFsTxc": {
   "car": "Volkswagen ID.4 GTX (2023)",
@@ -141,7 +145,7 @@
   "short": "DFSK Seres 3",
   "wb": 2655,
   "gc": 180,
-  "gc_source": "estimate (auto-data · EVSpecs 180mm)",
+  "gc_source": "estimate (2021–25 Seres 3: auto-data · Autotijd · EVSpecs 모두 180mm)",
   "km77": ""
  },
  "cS5rB-ATr2M": {
@@ -164,8 +168,9 @@
   "car": "Porsche 718 Cayman GT4 RS Manthey (2024)",
   "short": "Porsche Cayman GT4 RS Manthey",
   "wb": 2456,
-  "gc": 100,
-  "gc_source": "estimate (제조사 제원 약 100mm)",
-  "km77": ""
+  "gc": 102,
+  "gc_source": "estimate (GT4 RS 2022–: Porsche 미국 4.0in(102mm), cars-data 103mm, Porsche UK 79mm, CarExpert 82mm)",
+  "km77": "",
+  "gc_label": "79–102mm"
  }
 }
