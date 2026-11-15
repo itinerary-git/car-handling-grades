@@ -161,7 +161,7 @@
      "moose_kmh": 79,
      "wheelbase_mm": 2538,
      "ground_clearance_mm": 140,
-     "gc_source": "estimate (빈 차 표기 값 없음: cars-data 2023 · Witness(남아공) 140mm, auto-data 140–160mm / 같은 플랫폼 Peugeot 208 II L'argus 109 · CarExpert 123mm)",
+     "gc_source": "estimate (Opel 공식 자료에 지상고 항목 없음(Opel 독일 2024 가격·기술 데이터, Vauxhall UK 가이드, Opel 칠레 제원표) / cars-data 2023 · Witness · Caroom 140mm, auto-data 140–160mm)",
      "km77": "https://www.km77.com/coches/opel/corsa/2024/mediciones-propias",
      "wb": 0,
      "gc": 0

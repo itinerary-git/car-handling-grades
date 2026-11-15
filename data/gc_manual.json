@@ -434,7 +434,7 @@
  },
  "Opel Corsa 1.2 Turbo 74 kW (100 CV) GS (2023)": {
   "ground_clearance_mm": 140,
-  "gc_source": "estimate (빈 차 표기 값 없음: cars-data 2023 · Witness(남아공) 140mm, auto-data 140–160mm / 같은 플랫폼 Peugeot 208 II L'argus 109 · CarExpert 123mm)"
+  "gc_source": "estimate (Opel 공식 자료에 지상고 항목 없음(Opel 독일 2024 가격·기술 데이터, Vauxhall UK 가이드, Opel 칠레 제원표) / cars-data 2023 · Witness · Caroom 140mm, auto-data 140–160mm)"
  },
  "MG MG3 Hybrid+ Luxury (2024)": {
   "ground_clearance_mm": 150,
