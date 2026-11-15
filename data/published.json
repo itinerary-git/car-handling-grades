@@ -94,12 +94,28 @@
   "Mazda CX-80 Takumi Plus 2.5 E-Skyactiv PHEV 327 CV AWD (2024)"
  ],
  "qr": [
-  "Tesla Model Y (2025 부분변경, RWD)",
   "Audi RS6 Avant Performance (C8)",
   "Lamborghini Revuelto"
  ],
  "peers": [
   "Tesla Model Y (2026 페이스리프트)"
  ],
- "av": []
+ "av": [],
+ "qm": [
+  "Peugeot 308 (3세대, 2022)",
+  "Peugeot 308 SW (3세대, 2022)",
+  "Maserati Grecale Trofeo",
+  "Maserati GranTurismo Trofeo (2024)",
+  "Renault Rafale E-Tech Esprit Alpine",
+  "Renault 4 E-Tech (2025)",
+  "Audi RS6 Avant Performance (C8)",
+  "Tesla Model 3 Standard Range (2023)",
+  "BMW i4 M50",
+  "Tesla Model Y (2025 부분변경, RWD)",
+  "Peugeot 408 Hybrid (2023)",
+  "Audi Q8 e-tron (2023)",
+  "Jeep Grand Cherokee 4xe (WL)",
+  "Range Rover D250 Autobiography (L460 SWB)",
+  "Land Rover Defender 130 (2023)"
+ ]
 }

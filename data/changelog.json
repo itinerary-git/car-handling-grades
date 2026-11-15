@@ -1,5 +1,31 @@
 [
  {
+  "date": "2026-11-15",
+  "initial": false,
+  "added": [],
+  "removed": [],
+  "qrAdded": [],
+  "peersAdded": [],
+  "avAdded": [],
+  "qmAdded": [
+   "Peugeot 308 (3세대, 2022)",
+   "Peugeot 308 SW (3세대, 2022)",
+   "Maserati Grecale Trofeo",
+   "Maserati GranTurismo Trofeo (2024)",
+   "Renault Rafale E-Tech Esprit Alpine",
+   "Renault 4 E-Tech (2025)",
+   "Audi RS6 Avant Performance (C8)",
+   "Tesla Model 3 Standard Range (2023)",
+   "BMW i4 M50",
+   "Tesla Model Y (2025 부분변경, RWD)",
+   "Peugeot 408 Hybrid (2023)",
+   "Audi Q8 e-tron (2023)",
+   "Jeep Grand Cherokee 4xe (WL)",
+   "Range Rover D250 Autobiography (L460 SWB)",
+   "Land Rover Defender 130 (2023)"
+  ]
+ },
+ {
   "date": "2026-11-01",
   "initial": false,
   "added": [],

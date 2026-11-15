@@ -20,6 +20,7 @@ const { grid } = rd('data/grades.json');
 const shown = grid.flat(2).filter((r) => r.moose_kmh >= 78).map((r) => r.name);
 const qr = rd('data/qr_expected.json', []).filter((q) => q.chip !== false).map((q) => q.car);
 const peers = rd('data/peer_mentions.json', []).map((m) => m.car);
+const qm = rd('data/qr_measured.json', []).map((q) => q.car);
 const av = compareAutoview(grid, 78).cells.flat(2).filter((x) => x.status === 'blue').map((x) => x.car);
 const prev = rd('data/published.json', { cars: [], qr: [], peers: [] });
 const today = new Date().toISOString().slice(0, 10);
@@ -31,19 +32,20 @@ const diff = {
   qrAdded: qr.filter((n) => !prev.qr.includes(n)),
   peersAdded: peers.filter((n) => !prev.peers.includes(n)),
   avAdded: av.filter((n) => !(prev.av || []).includes(n)),
+  qmAdded: qm.filter((n) => !(prev.qm || []).includes(n)),
 };
-const changed = diff.added.length || diff.removed.length || diff.qrAdded.length || diff.peersAdded.length || diff.avAdded.length;
+const changed = diff.added.length || diff.removed.length || diff.qrAdded.length || diff.peersAdded.length || diff.avAdded.length || diff.qmAdded.length;
 
 const state = rd('data/state.json');
 if (!dry) {
   const log = rd('data/changelog.json', []);
   if (changed || !log.length) log.unshift(diff);
   wr('data/changelog.json', log);
-  wr('data/published.json', { cars: shown, qr, peers, av });
+  wr('data/published.json', { cars: shown, qr, peers, av, qm });
   state.lastUpdated = today;
   delete state.pending;
   wr('data/state.json', state);
 }
 process.env.LAST_UPDATED = state.lastUpdated;
 run('scripts/build_page.mjs');
-console.log(changed ? `changes: +${diff.added.length} -${diff.removed.length} qr+${diff.qrAdded.length} peers+${diff.peersAdded.length} av+${diff.avAdded.length}` : 'no changes since last publish');
+console.log(changed ? `changes: +${diff.added.length} -${diff.removed.length} qr+${diff.qrAdded.length} peers+${diff.peersAdded.length} av+${diff.avAdded.length} qm+${diff.qmAdded.length}` : 'no changes since last publish');

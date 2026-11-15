@@ -12,6 +12,10 @@ const grid = src.grid.map((row) => row.map((c) => c.filter((r) => r.moose_kmh >=
 const mentions = JSON.parse(fs.readFileSync(new URL('data/peer_mentions.json', root), 'utf8'));
 const qrExpected = JSON.parse(fs.readFileSync(new URL('data/qr_expected.json', root), 'utf8'));
 const av = compareAutoview(src.grid, MIN_KMH);
+// Quattroruote stability-test speeds read from the video screens (owner-picked cars), placed by the car's own specs
+const qrMeasured = fs.existsSync(new URL('data/qr_measured.json', root)) ? JSON.parse(fs.readFileSync(new URL('data/qr_measured.json', root), 'utf8')) : [];
+const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
+const gcBin = (g) => (g < 150 ? 0 : g < 175 ? 1 : g < 200 ? 2 : 3);
 
 const SHORT = [
   [/^Porsche 911 Turbo S Coupé \(2025/, 'Porsche 911 Turbo S (992.2)'],
@@ -66,6 +70,10 @@ const cells = grid.map((row, i) =>
       mentions: mentions.filter((m) => m.cell === `W${i + 1}G${j + 1}`),
       qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}`),
       av: av.cells[i][j],
+      qm: qrMeasured
+        .filter((q) => wbBin(q.wb) === i && gcBin(q.gc) === j)
+        .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)
+        .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
       winners: c.filter((r) => r.moose_kmh === top).map((r) => short(r.name)),
       top: top ?? null,
       list: c.slice(0, 6).map((r) => ({
@@ -98,6 +106,7 @@ const changelog = rdj('data/changelog.json', []).slice(0, 12).map((e) => {
   if (e.removed.length) parts.push(`제외 ${e.removed.length}대`);
   if (e.qrAdded.length) parts.push(`Quattroruote 예상 추가: ${e.qrAdded.map(escH).join(', ')}`);
   if (e.peersAdded.length) parts.push(`비교 평가 추가: ${e.peersAdded.map(escH).join(', ')}`);
+  if (e.qmAdded?.length) parts.push(`Quattroruote 측정값 추가: ${e.qmAdded.map(escH).join(', ')}`);
   if (e.avAdded?.length) parts.push(`오토뷰 비교 추가: ${e.avAdded.map(escH).join(', ')}`);
   return `<li><span class="cl-date">${e.date}</span> ${parts.join(' · ') || '첫 공개'}</li>`;
 }).join('');

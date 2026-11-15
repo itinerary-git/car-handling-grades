@@ -99,6 +99,15 @@ table.src{border-collapse:collapse;width:100%;font-size:13.5px}
 .detail .qr-item{border-left:3px dashed var(--qr);padding-left:10px;font-size:13px;line-height:1.45}
 .detail .qr-item b{color:var(--qr)}
 .swatch.qr{background:var(--qr-soft);border:1px dashed var(--qr)}
+/* quattroruote measured speeds (read from the video screens) */
+.qmchip{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--qr-soft);color:var(--qr);border:1px solid var(--qr)}
+.cell.none.hasqm{cursor:pointer;outline:1px solid var(--qr);outline-offset:-3px}
+.detail .qms{margin-top:16px;padding-top:12px;border-top:2px solid var(--qr);display:grid;gap:10px}
+.detail .qms h4{margin:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--qr)}
+.detail .qm-item{border-left:3px solid var(--qr);padding-left:10px;font-size:13px;line-height:1.45}
+.detail .qm-item b{color:var(--qr)}
+.detail .qm-sp{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.swatch.qm{background:var(--qr-soft);border:1px solid var(--qr)}
 /* Autoview comparison (blue) */
 .avchip{display:inline-block;margin-top:6px;font-size:10.5px;font-weight:600;line-height:1.3;padding:2px 6px;border-radius:4px;background:var(--av-soft);color:var(--av);border:1px solid var(--av)}
 .cell.none.hasav{cursor:pointer;outline:1px solid var(--av);outline-offset:-3px}
@@ -145,7 +154,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
           <tbody></tbody>
         </table>
       </div>
-      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span><span><span class="swatch av" aria-hidden="true"></span> 오토뷰 핸들링·기본 안정성 등급이 1위 수준 이상인 차</span></div>
+      <div class="legend"><span>78 km/h</span><span class="ramp" aria-hidden="true"></span><span>83 km/h</span><span>· 오른쪽 위 숫자 = 등급 내 차량 수</span><span><span class="swatch" aria-hidden="true"></span> 다른 사이트에서 1위와 비슷하거나 낫다고 평가한 차</span><span><span class="swatch qr" aria-hidden="true"></span> Quattroruote 안정성 시험으로 비슷하거나 나을 것으로 예상한 차</span><span><span class="swatch qm" aria-hidden="true"></span> Quattroruote 측정값(4R 마른 노면 차선 변경 / 젖은 노면 이중 차선 변경 km/h)</span><span><span class="swatch av" aria-hidden="true"></span> 오토뷰 핸들링·기본 안정성 등급이 1위 수준 이상인 차</span></div>
     </div>
     <aside class="detail" id="detail" aria-live="polite"></aside>
   </section>
@@ -172,7 +181,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
         <li>지상고 추정치 178대 중 순위에 영향을 주는 경계값 차량 12대만 따로 검증했어요. 에어 서스펜션 차량(E-Class All-Terrain, Q6 e-tron 등)은 높이가 바뀌어서 등급이 달라질 수 있어요.</li>
         <li>KM77 표기 지상고가 제조사 공표값과 다를 때가 있어요(예: GLA 134mm). 이때도 KM77 값을 그대로 썼어요.</li>
         <li>빈 칸은 KM77 기록 차량이 없거나, 있더라도 모두 77km/h 이하인 등급이에요.</li>
-        <li>Quattroruote의 한계 속도는 영상 화면에만 나와서, 영상 설명에 적힌 평가와 별점, 속도 3건만 썼어요. 두 곳에서 모두 시험한 Opel Astra(Quattroruote 젖은 노면 88km/h·4성, KM77 76km/h)를 보면 두 시험 수치는 바로 바꿔 쓸 수 없어요. 그래서 호박색 표시는 예상일 뿐 측정값이 아니에요.</li>
+        <li>Quattroruote의 한계 속도는 영상 화면에만 나와요. 호박색 점선 표시는 영상 설명에 적힌 평가와 별점, 속도 3건으로 판단했고, 호박색 실선 표시(측정값)는 지정한 6개 영상(308, 308 SW, Grecale Trofeo, GranTurismo Trofeo, Rafale, Renault 4)의 결과 화면을 직접 읽었어요. 두 곳에서 모두 시험한 Opel Astra(Quattroruote 젖은 노면 88km/h·4성, KM77 76km/h)를 보면 두 시험 수치는 바로 바꿔 쓸 수 없어요. 그래서 호박색 표시는 예상일 뿐 측정값이 아니에요.</li>
         <li>보라색 표시는 세 사이트를 검색해 찾은 만큼만 반영했어요. 표시가 없다고 해서 비슷한 차가 없다는 뜻은 아니에요.</li>
       </ul>
     </div>
@@ -190,7 +199,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
           <tr><td>Car and Driver (미국)</td><td><span class="pill part">일부 확인</span></td><td>Kia Stinger GT AWD 스키드패드 0.91g를 확인했어요. 스키드패드는 정상 선회 한계라 회피 기동과 직접 비교하지 않았어요.</td></tr>
           <tr><td>MotorTrend (미국)</td><td><span class="pill part">일부 확인</span></td><td>Model S Plaid 8자 코스 23.5초(평균 0.90g), Model Y 스키드패드 0.86g를 확인했어요. 이 사이트는 자동 수집을 막고 있어요.</td></tr>
           <tr><td>Consumer Reports (미국)</td><td><span class="pill part">비교 평가 1건</span></td><td>회피 기동 점수는 유료 회원 전용이에요. 공개 검색 결과로 Model Y가 Model 3와 핸들링이 비슷하다는 평가를 찾아 W4G1 칸에 표시했어요. Q5와 X3처럼 1위끼리 비교한 내용은 표시하지 않았어요.</td></tr>
-          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 3대</span></td><td>공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
+          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 2대 · 측정값 15대</span></td><td>지정한 6개 영상은 Claude가 결과 화면에서 두 시험 통과 속도를 읽고, 9개 영상(RS6, Model 3, i4, Model Y, 408, Q8 e-tron, Grand Cherokee, Range Rover, Defender 130)은 사용자가 직접 확인한 속도를 받아 차 자신의 제원 칸에 측정값으로 넣었어요(<code>data/qr_measured.json</code>). 공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐고, 그중 Model Y(2025 부분변경)는 측정값(젖은 노면 81km/h)이 낮아 2026-11-15에 뺐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
           <tr><td>오토뷰 (한국)</td><td><span class="pill no">해당 없음</span></td><td>조건에 맞는 평가를 찾지 못했어요. 검색에 나온 G70이 스팅어보다 낫다는 평가, 폴스타 2가 Model 3보다 낫다는 평가는 오토뷰가 아닌 다른 매체나 커뮤니티 글이라 뺐어요.</td></tr>
         </tbody>
       </table>
@@ -212,6 +221,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
 const DATA = /*DATA*/null;
 const lo = 78, hi = 83;
 const qrItems = c => c.qr.filter(q => q.chip);
+const qmChips = c => (c.qm || []).map(q => `<span class="qmchip">4R ${q.short || q.car.split(' (')[0]} ${q.dry_kmh}/${q.wet_kmh}</span>`).join('');
 const avChips = c => (c.av || []).filter(a => a.status === 'blue').map(a => `<span class="avchip">AV: ${a.car.replace(/^[0-9]{4} /, '').split(' (')[0]}</span>`).join('');
 const tbody = document.querySelector('#grid tbody');
 const headRow = document.querySelector('#grid thead tr');
@@ -227,9 +237,9 @@ DATA.WB.forEach((w, i) => {
     td.dataset.i = i; td.dataset.j = j;
     if (!c.n) {
       td.classList.add('none');
-      td.innerHTML = '<span class="kmh">–</span><span class="who">78km/h 이상 기록 없음</span>' + qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('');
-      if (qrItems(c).length || (c.av || []).length) {
-        td.classList.add(qrItems(c).length ? 'hasqr' : 'hasav'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
+      td.innerHTML = '<span class="kmh">–</span><span class="who">78km/h 이상 기록 없음</span>' + qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('') + qmChips(c);
+      if (qrItems(c).length || (c.av || []).length || (c.qm || []).length) {
+        td.classList.add(qrItems(c).length ? 'hasqr' : (c.qm || []).length ? 'hasqm' : 'hasav'); td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
         td.addEventListener('click', () => show(i, j));
         td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
       }
@@ -241,7 +251,7 @@ DATA.WB.forEach((w, i) => {
       if (c.winners.length > 1) td.classList.add('tie');
       td.tabIndex = 0; td.setAttribute('role', 'button'); td.setAttribute('aria-pressed', 'false');
       td.setAttribute('aria-label', `휠베이스 ${w}mm, 지상고 ${g}mm: ${c.winners.join(', ')} ${c.top}km/h`);
-      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}${avChips(c)}`;
+      td.innerHTML = `<span class="n">${c.n}</span><span class="kmh">${c.top}<small>km/h</small></span><span class="who">${c.winners.join('<br>')}</span>${qrItems(c).map(q => `<span class="qrchip">4R: ${q.car.split(' (')[0]}</span>`).join('')}${c.mentions.map(m => `<span class="peer">${m.source}: ${m.car.split(' (')[0]} ${m.relation}</span>`).join('')}${qmChips(c)}${avChips(c)}`;
       td.addEventListener('click', () => show(i, j));
       td.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i, j); } });
     }
@@ -261,6 +271,7 @@ function show(i, j) {
      <span class="sp-meta">WB ${r.wb.toLocaleString()} · GC ${r.gc}mm${flag(r.est)}</span></span></li>`).join('')}</ol>
      ${c.mentions.length ? `<div class="peers"><h4>다른 사이트 평가</h4>${c.mentions.map(m => `<div class="peer-item"><b>${m.car}</b> · ${m.vs}와 핸들링 ${m.relation}<br>${m.summary}<span class="sp-meta">${m.own}</span><span class="sp-meta">${m.caveat}</span><span class="sp-meta">출처: <a href="${m.url}" target="_blank" rel="noopener">${m.source}</a> (검색 결과 요약)</span></div>`).join('')}</div>` : ''}
      ${c.qr.length ? `<div class="qrs"><h4>Quattroruote 안정성 시험</h4>${c.qr.map(q => `<div class="qr-item"><b>${q.car}</b> · ${q.relation}${q.confidence !== '-' ? ` (확신 ${q.confidence})` : ''}<br>${q.basis}<span class="sp-meta">${q.specs}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 설명과 검색 결과 요약</span></div>`).join('')}</div>` : ''}
+     ${(c.qm || []).length ? `<div class="qms"><h4>Quattroruote 측정값</h4>${c.qm.map(q => `<div class="qm-item"><b>${q.car}</b><br>마른 노면 선회 중 차선 변경 <span class="qm-sp">${q.dry_kmh}km/h</span> · 젖은 노면 이중 차선 변경 <span class="qm-sp">${q.wet_kmh}km/h</span>${q.extra ? `<span class="sp-meta">${q.extra}</span>` : ''}<span class="sp-meta">WB ${q.wb.toLocaleString()} · GC ${q.gc_label || q.gc + 'mm'}${flag(q.est)}${q.km77 ? ' · ' + q.km77 : ''}</span><span class="sp-meta">출처: <a href="${q.url}" target="_blank" rel="noopener">Quattroruote 공개 영상</a> · 화면의 결과${q.by === 'user' ? '(직접 확인)' : ''}</span></div>`).join('')}<p class="sp-meta">KM77 무스 테스트와 코스가 달라 속도를 바로 비교할 수 없어요.</p></div>` : ''}
      ${bestAv(c.av || []).length ? `<div class="avs"><h4>오토뷰 로드테스트 등급</h4>${bestAv(c.av).map(a => `<div class="av-item${a.status === 'blue' ? ' blue' : ''}"><b>${a.car}</b> · 핸들링 ${a.handling} · 기본 안정성 ${a.avoidance}<br>${avVerdict(a)}<span class="sp-meta">${a.specs}</span><span class="sp-meta">출처: <a href="${a.url}" target="_blank" rel="noopener">오토뷰 YouTube 영상</a> · 화면의 등급</span></div>`).join('')}</div>` : ''}`;
 }
 // KM77 list: only the top speed and the next lower speed level

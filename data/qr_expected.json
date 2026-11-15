@@ -1,15 +1,5 @@
 [
  {
-  "cell": "W4G2",
-  "chip": true,
-  "car": "Tesla Model Y (2025 부분변경, RWD)",
-  "relation": "유사 이상 예상",
-  "confidence": "중간",
-  "basis": "Quattroruote 안정성 시험에서 부분변경 뒤에도 차체와 전자 제어가 뛰어나다는 평가를 다시 받았고, ESP가 초기 언더스티어를 잘 잡는다고 했어요. 부분변경 전 Model Y는 KM77에서 83km/h로 최고 기록대예요.",
-  "specs": "WB 2,890 / GC 167mm (KM77 제원) · KM77 무스 테스트 값 없음",
-  "url": "https://www.youtube.com/watch?v=12O2-ufA2so"
- },
- {
   "cell": "W5G1",
   "chip": true,
   "car": "Audi RS6 Avant Performance (C8)",
