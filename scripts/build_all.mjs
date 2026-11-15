@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { compareAutoview } from './autoview_compare.mjs';
+import { loadQr } from './qr_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const P = (p) => new URL(p, root);
@@ -20,7 +21,7 @@ const { grid } = rd('data/grades.json');
 const shown = grid.flat(2).filter((r) => r.moose_kmh >= 78).map((r) => r.name);
 const qr = rd('data/qr_expected.json', []).filter((q) => q.chip !== false).map((q) => q.car);
 const peers = rd('data/peer_mentions.json', []).map((m) => m.car);
-const qm = rd('data/qr_measured.json', []).map((q) => q.car);
+const qm = loadQr().measured.map((q) => q.car);
 const av = compareAutoview(grid, 78).cells.flat(2).filter((x) => x.status === 'blue').map((x) => x.car);
 const prev = rd('data/published.json', { cars: [], qr: [], peers: [] });
 const today = new Date().toISOString().slice(0, 10);

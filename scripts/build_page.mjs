@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import { compareAutoview } from './autoview_compare.mjs';
 import { expandVideos, LEVELS } from './autoview_lib.mjs';
+import { loadQr } from './qr_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const MIN_KMH = 78; // user rule: drop cars at or below 77 km/h
@@ -13,7 +14,8 @@ const mentions = JSON.parse(fs.readFileSync(new URL('data/peer_mentions.json', r
 const qrExpected = JSON.parse(fs.readFileSync(new URL('data/qr_expected.json', root), 'utf8'));
 const av = compareAutoview(src.grid, MIN_KMH);
 // Quattroruote stability-test speeds read from the video screens (owner-picked cars), placed by the car's own specs
-const qrMeasured = fs.existsSync(new URL('data/qr_measured.json', root)) ? JSON.parse(fs.readFileSync(new URL('data/qr_measured.json', root), 'utf8')) : [];
+const qrData = loadQr();
+const qrMeasured = qrData.measured;
 const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
 const gcBin = (g) => (g < 150 ? 0 : g < 175 ? 1 : g < 200 ? 2 : 3);
 
@@ -153,3 +155,5 @@ fs.writeFileSync(new URL('public/autoview.html', root), avTpl
 const blue = av.cells.flat(2).filter((x) => x.status === 'blue');
 console.log('cars', total, 'filled cells', filled, '| autoview rated', av.rated, 'blue', blue.length, blue.length ? '(' + blue.map((x) => x.car).join(', ') + ')' : '');
 if (av.unmapped.length) console.log('autoview: no specs in data/autoview_cars.json for', av.unmapped.join(', '));
+console.log('quattroruote speeds shown', qrMeasured.length);
+if (qrData.unmapped.length) console.log('quattroruote: no specs in data/qr_cars.json for', qrData.unmapped.join(', '));

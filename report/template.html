@@ -117,7 +117,8 @@ table.src{border-collapse:collapse;width:100%;font-size:13.5px}
 .detail .av-item.blue{border-left-color:var(--av)}
 .detail .av-item.blue b{color:var(--av)}
 .swatch.av{background:var(--av-soft);border:1px solid var(--av)}
-.owner{display:flex;justify-content:flex-end}
+.owner{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+.owner a.qr{background:var(--qr)}
 .owner a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:6px;background:var(--av);color:#fff;font-weight:600;font-size:13.5px;text-decoration:none}
 .owner a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .changelog{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:13.5px}
@@ -199,7 +200,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
           <tr><td>Car and Driver (미국)</td><td><span class="pill part">일부 확인</span></td><td>Kia Stinger GT AWD 스키드패드 0.91g를 확인했어요. 스키드패드는 정상 선회 한계라 회피 기동과 직접 비교하지 않았어요.</td></tr>
           <tr><td>MotorTrend (미국)</td><td><span class="pill part">일부 확인</span></td><td>Model S Plaid 8자 코스 23.5초(평균 0.90g), Model Y 스키드패드 0.86g를 확인했어요. 이 사이트는 자동 수집을 막고 있어요.</td></tr>
           <tr><td>Consumer Reports (미국)</td><td><span class="pill part">비교 평가 1건</span></td><td>회피 기동 점수는 유료 회원 전용이에요. 공개 검색 결과로 Model Y가 Model 3와 핸들링이 비슷하다는 평가를 찾아 W4G1 칸에 표시했어요. Q5와 X3처럼 1위끼리 비교한 내용은 표시하지 않았어요.</td></tr>
-          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 2대 · 측정값 15대</span></td><td>지정한 6개 영상은 Claude가 결과 화면에서 두 시험 통과 속도를 읽고, 9개 영상(RS6, Model 3, i4, Model Y, 408, Q8 e-tron, Grand Cherokee, Range Rover, Defender 130)은 사용자가 직접 확인한 속도를 받아 차 자신의 제원 칸에 측정값으로 넣었어요(<code>data/qr_measured.json</code>). 공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐고, 그중 Model Y(2025 부분변경)는 측정값(젖은 노면 81km/h)이 낮아 2026-11-15에 뺐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
+          <tr><td>Quattroruote (이탈리아)</td><td><span class="pill part">영상 참고 2대 · 측정값 15대</span></td><td>지정한 6개 영상은 Claude가 결과 화면에서 두 시험 통과 속도를 읽고, 9개 영상(RS6, Model 3, i4, Model Y, 408, Q8 e-tron, Grand Cherokee, Range Rover, Defender 130)은 사용자가 직접 확인한 속도를 받아 차 자신의 제원 칸에 측정값으로 넣었어요. 새 영상은 로컬 입력 페이지 <code>/quattroruote</code>에서 속도를 넣으면(<code>data/qr_ratings.json</code>) 갱신 때 클아가 제원(<code>data/qr_cars.json</code>)을 채워 표시해요. 공개 YouTube 재생목록 "Prove di stabilità" 영상 74개의 제목과 설명을 확인해 호박색 후보 3대를 골랐고, 그중 Model Y(2025 부분변경)는 측정값(젖은 노면 81km/h)이 낮아 2026-11-15에 뺐어요. KM77 기록이 77km/h 이하인 차(Astra, 500X, i30, i4)는 KM77 값을 우선해 표시하지 않았어요. 평가 문장 비교에서는 조건에 맞는 평가를 찾지 못했어요. Model 3가 BMW 3시리즈보다 운전 재미가 낫다는 평가는 1위 차가 더 좋다는 반대 방향이었어요. 골프가 308보다 세팅이 날카롭다는 2026년 비교는 1위(2017년형 308)와 세대가 달라 뺐어요.</td></tr>
           <tr><td>오토뷰 (한국)</td><td><span class="pill no">해당 없음</span></td><td>조건에 맞는 평가를 찾지 못했어요. 검색에 나온 G70이 스팅어보다 낫다는 평가, 폴스타 2가 Model 3보다 낫다는 평가는 오토뷰가 아닌 다른 매체나 커뮤니티 글이라 뺐어요.</td></tr>
         </tbody>
       </table>
@@ -212,7 +213,7 @@ footer{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px 
     <ul class="changelog">{{CHANGELOG}}</ul>
   </section>
 
-  <div class="owner" id="owner" hidden><a href="/autoview">오토뷰 등급 입력 →</a></div>
+  <div class="owner" id="owner" hidden><a class="qr" id="qrLink" href="/quattroruote" hidden>Quattroruote 속도 입력 →</a><a href="/autoview">오토뷰 등급 입력 →</a></div>
 
   <footer>마지막 갱신 {{UPDATED}} · 원자료: km77.com 차량별 "Mediciones propias" 페이지 · <a href="all_cars.csv" style="color:inherit">전체 차량 목록 CSV</a></footer>
 </div>
@@ -302,6 +303,8 @@ show(3, 0);
 (() => {
   let key = '';
   try { key = localStorage.getItem('moose-admin-key') || ''; } catch {}
-  if (['localhost', '127.0.0.1'].includes(location.hostname) || key) document.getElementById('owner').hidden = false;
+  const local = ['localhost', '127.0.0.1'].includes(location.hostname);
+  if (local || key) document.getElementById('owner').hidden = false;
+  if (local) document.getElementById('qrLink').hidden = false; // the Quattroruote input page exists only on the local server
 })();
 </script>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Quattroruote 속도 입력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --accent:#0E7A68; --accent-soft:#DDEFEA; --warn:#D9520B; --qr:#9A5B00; --qr-soft:#FBEFD9;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --qr:#F0B44C; --qr-soft:#33270F;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --qr:#F0B44C; --qr-soft:#33270F;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:20px}
+.back{font-family:var(--mono);font-size:12px;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:4px 0 0}
+.lede{color:var(--muted);max-width:72ch;margin:8px 0 0}
+.add{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.add b{font-size:13.5px}
+.add input{flex:1 1 260px;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.add button{padding:7px 14px;border:0;border-radius:6px;background:var(--qr);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.add .err{flex-basis:100%;margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);padding-block:10px;z-index:2;border-bottom:1px solid var(--line)}
+.bar input[type=search]{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.status{font-family:var(--mono);font-size:12px}
+.status.off{color:var(--warn)}
+ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.row.done{border-color:var(--qr);box-shadow:inset 3px 0 0 var(--qr)}
+.row .t{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.row input.car{width:100%;font:inherit;font-weight:600;padding:4px 8px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink)}
+.row input.car:hover,.row input.car:focus{border-color:var(--line);background:var(--paper)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:4px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.meta a{color:var(--qr);text-underline-offset:2px}
+.tag{font-family:var(--body);font-size:11.5px;padding:1px 7px;border-radius:4px;font-weight:600}
+.tag.ok{background:var(--accent-soft);color:var(--accent)}
+.tag.need{background:var(--qr-soft);color:var(--qr)}
+.pick{display:grid;grid-template-columns:auto auto auto;gap:6px 8px;align-items:center;font-size:12.5px}
+.pick label{color:var(--muted);text-align:right}
+.pick input{width:5.5em;font:inherit;font-family:var(--mono);font-size:14px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);text-align:right}
+.pick input:invalid{border-color:var(--warn)}
+.pick .u{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--qr);min-height:1em}
+@media (max-width:640px){.row{grid-template-columns:1fr}.pick label{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="/">← 무스 테스트 등급표</a>
+    <h1>Quattroruote 속도 입력</h1>
+    <p class="lede">영상 결과 화면의 <b>마른 노면 선회 중 차선 변경</b>(Cambio di corsia in curva, su asciutto)과 <b>젖은 노면 이중 차선 변경</b>(Doppio cambio di corsia, sul bagnato) 통과 속도를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 두 값이 다 있고 제원이 있으면 다음 갱신 때 등급표에 나와요. 제원이 없는 차는 클아가 갱신할 때 채워요. 이 페이지는 내 PC(localhost)에서만 열려요.</p>
+  </header>
+
+  <form class="add" id="addForm">
+    <b>목록에 없는 영상 추가</b>
+    <input id="addUrl" placeholder="YouTube 주소 또는 영상 ID" aria-label="YouTube 주소 또는 영상 ID">
+    <button>추가</button>
+    <p class="err" id="addErr"></p>
+  </form>
+
+  <div>
+    <div class="bar">
+      <input type="search" id="q" placeholder="차 이름으로 찾기 (예: Golf, Model Y)" aria-label="차 이름으로 찾기">
+      <label><input type="checkbox" id="onlyTodo"> 미입력만</label>
+      <span class="status" id="status"></span>
+      <span class="count" id="count"></span>
+    </div>
+    <ul class="list" id="list"></ul>
+  </div>
+</div>
+
+<script>
+const VIDEOS = /*DATA*/[];
+const ratings = /*RATINGS*/{};
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const done = (r) => r && r.dry != null && r.wet != null;
+
+function count() {
+  const n = VIDEOS.filter((v) => done(ratings[v.id])).length;
+  $('#count').textContent = `${$('#list').children.length}개 표시 · 입력 완료 ${n}/${VIDEOS.length}`;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), onlyTodo = $('#onlyTodo').checked;
+  const rows = VIDEOS.filter((v) => (!q || `${v.car} ${v.title} ${ratings[v.id]?.car || ''}`.toLowerCase().includes(q)) && (!onlyTodo || !done(ratings[v.id])));
+  $('#list').innerHTML = rows.map((v) => {
+    const r = ratings[v.id] || {};
+    return `<li class="row${done(r) ? ' done' : ''}" data-id="${v.id}">
+      <div><input class="car" data-k="car" value="${esc(r.car || v.car)}" aria-label="차 이름">
+        <div class="t">${esc(v.title || '제목은 다음 갱신 때 채워져요')}</div>
+        <div class="meta"><span>${v.date || ''}</span><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">영상</a>${v.spec ? '<span class="tag ok">제원 있음</span>' : '<span class="tag need">제원은 갱신 때 추가</span>'}${r.by === 'claude' ? '<span>클아가 읽은 값</span>' : ''}</div></div>
+      <div class="pick">
+        <label for="d-${v.id}">마른 노면 차선 변경</label><input id="d-${v.id}" data-k="dry" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.dry ?? ''}"><span class="u">km/h</span>
+        <label for="w-${v.id}">젖은 노면 이중 차선 변경</label><input id="w-${v.id}" data-k="wet" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.wet ?? ''}"><span class="u">km/h</span>
+        <span class="saved" id="s-${v.id}">${r.updatedAt ? '저장됨 ' + r.updatedAt.slice(0, 10) : ''}</span>
+      </div></li>`;
+  }).join('');
+  count();
+}
+
+async function save(id, patch) {
+  const note = document.getElementById('s-' + id);
+  if (note) note.textContent = '저장 중…';
+  try {
+    const res = await fetch('/api/qr', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, ...patch }) });
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || res.status);
+    ratings[id] = out.saved;
+    if (note) note.textContent = '저장됨';
+    document.querySelector(`.row[data-id="${id}"]`)?.classList.toggle('done', done(out.saved));
+    count();
+    return true;
+  } catch (e) {
+    if (note) note.textContent = '저장하지 못했어요 (40–200 사이 숫자만)';
+    return false;
+  }
+}
+
+$('#list').addEventListener('change', (e) => {
+  const inp = e.target.closest('input[data-k]');
+  if (!inp) return;
+  const id = inp.closest('.row').dataset.id;
+  save(id, { [inp.dataset.k]: inp.value.trim() });
+});
+['#q', '#onlyTodo'].forEach((s) => $(s).addEventListener('input', render));
+
+$('#addForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const raw = $('#addUrl').value.trim();
+  const id = (raw.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/) || raw.match(/^([\w-]{11})$/) || [])[1];
+  if (!id) { $('#addErr').textContent = '영상 주소나 11자리 영상 ID를 넣어 주세요'; return; }
+  $('#addErr').textContent = '';
+  if (!VIDEOS.some((v) => v.id === id)) {
+    if (!(await save(id, { car: '' }))) { $('#addErr').textContent = '추가하지 못했어요'; return; }
+    VIDEOS.unshift({ id, title: '', date: '', car: '', spec: false });
+  }
+  $('#addUrl').value = ''; $('#q').value = ''; $('#onlyTodo').checked = false;
+  render();
+  document.querySelector(`.row[data-id="${id}"] input.car`)?.focus();
+});
+
+$('#status').textContent = '로컬 저장 (data/qr_ratings.json)';
+render();
+</script>
+</body>
+</html>

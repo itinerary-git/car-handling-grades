@@ -4,6 +4,8 @@
 // Then review data/pending_review.md (ground clearance, Quattroruote verdicts) and run scripts/build_all.mjs.
 import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { collectQrVideos } from './qr_list.mjs';
+import { loadQr } from './qr_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const P = (p) => new URL(p, root);
@@ -99,17 +101,11 @@ const addedKm77 = Object.keys(after).filter((k) => !before.has(k) && after[k].mo
 const needGc = addedKm77.filter((c) => c.moose_kmh >= 78 && (!c.ground_clearance_mm || !c.wheelbase_mm) && !manual[c.version]);
 log('new km77 moose results', addedKm77.length, 'need clearance', needGc.length);
 
-// 5) Quattroruote public YouTube stability playlist: only videos not seen before
-const pl = await (await fetch(`https://www.youtube.com/playlist?list=${state.qr.playlist}`, { headers: { ...H, 'Accept-Language': 'it' } })).text();
-const ids = [...new Set([...pl.matchAll(/"videoId":"([\w-]{11})"/g)].map((m) => m[1]))];
-const newIds = ids.filter((id) => !state.qr.seenVideoIds.includes(id));
-let newVideos = [];
-if (newIds.length) {
-  const out = execFileSync('node', ['scripts/yt_meta.mjs', ...newIds], { cwd: root }).toString().trim();
-  newVideos = out ? out.split('\n').map(JSON.parse).filter((v) => v.channel === 'Quattroruote') : [];
-  fs.appendFileSync(P('data/qr_stab_meta.jsonl'), newVideos.map((v) => JSON.stringify(v)).join('\n') + (newVideos.length ? '\n' : ''));
-}
-log('new Quattroruote videos', newVideos.length);
+// 5) Quattroruote stability tests: playlist + channel search (scripts/qr_list.mjs), only videos not seen before
+const newVideos = await collectQrVideos(state);
+const { unmapped: qrNoSpec } = loadQr();
+const qrTodo = Object.entries(loadQr().ratings).filter(([, r]) => r.dry == null || r.wet == null).map(([id]) => id);
+log('new Quattroruote videos', newVideos.length, '| entered speeds without specs', qrNoSpec.length);
 
 // 6) review file for Claude / the user
 const md = [
@@ -123,8 +119,13 @@ const md = [
   ...needGc.map((c) => `- ${c.version} (WB ${c.wheelbase_mm ?? '?'})`),
   '',
   `## Quattroruote 새 안정성 시험 영상 (${newVideos.length}개)`,
-  '평가가 뚜렷하면 `data/qr_expected.json`에 추가 (KM77 값이 77km/h 이하인 같은 세대 차는 제외).',
+  '사용자에게 알려 로컬 입력 페이지 http://localhost:5177/quattroruote (`node scripts/serve.mjs`)에서 두 통과 속도를 넣게 한다. 클아는 웹 검색("Quattroruote prova di stabilità" + 최근 차 이름)으로 목록에 없는 새 시험도 찾아 알려 준다.',
   ...newVideos.map((v) => `- ${v.date.slice(0, 10)} · ${v.title} · https://www.youtube.com/watch?v=${v.id}\n  > ${v.desc.replace(/\s+/g, ' ').slice(0, 400)}`),
+  '',
+  `## Quattroruote 속도는 입력됐지만 제원이 없는 차 (${qrNoSpec.length}대)`,
+  '`data/qr_cars.json`에 `{"<videoId>": {"car", "wb", "gc", "gc_source", "km77"}}` 추가 (KM77 제원 우선, 경계값은 검색으로 검증).',
+  ...qrNoSpec.map((x) => `- ${x}`),
+  qrTodo.length ? `(속도 하나만 들어간 영상 ${qrTodo.length}개: ${qrTodo.join(', ')})` : '',
   '',
   `## KM77 매거진 새 글 (${hints.length}개, 참고)`,
   ...hints.map((h) => `- ${h.date} · ${h.title} · ${h.link}${h.carPages.length ? ' · 차량 페이지 ' + h.carPages.join(', ') : ''}`),
@@ -134,7 +135,6 @@ const md = [
 ];
 fs.writeFileSync(P('data/pending_review.md'), md.join('\n'));
 
-state.qr.seenVideoIds.push(...newIds);
 state.pending = {
   collectedAt: new Date().toISOString().slice(0, 10),
   km77: addedKm77.map((c) => c.version),

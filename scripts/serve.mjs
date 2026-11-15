@@ -1,5 +1,6 @@
-// Local preview of the site with the owner-only Autoview input page.
-//   node scripts/serve.mjs [port]     -> http://localhost:5177  (input page: /autoview)
+// Local preview of the site with the owner-only input pages.
+//   node scripts/serve.mjs [port]     -> http://localhost:5177  (input pages: /autoview, /quattroruote)
+// /quattroruote exists only here (never deployed): speeds go to data/qr_ratings.json.
 // Serves public/ like Vercel (clean URLs) and answers /api/ratings from data/autoview_ratings.json,
 // so ratings entered locally land in the repo directly. No admin key is needed on localhost.
 import fs from 'node:fs';
@@ -7,6 +8,7 @@ import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LEVELS, mergeRatings } from './autoview_lib.mjs';
+import { loadQr, carFromTitle, cleanSpeed, ID_RE, RATINGS_FILE } from './qr_lib.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const pub = path.join(root, 'public');
@@ -16,8 +18,43 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.csv': 'text/csv; charset=
 const load = () => (fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, 'utf8')) : {});
 const send = (res, status, body, type = 'application/json') => { res.writeHead(status, { 'Content-Type': type, 'Cache-Control': 'no-store' }); res.end(body); };
 
+const readBody = async (req) => { let raw = ''; for await (const c of req) raw += c; return JSON.parse(raw || '{}'); };
+const QR_TPL = path.join(root, 'report/qr_input_template.html');
+
 http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');
+  if (url.pathname === '/quattroruote' || url.pathname === '/quattroruote.html') {
+    const { videos, ratings, cars } = loadQr();
+    const known = new Set(videos.map((v) => v.id));
+    const list = [...Object.keys(ratings).filter((id) => !known.has(id)).map((id) => ({ id, title: '', date: '' })), ...videos.slice().sort((a, b) => b.date.localeCompare(a.date))]
+      .map((v) => ({ ...v, car: cars[v.id]?.car || carFromTitle(v.title), spec: !!(cars[v.id]?.wb && cars[v.id]?.gc) }));
+    const safe = (o) => JSON.stringify(o).replaceAll('<', String.fromCharCode(92) + 'u003c'); // no '</script>' in inline JSON
+    const html = fs.readFileSync(QR_TPL, 'utf8').replace('/*DATA*/[]', () => safe(list)).replace('/*RATINGS*/{}', () => safe(ratings));
+    return send(res, 200, html, TYPES['.html']);
+  }
+  if (url.pathname === '/api/qr') {
+    if (req.method === 'GET') return send(res, 200, JSON.stringify({ ratings: loadQr().ratings }));
+    if (req.method !== 'POST') return send(res, 405, '{}');
+    const body = await readBody(req);
+    if (!ID_RE.test(body.id || '')) return send(res, 400, '{"error":"bad id"}');
+    const all = fs.existsSync(RATINGS_FILE) ? JSON.parse(fs.readFileSync(RATINGS_FILE, 'utf8')) : {};
+    const cur = { ...(all[body.id] || {}) };
+    for (const k of ['dry', 'wet']) if (k in body) {
+      const v = cleanSpeed(body[k]);
+      if (v === undefined) return send(res, 400, '{"error":"speed must be 40-200"}');
+      if (v !== cur[k]) cur.by = 'user';
+      cur[k] = v;
+    }
+    if ('car' in body) {
+      const c = String(body.car || '').trim().slice(0, 80);
+      if (c) cur.car = c; else delete cur.car;
+    }
+    cur.dry ??= null; cur.wet ??= null; cur.by ||= 'user';
+    cur.updatedAt = new Date().toISOString();
+    all[body.id] = cur;
+    fs.writeFileSync(RATINGS_FILE, JSON.stringify(all, null, 1));
+    return send(res, 200, JSON.stringify({ saved: cur }));
+  }
   if (url.pathname === '/api/ratings') {
     if (req.method === 'GET') return send(res, 200, JSON.stringify({ ratings: load() }));
     if (req.method !== 'POST') return send(res, 405, '{}');
@@ -40,4 +77,4 @@ http.createServer(async (req, res) => {
   else if (!path.extname(p) && fs.existsSync(p + '.html')) p += '.html';
   if (!fs.existsSync(p)) return send(res, 404, 'not found', 'text/plain');
   send(res, 200, fs.readFileSync(p), TYPES[path.extname(p)] || 'application/octet-stream');
-}).listen(port, '127.0.0.1', () => console.log(`http://localhost:${port}  (오토뷰 입력: http://localhost:${port}/autoview)`));
+}).listen(port, '127.0.0.1', () => console.log(`http://localhost:${port}  (오토뷰 입력: http://localhost:${port}/autoview · Quattroruote 입력: http://localhost:${port}/quattroruote)`));
