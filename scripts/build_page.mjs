@@ -74,6 +74,7 @@ const cells = grid.map((row, i) =>
       av: av.cells[i][j],
       qm: qrMeasured
         .filter((q) => wbBin(q.wb) === i && gcBin(q.gc) === j)
+        .filter((q, _, all) => !all.some((o) => o.dry_kmh > q.dry_kmh && o.wet_kmh > q.wet_kmh)) // user rule: drop a car when another car in the same cell beats both speeds
         .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)
         .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
       winners: c.filter((r) => r.moose_kmh === top).map((r) => short(r.name)),
@@ -155,5 +156,5 @@ fs.writeFileSync(new URL('public/autoview.html', root), avTpl
 const blue = av.cells.flat(2).filter((x) => x.status === 'blue');
 console.log('cars', total, 'filled cells', filled, '| autoview rated', av.rated, 'blue', blue.length, blue.length ? '(' + blue.map((x) => x.car).join(', ') + ')' : '');
 if (av.unmapped.length) console.log('autoview: no specs in data/autoview_cars.json for', av.unmapped.join(', '));
-console.log('quattroruote speeds shown', qrMeasured.length);
+console.log('quattroruote speeds shown', cells.flat().reduce((n, c) => n + c.qm.length, 0), 'of', qrMeasured.length);
 if (qrData.unmapped.length) console.log('quattroruote: no specs in data/qr_cars.json for', qrData.unmapped.join(', '));

@@ -116,5 +116,13 @@
   "gc": 218,
   "gc_source": "estimate (cars-data 218mm, 출시 자료 290mm, 둘 다 200mm 이상)",
   "km77": ""
+ },
+ "VKCLRhSMD9A": {
+  "car": "Alfa Romeo Giulia (부분변경, 2023)",
+  "short": "Alfa Romeo Giulia",
+  "wb": 2820,
+  "gc": 135,
+  "gc_source": "estimate (KM77 같은 세대 2.2 Diesel Super 추정값 135mm)",
+  "km77": "KM77: 같은 세대 2.2 Diesel Super 78km/h · Quadrifoglio 77km/h"
  }
 }
