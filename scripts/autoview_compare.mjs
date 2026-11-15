@@ -17,6 +17,9 @@ export function compareAutoview(grid, minKmh) {
   const ratings = rdj('data/autoview_ratings.json', {});
   const map = rdj('data/autoview_cars.json', {});
   const km77 = new Map(grid.flat(2).map((r) => [r.name, r]));
+  // curb weight for the one-car-per-cell tie-break: KM77 weight, else autoview_cars.json "kg"
+  const dedup = rdj('data/km77_dedup.json', []);
+  const kgByName = new Map((Array.isArray(dedup) ? dedup : Object.values(dedup)).map((r) => [r.version.replace(/&amp;/g, '&'), r.weight_kg]));
 
   // latest complete rating per car name (the same car can come from several videos)
   const byCar = new Map();
@@ -24,7 +27,7 @@ export function compareAutoview(grid, minKmh) {
     const r = ratings[e.key];
     if (!r?.handling || !r?.avoidance) continue;
     const prev = byCar.get(e.car);
-    if (!prev || Date.parse(r.updatedAt) > Date.parse(prev.updatedAt)) byCar.set(e.car, { ...r, car: e.car, vid: e.vid, t: e.handling });
+    if (!prev || Date.parse(r.updatedAt) > Date.parse(prev.updatedAt)) byCar.set(e.car, { ...r, car: e.car, vid: e.vid, t: e.handling, date: e.date || '' });
   }
 
   const anchors = [];
@@ -59,6 +62,7 @@ export function compareAutoview(grid, minKmh) {
     cells[i][j].push({
       car, handling: r.handling, avoidance: r.avoidance, status, top,
       kmh: k?.moose_kmh ?? null,
+      wb, kg: (k ? kgByName.get(k.name) : m?.kg) ?? null, date: r.date,
       basis: basis && { car: basis.car, km77: basis.km77, kmh: basis.kmh, handling: basis.r.handling, avoidance: basis.r.avoidance },
       specs: `WB ${wb.toLocaleString("en-US")} / GC ${gc}mm · ${k ? "KM77 " + k.name : m.src || "제조사 제원"}`,
       url: `https://www.youtube.com/watch?v=${r.vid}${r.t != null ? `&t=${r.t}s` : ''}`,

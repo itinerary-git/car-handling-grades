@@ -292,7 +292,7 @@ function topLevels(list) {
   const speeds = [...new Set(list.map(r => r.kmh))].sort((x, y) => y - x).slice(0, 2).filter((s, i, a) => i === 0 || a[0] - s <= 1);
   return list.filter(r => speeds.includes(r.kmh));
 }
-// Autoview list: handling 좋음 or better; highest handling, then highest stability (exact ties all shown)
+// Autoview list: handling 좋음 or better; highest handling, then highest stability, then shorter wheelbase, then lighter (1 car)
 const AV_LV = ['', '나쁨', '나쁨~부족', '부족', '부족~보통', '보통', '보통~좋음', '좋음', '좋음~훌륭함', '훌륭함'];
 const avLv = x => Math.max(0, AV_LV.indexOf(x));
 function bestAv(av) {
@@ -300,7 +300,10 @@ function bestAv(av) {
   const mh = Math.max(0, ...ok.map(a => avLv(a.handling)));
   const top = ok.filter(a => avLv(a.handling) === mh);
   const ma = Math.max(0, ...top.map(a => avLv(a.avoidance)));
-  return top.filter(a => avLv(a.avoidance) === ma);
+  // user rule 2026-11-15: one car per cell; ties go to the shorter wheelbase, then the lighter car (then the newer video)
+  const best = top.filter(a => avLv(a.avoidance) === ma)
+    .sort((x, y) => (x.wb ?? 1e9) - (y.wb ?? 1e9) || (x.kg ?? 1e9) - (y.kg ?? 1e9) || String(y.date || '').localeCompare(String(x.date || '')));
+  return best.slice(0, 1);
 }
 function avVerdict(a) {
   const b = a.basis, base = b ? `기준차 ${b.car.replace(/^[0-9]{4} /, '')}(KM77 ${b.kmh}km/h)의 오토뷰 등급은 핸들링 ${b.handling} · 기본 안정성 ${b.avoidance}` : '';
