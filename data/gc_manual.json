@@ -425,8 +425,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Volkswagen Polo Life 1.0 TSI 70 kW (95 CV) DSG 7 vel. (2021-2024)": {
-  "ground_clearance_mm": 147,
-  "gc_source": "estimate (2021 부분변경 Polo 1.0 TSI: auto-data 147mm)"
+  "ground_clearance_mm": 148,
+  "gc_source": "estimate (빈 차: CarExpert 2022 Polo Life · Style 148mm, auto-data 147mm)"
  },
  "SEAT Ibiza 1.0 TSI 81 kW (110 CV) Xcellence Plus (2021-2022)": {
   "ground_clearance_mm": 140,
@@ -771,5 +771,20 @@
  "Porsche Taycan Turbo S (2019-2024)": {
   "ground_clearance_mm": 126,
   "gc_source": "verified (Porsche 구성기 보통 높이 126mm, CarsGuide 126mm)"
+ },
+ "MINI Cooper SE Countryman ALL4 (2020-2024)": {
+  "ground_clearance_mm": 165,
+  "gc_source": "verified (MINI 보도자료 F60 Cooper S E ALL4 · Cooper S ALL4 빈 차(empty) 165mm / KM77 147mm는 기준 불명)",
+  "override": true
+ },
+ "Tesla Model Y Gran autonomía Tracción integral (2019-2025)": {
+  "ground_clearance_mm": 164,
+  "gc_source": "verified (Tesla 오너스 매뉴얼 Model Y AWD 빈 차 164mm, 적재 119mm / KM77 172mm는 기준 불명)",
+  "override": true
+ },
+ "Mazda CX-80 Takumi Plus 2.5 E-Skyactiv PHEV 327 CV AWD (2024)": {
+  "ground_clearance_mm": 170,
+  "gc_source": "verified (Mazda NZ CX-80 브로셔 170mm, CarExpert 빈 차 170–175mm / KM77 165mm)",
+  "override": true
  }
 }

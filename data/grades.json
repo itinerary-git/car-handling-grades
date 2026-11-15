@@ -200,8 +200,8 @@
      "name": "Volkswagen Polo Life 1.0 TSI 70 kW (95 CV) DSG 7 vel. (2021-2024)",
      "moose_kmh": 78,
      "wheelbase_mm": 2552,
-     "ground_clearance_mm": 147,
-     "gc_source": "estimate (2021 부분변경 Polo 1.0 TSI: auto-data 147mm)",
+     "ground_clearance_mm": 148,
+     "gc_source": "estimate (빈 차: CarExpert 2022 Polo Life · Style 148mm, auto-data 147mm)",
      "km77": "https://www.km77.com/coches/volkswagen/polo/2021/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -867,16 +867,6 @@
      "gc": 0
     },
     {
-     "name": "MINI Cooper SE Countryman ALL4 (2020-2024)",
-     "moose_kmh": 79,
-     "wheelbase_mm": 2670,
-     "ground_clearance_mm": 147,
-     "gc_source": "km77",
-     "km77": "https://www.km77.com/coches/mini/mini-countryman/2021/mediciones-propias",
-     "wb": 1,
-     "gc": 0
-    },
-    {
      "name": "BMW M2 Competition (2018-2021)",
      "moose_kmh": 78,
      "wheelbase_mm": 2693,
@@ -1185,6 +1175,16 @@
      "ground_clearance_mm": 170,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/kia/sportage/2022/mediciones-propias",
+     "wb": 1,
+     "gc": 1
+    },
+    {
+     "name": "MINI Cooper SE Countryman ALL4 (2020-2024)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2670,
+     "ground_clearance_mm": 165,
+     "gc_source": "verified (MINI 보도자료 F60 Cooper S E ALL4 · Cooper S ALL4 빈 차(empty) 165mm / KM77 147mm는 기준 불명)",
+     "km77": "https://www.km77.com/coches/mini/mini-countryman/2021/mediciones-propias",
      "wb": 1,
      "gc": 1
     },
@@ -2602,8 +2602,8 @@
      "name": "Tesla Model Y Gran autonomía Tracción integral (2019-2025)",
      "moose_kmh": 83,
      "wheelbase_mm": 2890,
-     "ground_clearance_mm": 172,
-     "gc_source": "km77",
+     "ground_clearance_mm": 164,
+     "gc_source": "verified (Tesla 오너스 매뉴얼 Model Y AWD 빈 차 164mm, 적재 119mm / KM77 172mm는 기준 불명)",
      "km77": "https://www.km77.com/coches/tesla/model-y/2021/mediciones-propias",
      "wb": 3,
      "gc": 1
@@ -3321,8 +3321,8 @@
      "name": "Mazda CX-80 Takumi Plus 2.5 E-Skyactiv PHEV 327 CV AWD (2024)",
      "moose_kmh": 78,
      "wheelbase_mm": 3120,
-     "ground_clearance_mm": 165,
-     "gc_source": "km77",
+     "ground_clearance_mm": 170,
+     "gc_source": "verified (Mazda NZ CX-80 브로셔 170mm, CarExpert 빈 차 170–175mm / KM77 165mm)",
      "km77": "https://www.km77.com/coches/mazda/cx-80/2025/mediciones-propias",
      "wb": 5,
      "gc": 1

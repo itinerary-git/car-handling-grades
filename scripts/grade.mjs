@@ -16,14 +16,16 @@ const rows = [];
 for (const c of [...cars, ...extra]) {
   const m = manual[c.version] || {};
   const wb = c.wheelbase_mm || m.wheelbase_mm;
-  const gc = c.ground_clearance_mm || m.ground_clearance_mm;
+  // gc_manual "override": unladen (manufacturer spec) value replaces a KM77 value that is not unladen (user rule 2026-11-15)
+  const useManual = m.override && m.ground_clearance_mm;
+  const gc = useManual ? m.ground_clearance_mm : c.ground_clearance_mm || m.ground_clearance_mm;
   if (!wb || !gc) continue;
   rows.push({
     name: c.version.replace(/&amp;/g, '&'),
     moose_kmh: c.moose_kmh,
     wheelbase_mm: wb,
     ground_clearance_mm: gc,
-    gc_source: c.gc_source || (c.ground_clearance_mm ? 'km77' : m.gc_source),
+    gc_source: useManual ? m.gc_source : c.gc_source || (c.ground_clearance_mm ? 'km77' : m.gc_source),
     km77: c.k ? 'https://www.km77.com' + c.k : c.source,
     wb: wbBin(wb),
     gc: gcBin(gc),
