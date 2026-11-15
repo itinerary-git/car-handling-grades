@@ -11,30 +11,29 @@ const root = new URL('../', import.meta.url);
 const P = (p) => new URL(p, root);
 const H = { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'it' };
 const CHANNEL = 'https://www.youtube.com/@QuattroruoteIt';
-const QUERIES = ['prova di stabilità', 'test di stabilità', "manovre d'emergenza"];
+const QUERIES = ['prova di stabilità', 'test di stabilità', "manovre d'emergenza", 'quanto è sicura davvero', 'prova del limite'];
 export const IS_TEST = /prova di stabilit|test di stabilit|manovre d.emergenza|prova del limite/i;
 
 export async function collectQrVideos(state) {
   const ids = new Set();
   const pl = await (await fetch(`https://www.youtube.com/playlist?list=${state.qr.playlist}`, { headers: H })).text();
   for (const m of pl.matchAll(/"videoId":"([\w-]{11})"/g)) ids.add(m[1]);
-  // channel search (relevance order) + latest uploads (newest ~30), keep titles that look like a stability test
+  // channel search (relevance order) + latest uploads (newest ~30). Every video id on those pages is checked by its
+  // own /watch title below: pairing ids with titles on the search page mislabels videos (2026-11-15: Mazda CX-5 missed).
   const pages = [...QUERIES.map((q) => `${CHANNEL}/search?query=${encodeURIComponent(q)}`), `${CHANNEL}/videos`];
   for (const url of pages) {
     const h = await (await fetch(url, { headers: H })).text();
-    for (const m of h.matchAll(/"videoId":"([\w-]{11})".{0,3000}?"title":\{"(?:runs":\[\{"text|simpleText)":"((?:[^"\\]|\\.)*)"/g)) {
-      if (IS_TEST.test(JSON.parse(`"${m[2]}"`))) ids.add(m[1]);
-    }
+    for (const m of h.matchAll(/"videoId":"([\w-]{11})"/g)) ids.add(m[1]);
     await new Promise((r) => setTimeout(r, 500));
   }
   const newIds = [...ids].filter((id) => !state.qr.seenVideoIds.includes(id));
   let newVideos = [];
-  if (newIds.length) {
-    const out = execFileSync('node', ['scripts/yt_meta.mjs', ...newIds], { cwd: root }).toString().trim();
-    // playlist videos are all tests; channel-search hits must also look like a test by title
-    newVideos = out ? out.split('\n').map(JSON.parse).filter((v) => v.channel === 'Quattroruote' && (IS_TEST.test(v.title) || pl.includes(v.id))) : [];
-    if (newVideos.length) fs.appendFileSync(P('data/qr_stab_meta.jsonl'), newVideos.map((v) => JSON.stringify(v)).join('\n') + '\n');
+  for (let i = 0; i < newIds.length; i += 20) {
+    const out = execFileSync('node', ['scripts/yt_meta.mjs', ...newIds.slice(i, i + 20)], { cwd: root, maxBuffer: 50e6 }).toString().trim();
+    // playlist videos are all tests; channel-search hits must look like a test by their real title
+    if (out) newVideos.push(...out.split('\n').map(JSON.parse).filter((v) => v.channel === 'Quattroruote' && (IS_TEST.test(v.title) || pl.includes(v.id))));
   }
+  if (newVideos.length) fs.appendFileSync(P('data/qr_stab_meta.jsonl'), newVideos.map((v) => JSON.stringify(v)).join('\n') + '\n');
   state.qr.seenVideoIds.push(...newIds);
   return newVideos;
 }

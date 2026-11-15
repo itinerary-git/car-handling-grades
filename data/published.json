@@ -97,9 +97,7 @@
   "Audi RS6 Avant Performance (C8)",
   "Lamborghini Revuelto"
  ],
- "peers": [
-  "Tesla Model Y (2026 페이스리프트)"
- ],
+ "peers": [],
  "av": [],
  "qm": [
   "Peugeot 308 (3세대, 2022)",
@@ -117,7 +115,8 @@
   "Jeep Grand Cherokee 4xe (WL)",
   "Range Rover D250 Autobiography (L460 SWB)",
   "Land Rover Defender 130 (2023)",
-  "Alfa Romeo Giulia (부분변경, 2023)"
+  "Alfa Romeo Giulia (부분변경, 2023)",
+  "Renault Mégane E-Tech Electric (2022)"
  ],
  "tm": [
   "Toyota RAV4 Plug-in Hybrid AWD-i (5세대, 2021)",

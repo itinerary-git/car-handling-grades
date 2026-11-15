@@ -145,7 +145,7 @@ const md = [
   `## KM77 매거진 새 글 (${hints.length}개, 참고)`,
   ...hints.map((h) => `- ${h.date} · ${h.title} · ${h.link}${h.carPages.length ? ' · 차량 페이지 ' + h.carPages.join(', ') : ''}`),
   '',
-  '## Consumer Reports · 오토뷰 비교 평가',
+  '## 오토뷰 · Quattroruote 비교 평가 (Consumer Reports는 제원 확인용으로만 씀)',
   '자동 수집하지 않음. 새 1위 차량이 생기면 검색으로 확인해 `data/peer_mentions.json`에 추가.',
 ];
 fs.writeFileSync(P('data/pending_review.md'), md.join('\n'));

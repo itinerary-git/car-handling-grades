@@ -124,5 +124,14 @@
   "gc": 100,
   "gc_source": "estimate (2023 부분변경 Giulia: CarExpert Ti · QV 100mm, CarsGuide 100mm / cars-data QV 140mm)",
   "km77": "KM77: 같은 세대 2.2 Diesel Super 78km/h · Quadrifoglio 77km/h"
+ },
+ "IckOiA2hK2Y": {
+  "car": "Renault Mégane E-Tech Electric (2022)",
+  "short": "Renault Mégane E-Tech",
+  "wb": 2685,
+  "gc": 135,
+  "gc_source": "estimate (빈 차: CarExpert 135mm, CarsGuide EV60 128mm)",
+  "km77": "KM77: 같은 차 iconic EV60 220 74km/h",
+  "extra": "속도는 영상 설명의 결과 문장(마른 103, 젖은 85km/h)"
  }
 }
