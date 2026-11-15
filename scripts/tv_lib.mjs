@@ -50,3 +50,15 @@ export function loadTv() {
   }
   return { videos, ratings, cars, measured, unmapped };
 }
+
+// rows for the input page (/teknikens): playlist videos newest first, plus extra keys already in the ratings
+export function tvInputRows() {
+  const { videos, ratings, cars } = loadTv();
+  const vids = new Map(videos.map((v) => [v.id, v]));
+  const keys = [...new Set([...videos.slice().sort((a, b) => b.date.localeCompare(a.date)).map((v) => v.id), ...Object.keys(ratings)])]
+    .sort((a, b) => (vids.get(b.slice(0, 11))?.date || '9').localeCompare(vids.get(a.slice(0, 11))?.date || '9') || a.localeCompare(b));
+  return keys.map((key) => {
+    const v = vids.get(key.slice(0, 11)) || { title: '', date: '', stated: null, test: '' };
+    return { key, id: key.slice(0, 11), title: v.title, date: v.date, stated: key.includes('.') ? null : v.stated, car: cars[key]?.car || (key.includes('.') ? '' : v.test || tvCarFromTitle(v.title)), spec: !!(cars[key]?.wb && cars[key]?.gc) };
+  });
+}

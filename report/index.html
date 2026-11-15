@@ -316,13 +316,7 @@ show(3, 0);
   try { key = localStorage.getItem('moose-admin-key') || ''; } catch {}
   const local = ['localhost', '127.0.0.1'].includes(location.hostname);
   if (local || key) document.getElementById('owner').hidden = false;
-  // Quattroruote / Teknikens Värld input pages exist only on the local server (node scripts/serve.mjs):
-  // relative links on localhost; in the owner's browser on the deployed site they point to the local server
-  for (const [id, path] of [['qrLink', '/quattroruote'], ['tvLink', '/teknikens']]) {
-    const a = document.getElementById(id);
-    if (!local && !key) continue;
-    if (!local) { a.href = 'http://localhost:5177' + path; a.title = '내 PC에서 node scripts/serve.mjs 실행 중일 때 열려요'; }
-    a.hidden = false;
-  }
+  // Quattroruote / Teknikens Värld input pages: same owner rule as the Autoview button
+  if (local || key) for (const id of ['qrLink', 'tvLink']) document.getElementById(id).hidden = false;
 })();
 </script>

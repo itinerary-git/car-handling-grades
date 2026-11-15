@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Quattroruote 속도 입력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --accent:#0E7A68; --accent-soft:#DDEFEA; --warn:#D9520B; --qr:#9A5B00; --qr-soft:#FBEFD9;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --qr:#F0B44C; --qr-soft:#33270F;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --qr:#F0B44C; --qr-soft:#33270F;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:20px}
+.back{font-family:var(--mono);font-size:12px;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:4px 0 0}
+.lede{color:var(--muted);max-width:72ch;margin:8px 0 0}
+.add{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.add b{font-size:13.5px}
+.add input{flex:1 1 260px;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.add button{padding:7px 14px;border:0;border-radius:6px;background:var(--qr);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.add .err{flex-basis:100%;margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);padding-block:10px;z-index:2;border-bottom:1px solid var(--line)}
+.bar input[type=search]{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.status{font-family:var(--mono);font-size:12px}
+.status.off{color:var(--warn)}
+ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.row.done{border-color:var(--qr);box-shadow:inset 3px 0 0 var(--qr)}
+.row .t{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.row input.car{width:100%;font:inherit;font-weight:600;padding:4px 8px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink)}
+.row input.car:hover,.row input.car:focus{border-color:var(--line);background:var(--paper)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:4px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.meta a{color:var(--qr);text-underline-offset:2px}
+.tag{font-family:var(--body);font-size:11.5px;padding:1px 7px;border-radius:4px;font-weight:600}
+.tag.ok{background:var(--accent-soft);color:var(--accent)}
+.tag.need{background:var(--qr-soft);color:var(--qr)}
+.pick{display:grid;grid-template-columns:auto auto auto;gap:6px 8px;align-items:center;font-size:12.5px}
+.pick label{color:var(--muted);text-align:right}
+.pick input{width:5.5em;font:inherit;font-family:var(--mono);font-size:14px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);text-align:right}
+.pick input:invalid{border-color:var(--warn)}
+.pick .u{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--qr);min-height:1em}
+.gate{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:10px;max-width:420px}
+.gate form{display:flex;gap:8px}
+.gate input{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.gate button{padding:8px 14px;border:0;border-radius:6px;background:var(--qr);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.gate .err{margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+@media (max-width:640px){.row{grid-template-columns:1fr}.pick label{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="/">← 무스 테스트 등급표</a>
+    <h1>Quattroruote 속도 입력</h1>
+    <p class="lede">영상 결과 화면의 <b>마른 노면 선회 중 차선 변경</b>(Cambio di corsia in curva, su asciutto)과 <b>젖은 노면 이중 차선 변경</b>(Doppio cambio di corsia, sul bagnato) 통과 속도를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 두 값이 다 있고 제원이 있으면 다음 갱신 때 등급표에 나와요. 제원이 없는 차는 클아가 갱신할 때 채워요. 마른 노면 96km/h·젖은 노면 72km/h를 둘 다 넘어야 등급표에 나와요. 관리자 키가 저장된 브라우저에서만 열려요.</p>
+  </header>
+
+  <section class="gate" id="gate" hidden>
+    <b>관리자 키를 입력해 주세요</b>
+    <form id="gateForm"><input type="password" id="key" autocomplete="current-password" placeholder="관리자 키" aria-label="관리자 키"><button>열기</button></form>
+    <p class="err" id="gateErr"></p>
+  </section>
+
+  <div id="main" hidden>
+  <form class="add" id="addForm">
+    <b>목록에 없는 영상 추가</b>
+    <input id="addUrl" placeholder="YouTube 주소 또는 영상 ID" aria-label="YouTube 주소 또는 영상 ID">
+    <button>추가</button>
+    <p class="err" id="addErr"></p>
+  </form>
+
+  <div>
+    <div class="bar">
+      <input type="search" id="q" placeholder="차 이름으로 찾기 (예: Golf, Model Y)" aria-label="차 이름으로 찾기">
+      <label><input type="checkbox" id="onlyTodo"> 미입력만</label>
+      <span class="status" id="status"></span>
+      <span class="count" id="count"></span>
+    </div>
+    <ul class="list" id="list"></ul>
+  </div>
+  </div>
+</div>
+
+<script>
+const VIDEOS = [{"id":"IdrOVeBilts","title":"NUOVA Fiat Grande PANDA: QUANTO È SICURA DAVVERO?  L'abbiamo messa alla PROVA nei TEST DI STABILITÀ","date":"2025-12-21","car":"Fiat Grande PANDA","spec":false},{"id":"ks6Uli6ingY","title":"Leapmotor T03: QUANTO È SICURA DAVVERO? L'abbiamo messa alla PROVA nei TEST DI STABILITÀ","date":"2025-11-05","car":"Leapmotor T03","spec":false},{"id":"TxQVeHETXZo","title":"BYD Seal U DM-I | QUANTO È SICURA nelle manovre D’EMERGENZA? LA PROVA DI STABILITÀ","date":"2025-10-21","car":"BYD Seal U DM-I","spec":false},{"id":"a-VW8s-_g7g","title":"MG HS 2025 | alla PROVA DEL LIMITE: ecco come reagisce | LA PROVA DI STABILITÀ","date":"2025-10-08","car":"MG HS 2025","spec":false},{"id":"12O2-ufA2so","title":"Quanto è SICURA la Tesla Model Y? Il TEST DI STABILITÀ su ASCIUTTO E BAGNATO","date":"2025-09-28","car":"Tesla Model Y (2025 부분변경, RWD)","spec":true},{"id":"_wZiwhVMW8g","title":"Jaecoo 7 Super Hybrid | Meglio delle tedesche? LA PROVA DI STABILITÀ","date":"2025-09-21","car":"Jaecoo 7 Super Hybrid","spec":false},{"id":"iIjgqmMzAiM","title":"La SUV MADE in CHINA AL TEST DI STABILITÀ STRUMENTALE | LEAPMOTOR C10","date":"2025-08-23","car":"LEAPMOTOR C10","spec":false},{"id":"Jpf8_CL00rs","title":"Nuova Renault 4: la PROVA DI STABILITÀ","date":"2025-08-18","car":"Renault 4 E-Tech (2025)","spec":true},{"id":"sv0KgJkLLpQ","title":"Mazda CX-60: senza ANTI-ROLLIO andrà meglio? | La PROVA di stabilità","date":"2025-06-19","car":"Mazda CX-60","spec":false},{"id":"us5Qn7sQsbY","title":"Renault Rafale E-Tech Esprit Alpine | La prova di stabilità","date":"2025-06-09","car":"Renault Rafale E-Tech Esprit Alpine","spec":true},{"id":"lTFYD2R0mKY","title":"SEAT IBIZA 2025: il test di STABILITÀ","date":"2025-04-20","car":"SEAT IBIZA 2025","spec":false},{"id":"4lLH_vZLi8M","title":"SKODA ELROQ 2025: la PROVA di stabilità","date":"2025-04-13","car":"SKODA ELROQ 2025","spec":false},{"id":"kKevCQ7onEs","title":"MG3 HYBRID + | LA PROVA DI STABILITÀ su asciutto e bagnato","date":"2024-10-21","car":"MG3 HYBRID +","spec":false},{"id":"kkeAebcX9BM","title":"LAMBORGHINI REVUELTO: la PROVA di STABILITÀ","date":"2024-09-06","car":"LAMBORGHINI REVUELTO","spec":false},{"id":"2r07Lkizh5s","title":"Nuova BMW X2 (2024) | LA (NUOVA) PROVA DI STABILITÀ","date":"2024-04-19","car":"BMW X2 (2024)","spec":false},{"id":"6ZyIDDjaSVE","title":"Nuova VW TIGUAN (2024) | LA (NUOVA) PROVA DI STABILITÀ","date":"2024-04-12","car":"VW TIGUAN (2024)","spec":false},{"id":"XpH2vLykdvI","title":"Honda Z-RV: la prova di stabilità","date":"2024-04-09","car":"Honda Z-RV","spec":false},{"id":"z7kcdm5kE7Y","title":"Cupra FORMENTOR (2024) | LA (NUOVA) PROVA DI STABILITÀ","date":"2024-03-29","car":"Cupra FORMENTOR (2024)","spec":false},{"id":"UmoOXhayddk","title":"Subaru CROSSTREK (2024) | LA (NUOVA) PROVA DI STABILITÀ","date":"2024-03-14","car":"Subaru CROSSTREK (2024)","spec":false},{"id":"kEHRsVTKwbU","title":"⚠️ LA MANOVRA CORRETTA in caso di PERICOLO | Ve la SPIEGO nel TEST di STABILITA' con Alfa Stelvio","date":"2024-03-07","car":"⚠️ LA MANOVRA CORRETTA in caso di PERICOLO","spec":false},{"id":"SmHk0zTPSX0","title":"Audi SQ8 e-tron: prova di stabilità","date":"2024-01-24","car":"Audi SQ8 e-tron","spec":false},{"id":"5DcON4WMkmQ","title":"Com'è andata nelle manovre d'emergenza? | Honda ZR-V (2024)","date":"2023-12-28","car":"Honda ZR-V (2024)","spec":false},{"id":"Xfef9mb-5s8","title":"Com'è andata nelle manovre d'emergenza? | Jeep Grand Cherokee","date":"2023-12-21","car":"Jeep Grand Cherokee 4xe (WL)","spec":true},{"id":"XmTHBkrLynA","title":"Com'è andata nelle manovre d'emergenza?  | Polestar 2","date":"2023-12-14","car":"Polestar 2","spec":false},{"id":"r35xciwoXYo","title":"Com'è andata nelle manovre d'emergenza?  | BMW i5","date":"2023-12-07","car":"BMW i5","spec":false},{"id":"cyLrsmrf00E","title":"Com'è andata nelle manovre d'emergenza?  | Audi SQ8 e-tron","date":"2023-12-03","car":"Audi SQ8 e-tron","spec":false},{"id":"6rIRGsj7xn4","title":"Com'è andata nelle manovre d'emergenza? | Nuova Renault CLIO (2023)","date":"2023-11-23","car":"Renault CLIO (2023)","spec":false},{"id":"zXc4V9ygoZE","title":"Com'è andata nelle manovre d'emergenza?  | Ford Bronco (2023)","date":"2023-11-17","car":"Ford Bronco (2023)","spec":false},{"id":"VyevhmNxLzM","title":"Maserati Granturismo Trofeo (2024):  la prova di stabilità","date":"2023-11-02","car":"Maserati GranTurismo Trofeo (2024)","spec":true},{"id":"jtopoahx-iY","title":"Audi RS6 Avant Performance (2024): la prova di stabilità","date":"2023-09-15","car":"Audi RS6 Avant Performance (C8)","spec":true},{"id":"2xunkuUPy8I","title":"Tesla Model 3 Standard Range (2023): la prova di stabilità","date":"2023-06-22","car":"Tesla Model 3 Standard Range (2023)","spec":true},{"id":"YLd5681iTlw","title":"Volkswagen T-Cross (2023): la prova di stabilità","date":"2023-06-08","car":"Volkswagen T-Cross (2023)","spec":false},{"id":"Ih6PUqDkW0A","title":"Lancia Ypsilon Hybrid (2023): la prova di stabilità","date":"2023-05-19","car":"Lancia Ypsilon Hybrid (2023)","spec":false},{"id":"UbscfOfK4MA","title":"DR 6.0 GPL (2023): la prova di stabilità","date":"2023-05-12","car":"DR 6.0 GPL (2023)","spec":false},{"id":"N4cL1Aayxxs","title":"Nuova Hyundai Staria (2023): la prova stabilità","date":"2023-04-20","car":"Hyundai Staria (2023)","spec":false},{"id":"b-QllxpJIJc","title":"Hyundai Bayon (2023): la prova di stabilità","date":"2023-04-13","car":"Hyundai Bayon (2023)","spec":false},{"id":"VKCLRhSMD9A","title":"Alfa Romeo Giulia (2023): la prova di stabilità","date":"2023-04-06","car":"Alfa Romeo Giulia (부분변경, 2023)","spec":true},{"id":"jkudNBBVrVY","title":"Jeep Avenger 1.2 Benzina: la prova di stabilità","date":"2023-03-23","car":"Jeep Avenger 1.2 Benzina","spec":false},{"id":"8eiQ8TqunN8","title":"Land Rover Defender 130 (2023): la prova di stabilità","date":"2023-03-16","car":"Land Rover Defender 130 (2023)","spec":true},{"id":"hOQc1G9AcAA","title":"Peugeot 408 Hybrid (2023): la prova di stabilità","date":"2023-03-09","car":"Peugeot 408 Hybrid (2023)","spec":true},{"id":"nN693Cnv6j8","title":"Audi Q8 e-tron (2023): la prova di stabilità","date":"2023-02-23","car":"Audi Q8 e-tron (2023)","spec":true},{"id":"lO-EQ1xAEHk","title":"Smart #1: la prova di stabilità","date":"2022-12-15","car":"Smart #1","spec":false},{"id":"i2tcgJGjM1A","title":"BMW X1 (2022): la prova di stabilità","date":"2022-11-26","car":"BMW X1 (2022)","spec":false},{"id":"A_buruvXrdI","title":"Nuova Honda Civic: la prova di stabilità","date":"2022-11-04","car":"Honda Civic","spec":false},{"id":"CPZdi5bxLk0","title":"Peugeot 308 SW: la prova di stabilità","date":"2022-10-27","car":"Peugeot 308 SW (3세대, 2022)","spec":true},{"id":"FNEhBxII-G8","title":"Mazda CX-60: la prova di stabilità","date":"2022-10-21","car":"Mazda CX-60","spec":false},{"id":"gB00eVGZWAs","title":"Fiat 500 X: la prova di stabilità","date":"2022-10-15","car":"Fiat 500 X","spec":false},{"id":"LN8oCORAcYs","title":"BMW i4 M50: la prova di stabilità","date":"2022-10-06","car":"BMW i4 M50","spec":true},{"id":"STzojL9R0mY","title":"Hyundai Kona Electric: la prova di stabilità","date":"2022-09-22","car":"Hyundai Kona Electric","spec":false},{"id":"c3Gqk7Ln_SY","title":"Aiways U5: la prova di stabilità","date":"2022-09-15","car":"Aiways U5","spec":false},{"id":"2pHtdiwuHl4","title":"Hyundai i30 (2022): la prova di stabilità","date":"2022-09-08","car":"Hyundai i30 (2022)","spec":false},{"id":"Eh2IzZpvCzM","title":"Range Rover D250 Autobiography: la prova di stabilità","date":"2022-09-02","car":"Range Rover D250 Autobiography (L460 SWB)","spec":true},{"id":"fqxeFJ07VBA","title":"Alfa Romeo Tonale: la prova di stabilità","date":"2022-07-21","car":"Alfa Romeo Tonale","spec":false},{"id":"i2fqe02rfE8","title":"Maserati Grecale Trofeo: la prova di stabilità","date":"2022-07-14","car":"Maserati Grecale Trofeo","spec":true},{"id":"ML4M67KcqQU","title":"Opel Astra 1.2 130 CV GS Line: la prova di stabilità","date":"2022-07-07","car":"Opel Astra 1.2 130 CV GS Line","spec":false},{"id":"9_aCziY-elA","title":"Bmw 218D Active Tourer: la prova di stabilità","date":"2022-07-01","car":"Bmw 218D Active Tourer","spec":false},{"id":"7SmYoD8ILDU","title":"Volkswagen T-Roc: la prova di stabilità","date":"2022-06-17","car":"Volkswagen T-Roc","spec":false},{"id":"IxtG4stuLqg","title":"Citroën C5 X Hybrid: la prova di stabilità","date":"2022-06-09","car":"Citroën C5 X Hybrid","spec":false},{"id":"ObzU-0rvQTY","title":"Toyota Aygo X:  la prova di stabilità","date":"2022-05-26","car":"Toyota Aygo X","spec":false},{"id":"X11ZVRiRQAU","title":"Opel Mokka (2022): la prova di stabilità","date":"2022-04-28","car":"Opel Mokka (2022)","spec":false},{"id":"K1njWW3IbH0","title":"Toyota GR Yaris: la prova di stabilità","date":"2022-04-22","car":"Toyota GR Yaris","spec":false},{"id":"IWjeiDXtMnU","title":"Lexus NX (2022): la prova di stabilità","date":"2022-03-24","car":"Lexus NX (2022)","spec":false},{"id":"uyUp_WTs4V8","title":"Hyundai Tucson (2022): la prova di stabilità","date":"2022-03-10","car":"Hyundai Tucson (2022)","spec":false},{"id":"XRSYGAlK7GU","title":"Fiat Nuova 500 (2022): la prova di stabilità","date":"2022-03-03","car":"Fiat Nuova 500 (2022)","spec":false},{"id":"972lmlLU-Uc","title":"Nuova DS 4 Cross (2020): la prova di stabilità","date":"2022-02-24","car":"DS 4 Cross (2020)","spec":false},{"id":"-6TFRJtut-M","title":"Honda HR-V (2022): la prova di stabilità","date":"2022-02-17","car":"Honda HR-V (2022)","spec":false},{"id":"O6aUCebJeQM","title":"Volkswagen Multivan 2022: la prova di stabilità","date":"2022-02-03","car":"Volkswagen Multivan 2022","spec":false},{"id":"ofteNFek5PU","title":"Nuova Peugeot 308: la prova di stabilità","date":"2022-01-27","car":"Peugeot 308 (3세대, 2022)","spec":true},{"id":"TM3NQUJVFiQ","title":"Lynk & Co 01: la prova di stabilità","date":"2022-01-13","car":"Lynk & Co 01","spec":false},{"id":"7OUi7btJH1s","title":"Cupra Born: la prova di stabilità","date":"2021-12-16","car":"Cupra Born","spec":false},{"id":"MfokZbBJd0o","title":"Porsche Macan GTS: la prova della stabilita","date":"2021-12-02","car":"Porsche Macan GTS","spec":false},{"id":"WWQpAU3bz6o","title":"Dacia Spring: la prova di stabilità","date":"2021-11-29","car":"Dacia Spring","spec":false},{"id":"VPWM-0BJMqQ","title":"Audi RS3 Sportback (2021): la prova di stabilità","date":"2021-11-18","car":"Audi RS3 Sportback (2021)","spec":false},{"id":"RYrBs2GEsCg","title":"Bmw iX: la prova di stabilità","date":"2021-11-11","car":"Bmw iX","spec":false},{"id":"VMbLGZJz5CY","title":"Skoda Fabia (2021): la prova di stabilità","date":"2021-11-04","car":"Skoda Fabia (2021)","spec":false},{"id":"iP8eA0Vu2BY","title":"Citroen C3 Aircross (2021): la prova di stabilità","date":"2021-10-27","car":"Citroen C3 Aircross (2021)","spec":false},{"id":"kq-ngdKajII","title":"Hyundai i20 (2021): la prova di stabilità","date":"2021-10-21","car":"Hyundai i20 (2021)","spec":false},{"id":"HyobUABB67k","title":"Renault Kangoo (2021): la prova di stabilità","date":"2021-10-14","car":"Renault Kangoo (2021)","spec":false},{"id":"wMvgYsfIA1Q","title":"Volkswagen Golf GTI (2020): la prova di stabilità","date":"2021-10-01","car":"Volkswagen Golf GTI (2020)","spec":false},{"id":"Ww0qRSnMOuA","title":"Audi Q4 e-tron Sportback: la prova di stabilità","date":"2021-09-15","car":"Audi Q4 e-tron Sportback","spec":false},{"id":"XEBKQCvj9PM","title":"Volkswagen ID.3: la prova di stabilità","date":"2021-09-09","car":"Volkswagen ID.3","spec":false},{"id":"ohhHuKiULVo","title":"Nissan Qashqai (2020): la prova di stabilità","date":"2021-09-01","car":"Nissan Qashqai (2020)","spec":false},{"id":"OeFdkJAESv4","title":"Volkswagen Golf (2020): la prova di stabilità","date":"2021-08-25","car":"Volkswagen Golf (2020)","spec":false},{"id":"hXNQ3BRhQgM","title":"Kia XCeed (2019): la prova di stabilità","date":"2021-08-18","car":"Kia XCeed (2019)","spec":false},{"id":"FEZQzkDulKs","title":"Ford Puma (2020): la prova di stabilità","date":"2021-08-11","car":"Ford Puma (2020)","spec":false}];
+const ratings = {};
+const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+const KEY_NAME = 'moose-admin-key'; // same key as the Autoview input page
+const keyStore = {
+  get() { try { return localStorage.getItem(KEY_NAME) || ''; } catch { return ''; } },
+  set(v) { try { v ? localStorage.setItem(KEY_NAME, v) : localStorage.removeItem(KEY_NAME); } catch {} },
+};
+let adminKey = keyStore.get();
+const api = (method, body) => fetch('/api/qr', {
+  method, cache: 'no-store',
+  headers: { 'Content-Type': 'application/json', ...(adminKey ? { 'x-admin-key': adminKey } : {}) },
+  body: body ? JSON.stringify(body) : undefined,
+});
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const done = (r) => r && r.dry != null && r.wet != null;
+
+function count() {
+  const n = VIDEOS.filter((v) => done(ratings[v.id])).length;
+  $('#count').textContent = `${$('#list').children.length}개 표시 · 입력 완료 ${n}/${VIDEOS.length}`;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), onlyTodo = $('#onlyTodo').checked;
+  const rows = VIDEOS.filter((v) => (!q || `${v.car} ${v.title} ${ratings[v.id]?.car || ''}`.toLowerCase().includes(q)) && (!onlyTodo || !done(ratings[v.id])));
+  $('#list').innerHTML = rows.map((v) => {
+    const r = ratings[v.id] || {};
+    return `<li class="row${done(r) ? ' done' : ''}" data-id="${v.id}">
+      <div><input class="car" data-k="car" value="${esc(r.car || v.car)}" aria-label="차 이름">
+        <div class="t">${esc(v.title || '제목은 다음 갱신 때 채워져요')}</div>
+        <div class="meta"><span>${v.date || ''}</span><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">영상</a>${v.spec ? '<span class="tag ok">제원 있음</span>' : '<span class="tag need">제원은 갱신 때 추가</span>'}${r.by === 'claude' ? '<span>클아가 읽은 값</span>' : ''}</div></div>
+      <div class="pick">
+        <label for="d-${v.id}">마른 노면 차선 변경</label><input id="d-${v.id}" data-k="dry" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.dry ?? ''}"><span class="u">km/h</span>
+        <label for="w-${v.id}">젖은 노면 이중 차선 변경</label><input id="w-${v.id}" data-k="wet" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.wet ?? ''}"><span class="u">km/h</span>
+        <span class="saved" id="s-${v.id}">${r.updatedAt ? '저장됨 ' + r.updatedAt.slice(0, 10) : ''}</span>
+      </div></li>`;
+  }).join('');
+  count();
+}
+
+// sends the full row state (both speeds + car name) so the site store and the local file keep the same shape
+async function save(id, patch) {
+  const note = document.getElementById('s-' + id);
+  if (note) note.textContent = '저장 중…';
+  const cur = ratings[id] || {};
+  const changed = ['dry', 'wet'].some((k) => k in patch && String(patch[k]) !== String(cur[k] ?? ''));
+  const body = {
+    id, dry: 'dry' in patch ? patch.dry : cur.dry ?? '', wet: 'wet' in patch ? patch.wet : cur.wet ?? '',
+    car: 'car' in patch ? patch.car : cur.car || '', by: changed ? 'user' : cur.by || 'user', updatedAt: new Date().toISOString(),
+  };
+  try {
+    const res = await api('POST', body);
+    if (res.status === 401) { if (note) note.textContent = '관리자 키가 맞지 않아요'; return false; }
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || res.status);
+    const saved = (out.saved && (out.saved[id] || out.saved)) || {};
+    ratings[id] = { ...cur, ...saved };
+    if (note) note.textContent = '저장됨';
+    document.querySelector(`.row[data-id="${id}"]`)?.classList.toggle('done', done(ratings[id]));
+    count();
+    return true;
+  } catch (e) {
+    if (note) note.textContent = '저장하지 못했어요 (40–200 사이 숫자만)';
+    return false;
+  }
+}
+
+$('#list').addEventListener('change', (e) => {
+  const inp = e.target.closest('input[data-k]');
+  if (!inp) return;
+  const id = inp.closest('.row').dataset.id;
+  save(id, { [inp.dataset.k]: inp.value.trim() });
+});
+['#q', '#onlyTodo'].forEach((s) => $(s).addEventListener('input', render));
+
+$('#addForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const raw = $('#addUrl').value.trim();
+  const id = (raw.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/) || raw.match(/^([\w-]{11})$/) || [])[1];
+  if (!id) { $('#addErr').textContent = '영상 주소나 11자리 영상 ID를 넣어 주세요'; return; }
+  $('#addErr').textContent = '';
+  if (!VIDEOS.some((v) => v.id === id)) {
+    if (!(await save(id, { car: '' }))) { $('#addErr').textContent = '추가하지 못했어요'; return; }
+    VIDEOS.unshift({ id, title: '', date: '', car: '', spec: false });
+  }
+  $('#addUrl').value = ''; $('#q').value = ''; $('#onlyTodo').checked = false;
+  render();
+  document.querySelector(`.row[data-id="${id}"] input.car`)?.focus();
+});
+
+// true when the list could be shown (key accepted or local), false when the key was refused
+async function openList() {
+  let res = null;
+  try { res = await api('GET'); } catch {}
+  if (res?.status === 401) return false;
+  $('#gate').hidden = true; $('#main').hidden = false;
+  const st = $('#status');
+  if (res?.ok) {
+    Object.assign(ratings, (await res.json()).ratings);
+    st.textContent = LOCAL ? '로컬 저장 (data/qr_ratings.json)' : '저장소 연결됨';
+  } else {
+    st.textContent = '저장소에 연결할 수 없어요'; st.classList.add('off');
+  }
+  // videos added on the site but not in the list yet
+  for (const id of Object.keys(ratings)) if (!VIDEOS.some((v) => v.id === id)) VIDEOS.unshift({ id, title: '', date: '', car: '', spec: false });
+  render();
+  return true;
+}
+function showGate(msg) {
+  $('#main').hidden = true; $('#gate').hidden = false;
+  $('#gateErr').textContent = msg || '';
+  $('#key').focus();
+}
+$('#gateForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  adminKey = $('#key').value.trim();
+  if (!adminKey) return;
+  if (await openList()) keyStore.set(adminKey);
+  else showGate('관리자 키가 맞지 않아요');
+});
+(async () => {
+  // one-time link /quattroruote#key=… stores the key on this device and drops it from the address bar
+  const hashKey = new URLSearchParams(location.hash.slice(1)).get('key');
+  if (hashKey) { adminKey = hashKey; history.replaceState(null, '', location.pathname); }
+  if (!LOCAL && !adminKey) return showGate();
+  if (await openList()) { if (hashKey) keyStore.set(hashKey); }
+  else { keyStore.set(''); adminKey = ''; showGate('관리자 키가 맞지 않아요'); }
+})();
+</script>
+</body>
+</html>

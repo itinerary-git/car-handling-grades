@@ -48,3 +48,11 @@ export function loadQr() {
   }
   return { videos, ratings, cars, measured, unmapped };
 }
+
+// rows for the input page (/quattroruote): videos newest first, plus ids entered on the page but not in the list yet
+export function qrInputRows() {
+  const { videos, ratings, cars } = loadQr();
+  const known = new Set(videos.map((v) => v.id));
+  return [...Object.keys(ratings).filter((id) => !known.has(id)).map((id) => ({ id, title: '', date: '' })), ...videos.slice().sort((a, b) => b.date.localeCompare(a.date))]
+    .map((v) => ({ ...v, car: cars[v.id]?.car || carFromTitle(v.title), spec: !!(cars[v.id]?.wb && cars[v.id]?.gc) }));
+}

@@ -65,6 +65,12 @@ ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
 .pick input:invalid{border-color:var(--warn)}
 .pick .u{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
 .saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--tv);min-height:1em}
+.status.off{color:var(--warn)}
+.gate{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:10px;max-width:420px}
+.gate form{display:flex;gap:8px}
+.gate input{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.gate button{padding:8px 14px;border:0;border-radius:6px;background:var(--tv);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.gate .err{margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
 @media (max-width:640px){.row{grid-template-columns:1fr}.row.sub{margin-left:12px}.pick label{text-align:left}}
 </style>
 </head>
@@ -73,9 +79,16 @@ ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
   <header>
     <a class="back" href="/">← 무스 테스트 등급표</a>
     <h1>Teknikens Värld 속도 입력</h1>
-    <p class="lede">영상에서 <b>콘을 쓰러뜨리지 않고 통과한 가장 높은 속도</b>(Achieved max speed)를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 여러 차를 비교하는 영상은 <b>차 추가</b>로 줄을 늘려 차마다 넣어 주세요. 제원이 없는 차는 클아가 갱신할 때 채우고, 같은 등급 칸에서는 가장 빠른 차만 등급표에 나와요. 이 페이지는 내 PC(localhost)에서만 열려요.</p>
+    <p class="lede">영상에서 <b>콘을 쓰러뜨리지 않고 통과한 가장 높은 속도</b>(Achieved max speed)를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 여러 차를 비교하는 영상은 <b>차 추가</b>로 줄을 늘려 차마다 넣어 주세요. 제원이 없는 차는 클아가 갱신할 때 채우고, 73km/h 이상인 차 중 같은 등급 칸에서 가장 빠른 차만 등급표에 나와요. 관리자 키가 저장된 브라우저에서만 열려요.</p>
   </header>
 
+  <section class="gate" id="gate" hidden>
+    <b>관리자 키를 입력해 주세요</b>
+    <form id="gateForm"><input type="password" id="key" autocomplete="current-password" placeholder="관리자 키" aria-label="관리자 키"><button>열기</button></form>
+    <p class="err" id="gateErr"></p>
+  </section>
+
+  <div id="main" hidden>
   <form class="add" id="addForm">
     <b>목록에 없는 영상 추가</b>
     <input id="addUrl" placeholder="YouTube 주소 또는 영상 ID" aria-label="YouTube 주소 또는 영상 ID">
@@ -92,11 +105,24 @@ ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
     </div>
     <ul class="list" id="list"></ul>
   </div>
+  </div>
 </div>
 
 <script>
 const ROWS = /*DATA*/[];
-const ratings = /*RATINGS*/{};
+const ratings = {};
+const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+const KEY_NAME = 'moose-admin-key'; // same key as the Autoview input page
+const keyStore = {
+  get() { try { return localStorage.getItem(KEY_NAME) || ''; } catch { return ''; } },
+  set(v) { try { v ? localStorage.setItem(KEY_NAME, v) : localStorage.removeItem(KEY_NAME); } catch {} },
+};
+let adminKey = keyStore.get();
+const api = (method, body) => fetch('/api/tv', {
+  method, cache: 'no-store',
+  headers: { 'Content-Type': 'application/json', ...(adminKey ? { 'x-admin-key': adminKey } : {}) },
+  body: body ? JSON.stringify(body) : undefined,
+});
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 const done = (r) => r && r.kmh != null;
@@ -122,16 +148,24 @@ function render() {
   count();
 }
 
+// sends the full row state (speed + car name) so the site store and the local file keep the same shape
 async function save(key, patch) {
   const note = document.getElementById('s-' + key);
   if (note) note.textContent = '저장 중…';
+  const cur = ratings[key] || {};
+  const body = patch.remove ? { key, remove: true, updatedAt: new Date().toISOString() } : {
+    key, kmh: 'kmh' in patch ? patch.kmh : cur.kmh ?? '', car: 'car' in patch ? patch.car : cur.car || '',
+    by: 'kmh' in patch && String(patch.kmh) !== String(cur.kmh ?? '') ? 'user' : cur.by || 'user', updatedAt: new Date().toISOString(),
+  };
   try {
-    const res = await fetch('/api/tv', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, ...patch }) });
+    const res = await api('POST', body);
+    if (res.status === 401) { if (note) note.textContent = '관리자 키가 맞지 않아요'; return false; }
     const out = await res.json();
     if (!res.ok) throw new Error(out.error || res.status);
-    if (patch.remove) delete ratings[key]; else ratings[key] = out.saved;
+    const saved = (out.saved && (out.saved[key] || out.saved)) || {};
+    if (patch.remove) delete ratings[key]; else ratings[key] = { ...cur, ...saved };
     if (note) note.textContent = '저장됨';
-    document.querySelector(`.row[data-key="${key}"]`)?.classList.toggle('done', done(out.saved));
+    document.querySelector(`.row[data-key="${key}"]`)?.classList.toggle('done', done(ratings[key]));
     count();
     return true;
   } catch (e) {
@@ -183,8 +217,53 @@ $('#addForm').addEventListener('submit', async (e) => {
   document.querySelector(`.row[data-key="${id}"] input.car`)?.focus();
 });
 
-$('#status').textContent = '로컬 저장 (data/tv_ratings.json)';
-render();
+// rows added on the site (comparison cars, videos not in the list yet) come from the store
+function addStoredRows() {
+  for (const key of Object.keys(ratings)) {
+    if (ROWS.some((v) => v.key === key)) continue;
+    const id = key.slice(0, 11), base = ROWS.find((v) => v.key === id);
+    const row = { key, id, title: '', date: base?.date || '', stated: null, car: '', spec: false };
+    const at = ROWS.findIndex((v) => v.key.slice(0, 11) === id);
+    if (at < 0) ROWS.unshift(row); else ROWS.splice(at + 1, 0, row);
+  }
+}
+// true when the list could be shown (key accepted or local), false when the key was refused
+async function openList() {
+  let res = null;
+  try { res = await api('GET'); } catch {}
+  if (res?.status === 401) return false;
+  $('#gate').hidden = true; $('#main').hidden = false;
+  const st = $('#status');
+  if (res?.ok) {
+    Object.assign(ratings, (await res.json()).ratings);
+    st.textContent = LOCAL ? '로컬 저장 (data/tv_ratings.json)' : '저장소 연결됨';
+  } else {
+    st.textContent = '저장소에 연결할 수 없어요'; st.classList.add('off');
+  }
+  addStoredRows();
+  render();
+  return true;
+}
+function showGate(msg) {
+  $('#main').hidden = true; $('#gate').hidden = false;
+  $('#gateErr').textContent = msg || '';
+  $('#key').focus();
+}
+$('#gateForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  adminKey = $('#key').value.trim();
+  if (!adminKey) return;
+  if (await openList()) keyStore.set(adminKey);
+  else showGate('관리자 키가 맞지 않아요');
+});
+(async () => {
+  // one-time link /teknikens#key=… stores the key on this device and drops it from the address bar
+  const hashKey = new URLSearchParams(location.hash.slice(1)).get('key');
+  if (hashKey) { adminKey = hashKey; history.replaceState(null, '', location.pathname); }
+  if (!LOCAL && !adminKey) return showGate();
+  if (await openList()) { if (hashKey) keyStore.set(hashKey); }
+  else { keyStore.set(''); adminKey = ''; showGate('관리자 키가 맞지 않아요'); }
+})();
 </script>
 </body>
 </html>

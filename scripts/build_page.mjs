@@ -3,8 +3,8 @@
 import fs from 'node:fs';
 import { compareAutoview } from './autoview_compare.mjs';
 import { expandVideos, LEVELS } from './autoview_lib.mjs';
-import { loadQr } from './qr_lib.mjs';
-import { loadTv } from './tv_lib.mjs';
+import { loadQr, qrInputRows } from './qr_lib.mjs';
+import { loadTv, tvInputRows } from './tv_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const MIN_KMH = 78; // user rule: drop cars at or below 77 km/h
@@ -164,6 +164,12 @@ const avTpl = fs.readFileSync(new URL('report/autoview_template.html', root), 'u
 fs.writeFileSync(new URL('public/autoview.html', root), avTpl
   .replace('/*DATA*/[]', () => JSON.stringify(entries).replace(/</g, String.fromCharCode(92) + 'u003c')) // no '</script>' inside the inline JSON
   .replace('/*LEVELS*/[]', () => JSON.stringify(LEVELS)));
+
+// owner-only Quattroruote / Teknikens Värld input pages (site store api/qr.js, api/tv.js; local store via serve.mjs)
+const inline = (o) => JSON.stringify(o).replace(/</g, String.fromCharCode(92) + 'u003c'); // no '</script>' inside the inline JSON
+for (const [tpl, out, rows] of [['report/qr_input_template.html', 'public/quattroruote.html', qrInputRows()], ['report/tv_input_template.html', 'public/teknikens.html', tvInputRows()]]) {
+  fs.writeFileSync(new URL(out, root), fs.readFileSync(new URL(tpl, root), 'utf8').replace('/*DATA*/[]', () => inline(rows)));
+}
 
 const blue = av.cells.flat(2).filter((x) => x.status === 'blue');
 console.log('cars', total, 'filled cells', filled, '| autoview rated', av.rated, 'blue', blue.length, blue.length ? '(' + blue.map((x) => x.car).join(', ') + ')' : '');

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Teknikens Värld 속도 입력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --accent:#0E7A68; --accent-soft:#DDEFEA; --warn:#D9520B; --tv:#B4234A; --tv-soft:#FBE4EA;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --tv:#FF8FA8; --tv-soft:#3A1820;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --tv:#FF8FA8; --tv-soft:#3A1820;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:20px}
+.back{font-family:var(--mono);font-size:12px;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:4px 0 0}
+.lede{color:var(--muted);max-width:72ch;margin:8px 0 0}
+.add{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.add b{font-size:13.5px}
+.add input{flex:1 1 260px;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.add button{padding:7px 14px;border:0;border-radius:6px;background:var(--tv);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.add .err{flex-basis:100%;margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);padding-block:10px;z-index:2;border-bottom:1px solid var(--line)}
+.bar input[type=search]{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.status{font-family:var(--mono);font-size:12px}
+ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.row.sub{margin-left:24px}
+.row.done{border-color:var(--tv);box-shadow:inset 3px 0 0 var(--tv)}
+.row .t{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.row input.car{width:100%;font:inherit;font-weight:600;padding:4px 8px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink)}
+.row input.car:hover,.row input.car:focus{border-color:var(--line);background:var(--paper)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.meta a{color:var(--tv);text-underline-offset:2px}
+.tag{font-family:var(--body);font-size:11.5px;padding:1px 7px;border-radius:4px;font-weight:600}
+.tag.ok{background:var(--accent-soft);color:var(--accent)}
+.tag.need{background:var(--tv-soft);color:var(--tv)}
+.mini{font-family:var(--body);font-size:12px;padding:2px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}
+.mini.del{color:var(--warn)}
+.pick{display:grid;grid-template-columns:auto auto auto;gap:6px 8px;align-items:center;font-size:12.5px}
+.pick label{color:var(--muted);text-align:right}
+.pick input{width:5.5em;font:inherit;font-family:var(--mono);font-size:14px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);text-align:right}
+.pick input:invalid{border-color:var(--warn)}
+.pick .u{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--tv);min-height:1em}
+.status.off{color:var(--warn)}
+.gate{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:grid;gap:10px;max-width:420px}
+.gate form{display:flex;gap:8px}
+.gate input{flex:1;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.gate button{padding:8px 14px;border:0;border-radius:6px;background:var(--tv);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.gate .err{margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+@media (max-width:640px){.row{grid-template-columns:1fr}.row.sub{margin-left:12px}.pick label{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="/">← 무스 테스트 등급표</a>
+    <h1>Teknikens Värld 속도 입력</h1>
+    <p class="lede">영상에서 <b>콘을 쓰러뜨리지 않고 통과한 가장 높은 속도</b>(Achieved max speed)를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 여러 차를 비교하는 영상은 <b>차 추가</b>로 줄을 늘려 차마다 넣어 주세요. 제원이 없는 차는 클아가 갱신할 때 채우고, 73km/h 이상인 차 중 같은 등급 칸에서 가장 빠른 차만 등급표에 나와요. 관리자 키가 저장된 브라우저에서만 열려요.</p>
+  </header>
+
+  <section class="gate" id="gate" hidden>
+    <b>관리자 키를 입력해 주세요</b>
+    <form id="gateForm"><input type="password" id="key" autocomplete="current-password" placeholder="관리자 키" aria-label="관리자 키"><button>열기</button></form>
+    <p class="err" id="gateErr"></p>
+  </section>
+
+  <div id="main" hidden>
+  <form class="add" id="addForm">
+    <b>목록에 없는 영상 추가</b>
+    <input id="addUrl" placeholder="YouTube 주소 또는 영상 ID" aria-label="YouTube 주소 또는 영상 ID">
+    <button>추가</button>
+    <p class="err" id="addErr"></p>
+  </form>
+
+  <div>
+    <div class="bar">
+      <input type="search" id="q" placeholder="차 이름으로 찾기 (예: Golf, RAV4)" aria-label="차 이름으로 찾기">
+      <label><input type="checkbox" id="onlyTodo"> 미입력만</label>
+      <span class="status" id="status"></span>
+      <span class="count" id="count"></span>
+    </div>
+    <ul class="list" id="list"></ul>
+  </div>
+  </div>
+</div>
+
+<script>
+const ROWS = [{"key":"93tNSzqlo8M","id":"93tNSzqlo8M","title":"New record in the moose test","date":"2024-09-12","stated":null,"car":"Porsche 718 Cayman GT4 RS Manthey (2024)","spec":true},{"key":"qJ4OGnj3Nro","id":"qJ4OGnj3Nro","title":"Moose test of the week: Ford Puma","date":"2023-08-30","stated":78,"car":"Ford Puma 1.0 EcoBoost MHEV 125 ST-Line (2023)","spec":true},{"key":"cS5rB-ATr2M","id":"cS5rB-ATr2M","title":"Moose test of the week: Audi Q4 e-tron","date":"2023-07-26","stated":74,"car":"Audi Q4 40 e-tron (2023)","spec":true},{"key":"CIj246cKIBs","id":"CIj246cKIBs","title":"Moose test of the week: DFSK Seres 3","date":"2023-07-19","stated":72,"car":"DFSK Seres 3 Electric (2023)","spec":true},{"key":"ba-ng1L3wJU","id":"ba-ng1L3wJU","title":"Moose test of the week: Skoda Octavia Scout","date":"2023-07-12","stated":72,"car":"Skoda Octavia Scout 2.0 TDI 200 4x4 (4세대, 2023)","spec":true},{"key":"X_6HNeFsTxc","id":"X_6HNeFsTxc","title":"Moose test of the week: Volkswagen ID.4 GTX","date":"2023-07-05","stated":74,"car":"Volkswagen ID.4 GTX (2023)","spec":true},{"key":"w2EZwDxWfLU","id":"w2EZwDxWfLU","title":"Moose test of the week: Cupra Leon Sportstourer","date":"2023-06-28","stated":76,"car":"Cupra Leon Sportstourer 1.4 TSI e-Hybrid (2023)","spec":true},{"key":"3dI3492dugw","id":"3dI3492dugw","title":"Moose test of the week: Volkswagen Golf","date":"2023-06-21","stated":72,"car":"Volkswagen Golf 1.0 eTSI DSG (8세대, 2023)","spec":true},{"key":"sMeh_OZTkCw","id":"sMeh_OZTkCw","title":"Moose test of the week: Opel Mokka-e","date":"2023-06-14","stated":74,"car":"Opel Mokka-e Ultimate 50kWh (2021–2023)","spec":true},{"key":"XLj9Ofb1zq4","id":"XLj9Ofb1zq4","title":"Moose test of the week: Audi A4 allroad","date":"2023-06-07","stated":74,"car":"Audi A4 allroad 40 TDI quattro (B9, 2023)","spec":true},{"key":"KQ8S0YgDQQs","id":"KQ8S0YgDQQs","title":"Moose test: Huge loss of performance for MG5 with other tires","date":"2023-05-31","stated":72,"car":"MG5 Electric (기본 Maxxis 타이어, 2023)","spec":true},{"key":"MxTAK8JLEfM","id":"MxTAK8JLEfM","title":"Moose test of the week: Porsche Boxster","date":"2023-05-24","stated":79,"car":"Porsche 718 Boxster 25 Years (2023)","spec":true},{"key":"ksLEYoiMhwo","id":"ksLEYoiMhwo","title":"Moose test of the week: Volvo V60","date":"2023-05-17","stated":74,"car":"Volvo V60 B4 Diesel Inscription (2세대, 2023)","spec":true},{"key":"i_6km4b9VSk","id":"i_6km4b9VSk","title":"Moose test of the week: Peugeot 208","date":"2023-05-10","stated":76,"car":"Peugeot 208 Active PureTech 75 (2세대, 2023)","spec":true},{"key":"O_CLAD4UEoM","id":"O_CLAD4UEoM","title":"Moose test of the week: MG5 Electric","date":"2023-05-03","stated":80,"car":"MG5 Electric Luxury (Michelin 타이어, 2023)","spec":true},{"key":"gz76gNfNx1A","id":"gz76gNfNx1A","title":"Moose test of the week: Subaru Outback","date":"2023-04-26","stated":72,"car":"Subaru Outback 2.5 4WD Touring (6세대, 2023)","spec":true},{"key":"glfCfD3dEHA","id":"glfCfD3dEHA","title":"Moose test of the week: BMW M3 Competition","date":"2023-04-20","stated":76,"car":"BMW M3 Competition RWD (G80, 2023)","spec":true},{"key":"RtgJU5nr1_0","id":"RtgJU5nr1_0","title":"Moose test of the week: Maxus Euniq 5","date":"2023-03-30","stated":68,"car":"Maxus Euniq 5 (2023)","spec":true},{"key":"wKPrvG35RPk","id":"wKPrvG35RPk","title":"Moose test of the week: Toyota RAV4 Plug-In Hybrid","date":"2023-03-13","stated":74,"car":"Toyota RAV4 Plug-in Hybrid AWD-i (5세대, 2021)","spec":true},{"key":"TZ2MYFInpMI","id":"TZ2MYFInpMI","title":"Moose test of the week: Tesla Model 3 Standard Range","date":"2023-03-06","stated":76,"car":"Tesla Model 3 Standard Range Plus (2021)","spec":true},{"key":"2PTOBc883zg","id":"2PTOBc883zg","title":"Ford Mustang Mach-E fails the Moose Test","date":"2021-09-28","stated":null,"car":"Ford Mustang Mach-E (2021)","spec":true},{"key":"CLnaParvC_8","id":"CLnaParvC_8","title":"Toyota RAV4 Plug-in Hybrid performs really poorly in the moose test","date":"2020-12-03","stated":null,"car":"Toyota RAV4 Plug-in Hybrid","spec":false},{"key":"8gQ0xjTaG78","id":"8gQ0xjTaG78","title":"Electric car Renault Zoe fails the moose test","date":"2020-11-16","stated":null,"car":"Renault Zoe","spec":false},{"key":"bdFpJa8fLIA","id":"bdFpJa8fLIA","title":"Skoda Octavia Combi performs the moose test poorly","date":"2020-05-29","stated":null,"car":"Skoda Octavia Combi","spec":false},{"key":"3XLfyatbtGo","id":"3XLfyatbtGo","title":"Skoda Superb iV fails the moose test","date":"2020-05-26","stated":null,"car":"Skoda Superb iV","spec":false},{"key":"YWKAXI5g4ag","id":"YWKAXI5g4ag","title":"Volkswagen Passat GTE fails the moose test","date":"2020-05-26","stated":null,"car":"Volkswagen Passat GTE","spec":false},{"key":"xSRCJFCmvTk","id":"xSRCJFCmvTk","title":"Toyota RAV4 handles the moose test after an update","date":"2020-01-29","stated":null,"car":"Toyota RAV4","spec":false},{"key":"VtQ24W_lamY","id":"VtQ24W_lamY","title":"The new Toyota RAV4 fails the moose test","date":"2019-09-12","stated":null,"car":"Toyota RAV4","spec":false},{"key":"y2QSogJj3ec","id":"y2QSogJj3ec","title":"Revised Toyota Hilux now handles the moose test","date":"2017-04-21","stated":null,"car":"Toyota Hilux now","spec":false},{"key":"o0Ky7saE0Qk","id":"o0Ky7saE0Qk","title":"Toyota corrects the new Hilux after the moose test","date":"2017-03-02","stated":null,"car":"Toyota corrects the new Hilux after the","spec":false},{"key":"xoHbn8-ROiQ","id":"xoHbn8-ROiQ","title":"The new Toyota Hilux 2016 fails moose test","date":"2016-10-26","stated":null,"car":"Toyota Hilux 2016","spec":false},{"key":"NbpWpFj4JY4","id":"NbpWpFj4JY4","title":"Moose test Mercedes C 350 e (Hybrid) 2015 [Poor result]","date":"2015-10-22","stated":null,"car":"Moose test Mercedes C 350 e (Hybrid) 2015 [Poor result]","spec":false},{"key":"DEmcfwdv_5k","id":"DEmcfwdv_5k","title":"Mazda 6 Wagon 2015 moose test [Good result]","date":"2015-09-03","stated":null,"car":"Mazda 6 Wagon 2015","spec":false},{"key":"DR9FDG4VNbY","id":"DR9FDG4VNbY","title":"Hyundai i30 Wagon 2015 moose test [Poor result]","date":"2015-09-03","stated":null,"car":"Hyundai i30 Wagon 2015","spec":false},{"key":"kK46RNXmo8c","id":"kK46RNXmo8c","title":"Hyundai i40 Wagon 2015 moose test [Poor result]","date":"2015-09-03","stated":null,"car":"Hyundai i40 Wagon 2015","spec":false},{"key":"ufGcPWehNxU","id":"ufGcPWehNxU","title":"Kia Cee'd Sportswagon 2015 moose test [Poor result]","date":"2015-09-03","stated":null,"car":"Kia Cee'd Sportswagon 2015","spec":false},{"key":"HgVue72wqnI","id":"HgVue72wqnI","title":"Porsche Macan behaving strangely in moose test","date":"2014-10-08","stated":null,"car":"Porsche Macan","spec":false},{"key":"8Fs5M8GuvcU","id":"8Fs5M8GuvcU","title":"New Jeep Grand Cherokee 2014 moose test","date":"2014-01-02","stated":null,"car":"Jeep Grand Cherokee 2014","spec":false},{"key":"zaYFLb8WMGM","id":"zaYFLb8WMGM","title":"Jeep Grand Cherokee moose test -- the full story","date":"2012-07-16","stated":null,"car":"Jeep Grand Cherokee","spec":false},{"key":"HJ538H_KZCI","id":"HJ538H_KZCI","title":"Jeep Grand Cherokee fails evasive maneuver (moose test)","date":"2012-07-10","stated":null,"car":"Jeep Grand Cherokee","spec":false}];
+const ratings = {};
+const LOCAL = ['localhost', '127.0.0.1'].includes(location.hostname);
+const KEY_NAME = 'moose-admin-key'; // same key as the Autoview input page
+const keyStore = {
+  get() { try { return localStorage.getItem(KEY_NAME) || ''; } catch { return ''; } },
+  set(v) { try { v ? localStorage.setItem(KEY_NAME, v) : localStorage.removeItem(KEY_NAME); } catch {} },
+};
+let adminKey = keyStore.get();
+const api = (method, body) => fetch('/api/tv', {
+  method, cache: 'no-store',
+  headers: { 'Content-Type': 'application/json', ...(adminKey ? { 'x-admin-key': adminKey } : {}) },
+  body: body ? JSON.stringify(body) : undefined,
+});
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const done = (r) => r && r.kmh != null;
+
+function count() {
+  const n = ROWS.filter((v) => done(ratings[v.key])).length;
+  $('#count').textContent = `${$('#list').children.length}개 표시 · 입력 완료 ${n}/${ROWS.length}`;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), onlyTodo = $('#onlyTodo').checked;
+  const rows = ROWS.filter((v) => (!q || `${v.car} ${v.title} ${ratings[v.key]?.car || ''}`.toLowerCase().includes(q)) && (!onlyTodo || !done(ratings[v.key])));
+  $('#list').innerHTML = rows.map((v) => {
+    const r = ratings[v.key] || {}, sub = v.key.includes('.');
+    return `<li class="row${done(r) ? ' done' : ''}${sub ? ' sub' : ''}" data-key="${v.key}">
+      <div><input class="car" data-k="car" value="${esc(r.car || v.car)}" placeholder="차 이름" aria-label="차 이름">
+        <div class="t">${sub ? '같은 영상의 ' + v.key.split('.')[1] + '번째 차' : esc(v.title || '제목은 다음 갱신 때 채워져요')}</div>
+        <div class="meta"><span>${v.date || ''}</span><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">영상</a>${v.spec ? '<span class="tag ok">제원 있음</span>' : '<span class="tag need">제원은 갱신 때 추가</span>'}${r.by === 'claude' ? '<span>클아가 읽은 값</span>' : ''}${v.stated ? `<span>영상 설명: ${v.stated}km/h</span>` : ''}${sub ? '<button type="button" class="mini del" data-act="del">이 줄 삭제</button>' : '<button type="button" class="mini" data-act="more">차 추가</button>'}</div></div>
+      <div class="pick">
+        <label for="k-${v.key}">콘 안 쓰러뜨린 최고 속도</label><input id="k-${v.key}" data-k="kmh" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.kmh ?? ''}"><span class="u">km/h</span>
+        <span class="saved" id="s-${v.key}">${r.updatedAt ? '저장됨 ' + r.updatedAt.slice(0, 10) : ''}</span>
+      </div></li>`;
+  }).join('');
+  count();
+}
+
+// sends the full row state (speed + car name) so the site store and the local file keep the same shape
+async function save(key, patch) {
+  const note = document.getElementById('s-' + key);
+  if (note) note.textContent = '저장 중…';
+  const cur = ratings[key] || {};
+  const body = patch.remove ? { key, remove: true, updatedAt: new Date().toISOString() } : {
+    key, kmh: 'kmh' in patch ? patch.kmh : cur.kmh ?? '', car: 'car' in patch ? patch.car : cur.car || '',
+    by: 'kmh' in patch && String(patch.kmh) !== String(cur.kmh ?? '') ? 'user' : cur.by || 'user', updatedAt: new Date().toISOString(),
+  };
+  try {
+    const res = await api('POST', body);
+    if (res.status === 401) { if (note) note.textContent = '관리자 키가 맞지 않아요'; return false; }
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || res.status);
+    const saved = (out.saved && (out.saved[key] || out.saved)) || {};
+    if (patch.remove) delete ratings[key]; else ratings[key] = { ...cur, ...saved };
+    if (note) note.textContent = '저장됨';
+    document.querySelector(`.row[data-key="${key}"]`)?.classList.toggle('done', done(ratings[key]));
+    count();
+    return true;
+  } catch (e) {
+    if (note) note.textContent = '저장하지 못했어요 (30–150 사이 숫자만)';
+    return false;
+  }
+}
+
+$('#list').addEventListener('change', (e) => {
+  const inp = e.target.closest('input[data-k]');
+  if (!inp) return;
+  save(inp.closest('.row').dataset.key, { [inp.dataset.k]: inp.value.trim() });
+});
+$('#list').addEventListener('click', async (e) => {
+  const b = e.target.closest('button[data-act]');
+  if (!b) return;
+  const key = b.closest('.row').dataset.key, id = key.slice(0, 11);
+  if (b.dataset.act === 'more') {
+    let n = 2;
+    while (ROWS.some((v) => v.key === `${id}.${n}`)) n++;
+    if (n > 9) return;
+    const k = `${id}.${n}`, base = ROWS.find((v) => v.key === id);
+    if (!(await save(k, { car: '' }))) return;
+    let at = ROWS.findIndex((v) => v.key === id);
+    while (ROWS[at + 1]?.key.startsWith(id + '.')) at++;
+    ROWS.splice(at + 1, 0, { key: k, id, title: '', date: base?.date || '', stated: null, car: '', spec: false });
+    render();
+    document.querySelector(`.row[data-key="${k}"] input.car`)?.focus();
+  } else if (b.dataset.act === 'del') {
+    if (!(await save(key, { remove: true }))) return;
+    ROWS.splice(ROWS.findIndex((v) => v.key === key), 1);
+    render();
+  }
+});
+['#q', '#onlyTodo'].forEach((s) => $(s).addEventListener('input', render));
+
+$('#addForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const raw = $('#addUrl').value.trim();
+  const id = (raw.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/) || raw.match(/^([\w-]{11})$/) || [])[1];
+  if (!id) { $('#addErr').textContent = '영상 주소나 11자리 영상 ID를 넣어 주세요'; return; }
+  $('#addErr').textContent = '';
+  if (!ROWS.some((v) => v.key === id)) {
+    if (!(await save(id, { car: '' }))) { $('#addErr').textContent = '추가하지 못했어요'; return; }
+    ROWS.unshift({ key: id, id, title: '', date: '', stated: null, car: '', spec: false });
+  }
+  $('#addUrl').value = ''; $('#q').value = ''; $('#onlyTodo').checked = false;
+  render();
+  document.querySelector(`.row[data-key="${id}"] input.car`)?.focus();
+});
+
+// rows added on the site (comparison cars, videos not in the list yet) come from the store
+function addStoredRows() {
+  for (const key of Object.keys(ratings)) {
+    if (ROWS.some((v) => v.key === key)) continue;
+    const id = key.slice(0, 11), base = ROWS.find((v) => v.key === id);
+    const row = { key, id, title: '', date: base?.date || '', stated: null, car: '', spec: false };
+    const at = ROWS.findIndex((v) => v.key.slice(0, 11) === id);
+    if (at < 0) ROWS.unshift(row); else ROWS.splice(at + 1, 0, row);
+  }
+}
+// true when the list could be shown (key accepted or local), false when the key was refused
+async function openList() {
+  let res = null;
+  try { res = await api('GET'); } catch {}
+  if (res?.status === 401) return false;
+  $('#gate').hidden = true; $('#main').hidden = false;
+  const st = $('#status');
+  if (res?.ok) {
+    Object.assign(ratings, (await res.json()).ratings);
+    st.textContent = LOCAL ? '로컬 저장 (data/tv_ratings.json)' : '저장소 연결됨';
+  } else {
+    st.textContent = '저장소에 연결할 수 없어요'; st.classList.add('off');
+  }
+  addStoredRows();
+  render();
+  return true;
+}
+function showGate(msg) {
+  $('#main').hidden = true; $('#gate').hidden = false;
+  $('#gateErr').textContent = msg || '';
+  $('#key').focus();
+}
+$('#gateForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  adminKey = $('#key').value.trim();
+  if (!adminKey) return;
+  if (await openList()) keyStore.set(adminKey);
+  else showGate('관리자 키가 맞지 않아요');
+});
+(async () => {
+  // one-time link /teknikens#key=… stores the key on this device and drops it from the address bar
+  const hashKey = new URLSearchParams(location.hash.slice(1)).get('key');
+  if (hashKey) { adminKey = hashKey; history.replaceState(null, '', location.pathname); }
+  if (!LOCAL && !adminKey) return showGate();
+  if (await openList()) { if (hashKey) keyStore.set(hashKey); }
+  else { keyStore.set(''); adminKey = ''; showGate('관리자 키가 맞지 않아요'); }
+})();
+</script>
+</body>
+</html>
