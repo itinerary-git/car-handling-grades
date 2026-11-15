@@ -17,6 +17,7 @@ const av = compareAutoview(src.grid, MIN_KMH);
 // Quattroruote stability-test speeds read from the video screens (owner-picked cars), placed by the car's own specs
 const qrData = loadQr();
 const qrMeasured = qrData.measured;
+const QR_MIN = { dry: 96, wet: 72 }; // user rule 2026-11-15: both speeds must reach these to be shown
 // Teknikens Värld moose-test speeds (highest pass without hitting a cone), placed by the car's own specs
 const tvData = loadTv();
 const TV_MIN_KMH = 73; // user rule 2026-11-15: show Teknikens Värld cars at 73 km/h or more only
@@ -77,7 +78,7 @@ const cells = grid.map((row, i) =>
       qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}`),
       av: av.cells[i][j],
       qm: qrMeasured
-        .filter((q) => wbBin(q.wb) === i && gcBin(q.gc) === j)
+        .filter((q) => q.dry_kmh >= QR_MIN.dry && q.wet_kmh >= QR_MIN.wet && wbBin(q.wb) === i && gcBin(q.gc) === j)
         .filter((q, _, all) => !all.some((o) => o.dry_kmh > q.dry_kmh && o.wet_kmh > q.wet_kmh)) // user rule: drop a car when another car in the same cell beats both speeds
         .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)
         .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
