@@ -40,8 +40,8 @@
      "name": "Fiat 124 Spider Lusso 103 kW (140 CV) (2016-2019)",
      "moose_kmh": 81,
      "wheelbase_mm": 2310,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 124,
+     "gc_source": "estimate (2016–19 124 Spider: Autofiles 124mm)",
      "km77": "https://www.km77.com/coches/fiat/124-spider/2016/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -110,8 +110,8 @@
      "name": "Renault 5 E-Tech iconic cinq 110 kW (150 CV) 52 kWh (2024)",
      "moose_kmh": 80,
      "wheelbase_mm": 2540,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 145,
+     "gc_source": "estimate (2024 R5 E-Tech: Autotijd · cars-data · vehiclesizes 145mm)",
      "km77": "https://www.km77.com/coches/renault/5/2025/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -130,8 +130,8 @@
      "name": "MINI Cooper S 5 puertas (2014-2017)",
      "moose_kmh": 80,
      "wheelbase_mm": 2567,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 146,
+     "gc_source": "verified (F55 5도어: MINI 2016-03 보도자료 146mm, CarExpert 2015 Cooper S 146mm)",
      "km77": "https://www.km77.com/coches/mini/mini/2015/5-puertas/cooper-s/5-puertas-cooper-s/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -160,8 +160,8 @@
      "name": "Audi A1 Sportback S line 30 TFSI S tronic 7 vel. (2018-2020)",
      "moose_kmh": 79,
      "wheelbase_mm": 2563,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 136,
+     "gc_source": "estimate (2019 A1 Sportback 30 TFSI: CarsGuide 136mm)",
      "km77": "https://www.km77.com/coches/audi/a1/2019/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -190,8 +190,8 @@
      "name": "BMW i3s 94Ah (2017-2019)",
      "moose_kmh": 79,
      "wheelbase_mm": 2570,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 131,
+     "gc_source": "verified (BMW i3s 기술 자료 131mm, auto-data 131mm)",
      "km77": "https://www.km77.com/coches/bmw/i3/2018/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -210,8 +210,8 @@
      "name": "Volkswagen Polo Life 1.0 TSI 70 kW (95 CV) DSG 7 vel. (2021-2024)",
      "moose_kmh": 78,
      "wheelbase_mm": 2552,
-     "ground_clearance_mm": 142,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 147,
+     "gc_source": "estimate (2021 부분변경 Polo 1.0 TSI: auto-data 147mm)",
      "km77": "https://www.km77.com/coches/volkswagen/polo/2021/mediciones-propias",
      "wb": 0,
      "gc": 0
@@ -810,8 +810,8 @@
      "name": "Peugeot 308 5p GT Line 1.2 PureTech 130 S&S (2017-2018)",
      "moose_kmh": 82,
      "wheelbase_mm": 2620,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 110,
+     "gc_source": "estimate (2세대 308 2016–20: CarExpert 2016 GT · 2019 110mm, 2020 GT Line 109mm)",
      "km77": "https://www.km77.com/coches/peugeot/308/2017/mediciones-propias",
      "wb": 1,
      "gc": 0
@@ -1189,16 +1189,6 @@
      "gc": 1
     },
     {
-     "name": "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)",
-     "moose_kmh": 79,
-     "wheelbase_mm": 2650,
-     "ground_clearance_mm": 172,
-     "gc_source": "manufacturer (estimate, unverified)",
-     "km77": "https://www.km77.com/coches/kia/xceed/2020/estandar/emotion/xceed-14-t-gdi-emotion-103-kw-140-cv-dct2/mediciones-propias",
-     "wb": 1,
-     "gc": 1
-    },
-    {
      "name": "Skoda Karoq Sportline 1.5 TSI 110 kW (150 CV) DSG (2022)",
      "moose_kmh": 78,
      "wheelbase_mm": 2638,
@@ -1517,6 +1507,16 @@
      "ground_clearance_mm": 177,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/ebro/s700/2025/mediciones-propias",
+     "wb": 1,
+     "gc": 2
+    },
+    {
+     "name": "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)",
+     "moose_kmh": 79,
+     "wheelbase_mm": 2650,
+     "ground_clearance_mm": 184,
+     "gc_source": "verified (Kia 스페인 보도자료: Tech·Emotion 트림 184mm, Concept·Drive 172mm)",
+     "km77": "https://www.km77.com/coches/kia/xceed/2020/estandar/emotion/xceed-14-t-gdi-emotion-103-kw-140-cv-dct2/mediciones-propias",
      "wb": 1,
      "gc": 2
     },
@@ -1850,8 +1850,8 @@
      "name": "Ford Focus Berlina ST-Line 1.0 EcoBoost 92 kW (125 CV) (2018-2020)",
      "moose_kmh": 83,
      "wheelbase_mm": 2700,
-     "ground_clearance_mm": 142,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 135,
+     "gc_source": "estimate (4세대 2019: CarExpert · Ford 유럽 제원 135mm, ST-Line X는 30mm 높음)",
      "km77": "https://www.km77.com/coches/ford/focus/2018/mediciones-propias",
      "wb": 2,
      "gc": 0
@@ -2401,7 +2401,7 @@
      "moose_kmh": 83,
      "wheelbase_mm": 2875,
      "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "gc_source": "estimate (부분변경 전 Model 3: CarExpert · cars-data · ArenaEV 140mm)",
      "km77": "https://www.km77.com/coches/tesla/model-3/2018/mediciones-propias",
      "wb": 3,
      "gc": 0
@@ -2421,7 +2421,7 @@
      "moose_kmh": 80,
      "wheelbase_mm": 2800,
      "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "gc_source": "estimate (2019 508 GT: CarExpert AU/NZ · drom.ru 140mm)",
      "km77": "https://www.km77.com/coches/peugeot/508/2019/mediciones-propias",
      "wb": 3,
      "gc": 0
@@ -2450,8 +2450,8 @@
      "name": "BMW 330i xDrive Touring (2019-2022)",
      "moose_kmh": 78,
      "wheelbase_mm": 2851,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 135,
+     "gc_source": "verified (BMW 2019 보도자료 330i xDrive Touring 135mm)",
      "km77": "https://www.km77.com/coches/bmw/serie-3/2020/mediciones-propias",
      "wb": 3,
      "gc": 0
@@ -2980,8 +2980,8 @@
      "name": "BMW 520d Berlina Aut. (2016-2018)",
      "moose_kmh": 79,
      "wheelbase_mm": 2975,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
+     "ground_clearance_mm": 144,
+     "gc_source": "estimate (G30 520d 2017: auto-data · automoli 144mm, motorspec 145mm)",
      "km77": "https://www.km77.com/coches/bmw/serie-5/2017/mediciones-propias",
      "wb": 4,
      "gc": 0
@@ -2993,16 +2993,6 @@
      "ground_clearance_mm": 130,
      "gc_source": "manufacturer (estimate, unverified)",
      "km77": "https://www.km77.com/coches/audi/a6/2018/estandar/estandar/a6-50-tdi-quattro/mediciones-propias",
-     "wb": 4,
-     "gc": 0
-    },
-    {
-     "name": "BMW 320d Gran Turismo Aut. (2016-2018)",
-     "moose_kmh": 78,
-     "wheelbase_mm": 2920,
-     "ground_clearance_mm": 140,
-     "gc_source": "manufacturer (estimate, unverified)",
-     "km77": "https://www.km77.com/coches/bmw/serie-3-gran-turismo/2016/mediciones-propias",
      "wb": 4,
      "gc": 0
     },
@@ -3148,6 +3138,16 @@
     }
    ],
    [
+    {
+     "name": "BMW 320d Gran Turismo Aut. (2016-2018)",
+     "moose_kmh": 78,
+     "wheelbase_mm": 2920,
+     "ground_clearance_mm": 165,
+     "gc_source": "verified (BMW 보도자료 320d Gran Turismo 165mm)",
+     "km77": "https://www.km77.com/coches/bmw/serie-3-gran-turismo/2016/mediciones-propias",
+     "wb": 4,
+     "gc": 1
+    },
     {
      "name": "KIA EV6 GT-line 168 kW (229 CV) 77 kWh RWD (2021-2025)",
      "moose_kmh": 78,

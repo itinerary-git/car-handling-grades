@@ -33,8 +33,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Peugeot 308 5p GT Line 1.2 PureTech 130 S&amp;S (2017-2018)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 110,
+  "gc_source": "estimate (2세대 308 2016–20: CarExpert 2016 GT · 2019 110mm, 2020 GT Line 109mm)"
  },
  "Audi A3 Sportback 35 TFSI 110 kW (150 CV) (2020-2022)": {
   "ground_clearance_mm": 140,
@@ -69,8 +69,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Ford Focus Berlina ST-Line 1.0 EcoBoost 92 kW (125 CV) (2018-2020)": {
-  "ground_clearance_mm": 142,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 135,
+  "gc_source": "estimate (4세대 2019: CarExpert · Ford 유럽 제원 135mm, ST-Line X는 30mm 높음)"
  },
  "Subaru Impreza 1.6i Lineartronic Executive (2018-2019)": {
   "ground_clearance_mm": 130,
@@ -102,7 +102,7 @@
  },
  "Peugeot 508 GT PureTech 225 S&amp;S EAT8 (2018-2019)": {
   "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (2019 508 GT: CarExpert AU/NZ · drom.ru 140mm)"
  },
  "Toyota Corolla Hybrid 200 GR Sport (2022)": {
   "ground_clearance_mm": 135,
@@ -317,8 +317,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Audi A1 Sportback S line 30 TFSI S tronic 7 vel. (2018-2020)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 136,
+  "gc_source": "estimate (2019 A1 Sportback 30 TFSI: CarsGuide 136mm)"
  },
  "BMW 420d Gran Coupé Aut. (2017-2018)": {
   "ground_clearance_mm": 130,
@@ -334,19 +334,19 @@
  },
  "Tesla Model 3 Tracción integral Gran autonomía (2018-2020)": {
   "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (부분변경 전 Model 3: CarExpert · cars-data · ArenaEV 140mm)"
  },
  "BMW 320d Gran Turismo Aut. (2016-2018)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 165,
+  "gc_source": "verified (BMW 보도자료 320d Gran Turismo 165mm)"
  },
  "Volkswagen Arteon Elegance 2.0 TDI 4MOTION 176 kW (240 CV) DSG 7 vel. (2017-2018)": {
   "ground_clearance_mm": 140,
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "BMW 520d Berlina Aut. (2016-2018)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 144,
+  "gc_source": "estimate (G30 520d 2017: auto-data · automoli 144mm, motorspec 145mm)"
  },
  "Toyota Camry Electric Hybrid Luxury (2021-2025)": {
   "ground_clearance_mm": 145,
@@ -373,8 +373,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "BMW 330i xDrive Touring (2019-2022)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 135,
+  "gc_source": "verified (BMW 2019 보도자료 330i xDrive Touring 135mm)"
  },
  "BMW i4 eDrive40 Gran Coupé (2021-2024)": {
   "ground_clearance_mm": 125,
@@ -425,8 +425,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Volkswagen Polo Life 1.0 TSI 70 kW (95 CV) DSG 7 vel. (2021-2024)": {
-  "ground_clearance_mm": 142,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 147,
+  "gc_source": "estimate (2021 부분변경 Polo 1.0 TSI: auto-data 147mm)"
  },
  "SEAT Ibiza 1.0 TSI 81 kW (110 CV) Xcellence Plus (2021-2022)": {
   "ground_clearance_mm": 140,
@@ -577,8 +577,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Renault 5 E-Tech iconic cinq 110 kW (150 CV) 52 kWh (2024)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 145,
+  "gc_source": "estimate (2024 R5 E-Tech: Autotijd · cars-data · vehiclesizes 145mm)"
  },
  "Nissan Micra Tekna Long Range 52 kWh (2025)": {
   "ground_clearance_mm": 140,
@@ -637,8 +637,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Fiat 124 Spider Lusso 103 kW (140 CV) (2016-2019)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 124,
+  "gc_source": "estimate (2016–19 124 Spider: Autofiles 124mm)"
  },
  "Renault Scenic Edition One Energy dCi 96 kW (130 CV) (2016-2018)": {
   "ground_clearance_mm": 170,
@@ -657,8 +657,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "BMW i3s 94Ah (2017-2019)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 131,
+  "gc_source": "verified (BMW i3s 기술 자료 131mm, auto-data 131mm)"
  },
  "Tesla Model S Plaid (2021-2025)": {
   "ground_clearance_mm": 125,
@@ -725,8 +725,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "MINI Cooper S 5 puertas (2014-2017)": {
-  "ground_clearance_mm": 140,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 146,
+  "gc_source": "verified (F55 5도어: MINI 2016-03 보도자료 146mm, CarExpert 2015 Cooper S 146mm)"
  },
  "Ford Fiesta 5p ST 1.5 EcoBoost 147 kW (200 CV) (2018-2021)": {
   "ground_clearance_mm": 125,
@@ -749,8 +749,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)": {
-  "ground_clearance_mm": 172,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 184,
+  "gc_source": "verified (Kia 스페인 보도자료: Tech·Emotion 트림 184mm, Concept·Drive 172mm)"
  },
  "Honda Civic Type R 2.0 VTEC Turbo (2017-2018)": {
   "ground_clearance_mm": 125,
