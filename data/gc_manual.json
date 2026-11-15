@@ -733,8 +733,8 @@
   "gc_source": "verified (Ford 유럽 Fiesta ST 기술 제원 126mm(빈 차))"
  },
  "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop &amp; i-Eloop Zenith (2018-2022)": {
-  "ground_clearance_mm": 141,
-  "gc_source": "estimate (2018–22 RF 2.0: cars-data 141mm, Autotijd · auto-data 135mm / Mazda NZ 브로셔 적재 135mm · 빈 차 150mm)"
+  "ground_clearance_mm": 150,
+  "gc_source": "verified (Mazda NZ 브로셔 빈 차 150mm, 적재 135mm / cars-data 141mm, Autotijd 135mm)"
  },
  "Audi A6 50 TDI quattro tiptronic (2018-2021)": {
   "ground_clearance_mm": 130,

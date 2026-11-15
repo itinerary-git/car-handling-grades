@@ -147,16 +147,6 @@
      "gc": 0
     },
     {
-     "name": "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop & i-Eloop Zenith (2018-2022)",
-     "moose_kmh": 80,
-     "wheelbase_mm": 2310,
-     "ground_clearance_mm": 141,
-     "gc_source": "estimate (2018–22 RF 2.0: cars-data 141mm, Autotijd · auto-data 135mm / Mazda NZ 브로셔 적재 135mm · 빈 차 150mm)",
-     "km77": "https://www.km77.com/coches/mazda/mx-5/2019/rf/zenith/mx-5-rf-20-skyactiv-g-20-135-kw-184-cv-i-stop-i-eloop-zenith/mediciones-propias",
-     "wb": 0,
-     "gc": 0
-    },
-    {
      "name": "Audi A1 Sportback S line 30 TFSI S tronic 7 vel. (2018-2020)",
      "moose_kmh": 79,
      "wheelbase_mm": 2563,
@@ -475,6 +465,16 @@
      "ground_clearance_mm": 152,
      "gc_source": "km77",
      "km77": "https://www.km77.com/coches/ford/puma/2020/estandar/st/puma-st/mediciones-propias",
+     "wb": 0,
+     "gc": 1
+    },
+    {
+     "name": "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop & i-Eloop Zenith (2018-2022)",
+     "moose_kmh": 80,
+     "wheelbase_mm": 2310,
+     "ground_clearance_mm": 150,
+     "gc_source": "verified (Mazda NZ 브로셔 빈 차 150mm, 적재 135mm / cars-data 141mm, Autotijd 135mm)",
+     "km77": "https://www.km77.com/coches/mazda/mx-5/2019/rf/zenith/mx-5-rf-20-skyactiv-g-20-135-kw-184-cv-i-stop-i-eloop-zenith/mediciones-propias",
      "wb": 0,
      "gc": 1
     },
