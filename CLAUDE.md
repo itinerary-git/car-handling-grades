@@ -25,7 +25,7 @@
    그다음 `node scripts/autoview_list.mjs`(새 오토뷰 영상), `node scripts/autoview_sync.mjs`(사이트에 입력한 등급 ↔ `data/autoview_ratings.json`), `node scripts/input_sync.mjs`(사이트에 입력한 Quattroruote·Teknikens 속도 ↔ `data/qr_ratings.json`·`data/tv_ratings.json`)를 돌린다. 클아가 로컬 파일에 값을 넣었으면 빌드 전에 `input_sync.mjs`로 사이트에도 올린다.
 2. `data/pending_review.md`를 읽고 처리:
    - 78km/h 이상 새 차 중 지상고가 없는 차 → `data/gc_manual.json`에 값 추가(경계값이면 검색으로 검증).
-   - 새 Quattroruote 영상 → 사용자에게 알려 `/quattroruote`에서 속도 입력. 설명이 뚜렷하면 `data/qr_expected.json`(호박색 점선 예상) 후보로도 검토하되, 측정값이 들어오면 예상보다 측정값을 우선.
+   - 새 Quattroruote 영상 → 사용자에게 알려 `/quattroruote`에서 속도 입력. 설명이 뚜렷하면 `data/qr_expected.json`(호박색 점선 예상) 후보로도 검토하되, 측정값이 들어오면 예상보다 측정값을 우선(같은 영상에 측정값이 있으면 예상 항목은 화면에 표시하지 않음, `build_page.mjs`, 사용자 지시 2026-11-15).
    - 빌드 출력 `quattroruote: no specs …`(또는 pending의 "제원이 없는 차")에 나온 영상은 `data/qr_cars.json`에 제원을 넣는다(KM77 제원 우선, 경계 ±10mm는 검색으로 검증).
    - 새 1위가 생긴 등급 → 오토뷰 / Quattroruote 비교 평가를 검색해 `data/peer_mentions.json` 갱신.
    - 오토뷰: 빌드 출력의 `autoview: no specs …`에 나온 차는 `data/autoview_cars.json`에 `km77`(같은 세대 KM77 차 이름) 또는 `wb`/`gc`/`src`를 넣는다. 같은 모델·세대를 KM77이 측정했으면 `anchor: true`로 기준차가 된다.

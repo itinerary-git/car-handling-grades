@@ -17,6 +17,7 @@ const av = compareAutoview(src.grid, MIN_KMH);
 // Quattroruote stability-test speeds read from the video screens (owner-picked cars), placed by the car's own specs
 const qrData = loadQr();
 const qrMeasured = qrData.measured;
+const qrMeasuredIds = new Set(qrMeasured.map((q) => q.id));
 const QR_MIN = { dry: 96, wet: 72 }; // user rule 2026-11-15: both speeds must reach these to be shown
 // Teknikens Värld moose-test speeds (highest pass without hitting a cone), placed by the car's own specs
 const tvData = loadTv();
@@ -75,7 +76,8 @@ const cells = grid.map((row, i) =>
     return {
       n: c.length,
       mentions: mentions.filter((m) => m.cell === `W${i + 1}G${j + 1}`),
-      qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}`),
+      // user rule 2026-11-15: a video with measured speeds shows only the measured values, not the expected (amber dashed) note
+      qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}` && !qrMeasuredIds.has((q.url.match(/v=([\w-]{11})/) || [])[1])),
       av: av.cells[i][j],
       qm: qrMeasured
         .filter((q) => q.dry_kmh >= QR_MIN.dry && q.wet_kmh >= QR_MIN.wet && wbBin(q.wb) === i && gcBin(q.gc) === j)
