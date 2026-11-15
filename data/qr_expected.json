@@ -18,15 +18,5 @@
   "basis": "Quattroruote 영상 설명은 차체가 평평하고 반응이 빠르며 시험을 무난히 통과했다고 했어요. 다만 직선 회피 속도는 높지만 최상위는 아니라고 적었어요. KM77에서 비슷한 성격의 차는 911 Turbo S 82km/h, AMG GT R 81km/h예요.",
   "specs": "WB 2,779mm (KM77 제원) · GC 150mm 미만(추정) · KM77 무스 테스트 값 없음",
   "url": "https://www.youtube.com/watch?v=kkeAebcX9BM"
- },
- {
-  "cell": "W3G3",
-  "chip": false,
-  "car": "Renault Rafale E-Tech Esprit Alpine",
-  "relation": "교차 확인",
-  "confidence": "-",
-  "basis": "KM77 1위(79km/h) 차량을 Quattroruote도 시험했어요. 뒷바퀴 조향과 높은 접지 한계 덕분에 회피 기동에서 제어가 좋다는 평가예요. 직선 이중 차선 변경에서는 ESP 개입이 약해 수정 조향이 많았다고 했어요.",
-  "specs": "KM77 79km/h · 두 시험 모두 양호",
-  "url": "https://www.youtube.com/watch?v=us5Qn7sQsbY"
  }
 ]
