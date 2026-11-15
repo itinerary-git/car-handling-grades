@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { compareAutoview } from './autoview_compare.mjs';
 import { expandVideos, LEVELS } from './autoview_lib.mjs';
 import { loadQr } from './qr_lib.mjs';
+import { loadTv } from './tv_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const MIN_KMH = 78; // user rule: drop cars at or below 77 km/h
@@ -16,6 +17,8 @@ const av = compareAutoview(src.grid, MIN_KMH);
 // Quattroruote stability-test speeds read from the video screens (owner-picked cars), placed by the car's own specs
 const qrData = loadQr();
 const qrMeasured = qrData.measured;
+// Teknikens Värld moose-test speeds (highest pass without hitting a cone), placed by the car's own specs
+const tvData = loadTv();
 const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
 const gcBin = (g) => (g < 150 ? 0 : g < 175 ? 1 : g < 200 ? 2 : 3);
 
@@ -77,6 +80,12 @@ const cells = grid.map((row, i) =>
         .filter((q, _, all) => !all.some((o) => o.dry_kmh > q.dry_kmh && o.wet_kmh > q.wet_kmh)) // user rule: drop a car when another car in the same cell beats both speeds
         .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)
         .map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id })),
+      // user rule: only the fastest Teknikens Värld car(s) of the cell
+      tv: (() => {
+        const inCell = tvData.measured.filter((q) => wbBin(q.wb) === i && gcBin(q.gc) === j);
+        const best = Math.max(0, ...inCell.map((q) => q.kmh));
+        return inCell.filter((q) => q.kmh === best).map((q) => ({ ...q, est: q.gc_source === 'km77' ? '' : q.gc_source.startsWith('verified') ? 'v' : 'e', url: 'https://www.youtube.com/watch?v=' + q.id }));
+      })(),
       winners: c.filter((r) => r.moose_kmh === top).map((r) => short(r.name)),
       top: top ?? null,
       list: c.slice(0, 6).map((r) => ({
@@ -110,6 +119,7 @@ const changelog = rdj('data/changelog.json', []).slice(0, 12).map((e) => {
   if (e.qrAdded.length) parts.push(`Quattroruote 예상 추가: ${e.qrAdded.map(escH).join(', ')}`);
   if (e.peersAdded.length) parts.push(`비교 평가 추가: ${e.peersAdded.map(escH).join(', ')}`);
   if (e.qmAdded?.length) parts.push(`Quattroruote 측정값 추가: ${e.qmAdded.map(escH).join(', ')}`);
+  if (e.tmAdded?.length) parts.push(`Teknikens Värld 측정값 추가 ${e.tmAdded.length}대 (칸마다 가장 빠른 차만 표시)`);
   if (e.avAdded?.length) parts.push(`오토뷰 비교 추가: ${e.avAdded.map(escH).join(', ')}`);
   return `<li><span class="cl-date">${e.date}</span> ${parts.join(' · ') || '첫 공개'}</li>`;
 }).join('');
@@ -157,4 +167,6 @@ const blue = av.cells.flat(2).filter((x) => x.status === 'blue');
 console.log('cars', total, 'filled cells', filled, '| autoview rated', av.rated, 'blue', blue.length, blue.length ? '(' + blue.map((x) => x.car).join(', ') + ')' : '');
 if (av.unmapped.length) console.log('autoview: no specs in data/autoview_cars.json for', av.unmapped.join(', '));
 console.log('quattroruote speeds shown', cells.flat().reduce((n, c) => n + c.qm.length, 0), 'of', qrMeasured.length);
+console.log('teknikens speeds shown', cells.flat().reduce((n, c) => n + c.tv.length, 0), 'of', tvData.measured.length);
+if (tvData.unmapped.length) console.log('teknikens: no specs in data/tv_cars.json for', tvData.unmapped.join(', '));
 if (qrData.unmapped.length) console.log('quattroruote: no specs in data/qr_cars.json for', qrData.unmapped.join(', '));

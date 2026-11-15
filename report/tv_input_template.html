@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Teknikens Värld 속도 입력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F3F5F4; --surface:#FFFFFF; --ink:#16201C; --muted:#56645E; --line:#D3DCD8;
+  --accent:#0E7A68; --accent-soft:#DDEFEA; --warn:#D9520B; --tv:#B4234A; --tv-soft:#FBE4EA;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+    --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --tv:#FF8FA8; --tv-soft:#3A1820;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --surface:#17201D; --ink:#E4EBE8; --muted:#94A39D; --line:#2B3632;
+  --accent:#35BFA3; --accent-soft:#16312B; --warn:#FF7B3A; --tv:#FF8FA8; --tv-soft:#3A1820;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.55;padding-inline:16px;padding-block:24px 56px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:20px}
+.back{font-family:var(--mono);font-size:12px;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.05;margin:4px 0 0}
+.lede{color:var(--muted);max-width:72ch;margin:8px 0 0}
+.add{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.add b{font-size:13.5px}
+.add input{flex:1 1 260px;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}
+.add button{padding:7px 14px;border:0;border-radius:6px;background:var(--tv);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.add .err{flex-basis:100%;margin:0;font-size:12.5px;color:var(--warn);min-height:1em}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);padding-block:10px;z-index:2;border-bottom:1px solid var(--line)}
+.bar input[type=search]{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);font:inherit}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.status{font-family:var(--mono);font-size:12px}
+ul.list{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.row.sub{margin-left:24px}
+.row.done{border-color:var(--tv);box-shadow:inset 3px 0 0 var(--tv)}
+.row .t{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.row input.car{width:100%;font:inherit;font-weight:600;padding:4px 8px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink)}
+.row input.car:hover,.row input.car:focus{border-color:var(--line);background:var(--paper)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.meta a{color:var(--tv);text-underline-offset:2px}
+.tag{font-family:var(--body);font-size:11.5px;padding:1px 7px;border-radius:4px;font-weight:600}
+.tag.ok{background:var(--accent-soft);color:var(--accent)}
+.tag.need{background:var(--tv-soft);color:var(--tv)}
+.mini{font-family:var(--body);font-size:12px;padding:2px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);cursor:pointer}
+.mini.del{color:var(--warn)}
+.pick{display:grid;grid-template-columns:auto auto auto;gap:6px 8px;align-items:center;font-size:12.5px}
+.pick label{color:var(--muted);text-align:right}
+.pick input{width:5.5em;font:inherit;font-family:var(--mono);font-size:14px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);text-align:right}
+.pick input:invalid{border-color:var(--warn)}
+.pick .u{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.saved{grid-column:1/-1;font-family:var(--mono);font-size:11px;color:var(--tv);min-height:1em}
+@media (max-width:640px){.row{grid-template-columns:1fr}.row.sub{margin-left:12px}.pick label{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="/">← 무스 테스트 등급표</a>
+    <h1>Teknikens Värld 속도 입력</h1>
+    <p class="lede">영상에서 <b>콘을 쓰러뜨리지 않고 통과한 가장 높은 속도</b>(Achieved max speed)를 km/h로 적어 주세요. 칸에서 벗어나면 바로 저장돼요. 여러 차를 비교하는 영상은 <b>차 추가</b>로 줄을 늘려 차마다 넣어 주세요. 제원이 없는 차는 클아가 갱신할 때 채우고, 같은 등급 칸에서는 가장 빠른 차만 등급표에 나와요. 이 페이지는 내 PC(localhost)에서만 열려요.</p>
+  </header>
+
+  <form class="add" id="addForm">
+    <b>목록에 없는 영상 추가</b>
+    <input id="addUrl" placeholder="YouTube 주소 또는 영상 ID" aria-label="YouTube 주소 또는 영상 ID">
+    <button>추가</button>
+    <p class="err" id="addErr"></p>
+  </form>
+
+  <div>
+    <div class="bar">
+      <input type="search" id="q" placeholder="차 이름으로 찾기 (예: Golf, RAV4)" aria-label="차 이름으로 찾기">
+      <label><input type="checkbox" id="onlyTodo"> 미입력만</label>
+      <span class="status" id="status"></span>
+      <span class="count" id="count"></span>
+    </div>
+    <ul class="list" id="list"></ul>
+  </div>
+</div>
+
+<script>
+const ROWS = /*DATA*/[];
+const ratings = /*RATINGS*/{};
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+const done = (r) => r && r.kmh != null;
+
+function count() {
+  const n = ROWS.filter((v) => done(ratings[v.key])).length;
+  $('#count').textContent = `${$('#list').children.length}개 표시 · 입력 완료 ${n}/${ROWS.length}`;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), onlyTodo = $('#onlyTodo').checked;
+  const rows = ROWS.filter((v) => (!q || `${v.car} ${v.title} ${ratings[v.key]?.car || ''}`.toLowerCase().includes(q)) && (!onlyTodo || !done(ratings[v.key])));
+  $('#list').innerHTML = rows.map((v) => {
+    const r = ratings[v.key] || {}, sub = v.key.includes('.');
+    return `<li class="row${done(r) ? ' done' : ''}${sub ? ' sub' : ''}" data-key="${v.key}">
+      <div><input class="car" data-k="car" value="${esc(r.car || v.car)}" placeholder="차 이름" aria-label="차 이름">
+        <div class="t">${sub ? '같은 영상의 ' + v.key.split('.')[1] + '번째 차' : esc(v.title || '제목은 다음 갱신 때 채워져요')}</div>
+        <div class="meta"><span>${v.date || ''}</span><a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" rel="noopener">영상</a>${v.spec ? '<span class="tag ok">제원 있음</span>' : '<span class="tag need">제원은 갱신 때 추가</span>'}${r.by === 'claude' ? '<span>클아가 읽은 값</span>' : ''}${v.stated ? `<span>영상 설명: ${v.stated}km/h</span>` : ''}${sub ? '<button type="button" class="mini del" data-act="del">이 줄 삭제</button>' : '<button type="button" class="mini" data-act="more">차 추가</button>'}</div></div>
+      <div class="pick">
+        <label for="k-${v.key}">콘 안 쓰러뜨린 최고 속도</label><input id="k-${v.key}" data-k="kmh" inputmode="numeric" pattern="[0-9]{2,3}" value="${r.kmh ?? ''}"><span class="u">km/h</span>
+        <span class="saved" id="s-${v.key}">${r.updatedAt ? '저장됨 ' + r.updatedAt.slice(0, 10) : ''}</span>
+      </div></li>`;
+  }).join('');
+  count();
+}
+
+async function save(key, patch) {
+  const note = document.getElementById('s-' + key);
+  if (note) note.textContent = '저장 중…';
+  try {
+    const res = await fetch('/api/tv', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ key, ...patch }) });
+    const out = await res.json();
+    if (!res.ok) throw new Error(out.error || res.status);
+    if (patch.remove) delete ratings[key]; else ratings[key] = out.saved;
+    if (note) note.textContent = '저장됨';
+    document.querySelector(`.row[data-key="${key}"]`)?.classList.toggle('done', done(out.saved));
+    count();
+    return true;
+  } catch (e) {
+    if (note) note.textContent = '저장하지 못했어요 (30–150 사이 숫자만)';
+    return false;
+  }
+}
+
+$('#list').addEventListener('change', (e) => {
+  const inp = e.target.closest('input[data-k]');
+  if (!inp) return;
+  save(inp.closest('.row').dataset.key, { [inp.dataset.k]: inp.value.trim() });
+});
+$('#list').addEventListener('click', async (e) => {
+  const b = e.target.closest('button[data-act]');
+  if (!b) return;
+  const key = b.closest('.row').dataset.key, id = key.slice(0, 11);
+  if (b.dataset.act === 'more') {
+    let n = 2;
+    while (ROWS.some((v) => v.key === `${id}.${n}`)) n++;
+    if (n > 9) return;
+    const k = `${id}.${n}`, base = ROWS.find((v) => v.key === id);
+    if (!(await save(k, { car: '' }))) return;
+    let at = ROWS.findIndex((v) => v.key === id);
+    while (ROWS[at + 1]?.key.startsWith(id + '.')) at++;
+    ROWS.splice(at + 1, 0, { key: k, id, title: '', date: base?.date || '', stated: null, car: '', spec: false });
+    render();
+    document.querySelector(`.row[data-key="${k}"] input.car`)?.focus();
+  } else if (b.dataset.act === 'del') {
+    if (!(await save(key, { remove: true }))) return;
+    ROWS.splice(ROWS.findIndex((v) => v.key === key), 1);
+    render();
+  }
+});
+['#q', '#onlyTodo'].forEach((s) => $(s).addEventListener('input', render));
+
+$('#addForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const raw = $('#addUrl').value.trim();
+  const id = (raw.match(/(?:v=|youtu\.be\/|shorts\/)([\w-]{11})/) || raw.match(/^([\w-]{11})$/) || [])[1];
+  if (!id) { $('#addErr').textContent = '영상 주소나 11자리 영상 ID를 넣어 주세요'; return; }
+  $('#addErr').textContent = '';
+  if (!ROWS.some((v) => v.key === id)) {
+    if (!(await save(id, { car: '' }))) { $('#addErr').textContent = '추가하지 못했어요'; return; }
+    ROWS.unshift({ key: id, id, title: '', date: '', stated: null, car: '', spec: false });
+  }
+  $('#addUrl').value = ''; $('#q').value = ''; $('#onlyTodo').checked = false;
+  render();
+  document.querySelector(`.row[data-key="${id}"] input.car`)?.focus();
+});
+
+$('#status').textContent = '로컬 저장 (data/tv_ratings.json)';
+render();
+</script>
+</body>
+</html>

@@ -6,6 +6,8 @@ import fs from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { collectQrVideos } from './qr_list.mjs';
 import { loadQr } from './qr_lib.mjs';
+import { collectTvVideos } from './tv_list.mjs';
+import { loadTv } from './tv_lib.mjs';
 
 const root = new URL('../', import.meta.url);
 const P = (p) => new URL(p, root);
@@ -107,6 +109,11 @@ const { unmapped: qrNoSpec } = loadQr();
 const qrTodo = Object.entries(loadQr().ratings).filter(([, r]) => r.dry == null || r.wet == null).map(([id]) => id);
 log('new Quattroruote videos', newVideos.length, '| entered speeds without specs', qrNoSpec.length);
 
+// 5b) Teknikens Värld moose tests: public playlist (scripts/tv_list.mjs), only videos not seen before
+const newTv = await collectTvVideos(state);
+const { unmapped: tvNoSpec } = loadTv();
+log('new Teknikens Värld videos', newTv.length, '| entered speeds without specs', tvNoSpec.length);
+
 // 6) review file for Claude / the user
 const md = [
   `# 갱신 검토 목록 (${since} 이후)`,
@@ -127,6 +134,14 @@ const md = [
   ...qrNoSpec.map((x) => `- ${x}`),
   qrTodo.length ? `(속도 하나만 들어간 영상 ${qrTodo.length}개: ${qrTodo.join(', ')})` : '',
   '',
+  `## Teknikens Värld 새 무스 테스트 영상 (${newTv.length}개)`,
+  '설명에 "Achieved max speed"가 있으면 클아가 `data/tv_ratings.json`에 넣고(by: claude), 없으면 Chrome으로 영상을 확인하거나 사용자에게 알려 http://localhost:5177/teknikens 에서 콘을 쓰러뜨리지 않은 최고 속도를 넣게 한다.',
+  ...newTv.map((v) => `- ${v.date.slice(0, 10)} · ${v.title} · https://www.youtube.com/watch?v=${v.id}\n  > ${v.desc.replace(/\s+/g, ' ').slice(0, 300)}`),
+  '',
+  `## Teknikens Värld 속도는 입력됐지만 제원이 없는 차 (${tvNoSpec.length}대)`,
+  '`data/tv_cars.json`에 `{"<key>": {"car", "short", "wb", "gc", "gc_source", "km77"}}` 추가 (KM77 제원 우선, 경계값은 검색으로 검증).',
+  ...tvNoSpec.map((x) => `- ${x}`),
+  '',
   `## KM77 매거진 새 글 (${hints.length}개, 참고)`,
   ...hints.map((h) => `- ${h.date} · ${h.title} · ${h.link}${h.carPages.length ? ' · 차량 페이지 ' + h.carPages.join(', ') : ''}`),
   '',
@@ -139,6 +154,7 @@ state.pending = {
   collectedAt: new Date().toISOString().slice(0, 10),
   km77: addedKm77.map((c) => c.version),
   qr: newVideos.map((v) => v.title),
+  tv: newTv.map((v) => v.title),
 };
 wr('data/state.json', state);
 log('wrote data/pending_review.md');

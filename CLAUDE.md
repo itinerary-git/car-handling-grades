@@ -46,6 +46,12 @@
 - 로컬: `node scripts/serve.mjs` → http://localhost:5177/autoview , 입력값은 `data/autoview_ratings.json`에 바로 저장(키 불필요).
 - 두 저장소는 `node scripts/autoview_sync.mjs`로 맞춘다(나중에 고친 값이 이김). 예전 claude.ai 입력 페이지(artifact 2nAeipTFhLagQpdZTRMdtL)의 값 20건은 2026-10-06에 옮겼고 더 쓰지 않는다.
 
+## Teknikens Värld 입력 (사용자 전용, 내 PC에서만)
+- 출처: 공개 YouTube 재생목록 `PLubnNYiL3c4A-eHxarmLZHfszMp7lXaxC`("Moose test videos", `state.tv.playlist`). 기록은 **콘을 쓰러뜨리지 않은 최고 속도** 하나(km/h). 2023년 이후 "Moose test of the week" 영상은 설명의 `Achieved max speed`를 그대로 쓰고(`by: claude`), 그 전 비교 영상은 속도가 말로만 나와 화면 프레임으로 읽을 수 없어서 사용자가 넣는다. Chrome으로 영상을 볼 때 광고가 나오면 건너뛰기 버튼이 뜰 때 누른다(사용자 지시).
+- `node scripts/serve.mjs` → http://localhost:5177/teknikens (`report/tv_input_template.html`, 배포 안 됨). 저장 `/api/tv` → `data/tv_ratings.json` `{ "<videoId>[.<n>]": { kmh, car?, by, updatedAt } }`. 비교 영상은 "차 추가"로 `<videoId>.2` 같은 키를 만든다.
+- 제원 `data/tv_cars.json`(Claude가 채움, 형식은 `qr_cars.json`과 같고 키는 위 키) → `scripts/tv_lib.mjs` → `build_page.mjs`가 차 자신의 제원 칸에 넣고 **칸마다 가장 빠른 차만**(동률은 모두) 분홍색 칩 `TV 이름 속도`와 칸 상세로 보여 준다(사용자 지시 2026-11-15: 한 등급에서 속도가 낮은 차는 무시). 순위·색에는 쓰지 않는다.
+- 새 영상: `scripts/tv_list.mjs`(update.mjs가 호출)가 재생목록에서 `state.tv.seenVideoIds`에 없는 영상을 `data/tv_meta.jsonl`에 넣고 pending_review.md에 적는다. 갱신 때 Claude가 설명의 속도를 넣고 제원을 채운다.
+
 ## Quattroruote 입력 (사용자 전용, 내 PC에서만)
 - `node scripts/serve.mjs` → http://localhost:5177/quattroruote . 페이지는 `report/qr_input_template.html`을 serve.mjs가 요청 때 그려서 **배포되지 않는다**(public/에 없음). 저장은 `/api/qr`(로컬) → `data/qr_ratings.json`. 메인 페이지의 "Quattroruote 속도 입력" 버튼은 localhost에서만 보인다.
 - 영상 목록은 `data/qr_stab_meta.jsonl` + 입력 페이지에서 주소로 추가한 영상(제목은 다음 갱신 때 `yt_meta.mjs`로 채움).
@@ -54,10 +60,11 @@
 ## 수집 주의
 - KM77: robots.txt가 막은 `/buscador/*`, `/coches/mediciones-propias/` 목록 경로는 쓰지 않는다. 차량별 페이지만, 요청 간 250–400ms 간격.
 - Git Bash에서 `/coches/...` 인자를 넘길 땐 `MSYS_NO_PATHCONV=1` (update.mjs가 알아서 설정).
-- Teknikens Värld는 약관상 데이터 수집 금지. Consumer Reports / Quattroruote / 오토뷰 / MotorTrend 사이트는 AI 크롤러를 막으므로 직접 가져오지 않고 검색 결과 요약만 쓴다. YouTube는 `/watch` 페이지 메타데이터(제목·설명)만, 자막(`/timedtext`)은 쓰지 않는다.
+- Teknikens Värld는 약관상 데이터 수집 금지로 적어 두었지만, 2026-11-15 사용자가 이를 알고도 예외로 YouTube 재생목록 "Moose test videos" 영상 결과를 등록하라고 지시했다(아래 "Teknikens Värld 입력"). teknikensvarld.se 사이트 자체는 여전히 수집하지 않는다. Consumer Reports / Quattroruote / 오토뷰 / MotorTrend 사이트는 AI 크롤러를 막으므로 직접 가져오지 않고 검색 결과 요약만 쓴다. YouTube는 `/watch` 페이지 메타데이터(제목·설명)만, 자막(`/timedtext`)은 쓰지 않는다.
 
 ## 파일
 - `data/km77_measurements.json` 수집 원본, `data/km77_cars.json` 제원 추가, `data/km77_dedup.json` 버전별 1건, `data/grades.json` 등급 계산 결과
 - `data/state.json` 증분 갱신 상태, `data/changelog.json` 갱신 기록, `data/published.json` 직전 공개 스냅샷
+- `data/tv_meta.jsonl` Teknikens Värld 영상 메타, `data/tv_ratings.json` 속도, `data/tv_cars.json` 제원, `scripts/tv_lib.mjs` 합치기, `scripts/tv_list.mjs` 새 영상 찾기
 - `data/qr_stab_meta.jsonl` Quattroruote 시험 영상 메타, `data/qr_ratings.json` 입력한 속도, `data/qr_cars.json` 그 차 제원, `scripts/qr_lib.mjs` 합치기, `scripts/qr_list.mjs` 새 영상 찾기
 - `report/template.html` 페이지 템플릿 → `public/index.html`(Vercel), `report/index.html`(claude.ai Artifact용)

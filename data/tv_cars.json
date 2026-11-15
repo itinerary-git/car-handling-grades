@@ -1,0 +1,171 @@
+{
+ "wKPrvG35RPk": {
+  "car": "Toyota RAV4 Plug-in Hybrid AWD-i (5세대, 2021)",
+  "short": "Toyota RAV4 PHEV",
+  "wb": 2690,
+  "gc": 190,
+  "gc_source": "verified (Toyota UK 기술 제원 190mm)",
+  "km77": "KM77: 같은 세대 RAV4 Hybrid 220H 4x2 71km/h"
+ },
+ "TZ2MYFInpMI": {
+  "car": "Tesla Model 3 Standard Range Plus (2021)",
+  "short": "Tesla Model 3 SR+",
+  "wb": 2875,
+  "gc": 140,
+  "gc_source": "estimate (KM77 Model 3 지상고 추정 140mm)",
+  "km77": "KM77: Long Range AWD (2018-2020) 83km/h"
+ },
+ "2PTOBc883zg": {
+  "car": "Ford Mustang Mach-E (2021)",
+  "short": "Ford Mustang Mach-E",
+  "wb": 2984,
+  "gc": 147,
+  "gc_source": "km77",
+  "km77": "KM77: 같은 세대 Premium AWD Extended Range 71km/h"
+ },
+ "RtgJU5nr1_0": {
+  "car": "Maxus Euniq 5 (2023)",
+  "short": "Maxus Euniq 5",
+  "wb": 2800,
+  "gc": 130,
+  "gc_source": "estimate (autocango BEV 130mm, auto-data PHEV 145mm)",
+  "km77": ""
+ },
+ "glfCfD3dEHA": {
+  "car": "BMW M3 Competition RWD (G80, 2023)",
+  "short": "BMW M3 Competition",
+  "wb": 2857,
+  "gc": 120,
+  "gc_source": "estimate (제조사 제원 약 120mm)",
+  "km77": ""
+ },
+ "gz76gNfNx1A": {
+  "car": "Subaru Outback 2.5 4WD Touring (6세대, 2023)",
+  "short": "Subaru Outback",
+  "wb": 2745,
+  "gc": 213,
+  "gc_source": "km77",
+  "km77": ""
+ },
+ "i_6km4b9VSk": {
+  "car": "Peugeot 208 Active PureTech 75 (2세대, 2023)",
+  "short": "Peugeot 208",
+  "wb": 2540,
+  "gc": 140,
+  "gc_source": "estimate (KM77 같은 세대 추정 140mm)",
+  "km77": "KM77: 같은 세대 e-208 GT 76km/h · 208 GT Hybrid 73km/h"
+ },
+ "O_CLAD4UEoM": {
+  "car": "MG5 Electric Luxury (Michelin 타이어, 2023)",
+  "short": "MG5 Electric",
+  "wb": 2665,
+  "gc": 115,
+  "gc_source": "verified (MG5 스웨덴 브로슈어 115mm)",
+  "km77": ""
+ },
+ "KQ8S0YgDQQs": {
+  "car": "MG5 Electric (기본 Maxxis 타이어, 2023)",
+  "short": "MG5 Electric (Maxxis)",
+  "wb": 2665,
+  "gc": 115,
+  "gc_source": "verified (MG5 스웨덴 브로슈어 115mm)",
+  "km77": ""
+ },
+ "MxTAK8JLEfM": {
+  "car": "Porsche 718 Boxster 25 Years (2023)",
+  "short": "Porsche 718 Boxster",
+  "wb": 2475,
+  "gc": 110,
+  "gc_source": "estimate (KM77 718 Boxster S 추정 110mm)",
+  "km77": "KM77: 718 Boxster S PDK (2016-2018) 80km/h"
+ },
+ "ksLEYoiMhwo": {
+  "car": "Volvo V60 B4 Diesel Inscription (2세대, 2023)",
+  "short": "Volvo V60",
+  "wb": 2872,
+  "gc": 136,
+  "gc_source": "verified (Volvo 지원 문서 136mm)",
+  "km77": ""
+ },
+ "XLj9Ofb1zq4": {
+  "car": "Audi A4 allroad 40 TDI quattro (B9, 2023)",
+  "short": "Audi A4 allroad",
+  "wb": 2818,
+  "gc": 173,
+  "gc_source": "estimate (CarExpert 173mm, Audi: Avant보다 34–35mm 높음)",
+  "km77": "KM77: 같은 세대 45 TFSI 75km/h"
+ },
+ "sMeh_OZTkCw": {
+  "car": "Opel Mokka-e Ultimate (2023)",
+  "short": "Opel Mokka-e",
+  "wb": 2557,
+  "gc": 195,
+  "gc_label": "195–200mm",
+  "gc_source": "estimate (cars-data 195mm, EVKX 200mm)",
+  "km77": ""
+ },
+ "3dI3492dugw": {
+  "car": "Volkswagen Golf 1.0 eTSI DSG (8세대, 2023)",
+  "short": "Volkswagen Golf",
+  "wb": 2619,
+  "gc": 136,
+  "gc_source": "estimate (KM77 같은 세대 추정 136mm)",
+  "km77": "KM77: 같은 세대 1.5 eTSI 115 77km/h · Style 1.5 eTSI 69km/h"
+ },
+ "w2EZwDxWfLU": {
+  "car": "Cupra Leon Sportstourer 1.4 TSI e-Hybrid (2023)",
+  "short": "Cupra Leon ST e-Hybrid",
+  "wb": 2686,
+  "gc": 130,
+  "gc_source": "estimate (제조사 제원 약 130mm)",
+  "km77": "KM77: 같은 세대 SEAT León ST 1.5 TSI 70km/h"
+ },
+ "X_6HNeFsTxc": {
+  "car": "Volkswagen ID.4 GTX (2023)",
+  "short": "Volkswagen ID.4 GTX",
+  "wb": 2765,
+  "gc": 163,
+  "gc_source": "verified (VW NZ 제원표 163mm)",
+  "km77": "KM77: 같은 세대 ID.4 Pro Performance 73km/h"
+ },
+ "ba-ng1L3wJU": {
+  "car": "Skoda Octavia Scout 2.0 TDI 200 4x4 (4세대, 2023)",
+  "short": "Skoda Octavia Scout",
+  "wb": 2686,
+  "gc": 163,
+  "gc_source": "verified (Škoda 기술 제원 163mm)",
+  "km77": ""
+ },
+ "CIj246cKIBs": {
+  "car": "DFSK Seres 3 Electric (2023)",
+  "short": "DFSK Seres 3",
+  "wb": 2655,
+  "gc": 180,
+  "gc_source": "estimate (auto-data · EVSpecs 180mm)",
+  "km77": ""
+ },
+ "cS5rB-ATr2M": {
+  "car": "Audi Q4 40 e-tron (2023)",
+  "short": "Audi Q4 e-tron",
+  "wb": 2764,
+  "gc": 180,
+  "gc_source": "km77",
+  "km77": ""
+ },
+ "qJ4OGnj3Nro": {
+  "car": "Ford Puma 1.0 EcoBoost MHEV 125 ST-Line (2023)",
+  "short": "Ford Puma",
+  "wb": 2588,
+  "gc": 152,
+  "gc_source": "km77",
+  "km77": "KM77: 같은 세대 ST-Line X MHEV 155 78km/h"
+ },
+ "93tNSzqlo8M": {
+  "car": "Porsche 718 Cayman GT4 RS Manthey (2024)",
+  "short": "Porsche Cayman GT4 RS Manthey",
+  "wb": 2456,
+  "gc": 100,
+  "gc_source": "estimate (제조사 제원 약 100mm)",
+  "km77": ""
+ }
+}
