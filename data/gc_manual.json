@@ -1,7 +1,7 @@
 {
  "Porsche 911 Carrera 4S Coupé (2018-2020)": {
-  "ground_clearance_mm": 110,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 121,
+  "gc_source": "estimate (992 2019–: CarExpert 911 121mm, Carrera S 123–126mm, Porsche Fairfield 110–112mm)"
  },
  "SEAT León 1.5 TSI 96 KW (130 CV) Start/Stop Xcellence Launch Pack L (2020-2020)": {
   "ground_clearance_mm": 136,
@@ -20,13 +20,13 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Mercedes-Benz AMG GT R (2017-2018)": {
-  "ground_clearance_mm": 100,
-  "gc_source": "manufacturer (estimate, unverified)",
+  "ground_clearance_mm": 95,
+  "gc_source": "estimate (2017 AMG GT R: auto motor und sport · auto-data 95mm)",
   "wheelbase_mm": 2630
  },
  "BMW M2 Competition (2018-2021)": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 118,
+  "gc_source": "verified (BMW 2018-04 보도자료 M2 Competition 118mm)"
  },
  "BMW 116d 5p Aut. (2017-2019)": {
   "ground_clearance_mm": 140,
@@ -57,8 +57,8 @@
   "gc_source": "verified (web search: carsguide, cars-data 150-151)"
  },
  "Honda Civic 5p 1.0 Turbo VTEC Executive (2017-2018)": {
-  "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 129,
+  "gc_source": "estimate (2017 Civic 1.0 VTEC Turbo 해치백: cars-data · auto-data 129mm)"
  },
  "Toyota Corolla 125H Feel! (2019-2020)": {
   "ground_clearance_mm": 135,
@@ -150,15 +150,15 @@
  },
  "Renault Clio Zen Energy dCi 66 kW (90 CV) EDC (2016-2018)": {
   "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (Clio 4세대 부분변경 dCi 90: auto-data · cars-data · carsart 120mm)"
  },
  "Opel Corsa-e Elegance (2019-2020)": {
   "ground_clearance_mm": 135,
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Skoda Fabia 1.0 TSI 70 kW (95 CV) Style (2018-2019)": {
-  "ground_clearance_mm": 136,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 133,
+  "gc_source": "estimate (Fabia 3세대 부분변경 2018–21: CarExpert · vehiclesizes 133mm)"
  },
  "SEAT Ibiza 1.0 TSI 70 kW (95 CV) Start&amp;Stop Style (2017-2021)": {
   "ground_clearance_mm": 140,
@@ -229,12 +229,12 @@
   "gc_source": "verified (steel springs 184; air 159-229)"
  },
  "Porsche 718 Boxster S PDK (2016-2018)": {
-  "ground_clearance_mm": 110,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 131,
+  "gc_source": "estimate (2016 718 Boxster S: CarsGuide 131mm, autoevolution 132mm)"
  },
  "Toyota GT86 Sport (2016-2019)": {
   "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (2017 GT86: CarExpert · CarsGuide 130mm, 북미 124mm)"
  },
  "Toyota GR Supra Performance 3.0 Turbo 250 kW (340 CV) Aut. (2019-2022)": {
   "ground_clearance_mm": 120,
@@ -261,8 +261,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Ford Focus RS 2.3 EcoBoost 257 kW (350 CV) (2015-2019)": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 104,
+  "gc_source": "estimate (2016–18 Focus RS: Autofiles 104mm (117mm 표기도 있음))"
  },
  "Peugeot e-208 GT 100 kW (136 CV) (2019-2021)": {
   "ground_clearance_mm": 140,
@@ -286,7 +286,7 @@
  },
  "BYD Dolphin Comfort (2023-2025)": {
   "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (2023 Dolphin: CarsGuide 130mm, cars-data 120mm)"
  },
  "Honda Civic e:HEV Advance (2022-2025)": {
   "ground_clearance_mm": 130,
@@ -305,8 +305,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "CUPRA León 5p VZ 1.4 e-HYBRID 180 kW (245 CV) DSG (2020-2024)": {
-  "ground_clearance_mm": 135,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 125,
+  "gc_source": "estimate (Leon VZe: CarExpert 125mm, Cupra: 2021-06 생산분부터 차체 25mm 낮춤)"
  },
  "Audi A4 allroad 45 TFSI quattro-ultra 180 kW (245 CV) S tronic (2019-2020)": {
   "ground_clearance_mm": 170,
@@ -385,12 +385,12 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "KIA Stinger 3.3 T-GDI 276 kW (370 CV) GT 4x4 (2017-2018)": {
-  "ground_clearance_mm": 134,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 130,
+  "gc_source": "verified (Kia 호주 MY18 제원표 최저 지상고 130mm, cars-data · auto-data 130mm)"
  },
  "Tesla Model 3 Tracción trasera (2023-2025)": {
   "ground_clearance_mm": 138,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (2024– Highland RWD: cars-data · EVKX · auto-data 138mm)"
  },
  "Volkswagen ID.7 Pro Más 210 kW (286 CV) 77 kWh (2024-2025)": {
   "ground_clearance_mm": 149,
@@ -417,8 +417,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Toyota GR Yaris RZ (2020-2024)": {
-  "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 124,
+  "gc_source": "verified (Toyota 제원표 124mm, Autotijd · CarsGuide · CarExpert 124mm)"
  },
  "Skoda Fabia 1.0 MPI 59 kW (80 CV) Ambition (2021-2023)": {
   "ground_clearance_mm": 143,
@@ -433,8 +433,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Opel Corsa 1.2 Turbo 74 kW (100 CV) GS (2023)": {
-  "ground_clearance_mm": 135,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 140,
+  "gc_source": "estimate (2023 부분변경 Corsa 1.2 Turbo 100: cars-data 140mm)"
  },
  "MG MG3 Hybrid+ Luxury (2024)": {
   "ground_clearance_mm": 150,
@@ -529,8 +529,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Alpine A110 S (2022-2025)": {
-  "ground_clearance_mm": 110,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 126,
+  "gc_source": "estimate (2022 A110 S: CarsGuide 126mm)"
  },
  "BYD Seal Excellence AWD (2023-2026)": {
   "ground_clearance_mm": 120,
@@ -541,24 +541,24 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Mercedes-Benz Mercedes-AMG GT 63 S 4MATIC+ 4 puertas Coupé": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 122,
+  "gc_source": "estimate (2019 AMG GT 63 S 4도어: iSeeCars · neofiliac 122mm)"
  },
  "Audi A5 Coupé 3.0 TDI 160 kW (218 CV) quattro S tronic (2016-2018)": {
-  "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 118,
+  "gc_source": "estimate (B9 2017: CarExpert 2.0 TFSI quattro 118mm, CarsGuide 2.0 TDI quattro 119mm)"
  },
  "BYD Han AWD Executive (2023-2026)": {
   "ground_clearance_mm": 130,
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Porsche Taycan GTS (2021-2024)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 128,
+  "gc_source": "verified (Porsche 기술 제원 에어 서스펜션 보통 높이 128mm)"
  },
  "Porsche Panamera 4S (2017-2019)": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 133,
+  "gc_source": "verified (Porsche 기술 제원 에어 서스펜션 보통 높이 133mm)"
  },
  "Audi RS e-tron GT (2021-2024)": {
   "ground_clearance_mm": 120,
@@ -586,7 +586,7 @@
  },
  "Abarth 500e Turismo (2023)": {
   "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (2023 Abarth 500e: CarsGuide · CarExpert 130mm / EVKX · ConceptCarz 114mm)"
  },
  "MINI Cooper SE 3 puertas Acabado L (2019-2021)": {
   "ground_clearance_mm": 155,
@@ -617,8 +617,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Mercedes-Benz AMG GT C Roadster (2017-2018)": {
-  "ground_clearance_mm": 105,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 96,
+  "gc_source": "estimate (2017 AMG GT Roadster: auto-data · vehiclesizes 96mm, MBUSA 2018 최대 적재 3.8in)"
  },
  "Mercedes-Benz EQS 580 4MATIC (2021-2022)": {
   "ground_clearance_mm": 120,
@@ -645,12 +645,12 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Honda Jazz 1.5 i-VTEC Dynamic (2018-2018)": {
-  "ground_clearance_mm": 135,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 110,
+  "gc_source": "estimate (2018 Jazz 1.5 Dynamic(유럽): cars-data · auto-data 110mm / 호주 사양 135–137mm)"
  },
  "Honda Prelude e:HEV Advance (2025)": {
-  "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 136,
+  "gc_source": "verified (Honda UK 운전자 탑승 136mm, Honda NZ 무적재 136mm)"
  },
  "Audi TT Roadster 45 TFSI 180 kW (245 CV) quattro S tronic 7 vel. (2019-2021)": {
   "ground_clearance_mm": 110,
@@ -661,8 +661,8 @@
   "gc_source": "verified (BMW i3s 기술 자료 131mm, auto-data 131mm)"
  },
  "Tesla Model S Plaid (2021-2025)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 127,
+  "gc_source": "estimate (Tesla 오너스 매뉴얼 표준 높이 127mm, Plaid 109–159mm 조절)"
  },
  "Mazda CX-5 2.5 e-SKYACTIV G 141 CV AT Homura (2025)": {
   "ground_clearance_mm": 200,
@@ -689,8 +689,8 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Porsche 911 Turbo S Coupé (2025)": {
-  "ground_clearance_mm": 110,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 124,
+  "gc_source": "estimate (992.2 값 없음, 992.1 Turbo S CarExpert 124–126mm)"
  },
  "Toyota Aygo X Cross Play (2022-2025)": {
   "ground_clearance_mm": 155,
@@ -713,63 +713,63 @@
   "gc_source": "manufacturer (estimate, unverified)"
  },
  "Porsche 911 Turbo S Coupé (2015-2018)": {
-  "ground_clearance_mm": 110,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 114,
+  "gc_source": "estimate (991.2 Turbo S: CarExpert 2019 114mm, 991.1 115mm)"
  },
  "Ford Fiesta Active+ 1.5 TDCi 88 kW (120 CV) S/S (2018-2019)": {
   "ground_clearance_mm": 150,
   "gc_source": "verified approx (automobiledimension 150; another estimate 130)"
  },
  "Mercedes-Benz Mercedes-AMG C 63 S Coupé": {
-  "ground_clearance_mm": 115,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 101,
+  "gc_source": "estimate (C205 C 63 S: auto-data 101mm, MBUSA 2018 최대 적재 4.1in(104mm))"
  },
  "MINI Cooper S 5 puertas (2014-2017)": {
   "ground_clearance_mm": 146,
   "gc_source": "verified (F55 5도어: MINI 2016-03 보도자료 146mm, CarExpert 2015 Cooper S 146mm)"
  },
  "Ford Fiesta 5p ST 1.5 EcoBoost 147 kW (200 CV) (2018-2021)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 126,
+  "gc_source": "verified (Ford 유럽 Fiesta ST 기술 제원 126mm(빈 차))"
  },
  "Mazda MX-5 RF 2.0 SKYACTIV-G 2.0 135 kW (184 CV) i-Stop &amp; i-Eloop Zenith (2018-2022)": {
-  "ground_clearance_mm": 136,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 141,
+  "gc_source": "estimate (2018–22 RF 2.0: cars-data 141mm, Autotijd · auto-data 135mm / Mazda NZ 브로셔 적재 135mm · 빈 차 150mm)"
  },
  "Audi A6 50 TDI quattro tiptronic (2018-2021)": {
   "ground_clearance_mm": 130,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "gc_source": "estimate (공식 값 없음, A6 C8 세단(allroad 아님) 일반 서스펜션 추정)"
  },
  "Audi Q5 Sportback S line 45 TFSI quattro-ultra S tronic (2020-2024)": {
   "ground_clearance_mm": 208,
   "gc_source": "verified (web search: iseecars 8.2 in)"
  },
  "Audi RS 4 Avant 2.9 TFSI 331 kW (450 CV) quattro tiptronic 8 vel. (2017-2018)": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 129,
+  "gc_source": "estimate (2018 RS4 Avant: CarExpert 129mm, CarsGuide 126–129mm)"
  },
  "KIA XCeed 1.4 T-GDi Emotion 103 kW (140 CV) DCT (2019-2021)": {
   "ground_clearance_mm": 184,
   "gc_source": "verified (Kia 스페인 보도자료: Tech·Emotion 트림 184mm, Concept·Drive 172mm)"
  },
  "Honda Civic Type R 2.0 VTEC Turbo (2017-2018)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 126,
+  "gc_source": "estimate (FK8 2017: auto-data · vehiclesizes 126mm (126–132mm))"
  },
  "Ford Fiesta 5p Titanium 1.0 EcoBoost 92 kW (125 CV) S/S (2017-2018)": {
-  "ground_clearance_mm": 133,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 130,
+  "gc_source": "estimate (Fiesta Mk8 1.0 EcoBoost: Autotijd · cars-data 130mm (2022 부분변경 후 값))"
  },
  "Alfa Romeo Giulia 2.2 Diesel 132 kW (180 CV) Super (2016-2018)": {
-  "ground_clearance_mm": 135,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 100,
+  "gc_source": "estimate (Giulia 952: CarExpert 2021 · 2022 · 2023 100mm, 부분변경 전후 같은 차체)"
  },
  "Mercedes-Benz E 220 d Berlina 9G-TRONIC (2016-2018)": {
-  "ground_clearance_mm": 120,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 125,
+  "gc_source": "estimate (W213 2016–21 E 220 d 세단: autospot 125mm / 2020 CarsGuide 116mm)"
  },
  "Porsche Taycan Turbo S (2019-2024)": {
-  "ground_clearance_mm": 125,
-  "gc_source": "manufacturer (estimate, unverified)"
+  "ground_clearance_mm": 126,
+  "gc_source": "verified (Porsche 구성기 보통 높이 126mm, CarsGuide 126mm)"
  }
 }
