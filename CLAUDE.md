@@ -35,7 +35,7 @@
 5. `git add -A && git commit` (커밋 메시지 영어).
 
 ## 배포
-- **작업 폴더 예외**: 이 앱은 상위 규칙(로컬 `C:\dev\<앱>`에서 작업 후 robocopy)과 달리 NAS 폴더 `Z:\HDD1\개발\car-handling-grades`에서 바로 빌드·git 커밋·push·배포한다. `C:\dev\car-handling-grades`는 만들지 않는다(사용자 지시 2026-11-22). 이 저장소의 로컬 git 설정은 `core.autocrlf=input`(NAS 파일은 LF). NAS에서 `sed -i`는 임시 파일 이름 바꾸기에 실패하므로 파일 수정은 Edit 도구나 node로 하고, 쓴 뒤 내용을 다시 확인한다. `.git`이 다시 깨지면(`bad object HEAD` / `not a git repository`) GitHub에서 임시로 clone해 `.git`만 옮기고 파일 크기를 비교해 확인한다.
+- **작업 폴더 예외**: 이 앱은 상위 규칙(로컬 `C:\dev\<앱>`에서 작업 후 robocopy)과 달리 NAS 폴더 `Z:\HDD1\개발\car-handling-grades`에서 바로 빌드·git 커밋·push·배포한다. `C:\dev\car-handling-grades`는 만들지 않는다(사용자 지시 2026-11-22). 이 NAS는 있는 파일 위로 이름 바꾸기(rename 덮어쓰기)를 막아서 `.git`을 NAS에 두면 git이 config·index·객체를 못 쓴다(`File exists`, `insufficient permission`). 그래서 git 데이터는 로컬 `C:/Users/esmar/.gitdirs/car-handling-grades`에 두고(`core.worktree` = 이 NAS 폴더, `core.autocrlf=input`), git 명령은 항상 `git --git-dir=C:/Users/esmar/.gitdirs/car-handling-grades <명령>`으로 NAS 폴더에서 실행한다(2026-11-22). NAS 폴더의 빈 `.git` 폴더는 지워지지 않아 남아 있을 뿐이고 쓰지 않는다. 같은 이유로 NAS에서 `sed -i`도 실패하므로 파일 수정은 Edit 도구나 node로 하고, 쓴 뒤 내용을 다시 확인한다.
 - Vercel 프로젝트는 `public/`을 정적 파일로 서빙한다 (`vercel.json`).
 - 방식: Vercel CLI 직접 배포 (GitHub 연동 없음). 계정 itinerary-git, 프로젝트 moose-grade, 주소 https://moose-grade.vercel.app
 - 명령: `npx vercel deploy --prod --yes` (프로젝트 폴더에서). `.vercelignore`가 public/, api/, package*.json, scripts/autoview_lib.mjs만 올린다.
