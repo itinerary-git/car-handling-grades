@@ -18,10 +18,10 @@ const av = compareAutoview(src.grid, MIN_KMH);
 const qrData = loadQr();
 const qrMeasured = qrData.measured;
 const qrMeasuredIds = new Set(qrMeasured.map((q) => q.id));
-const QR_MIN = { dry: 96, wet: 72 }; // user rule 2026-11-15: both speeds must reach these to be shown
+const QR_MIN = { dry: 102, wet: 78 }; // user rule 2026-11-22: shown if dry >= 102 OR wet >= 78
 // Teknikens Värld moose-test speeds (highest pass without hitting a cone), placed by the car's own specs
 const tvData = loadTv();
-const TV_MIN_KMH = 73; // user rule 2026-11-15: show Teknikens Värld cars at 73 km/h or more only
+const TV_MIN_KMH = 74; // user rule 2026-11-22: show Teknikens Värld cars at 74 km/h or more only (was 73)
 const wbBin = (w) => (w < 2600 ? 0 : w >= 3000 ? 5 : Math.floor((w - 2600) / 100) + 1);
 const gcBin = (g) => (g < 150 ? 0 : g < 175 ? 1 : g < 200 ? 2 : 3);
 
@@ -80,7 +80,7 @@ const cells = grid.map((row, i) =>
       qr: qrExpected.filter((q) => q.cell === `W${i + 1}G${j + 1}` && !qrMeasuredIds.has((q.url.match(/v=([\w-]{11})/) || [])[1])),
       av: av.cells[i][j],
       qm: qrMeasured
-        .filter((q) => q.dry_kmh >= QR_MIN.dry && q.wet_kmh >= QR_MIN.wet && wbBin(q.wb) === i && gcBin(q.gc) === j)
+        .filter((q) => (q.dry_kmh >= QR_MIN.dry || q.wet_kmh >= QR_MIN.wet) && wbBin(q.wb) === i && gcBin(q.gc) === j)
         // user rule 2026-11-15: only the cell's top dry-lane-change car and top wet-double-lane-change car (ties all)
         .filter((q, _, all) => q.dry_kmh === Math.max(...all.map((o) => o.dry_kmh)) || q.wet_kmh === Math.max(...all.map((o) => o.wet_kmh)))
         .sort((a, b) => b.wet_kmh - a.wet_kmh || b.dry_kmh - a.dry_kmh)

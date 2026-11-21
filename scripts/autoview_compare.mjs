@@ -62,7 +62,7 @@ export function compareAutoview(grid, minKmh) {
     cells[i][j].push({
       car, handling: r.handling, avoidance: r.avoidance, status, top,
       kmh: k?.moose_kmh ?? null,
-      wb, kg: (k ? kgByName.get(k.name) : m?.kg) ?? null, date: r.date,
+      wb, drive: m?.drive ?? null, kg: (k ? kgByName.get(k.name) : m?.kg) ?? null, date: r.date,
       basis: basis && { car: basis.car, km77: basis.km77, kmh: basis.kmh, handling: basis.r.handling, avoidance: basis.r.avoidance },
       specs: `WB ${wb.toLocaleString("en-US")} / GC ${gc}mm · ${k ? "KM77 " + k.name : m.src || "제조사 제원"}`,
       url: `https://www.youtube.com/watch?v=${r.vid}${r.t != null ? `&t=${r.t}s` : ''}`,
